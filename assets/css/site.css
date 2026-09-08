@@ -912,3 +912,17 @@ details:not([open]) .faq-icon-minus { display: none; }
 #thanks-point-market:target { display: block; }
 #thanks-seabed-chart { display: none; }
 #thanks-seabed-chart:target { display: block; }
+
+/* ─── MARK: 背景写真（Section F・フッター） ─────────── */
+.section--photo-f {
+  background:
+    linear-gradient(rgba(11,26,33,.76), rgba(11,26,33,.76)),
+    url('/assets/img/section-f-bg.jpg') center / cover no-repeat;
+}
+
+.site-footer--photo {
+  background:
+    linear-gradient(rgba(11,26,33,.88), rgba(11,26,33,.94)),
+    url('/assets/img/footer-bg.jpg') center 60% / cover no-repeat;
+  border-top: none;
+}
