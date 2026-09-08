@@ -970,30 +970,131 @@ details:not([open]) .faq-icon-minus { display: none; }
 }
 
 .poll-option {
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: 12px;
   width: 100%;
   text-align: left;
   background: var(--color-paper);
   border: 1.5px solid var(--color-hairline);
   border-radius: var(--radius);
-  padding: 14px 20px;
+  padding: 14px 16px 14px 20px;
   font-family: var(--font-body);
   font-size: var(--text-body);
   font-weight: 400;
   color: var(--color-ink);
   cursor: pointer;
   line-height: 1.6;
-  transition: border-color 0.12s, background 0.12s;
+  box-shadow: 0 1px 3px rgba(0,0,0,.06);
+  transition: border-color 0.12s, background 0.12s, box-shadow 0.12s;
+}
+.poll-option::after {
+  content: "›";
+  font-size: 22px;
+  line-height: 1;
+  color: var(--color-fish-orange);
+  flex-shrink: 0;
+  margin-left: auto;
+  padding-left: 4px;
 }
 
 .poll-option:hover {
   border-color: var(--color-fish-orange);
   background: #fdf6ee;
+  box-shadow: 0 2px 8px rgba(230,100,30,.12);
+}
+.poll-option:active {
+  background: #fde8d2;
+  transform: scale(0.99);
 }
 
 .poll-option:focus-visible {
   outline: 2px solid var(--color-deep-orange);
   outline-offset: 2px;
+}
+
+/* ─── MARK: フィードバックフォーム ────────────────────── */
+.fb-type-group {
+  border: none;
+  padding: 0;
+  margin: 0 0 20px;
+}
+.fb-type-row {
+  display: flex;
+  border: 1.5px solid var(--color-hairline);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.fb-type-row input[type="radio"] { display: none; }
+.fb-type-row label {
+  flex: 1;
+  text-align: center;
+  padding: 10px 6px;
+  font-size: var(--text-body-sm);
+  font-family: var(--font-body);
+  cursor: pointer;
+  color: var(--color-ink-muted);
+  border-right: 1px solid var(--color-hairline);
+  transition: background 0.1s, color 0.1s;
+  line-height: 1.4;
+}
+.fb-type-row label:last-child { border-right: none; }
+.fb-type-row input[type="radio"]:checked + label {
+  background: var(--color-fish-orange);
+  color: #fff;
+  font-weight: 700;
+}
+
+.fb-field { margin-bottom: 20px; }
+.fb-label {
+  display: block;
+  font-size: var(--text-body-sm);
+  font-weight: 600;
+  color: var(--color-ink-muted);
+  margin-bottom: 8px;
+}
+.fb-textarea,
+.fb-input {
+  width: 100%;
+  font-family: var(--font-body);
+  font-size: var(--text-body);
+  color: var(--color-ink);
+  background: var(--color-paper);
+  border: 1.5px solid var(--color-hairline);
+  border-radius: var(--radius);
+  padding: 12px 16px;
+  box-sizing: border-box;
+  line-height: 1.6;
+  transition: border-color 0.12s;
+  appearance: none;
+  -webkit-appearance: none;
+}
+.fb-textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+.fb-textarea:focus,
+.fb-input:focus {
+  outline: none;
+  border-color: var(--color-fish-orange);
+  box-shadow: 0 0 0 3px rgba(230,100,30,.12);
+}
+.fb-count {
+  text-align: right;
+  font-size: var(--text-caption);
+  color: var(--color-ink-muted);
+  margin-top: 4px;
+  font-variant-numeric: tabular-nums;
+}
+.fb-hint {
+  margin: 6px 0 0;
+  font-size: var(--text-caption);
+  color: var(--color-ink-muted);
+}
+.fb-submit {
+  margin-top: 8px;
+  width: 100%;
+  max-width: 240px;
 }
 
 /* ─── MARK: アンケート回答後サンクス（CSS :target） ─── */
