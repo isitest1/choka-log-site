@@ -884,20 +884,24 @@ details:not([open]) .faq-icon-minus { display: none; }
 }
 .phone-carousel__track {
   display: flex;
+  width: 100%;          /* definite width so flex-basis:100% can resolve */
   overflow-x: auto;
   overflow-y: hidden;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
   scroll-behavior: smooth;
-  border-radius: 36px; /* match phone-mockup__screen */
 }
 .phone-carousel__track::-webkit-scrollbar { display: none; }
 .phone-carousel__slide {
   flex: 0 0 100%;
+  min-width: 100%;      /* prevent Safari from shrinking below flex-basis */
   scroll-snap-align: start;
-  display: block;
+}
+.phone-carousel__slide img {
   width: 100%;
+  display: block;
+  border-radius: 36px;  /* match phone-mockup__screen */
 }
 .phone-carousel__nav {
   display: flex;
