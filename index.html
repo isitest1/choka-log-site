@@ -687,46 +687,42 @@
 
       <!-- ── ご意見フォーム ── -->
       <div id="contact" style="margin-top:40px; padding-top:32px; border-top:1px solid var(--color-hairline);">
-        <p style="margin:0 0 20px; font-size:var(--text-heading-sm); font-weight:700; line-height:1.35;">ご意見・ご要望</p>
+        <p style="margin:0 0 4px; font-size:var(--text-heading-sm); font-weight:700; line-height:1.35;">ご意見・ご要望</p>
+        <p style="margin:0; font-size:var(--text-body-sm); color:var(--color-ink-muted);">いただいたご意見は開発の参考にします。</p>
 
-        <form id="feedback-form" novalidate>
-          <!-- 種類セレクタ -->
-          <fieldset class="fb-type-group" aria-label="種類">
-            <legend class="fb-label">種類</legend>
-            <div class="fb-type-row">
-              <input type="radio" name="type" id="fb-bug"     value="bug"     />
-              <label for="fb-bug">不具合</label>
-              <input type="radio" name="type" id="fb-request" value="request" checked />
-              <label for="fb-request">要望</label>
-              <input type="radio" name="type" id="fb-question" value="question" />
-              <label for="fb-question">質問</label>
-              <input type="radio" name="type" id="fb-other"   value="other"   />
-              <label for="fb-other">その他</label>
+        <form id="feedback-form" class="feedback-card" novalidate>
+
+          <!-- 種類 -->
+          <fieldset class="fb-type-group">
+            <legend class="fb-type-legend">種類</legend>
+            <div class="fb-type-pills">
+              <input type="radio" name="type" id="fb-bug"      value="bug"      /><label for="fb-bug">不具合</label>
+              <input type="radio" name="type" id="fb-request"  value="request"  checked /><label for="fb-request">要望</label>
+              <input type="radio" name="type" id="fb-question" value="question" /><label for="fb-question">質問</label>
+              <input type="radio" name="type" id="fb-other"    value="other"    /><label for="fb-other">その他</label>
             </div>
           </fieldset>
 
           <!-- メッセージ -->
           <div class="fb-field">
-            <label class="fb-label" for="fb-msg"><span id="fb-msg-label">ご意見（必須）</span></label>
-            <textarea id="fb-msg" name="message" rows="5" maxlength="2000"
-              placeholder="あると助かる機能や、変えてほしい点"
-              class="fb-textarea"></textarea>
-            <div class="fb-count"><span id="fb-count">0</span> / 2000</div>
+            <label class="fb-field-label" for="fb-msg"><span id="fb-msg-label">MESSAGE</span></label>
+            <textarea id="fb-msg" name="message" class="fb-textarea" maxlength="2000"
+              placeholder="あると助かる機能や、変えてほしい点"></textarea>
+            <span class="fb-count"><span id="fb-count">0</span> / 2000</span>
           </div>
 
           <!-- 返信先 -->
           <div class="fb-field">
-            <label class="fb-label" for="fb-email">返信先（任意）</label>
+            <label class="fb-field-label" for="fb-email">REPLY TO <span style="font-weight:400; text-transform:none; letter-spacing:0;">（任意）</span></label>
             <input type="email" id="fb-email" name="email" class="fb-input"
-              placeholder="example@mail.com"
-              autocomplete="email" />
+              placeholder="example@mail.com" autocomplete="email" />
             <p class="fb-hint">返信が必要な場合のみ入力してください</p>
           </div>
 
           <button type="submit" id="fb-submit" class="btn-primary fb-submit">送信</button>
         </form>
 
-        <div id="feedback-thanks" style="display:none; padding:24px; text-align:center; color:var(--color-ink-muted); font-size:var(--text-body);">
+        <div id="feedback-thanks" style="display:none; margin-top:24px; padding:32px; background:var(--color-paper); border-radius:var(--radius); text-align:center; color:var(--color-ink-muted);">
           ご意見をお送りいただきありがとうございました。
         </div>
       </div>
@@ -808,8 +804,8 @@
       other:    'ご自由にどうぞ',
     };
     var msgLabels = {
-      bug: 'ご意見（必須）', request: 'ご意見（必須）',
-      question: 'ご意見（必須）', other: 'ご意見（任意）',
+      bug: 'MESSAGE', request: 'MESSAGE',
+      question: 'MESSAGE', other: 'MESSAGE  <span style="font-weight:400; text-transform:none; letter-spacing:0;">（任意）</span>',
     };
     var textarea  = document.getElementById('fb-msg');
     var countEl   = document.getElementById('fb-count');
@@ -823,7 +819,7 @@
     function updateType() {
       var t = getType();
       textarea.placeholder = placeholders[t] || '';
-      if (labelEl) labelEl.textContent = msgLabels[t] || 'ご意見';
+      if (labelEl) labelEl.innerHTML = msgLabels[t] || 'MESSAGE';
     }
     feedbackForm.querySelectorAll('input[name="type"]').forEach(function (r) {
       r.addEventListener('change', updateType);
