@@ -872,6 +872,91 @@ details:not([open]) .faq-icon-minus { display: none; }
   object-fit: cover;
 }
 
+/* ─── MARK: Phone Carousel ──────────────────────────── */
+.phone-carousel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+.phone-carousel__mockup {
+  overflow: hidden; /* clips scroll to phone bezel */
+}
+.phone-carousel__track {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+  border-radius: 36px; /* match phone-mockup__screen */
+}
+.phone-carousel__track::-webkit-scrollbar { display: none; }
+.phone-carousel__slide {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+  display: block;
+  width: 100%;
+}
+.phone-carousel__nav {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.phone-carousel__dots {
+  display: flex;
+  gap: 6px;
+}
+.phone-carousel__dots .dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--color-hairline);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.phone-carousel__dots .dot--active {
+  background: var(--color-orange);
+  transform: scale(1.15);
+}
+.carousel-prev,
+.carousel-next {
+  background: var(--color-paper);
+  border: 1px solid var(--color-hairline);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  color: var(--color-ink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background 0.12s;
+  padding: 0;
+}
+.carousel-prev:hover,
+.carousel-next:hover { background: var(--color-hairline); }
+
+/* ヒーロー: デスクトップは扇形、モバイルはカルーセル */
+.hero__phones--mobile { display: none; }
+
+@media (max-width: 767px) {
+  .hero__phones--fan { display: none !important; }
+  .hero__phones--mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    margin-top: 24px;
+  }
+}
+
 /* ─── MARK: 縦並びポールボタン ──────────────────────── */
 .poll-buttons-vertical {
   display: flex;

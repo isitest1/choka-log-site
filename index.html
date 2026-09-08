@@ -221,8 +221,8 @@
       </span>
     </a>
 
-    <!-- 端末モックアップ（扇状） -->
-    <div class="hero__phones" aria-hidden="true">
+    <!-- 端末モックアップ（扇状 / デスクトップ） -->
+    <div class="hero__phones hero__phones--fan" aria-hidden="true">
       <div class="phone-mockup phone-left">
         <img
           src="/assets/img/shot-gallery.png"
@@ -252,6 +252,26 @@
           decoding="async"
           onerror="this.closest('.phone-mockup').style.background='#1b2227'"
         />
+      </div>
+    </div>
+
+    <!-- 端末モックアップ（スワイプ / モバイル） -->
+    <div class="phone-carousel hero__phones--mobile" aria-hidden="true">
+      <div class="phone-mockup phone-carousel__mockup" style="width:240px;">
+        <div class="phone-carousel__track">
+          <img class="phone-carousel__slide" src="/assets/img/shot-gallery.png"  alt="ギャラリービュー" width="390" height="844" decoding="async" />
+          <img class="phone-carousel__slide" src="/assets/img/shot-analysis.png" alt="分析インサイト"   width="390" height="844" decoding="async" loading="lazy" />
+          <img class="phone-carousel__slide" src="/assets/img/shot-map.png"      alt="地図ビュー"       width="390" height="844" decoding="async" loading="lazy" />
+        </div>
+      </div>
+      <div class="phone-carousel__nav">
+        <button class="carousel-prev" aria-label="前へ">&#8249;</button>
+        <div class="phone-carousel__dots">
+          <button class="dot dot--active" aria-label="1枚目"></button>
+          <button class="dot" aria-label="2枚目"></button>
+          <button class="dot" aria-label="3枚目"></button>
+        </div>
+        <button class="carousel-next" aria-label="次へ">&#8250;</button>
       </div>
     </div>
   </section>
@@ -394,30 +414,27 @@
         <p style="margin:0; font-size:var(--text-body-sm); color:var(--color-ink-muted);">取得に失敗した場合も、釣果の記録は必ず保存されます。</p>
       </div>
       <div class="feature-visual">
-        <div style="display:flex; flex-direction:column; gap:16px; align-items:flex-start;">
-          <div class="chips" style="flex-direction:column; flex-wrap:nowrap; gap:10px;">
-            <div class="chip">
-              <span class="chip__label">天気</span>
-              <span class="chip__value">晴れ</span>
-            </div>
-            <div class="chip">
-              <span class="chip__label">風速</span>
-              <span class="chip__value num">3.2 m/s</span>
-            </div>
-            <div class="chip">
-              <span class="chip__label">潮回り</span>
-              <span class="chip__value">小潮</span>
-            </div>
-            <div class="chip">
-              <span class="chip__label">底質</span>
-              <span class="chip__value">砂・岩</span>
-            </div>
-            <div class="chip">
-              <span class="chip__label">魚礁</span>
-              <span class="chip__value">あり</span>
+        <div class="phone-carousel">
+          <div class="phone-mockup phone-carousel__mockup" style="width:280px;">
+            <div class="phone-carousel__track">
+              <img class="phone-carousel__slide" src="/assets/img/shot-auto-1.png" alt="分析インサイト。中潮の日は60〜100m×砂が当たっているという傾向表示"      width="390" height="844" loading="lazy" decoding="async" />
+              <img class="phone-carousel__slide" src="/assets/img/shot-auto-2.png" alt="水深×潮のマトリクスと魚種ランキング"                                      width="390" height="844" loading="lazy" decoding="async" />
+              <img class="phone-carousel__slide" src="/assets/img/shot-auto-3.png" alt="条件ごとの水深分布・月別釣果グラフ・魚図鑑"                              width="390" height="844" loading="lazy" decoding="async" />
+              <img class="phone-carousel__slide" src="/assets/img/shot-auto-4.png" alt="魚図鑑。魚種ごとに写真と釣獲件数・平均水深が並ぶ"                        width="390" height="844" loading="lazy" decoding="async" />
+              <img class="phone-carousel__slide" src="/assets/img/shot-auto-5.png" alt="釣果詳細。潮汐グラフ・天気・風速・波高・底質・魚礁が自動で記録されている" width="390" height="844" loading="lazy" decoding="async" />
             </div>
           </div>
-          <p style="margin:0; font-size:var(--text-caption); color:var(--color-ink-muted);">釣果1件に自動で付くデータの例</p>
+          <div class="phone-carousel__nav">
+            <button class="carousel-prev" aria-label="前へ">&#8249;</button>
+            <div class="phone-carousel__dots">
+              <button class="dot dot--active" aria-label="1枚目"></button>
+              <button class="dot" aria-label="2枚目"></button>
+              <button class="dot" aria-label="3枚目"></button>
+              <button class="dot" aria-label="4枚目"></button>
+              <button class="dot" aria-label="5枚目"></button>
+            </div>
+            <button class="carousel-next" aria-label="次へ">&#8250;</button>
+          </div>
         </div>
       </div>
     </div>
@@ -439,16 +456,27 @@
         </ul>
       </div>
       <div class="feature-visual">
-        <div class="phone-mockup" style="width:280px;">
-          <img
-            src="/assets/img/shot-map.png"
-            alt="地図タブ。相模湾の釣果がオレンジのピンで表示されている"
-            class="phone-mockup__screen"
-            width="264" height="571"
-            loading="lazy"
-            decoding="async"
-            onerror="this.closest('.phone-mockup').style.background='#1b2227'; this.style.display='none'"
-          />
+        <div class="phone-carousel">
+          <div class="phone-mockup phone-carousel__mockup" style="width:280px;">
+            <div class="phone-carousel__track">
+              <img class="phone-carousel__slide" src="/assets/img/shot-views-1.png" alt="釣行ビュー。釣行ごとに写真グリッドで釣果をまとめて見られる"    width="390" height="844" loading="lazy" decoding="async" />
+              <img class="phone-carousel__slide" src="/assets/img/shot-views-2.png" alt="魚種ビュー。魚種別にグループ化された釣果一覧"                  width="390" height="844" loading="lazy" decoding="async" />
+              <img class="phone-carousel__slide" src="/assets/img/shot-views-3.png" alt="水深ビュー。水深の深い順に釣果が並ぶ"                          width="390" height="844" loading="lazy" decoding="async" />
+              <img class="phone-carousel__slide" src="/assets/img/shot-views-4.png" alt="ギャラリービュー。釣行写真がタイルグリッドで並ぶ"              width="390" height="844" loading="lazy" decoding="async" />
+              <img class="phone-carousel__slide" src="/assets/img/shot-views-5.png" alt="シンプルビュー。日付順の釣果一覧に魚種・サイズ・水深が表示"    width="390" height="844" loading="lazy" decoding="async" />
+            </div>
+          </div>
+          <div class="phone-carousel__nav">
+            <button class="carousel-prev" aria-label="前へ">&#8249;</button>
+            <div class="phone-carousel__dots">
+              <button class="dot dot--active" aria-label="1枚目"></button>
+              <button class="dot" aria-label="2枚目"></button>
+              <button class="dot" aria-label="3枚目"></button>
+              <button class="dot" aria-label="4枚目"></button>
+              <button class="dot" aria-label="5枚目"></button>
+            </div>
+            <button class="carousel-next" aria-label="次へ">&#8250;</button>
+          </div>
         </div>
       </div>
     </div>
@@ -719,6 +747,46 @@
     </div>
   </div>
 </footer>
+
+<script>
+(function () {
+  'use strict';
+  document.querySelectorAll('.phone-carousel').forEach(function (car) {
+    var track = car.querySelector('.phone-carousel__track');
+    var dots  = Array.from(car.querySelectorAll('.phone-carousel__dots .dot'));
+    var prev  = car.querySelector('.carousel-prev');
+    var next  = car.querySelector('.carousel-next');
+    var n = dots.length;
+    if (!track || n === 0) return;
+    var cur = 0;
+
+    function goTo(idx) {
+      cur = (idx + n) % n;
+      var w = track.clientWidth;
+      track.scrollTo({ left: w * cur, behavior: 'smooth' });
+      dots.forEach(function (d, i) { d.classList.toggle('dot--active', i === cur); });
+    }
+
+    if (prev) prev.addEventListener('click', function () { goTo(cur - 1); });
+    if (next) next.addEventListener('click', function () { goTo(cur + 1); });
+    dots.forEach(function (d, i) { d.addEventListener('click', function () { goTo(i); }); });
+
+    var scrollTimer;
+    track.addEventListener('scroll', function () {
+      clearTimeout(scrollTimer);
+      scrollTimer = setTimeout(function () {
+        var w = track.clientWidth;
+        if (!w) return;
+        var idx = Math.round(track.scrollLeft / w);
+        if (idx !== cur && idx >= 0 && idx < n) {
+          cur = idx;
+          dots.forEach(function (d, i) { d.classList.toggle('dot--active', i === cur); });
+        }
+      }, 50);
+    }, { passive: true });
+  });
+}());
+</script>
 
 </body>
 </html>
