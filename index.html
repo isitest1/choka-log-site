@@ -663,12 +663,14 @@
       <!-- ── 質問 1: ポイントマーケット ── -->
       <div class="poll-row" style="margin-bottom:24px;">
         <p class="poll-question">写真の位置情報と魚探の水深で裏付けられた「実際に釣れたポイント」を、釣り人同士で有料でやり取りできる仕組みを検討しています。売り手は匿名とし、1つのポイントを購入できる人数は限定する予定です。あなたに一番近いものはどれですか？</p>
-        <form method="post" action="https://fishing-log-api.kouhei1.workers.dev/poll" class="poll-buttons-vertical">
-          <input type="hidden" name="q" value="point-market-v1" />
-          <button type="submit" name="answer" value="buy-sell"  class="poll-option">買ってみたい。自分のポイントも、金額次第で出してよい</button>
-          <button type="submit" name="answer" value="buy-only"  class="poll-option">買ってみたい。ただし、自分のポイントは出さない</button>
-          <button type="submit" name="answer" value="sell-only" class="poll-option">買わないが、自分のポイントは金額次第で出してよい</button>
-          <button type="submit" name="answer" value="none"      class="poll-option">興味がない</button>
+        <form method="post" action="https://api.margheritaworks.com/poll" class="poll-buttons-vertical">
+          <input type="hidden" name="app"    value="choka-log" />
+          <input type="hidden" name="q"      value="market-v1" />
+          <input type="hidden" name="return" value="https://chokalog.margheritaworks.com/#thanks-point-market" />
+          <button type="submit" name="answer" value="buy-and-sell" class="poll-option">買ってみたい。自分のポイントも、金額次第で出してよい</button>
+          <button type="submit" name="answer" value="buy-only"     class="poll-option">買ってみたい。ただし、自分のポイントは出さない</button>
+          <button type="submit" name="answer" value="sell-only"    class="poll-option">買わないが、自分のポイントは金額次第で出してよい</button>
+          <button type="submit" name="answer" value="none"         class="poll-option">興味がない</button>
         </form>
         <div id="thanks-point-market" style="margin-top:16px; font-size:var(--text-body-sm); color:var(--color-ink-muted);">
           ご回答ありがとうございました。
@@ -678,12 +680,14 @@
       <!-- ── 質問 2: 海底地形の確認方法 ── -->
       <div class="poll-row">
         <p class="poll-question">海底の地形は、現在どのように確認していますか？</p>
-        <form method="post" action="https://fishing-log-api.kouhei1.workers.dev/poll" class="poll-buttons-vertical">
-          <input type="hidden" name="q" value="seabed-chart-v1" />
-          <button type="submit" name="answer" value="chart-app"  class="poll-option">海図アプリを使用している（月額または年額料金を支払っている）</button>
-          <button type="submit" name="answer" value="fish-paid"  class="poll-option">魚探の海図を使用している（別売りの地図カードや更新データを購入した）</button>
-          <button type="submit" name="answer" value="fish-free"  class="poll-option">魚探の海図を使用している（本体に入っていたもののみ）</button>
-          <button type="submit" name="answer" value="depth-only" class="poll-option">魚探の水深だけを見ており、海図は使用していない</button>
+        <form method="post" action="https://api.margheritaworks.com/poll" class="poll-buttons-vertical">
+          <input type="hidden" name="app"    value="choka-log" />
+          <input type="hidden" name="q"      value="seabed-chart-v1" />
+          <input type="hidden" name="return" value="https://chokalog.margheritaworks.com/#thanks-seabed-chart" />
+          <button type="submit" name="answer" value="app-sub"      class="poll-option">海図アプリを使用している（月額または年額料金を支払っている）</button>
+          <button type="submit" name="answer" value="sonar-card"   class="poll-option">魚探の海図を使用している（別売りの地図カードや更新データを購入した）</button>
+          <button type="submit" name="answer" value="sonar-builtin" class="poll-option">魚探の海図を使用している（本体に入っていたもののみ）</button>
+          <button type="submit" name="answer" value="sonar-only"   class="poll-option">魚探の水深だけを見ており、海図は使用していない</button>
         </form>
         <div id="thanks-seabed-chart" style="margin-top:16px; font-size:var(--text-body-sm); color:var(--color-ink-muted);">
           ご回答ありがとうございました。
@@ -849,11 +853,11 @@
       submitBtn.disabled = true;
       submitBtn.textContent = '送信中…';
 
-      var payload = { type: type, message: message, source: 'web' };
+      var payload = { app: 'choka-log', type: type, message: message, source: 'web' };
       if (email) payload.email = email;
 
       try {
-        var resp = await fetch('https://fishing-log-api.kouhei1.workers.dev/feedback', {
+        var resp = await fetch('https://api.margheritaworks.com/feedback', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(payload),
@@ -864,7 +868,7 @@
           if (thanks) thanks.style.display = 'block';
         } else {
           var data = await resp.json().catch(function () { return {}; });
-          alert(data.error || '送信できませんでした。しばらくしてから再度お試しください。');
+          alert(data.message || '送信できませんでした。しばらくしてから再度お試しください。');
           submitBtn.disabled = false;
           submitBtn.textContent = '送信';
         }
