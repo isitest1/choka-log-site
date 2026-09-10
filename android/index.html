@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Android版を検討しています｜釣果ログ</title>
+  <meta name="description" content="釣果ログのAndroid版は、希望される方の人数を見て開発するかどうかを決めます。メールアドレスをご登録いただくと、公開前のテストや公開のお知らせをお送りします。" />
+  <link rel="canonical" href="https://chokalog.margheritaworks.com/android/" />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png" />
+
+  <!-- OGP -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://chokalog.margheritaworks.com/android/" />
+  <meta property="og:title"       content="Android版を検討しています｜釣果ログ" />
+  <meta property="og:description" content="希望される方の人数を見て、Android版を作るかどうかを決めます。メールアドレスをご登録いただくと、公開前のテストや公開のお知らせをお送りします。" />
+  <meta property="og:image"       content="/assets/img/og.png" />
+  <meta property="og:locale"      content="ja_JP" />
+  <meta name="twitter:card"       content="summary_large_image" />
+
+  <!-- フォント -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/assets/css/site.css" />
+
+  <!-- このページ専用: ハニーポットとフラッシュメッセージ -->
+  <style>
+    .hp { position:absolute; left:-9999px; width:1px; height:1px; overflow:hidden; }
+    .flash {
+      display: none;
+      margin-top: 24px;
+      padding: 20px 24px;
+      border-radius: var(--radius);
+      background: var(--color-sand);
+      color: var(--color-ink);
+      font-size: var(--text-body-sm);
+      line-height: 1.7;
+    }
+    .flash-error { background: #fbeeee; color: var(--color-ink); }
+    .flash:target { display: block; }
+    .wish-form .fb-field { margin-bottom: 24px; }
+    .wish-form .fb-type-group { margin-bottom: 24px; }
+  </style>
+
+  <!-- 構造化データ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://margheritaworks.com/" },
+          { "@type": "ListItem", "position": 2, "name": "釣果ログ サポート", "item": "https://chokalog.margheritaworks.com/" },
+          { "@type": "ListItem", "position": 3, "name": "Android版を検討しています", "item": "https://chokalog.margheritaworks.com/android/" }
+        ]
+      },
+      {
+        "@type": "Organization",
+        "name": "Margherita Works",
+        "url": "https://margheritaworks.com/",
+        "contactPoint": { "@type": "ContactPoint", "email": "support@margheritaworks.com", "contactType": "customer support" }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<!-- ============ ヘッダー ============ -->
+<header class="site-header" role="banner">
+  <div class="site-header__inner">
+    <a href="/" class="brand" aria-label="釣果ログ サポートトップへ">
+      <img src="/assets/img/app-icon.png" alt="" width="32" height="32" class="brand__icon-img" aria-hidden="true" />
+      <span class="brand__name">釣果ログ</span>
+    </a>
+
+    <nav class="site-header__nav" aria-label="メインナビゲーション">
+      <a href="/#howto"    class="nav-link">使い方</a>
+      <a href="/#features" class="nav-link">機能</a>
+      <a href="/#faq"      class="nav-link">よくある質問</a>
+      <a href="/#contact"  class="nav-link">お問い合わせ</a>
+      <a href="#" class="btn-primary" aria-label="App Store でダウンロード">App Store で見る →</a>
+    </nav>
+
+    <details class="nav-toggle" aria-label="ナビゲーションを開く">
+      <summary>☰ メニュー</summary>
+      <nav class="nav-toggle__menu" aria-label="モバイルナビゲーション">
+        <a href="/#howto"    class="nav-link">使い方</a>
+        <a href="/#features" class="nav-link">機能</a>
+        <a href="/#faq"      class="nav-link">よくある質問</a>
+        <a href="/#contact"  class="nav-link">お問い合わせ</a>
+        <a href="#" class="btn-primary">App Store で見る →</a>
+      </nav>
+    </details>
+  </div>
+</header>
+
+<main id="main">
+  <div class="container">
+
+    <!-- ページヘッダー -->
+    <div class="privacy-page-header" style="padding-top: 48px;">
+      <span class="label label--blue" style="display:block; margin-bottom:16px;">ANDROID</span>
+      <h1 style="margin:0 0 12px; font-size:var(--text-display); font-weight:700; line-height:1.28;">Android版を検討しています</h1>
+    </div>
+
+    <div class="col-narrow" style="padding-bottom: 80px;">
+
+      <p style="margin:0 0 12px; font-size:var(--text-body);">現在は iPhone 版のみです。Android 版は、<strong>希望される方の人数を見て</strong>作るかどうかを決めます。</p>
+      <p style="margin:0 0 12px; font-size:var(--text-body); color:var(--color-ink-muted);">登録いただいた方には、（作ることになった場合）公開前のテスト参加のお願いと、公開のお知らせをメールでお送りします。それ以外の目的には使いません。いつでも解除できます。</p>
+
+      <!-- ── フォーム ── -->
+      <form method="post" action="https://api.margheritaworks.com/wish" class="feedback-card wish-form" style="margin-top:40px;">
+        <input type="hidden" name="app" value="choka-log">
+        <input type="hidden" name="topic" value="android">
+        <input type="hidden" name="src" id="src" value="">
+        <input type="hidden" name="return" value="https://chokalog.margheritaworks.com/android/">
+
+        <!-- ハニーポット。人には見えない -->
+        <div class="hp" aria-hidden="true">
+          <label>ウェブサイト <input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+        </div>
+
+        <div class="fb-field">
+          <label class="fb-field-label" for="wish-email">メールアドレス</label>
+          <input type="email" id="wish-email" name="email" class="fb-input" required maxlength="254"
+                 inputmode="email" autocomplete="email" placeholder="you@example.com">
+        </div>
+
+        <fieldset class="fb-type-group">
+          <legend class="fb-type-legend">お使いの Android 端末（任意）</legend>
+          <div class="fb-type-pills">
+            <input type="radio" name="device" id="wish-dev-pixel"  value="pixel" /><label for="wish-dev-pixel">Pixel</label>
+            <input type="radio" name="device" id="wish-dev-galaxy" value="galaxy" /><label for="wish-dev-galaxy">Galaxy</label>
+            <input type="radio" name="device" id="wish-dev-xperia" value="xperia" /><label for="wish-dev-xperia">Xperia</label>
+            <input type="radio" name="device" id="wish-dev-other"  value="other" /><label for="wish-dev-other">その他</label>
+          </div>
+        </fieldset>
+
+        <p class="fb-hint">登録いただいたアドレスは、Android 版のテスト参加のお願いと公開のお知らせにのみ使います。メール内のリンクからいつでも解除できます。<a href="/privacy/">プライバシーポリシー</a></p>
+
+        <button type="submit" class="btn-primary fb-submit">Android 版を希望する</button>
+      </form>
+
+      <div id="thanks" class="flash">登録しました。作ることになったら、テストのお願いをメールでお送りします。</div>
+      <div id="error-email" class="flash flash-error">メールアドレスの形式を確認してください。</div>
+      <div id="error-rate" class="flash flash-error">しばらく時間をおいて、もう一度お試しください。</div>
+
+      <!-- iPhone版はこちら -->
+      <div style="margin-top:56px; padding-top:32px; border-top:1px solid var(--color-hairline); text-align:center;">
+        <p style="margin:0 0 16px; font-size:var(--text-body-sm); color:var(--color-ink-muted);">iPhone 版はこちらからご利用いただけます。</p>
+        <a href="#" aria-label="App Store でダウンロード">
+          <img
+            src="/assets/img/appstore-badge-ja.svg"
+            alt="App Store でダウンロード"
+            class="appstore-badge"
+            width="156" height="52"
+            decoding="async"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"
+          />
+          <span class="btn-primary" style="display:none;" aria-hidden="true">▶ App Store でダウンロード</span>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+<!-- フッター -->
+<footer class="site-footer" style="margin-top: var(--section-gap);" role="contentinfo">
+  <div class="site-footer__inner">
+    <div class="site-footer__row">
+      <a href="/" class="brand brand--footer" aria-label="釣果ログ トップ">
+        <img src="/assets/img/app-icon.png" alt="" width="32" height="32" class="brand__icon-img" aria-hidden="true" />
+        <span class="brand__name">釣果ログ</span>
+      </a>
+      <nav class="site-footer__links" aria-label="フッターナビゲーション">
+        <a href="/">SUPPORT</a>
+        <a href="/privacy/">PRIVACY</a>
+        <a href="/#data-sources">DATA SOURCE</a>
+        <a href="/#contact">CONTACT</a>
+      </nav>
+    </div>
+    <div class="site-footer__copy">
+      © 2026 Margherita Works by Kohei Ishikawa ／ 出典：海洋状況表示システム（<a href="https://www.msil.go.jp/" style="color:inherit;">https://www.msil.go.jp/</a>）
+    </div>
+  </div>
+</footer>
+
+<script>
+  // ?src=ig などを hidden に写す。JS が無くてもフォーム自体は動く
+  document.getElementById('src').value =
+    (new URLSearchParams(location.search).get('src') || '').slice(0, 16);
+</script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "ede13281e7b5473dad0fcfdd10a4c235"}'></script>
+</body>
+</html>
