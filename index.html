@@ -209,25 +209,27 @@
       場所も時刻も潮回りも、海底が砂だったか岩だったかまで、その1枚から記録になります。
     </p>
 
-    <!-- App Store バッジ（公式画像。ID確定後に href を差し替え） -->
-    <a href="#" aria-label="App Store でダウンロード">
-      <img
-        src="/assets/img/appstore-badge-ja.svg"
-        alt="App Store でダウンロード"
-        class="appstore-badge"
-        width="156" height="52"
-        decoding="async"
-        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"
-      />
-      <!-- バッジ画像がない場合のフォールバック -->
-      <span class="btn-primary" style="display:none" aria-hidden="true">
-        ▶ App Store でダウンロード
-      </span>
-    </a>
+    <!-- App Store バッジ + Android版リンク（1つの塊としてまとめ、内側の余白だけ詰める） -->
+    <div style="display:flex; flex-direction:column; align-items:center; gap:8px;">
+      <a href="#" aria-label="App Store でダウンロード">
+        <img
+          src="/assets/img/appstore-badge-ja.svg"
+          alt="App Store でダウンロード"
+          class="appstore-badge"
+          width="156" height="52"
+          decoding="async"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"
+        />
+        <!-- バッジ画像がない場合のフォールバック -->
+        <span class="btn-primary" style="display:none" aria-hidden="true">
+          ▶ App Store でダウンロード
+        </span>
+      </a>
 
-    <p style="margin:12px 0 0; font-size:var(--text-caption); color:var(--color-ink-muted);">
-      <a href="/android/?src=site">Android版について</a>
-    </p>
+      <p style="margin:0; font-size:var(--text-caption); color:var(--color-ink-muted);">
+        <a href="/android/?src=site">Android版について</a>
+      </p>
+    </div>
 
     <!-- 端末モックアップ（扇状 / デスクトップ） -->
     <div class="hero__phones hero__phones--fan" aria-hidden="true">
