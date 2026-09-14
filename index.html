@@ -814,6 +814,16 @@
 (function () {
   'use strict';
 
+  /* ── ページ内リンクのときだけスムーススクロールを有効化 ──
+     外部（アプリ等）から /#roadmap のようなハッシュ付きURLを直接開いた場合、
+     初期スクロール完了後にWebフォントのswapでレイアウトが伸び、
+     目的セクションの手前で止まって見える不具合があった。
+     初期表示時は html.is-smooth-scroll を付けないことでこれを回避し、
+     ページ内リンクをクリックした後にだけ有効化する。 */
+  window.addEventListener('load', function () {
+    document.documentElement.classList.add('is-smooth-scroll');
+  });
+
   /* ── フィードバックフォーム ── */
   var feedbackForm = document.getElementById('feedback-form');
   if (feedbackForm) {

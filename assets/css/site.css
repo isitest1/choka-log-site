@@ -46,6 +46,15 @@
 
 html {
   color-scheme: light only;
+  /* scroll-behavior: smooth はここに置かない。
+     Webフォント(display=swap)のswapによるレイアウトシフトが
+     smoothスクロールのアニメーション中/直後に起きると、
+     アプリから /#roadmap のような外部ハッシュ付きURLを直接開いた際に
+     目的セクションの手前で止まって見える不具合が起きるため、
+     ページ内ナビゲーションのクリック時だけ .is-smooth-scroll で有効化する。 */
+}
+
+html.is-smooth-scroll {
   scroll-behavior: smooth;
 }
 
@@ -859,7 +868,7 @@ details:not([open]) .faq-icon-minus { display: none; }
 
 /* ─── MARK: アクセシビリティ ─────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
+  html.is-smooth-scroll { scroll-behavior: auto; }
 }
 
 /* ─── MARK: アプリアイコン（ヘッダー/フッター） ──────── */
