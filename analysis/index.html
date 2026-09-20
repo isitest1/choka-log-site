@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>分析の見方｜釣果ログ</title>
+  <meta name="description" content="釣果ログの「分析」タブの読み方。記録がたまると、下げ潮・朝まづめ・水深×底質など、あなた自身の当たりパターンが「時間あたり」の倍率で見えてきます。" />
+  <link rel="canonical" href="https://chokalog.margheritaworks.com/analysis/" />
+
+  <!-- OGP -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:url"         content="https://chokalog.margheritaworks.com/analysis/" />
+  <meta property="og:title"       content="分析の見方｜釣果ログ" />
+  <meta property="og:description" content="記録がたまると、あなた自身の当たりパターンが「時間あたり」の倍率で見えてきます。分析タブの読み方を、実際の画面で解説します。" />
+  <meta property="og:locale"      content="ja_JP" />
+
+  <!-- フォント -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/assets/css/site.css" />
+
+  <!-- 分析ページ専用の小さな追加スタイル（トークンはCSS変数のみ使用） -->
+  <style>
+    .guide-lead {
+      font-size: var(--text-subheading);
+      line-height: 1.85;
+      color: var(--color-ink-muted);
+      max-width: var(--col-max);
+      margin: 0 0 24px;
+    }
+    /* アプリに出る一文の引用（インサイト風） */
+    .insight-quote {
+      background: var(--color-sand);
+      border-left: 4px solid var(--color-fish-orange);
+      border-radius: 14px;
+      padding: 18px 22px;
+      margin: 0 0 24px;
+      font-size: var(--text-body);
+      line-height: 1.85;
+    }
+    .insight-quote strong { color: var(--color-deep-orange); }
+    .insight-quote .meta {
+      display: block;
+      margin-top: 4px;
+      font-family: var(--font-num);
+      font-size: var(--text-body-sm);
+      color: var(--color-slate-tide);
+      font-variant-numeric: tabular-nums;
+    }
+    /* スクリーンショット */
+    .shot {
+      margin: 32px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+    .shot img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 30px;
+      border: 1px solid var(--color-hairline);
+      box-shadow: 0 10px 34px rgba(11, 26, 33, .16);
+      display: block;
+    }
+    .shot--wide img {
+      max-width: 460px;
+      border-radius: 16px;
+    }
+    .shot figcaption {
+      font-size: var(--text-caption);
+      color: var(--color-ink-muted);
+      text-align: center;
+      max-width: 460px;
+      line-height: 1.7;
+    }
+    .badge-legend {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin: 0 0 24px;
+      padding: 0;
+      list-style: none;
+    }
+    .badge-legend li { display: flex; gap: 10px; align-items: baseline; font-size: var(--text-body); line-height: 1.8; }
+    .badge-legend .b { font-weight: 700; color: var(--color-deep-orange); flex: 0 0 auto; }
+  </style>
+
+  <!-- 構造化データ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://margheritaworks.com/" },
+          { "@type": "ListItem", "position": 2, "name": "釣果ログ サポート", "item": "https://chokalog.margheritaworks.com/" },
+          { "@type": "ListItem", "position": 3, "name": "分析の見方", "item": "https://chokalog.margheritaworks.com/analysis/" }
+        ]
+      },
+      {
+        "@type": "Article",
+        "headline": "分析の見方 — 記録がたまると、自分の「当たりパターン」が見えてきます",
+        "inLanguage": "ja",
+        "author": { "@type": "Organization", "name": "Margherita Works" },
+        "publisher": { "@type": "Organization", "name": "Margherita Works", "url": "https://margheritaworks.com/" },
+        "mainEntityOfPage": "https://chokalog.margheritaworks.com/analysis/"
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<!-- ============ ヘッダー ============ -->
+<header class="site-header" role="banner">
+  <div class="site-header__inner">
+    <a href="/" class="brand" aria-label="釣果ログ サポートトップへ">
+      <img src="/assets/img/app-icon.png" alt="" width="32" height="32" class="brand__icon-img" aria-hidden="true" />
+      <span class="brand__name">釣果ログ</span>
+    </a>
+
+    <nav class="site-header__nav" aria-label="メインナビゲーション">
+      <a href="/#howto"    class="nav-link">使い方</a>
+      <a href="/#features" class="nav-link">機能</a>
+      <a href="/#faq"      class="nav-link">よくある質問</a>
+      <a href="/#contact"  class="nav-link">お問い合わせ</a>
+      <a href="https://apps.apple.com/jp/app/id6808027589" class="btn-primary" aria-label="App Store でダウンロード">App Store で見る →</a>
+    </nav>
+
+    <details class="nav-toggle" aria-label="ナビゲーションを開く">
+      <summary>☰ メニュー</summary>
+      <nav class="nav-toggle__menu" aria-label="モバイルナビゲーション">
+        <a href="/#howto"    class="nav-link">使い方</a>
+        <a href="/#features" class="nav-link">機能</a>
+        <a href="/#faq"      class="nav-link">よくある質問</a>
+        <a href="/#contact"  class="nav-link">お問い合わせ</a>
+        <a href="https://apps.apple.com/jp/app/id6808027589" class="btn-primary">App Store で見る →</a>
+      </nav>
+    </details>
+  </div>
+</header>
+
+<main id="main">
+  <div class="container">
+
+    <!-- ページヘッダー -->
+    <div class="privacy-page-header" style="padding-top: 48px;">
+      <span class="label label--blue" style="display:block; margin-bottom:16px;">GUIDE</span>
+      <h1 style="margin:0 0 12px; font-size:var(--text-display); font-weight:700; line-height:1.28;">分析の見方</h1>
+      <p style="margin:0; font-size:var(--text-subheading); font-weight:500; color:var(--color-ink-muted); line-height:1.6;">記録がたまると、自分の「当たりパターン」が見えてきます</p>
+    </div>
+
+    <!-- 本文レイアウト（デスクトップ: 2カラム） -->
+    <div class="privacy-layout">
+
+      <!-- sticky 目次（デスクトップ） -->
+      <aside class="privacy-toc" aria-label="目次">
+        <div class="privacy-toc__header">CONTENTS</div>
+        <a href="#intro" class="active">はじめに</a>
+        <a href="#counts">記録の数と分かること</a>
+        <a href="#findings">どんなことが分かるか</a>
+        <a href="#read">画面の読み方</a>
+        <a href="#per-hour">「時間あたり」って何ですか</a>
+        <a href="#why">信頼できる理由</a>
+        <a href="#tips">記録をためるコツ</a>
+        <a href="#future">これから</a>
+        <a href="#notes">注意していただきたいこと</a>
+      </aside>
+
+      <!-- モバイル目次 -->
+      <details class="privacy-toc-mobile" aria-label="目次">
+        <summary>目次を表示</summary>
+        <nav class="privacy-toc-mobile__links" aria-label="分析の見方 目次">
+          <a href="#intro">はじめに</a>
+          <a href="#counts">記録の数と分かること</a>
+          <a href="#findings">どんなことが分かるか</a>
+          <a href="#read">画面の読み方</a>
+          <a href="#per-hour">「時間あたり」って何ですか</a>
+          <a href="#why">信頼できる理由</a>
+          <a href="#tips">記録をためるコツ</a>
+          <a href="#future">これから</a>
+          <a href="#notes">注意していただきたいこと</a>
+        </nav>
+      </details>
+
+      <!-- 本文 -->
+      <article class="privacy-body">
+
+        <section id="intro" aria-labelledby="intro-h">
+          <h2 id="intro-h">はじめに</h2>
+          <p>ボート釣果ログの「分析」タブは、あなた自身の釣果記録から「どんなときに釣れているか」を探して、言葉で教えてくれる機能です。</p>
+          <p>たとえばこんな一文が出ます。</p>
+          <div class="insight-quote">
+            <strong>下げ潮のときによく釣れています</strong>
+            <span class="meta">15件 / 釣行7回、時間あたり 1.8倍</span>
+          </div>
+          <p>これは、誰かの経験談でも一般論でもありません。あなたが記録した釣果と、そのときの潮・風・水深・底質を突き合わせて出てきた、あなたの海の、あなたの釣りのパターンです。</p>
+          <p>ただし、最初は何も出ません。分析が言えることは、記録の数で決まります。このページでは、記録がたまるとどんなことが分かるようになるのか、そして画面をどう読めばいいのかを、順番に説明します。</p>
+
+          <figure class="shot">
+            <img src="/assets/img/analysis-top.png" alt="分析タブの上部。総釣果・釣行回数・1釣行あたりの数字と、「よく釣れている条件」カード、傾向リストが並ぶ" loading="lazy" width="300" />
+            <figcaption>分析タブの上部。上の3つの数字、その下に「よく釣れている条件」と傾向リストが並びます。</figcaption>
+          </figure>
+        </section>
+
+        <section id="counts" aria-labelledby="counts-h">
+          <h2 id="counts-h">記録の数と、分かることの関係</h2>
+          <table class="def-table" aria-label="記録の数と分かることの関係">
+            <thead>
+              <tr><th scope="col">記録の数</th><th scope="col">分かること</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>〜4件</td><td>まだ何も出ません。「傾向を出すには5件・釣行2回以上が目安」と表示されます</td></tr>
+              <tr><td>5〜15件くらい</td><td>「参考」レベルの傾向が出始めます。まだ偶然の可能性が高い段階です</td></tr>
+              <tr><td>20〜30件くらい</td><td>「傾向」がいくつか出て、魚種ごとの当たり条件も見えてきます</td></tr>
+              <tr><td>50件〜</td><td>「当たり」と呼べる条件が出ます。エリアや魚種で絞っても傾向が出るようになります</td></tr>
+            </tbody>
+          </table>
+          <p>記録が増えるほど、分析は自信を持って言えるようになります。逆に言うと、たくさん記録するほど、あなたのアプリはあなたの釣りに詳しくなっていきます。</p>
+        </section>
+
+        <section id="findings" aria-labelledby="findings-h">
+          <h2 id="findings-h">どんなことが分かるようになるか</h2>
+          <p>記録がたまってくると、次のような発見が出てきます。実際の画面に出る文を例にして紹介します。</p>
+
+          <h3 style="font-size:var(--text-subheading); font-weight:700; margin:32px 0 12px;">潮のどのタイミングが良いか</h3>
+          <div class="insight-quote"><strong>下げ潮のときによく釣れている</strong><span class="meta">15件 / 釣行7回、時間あたり 1.8倍</span></div>
+          <p>上げ潮か下げ潮か、満潮前後か干潮前後か、大潮か中潮か。釣り人なら誰でも気にしているところですが、「自分の場合はどうなのか」を数字で確かめられます。</p>
+
+          <h3 style="font-size:var(--text-subheading); font-weight:700; margin:32px 0 12px;">何時ごろが良いか</h3>
+          <div class="insight-quote"><strong>朝まづめによく釣れている</strong><span class="meta">9件 / 釣行5回、時間あたり 1.6倍</span></div>
+          <p>朝まづめ・午前・昼・午後・夕まづめのどこに釣果が集中しているか。「朝が良いのは分かっている」と思っていても、意外と昼の方が釣れていることもあります。</p>
+
+          <h3 style="font-size:var(--text-subheading); font-weight:700; margin:32px 0 12px;">水深と底質の組み合わせ</h3>
+          <div class="insight-quote"><strong>下げ潮と水深60〜100mが重なると、下げ潮だけのときよりさらに釣れています</strong><span class="meta">時間あたり 2.4倍・8件</span></div>
+          <p>魚探で見た水深と、海底の底質（砂・岩・泥など。公的データから自動で付きます）を組み合わせて、どの層のどんな底で釣れているかが分かります。二つの条件が重なったときに特に良い、という組み合わせも見つけてくれます。</p>
+
+          <h3 style="font-size:var(--text-subheading); font-weight:700; margin:32px 0 12px;">魚種ごとの当たり条件</h3>
+          <div class="insight-quote"><strong>マダイは、上げ潮のときによく釣れています</strong></div>
+          <div class="insight-quote"><strong>イサキは、朝まづめによく釣れています</strong></div>
+          <p>同じ日に同じ場所で釣っていても、魚種によって当たる条件は違います。「魚種」で絞ると、その魚だけの傾向が見られます。</p>
+
+          <h3 style="font-size:var(--text-subheading); font-weight:700; margin:32px 0 12px;">良型はどこで出ているか</h3>
+          <div class="insight-quote"><strong>マダイの良型（50cm以上）6匹のうち5匹が大潮でした</strong></div>
+          <p>数が釣れる条件と、大きいのが出る条件は別のことがあります。良型だけを取り出した傾向も出ます。</p>
+
+          <h3 style="font-size:var(--text-subheading); font-weight:700; margin:32px 0 12px;">エリアごとの違い</h3>
+          <div class="insight-quote"><strong>城ヶ島沖では下げ潮のときによく釣れている</strong></div>
+          <div class="insight-quote"><strong>油壺沖では上げ潮のときによく釣れている</strong></div>
+          <p>釣果は自動でエリア（いつも行く海域）にまとまります。エリアで絞ると、その海域だけの傾向が出ます。潮の向きや風向きは、海域が違えば意味も違うので、エリアで絞ったときにだけ評価されます。</p>
+
+          <h3 style="font-size:var(--text-subheading); font-weight:700; margin:32px 0 12px;">釣れていない条件</h3>
+          <div class="insight-quote"><strong>上げ潮の時間は全体の35%ありましたが、釣果は0件でした</strong></div>
+          <p>これも大事な情報です。よく行っているのに釣れていない条件が分かれば、その時間を別の場所や別の狙いに使えます。傾向リストでは、釣れていない条件にはグレーの「−」が付きます。</p>
+
+          <figure class="shot shot--wide">
+            <img src="/assets/img/analysis-trends.png" alt="傾向リスト。大潮・朝まづめが正の傾向として並び、上げ潮にはグレーのマイナス印が付いて「0件（時間は全体の35%）」と表示されている" loading="lazy" width="460" />
+            <figcaption>傾向リスト。正の傾向（○）と、釣れていない条件（グレーの「−」）が一緒に並びます。</figcaption>
+          </figure>
+        </section>
+
+        <section id="read" aria-labelledby="read-h">
+          <h2 id="read-h">画面の読み方</h2>
+
+          <h3 style="font-size:var(--text-subheading); font-weight:700; margin:8px 0 12px;">上の3つの数字</h3>
+          <p>総釣果・釣行回数・1釣行あたりの匹数です。「1釣行あたり」は、あなたの釣りが上向いているかを見る一番シンプルな数字です。右上の「全期間／今季」で切り替えて比べてみてください。</p>
+
+          <h3 style="font-size:var(--text-subheading); font-weight:700; margin:32px 0 12px;">「よく釣れている条件」カード</h3>
+          <p>いま一番はっきりしている傾向が一つ、大きく出ます。右上のバッジが自信の度合いです。</p>
+          <ul class="badge-legend">
+            <li><span class="b">◎ 当たり</span><span>記録が十分にあって、はっきり偏っている</span></li>
+            <li><span class="b">○ 傾向</span><span>偏りはあるが、もう少し記録がほしい</span></li>
+            <li><span class="b">△ 参考</span><span>気になる兆しはある、という程度</span></li>
+          </ul>
+          <p>カードの「根拠を見る」を押すと、その傾向を支えている釣果の一覧と、数字の内訳が見られます。</p>
+
+          <figure class="shot shot--wide">
+            <img src="/assets/img/analysis-card.png" alt="「よく釣れている条件」カードの拡大。下げ潮のときによく釣れている、時間あたり×1.8・15件・釣行7回、右上に◎当たりのバッジ" loading="lazy" width="460" />
+            <figcaption>「よく釣れている条件」カード。時間あたりの倍率・件数・釣行回数と、自信を示すバッジが付きます。</figcaption>
+          </figure>
+
+          <h3 style="font-size:var(--text-subheading); font-weight:700; margin:32px 0 12px;">傾向リスト</h3>
+          <p>カードに載らなかった傾向が、自信の高い順に並びます。それぞれ「時間あたり ×1.5・9件・釣行4回」のように、倍率・件数・釣行回数が付いています。押すと根拠画面が開きます。</p>
+
+          <h3 style="font-size:var(--text-subheading); font-weight:700; margin:32px 0 12px;">根拠画面</h3>
+          <p>一番読んでほしいのがここです。</p>
+          <div class="insight-quote">
+            下げ潮の時間は全体の33%でしたが、釣果の42%が下げ潮のときでした。時間あたりでは1.8倍釣れています。
+            <span class="meta">ばらつきを考えると 1.3〜2.2倍の範囲</span>
+          </div>
+          <p>この一文が、分析の考え方そのものです。下に該当する釣果が並び、「地図で見る」を押せば、その釣果がどこで出たかを地図で確かめられます。</p>
+
+          <figure class="shot">
+            <img src="/assets/img/analysis-evidence.png" alt="根拠画面。件数15/36件・釣行7回・時間あたり×1.8と、その下に説明の一文、該当する釣果の一覧、地図で見るボタン" loading="lazy" width="300" />
+            <figcaption>根拠画面。数字の内訳と、傾向を支えている釣果の一覧が見られます。</figcaption>
+          </figure>
+
+          <h3 style="font-size:var(--text-subheading); font-weight:700; margin:32px 0 12px;">水深×潮の表</h3>
+          <p>水深帯と潮回りの組み合わせごとに、件数を並べた表です。「時間あたり」に切り替えると、件数ではなく「その組み合わせのときにどれだけ釣れやすかったか」で色が付きます。数字を押すと、そのマスに入っている釣果の一覧が出ます。</p>
+
+          <figure class="shot">
+            <img src="/assets/img/analysis-matrix.png" alt="水深×潮のマトリクスを「時間あたり」に切り替えた状態。各マスに×2.0や×1.4などの倍率が色付きで並ぶ" loading="lazy" width="300" />
+            <figcaption>水深×潮の表を「時間あたり」に切り替えた状態。釣れやすかった組み合わせほど濃い色になります。</figcaption>
+          </figure>
+
+          <h3 style="font-size:var(--text-subheading); font-weight:700; margin:32px 0 12px;">全体・エリア・魚種の切り替え</h3>
+          <p>一番上のボタンで、分析の対象を絞れます。最初は「全体」で眺めて、記録が増えてきたら「魚種」や「エリア」で絞ってみてください。絞ると件数が減るので、最初は「件数不足」と出ることが多いですが、それも正常です。</p>
+        </section>
+
+        <section id="per-hour" aria-labelledby="per-hour-h">
+          <h2 id="per-hour-h">「時間あたり」って何ですか</h2>
+          <p>このアプリの分析で一番大事な考え方なので、ここだけは少し説明させてください。</p>
+          <p>「下げ潮で10匹、上げ潮で6匹」と数えるだけでは、下げ潮の方が釣れるとは言えません。もし下げ潮の時間帯にばかり船を出していたら、下げ潮の釣果が多いのは当たり前だからです。</p>
+          <p>そこでこのアプリは、<strong>出船していた時間</strong>で割ります。あなたの釣行の出港から帰港までを10分刻みに分けて、そのとき潮がどうだったか、風がどうだったかを公的データから全部並べます。すると「下げ潮だった時間は全部で何時間」というのが分かります。</p>
+          <p>下げ潮の時間が全体の3分の1しかないのに、釣果の4割がその時間に出ていれば、下げ潮は時間の割によく釣れている、と言えます。これが「時間あたり 1.3倍」です。</p>
+          <p>だから、釣果が多い条件ではなく、<strong>そのときにいれば釣れやすい条件</strong>が分かります。次の釣行でどの時間帯に本気を出すか、を決める材料になります。</p>
+        </section>
+
+        <section id="why" aria-labelledby="why-h">
+          <h2 id="why-h">この分析が信頼できる理由（少しだけ、仕組みの話）</h2>
+          <p>統計の細かい話は省きますが、分析が「それっぽいこと」を言わないように、いくつか工夫をしています。</p>
+          <p><strong>出船時間を分母にしています。</strong> 上で説明したとおりです。よく行く条件だから釣果が多い、という見かけの偏りを取り除いています。</p>
+          <p><strong>件数が少ないときは控えめに言います。</strong> 3件で3倍と出ても、それは偶然かもしれません。件数が少ないほど倍率を1倍に近づけて評価し、根拠画面の「ばらつきを考えると○〜○倍の範囲」で、どのくらい幅があるかを見せています。この幅が1倍をまたいでいる間は「当たり」とは言いません。</p>
+          <p><strong>いつもの条件は「当たり」にしません。</strong> 出船時間の8割が中潮なら、中潮で釣れているのは当然です。そういう条件は表示から外しています。</p>
+          <p><strong>向きは同じ海域の中でだけ比べます。</strong> 潮の向きや風向きは、海域が違えば意味が変わります。エリアで絞ったときにだけ評価しています。</p>
+          <p><strong>記録が増えると結果は変わります。</strong> それは正常です。最初の20件で出た「当たり」が、50件になったら「傾向」に下がることもあります。分析はあなたの記録に追いついていくものなので、変わっていくのを楽しんでください。</p>
+        </section>
+
+        <section id="tips" aria-labelledby="tips-h">
+          <h2 id="tips-h">記録をためるコツ</h2>
+          <p>分析の質は、記録の質で決まります。難しいことはありません。</p>
+          <p><strong>釣れたその場で登録する。</strong> 写真を撮って「＋」から登録するだけで、位置・時刻・そのときの潮・風・波・底質が自動で付きます。あとから登録すると位置が変わってしまうので、船の上で入れるのが一番です。</p>
+          <p><strong>魚探の水深を入れる。</strong> 水深は分析の重要な軸です。登録画面の水深は魚探の値をそのまま入れてください。</p>
+          <p><strong>ボウズの日も釣行として残す。</strong> 記録タブの「過去の釣行を追加」で、釣れなかった日も残せます。「釣れなかった時間」が分かると、「釣れる条件」の精度が上がります。</p>
+          <p><strong>エリアの名前を自分の呼び方にする。</strong> エリアは自動で作られますが、名前は設定のエリア管理で変えられます。「亀城の北」でも「いつもの根」でも、自分が分かる名前にしておくと、分析の文が読みやすくなります。</p>
+          <p><strong>魚種はできるだけ入れる。</strong> 魚種が入っていないと、魚種ごとの傾向に使えません。</p>
+
+          <figure class="shot">
+            <img src="/assets/img/analysis-trips.png" alt="記録タブの釣行カード。日付・潮回り・出港帰港の時刻・エリア名・匹数・水深帯・底質・魚種が1日ごとにまとまっている" loading="lazy" width="300" />
+            <figcaption>記録タブの釣行カード。1日ぶんの釣果が、潮回り・時刻・エリア・水深・底質とともにまとまります。</figcaption>
+          </figure>
+        </section>
+
+        <section id="future" aria-labelledby="future-h">
+          <h2 id="future-h">これから</h2>
+          <p>今後のアップデートでは、出港から帰港までの航跡を自動で記録できるようにする予定です。そうすると「船が止まって釣りをしていた時間」が正確に分かるので、時間あたりの計算がもっと正確になり、「どこで流したときに釣れたか」も見られるようになります。</p>
+          <p>いま記録している釣果は、そのときそのまま使えます。今日から記録を始めておくほど、あとで見えるものが増えます。</p>
+        </section>
+
+        <section id="notes" aria-labelledby="notes-h">
+          <h2 id="notes-h">注意していただきたいこと</h2>
+          <p>分析が出すのは「これまでの傾向」であって、次の釣行の予測ではありません。海は毎日違います。潮汐・潮流・気象のデータは公的な推算値や予報値をもとにしていて、実際の海況とは差があります。分析はあくまで、あなたの経験と勘に添える、もう一つの材料としてお使いください。</p>
+          <div class="contact-block">
+            <p style="margin:0; font-size:var(--text-heading-sm); font-weight:700; line-height:1.4;">分からないことがあれば</p>
+            <p style="margin:0; color:var(--color-ink-muted);">分析についてのご質問は、アプリの「ご意見を送る」から、または下記までお気軽にどうぞ。</p>
+            <p style="margin:0;"><strong>Margherita Works</strong><br /><a href="mailto:support@margheritaworks.com">support@margheritaworks.com</a></p>
+          </div>
+        </section>
+
+      </article>
+    </div>
+  </div>
+</main>
+
+<!-- フッター -->
+<footer class="site-footer" style="margin-top: var(--section-gap);" role="contentinfo">
+  <div class="site-footer__inner">
+    <div class="site-footer__row">
+      <a href="/" class="brand brand--footer" aria-label="釣果ログ サポートトップへ">
+        <img src="/assets/img/app-icon.png" alt="" width="32" height="32" class="brand__icon-img" aria-hidden="true" />
+        <span class="brand__name">釣果ログ</span>
+      </a>
+      <nav class="site-footer__links" aria-label="フッターナビゲーション">
+        <a href="/">SUPPORT</a>
+        <a href="/privacy/">PRIVACY</a>
+        <a href="/#data-sources">DATA SOURCE</a>
+        <a href="/#contact">CONTACT</a>
+      </nav>
+    </div>
+    <div class="site-footer__copy">
+      © 2026 Margherita Works by Kohei Ishikawa ／ 出典：海洋状況表示システム（<a href="https://www.msil.go.jp/" style="color:inherit;">https://www.msil.go.jp/</a>）
+    </div>
+  </div>
+</footer>
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "ede13281e7b5473dad0fcfdd10a4c235"}'></script>
+</body>
+</html>
