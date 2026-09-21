@@ -372,16 +372,25 @@
         <p style="margin:8px 0 0;"><a href="/analysis/">分析の見方をくわしく見る →</a></p>
       </div>
       <div class="feature-visual">
-        <div class="phone-mockup" style="width:280px;">
-          <img
-            src="/assets/img/shot-insight.png"
-            alt="根拠画面。条件の時間割合と釣果の割合、該当する釣果の一覧"
-            class="phone-mockup__screen"
-            width="264" height="571"
-            loading="lazy"
-            decoding="async"
-            onerror="this.closest('.phone-mockup').style.background='#1b2227'; this.style.display='none'"
-          />
+        <div class="phone-carousel">
+          <div class="phone-mockup phone-carousel__mockup" style="width:280px;">
+            <div class="phone-carousel__track">
+              <div class="phone-carousel__slide"><img src="/assets/img/shot-catch-detail.png" alt="釣果詳細。水深・潮位グラフ・天気・底質が自動で記録されている" loading="lazy" decoding="async" /></div>
+              <div class="phone-carousel__slide"><img src="/assets/img/shot-insight.png"       alt="根拠画面。条件の時間割合と釣果の割合、該当する釣果の一覧"           loading="lazy" decoding="async" /></div>
+              <div class="phone-carousel__slide"><img src="/assets/img/shot-analysis-2.png"   alt="分析タブ。水深×潮のマトリクスと魚種ランキング"                     loading="lazy" decoding="async" /></div>
+              <div class="phone-carousel__slide"><img src="/assets/img/shot-analysis-3.png"   alt="全魚種の水深レンジ一覧"                                           loading="lazy" decoding="async" /></div>
+            </div>
+          </div>
+          <div class="phone-carousel__nav">
+            <button class="carousel-prev" aria-label="前へ">&#8249;</button>
+            <div class="phone-carousel__dots">
+              <button class="dot dot--active" aria-label="1枚目"></button>
+              <button class="dot" aria-label="2枚目"></button>
+              <button class="dot" aria-label="3枚目"></button>
+              <button class="dot" aria-label="4枚目"></button>
+            </div>
+            <button class="carousel-next" aria-label="次へ">&#8250;</button>
+          </div>
         </div>
       </div>
     </div>
@@ -391,16 +400,21 @@
   <section class="section section--dark bg-dark section--photo-f" aria-labelledby="depth-heading">
     <div class="feature-row feature-row--flip" style="max-width:var(--content-max); margin:0 auto;">
       <div class="feature-visual">
-        <div class="phone-mockup" style="width:280px; background:var(--color-slate-depth);">
-          <img
-            src="/assets/img/shot-matrix.png"
-            alt="水深×底質のマトリクス。件数と魚種ランキング"
-            class="phone-mockup__screen"
-            width="264" height="571"
-            loading="lazy"
-            decoding="async"
-            onerror="this.closest('.phone-mockup').style.background='#1b2227'; this.style.display='none'"
-          />
+        <div class="phone-carousel">
+          <div class="phone-mockup phone-carousel__mockup" style="width:280px; background:var(--color-slate-depth);">
+            <div class="phone-carousel__track">
+              <div class="phone-carousel__slide"><img src="/assets/img/shot-matrix.png"   alt="水深×底質のマトリクス。件数と魚種ランキング"     loading="lazy" decoding="async" /></div>
+              <div class="phone-carousel__slide"><img src="/assets/img/shot-depth-2.png" alt="水深・水温の入力画面。魚探の実測値を入力する"       loading="lazy" decoding="async" /></div>
+            </div>
+          </div>
+          <div class="phone-carousel__nav">
+            <button class="carousel-prev" aria-label="前へ">&#8249;</button>
+            <div class="phone-carousel__dots">
+              <button class="dot dot--active" aria-label="1枚目"></button>
+              <button class="dot" aria-label="2枚目"></button>
+            </div>
+            <button class="carousel-next" aria-label="次へ">&#8250;</button>
+          </div>
         </div>
       </div>
       <div class="feature-text">
@@ -495,7 +509,8 @@
               <div class="phone-carousel__slide"><img src="/assets/img/shot-views-2.png" alt="魚種ビュー。魚種別にグループ化された釣果一覧"                  loading="lazy" decoding="async" /></div>
               <div class="phone-carousel__slide"><img src="/assets/img/shot-views-3.png" alt="水深ビュー。水深の深い順に釣果が並ぶ"                          loading="lazy" decoding="async" /></div>
               <div class="phone-carousel__slide"><img src="/assets/img/shot-views-4.png" alt="ギャラリービュー。釣行写真がタイルグリッドで並ぶ"              loading="lazy" decoding="async" /></div>
-              <div class="phone-carousel__slide"><img src="/assets/img/shot-views-5.png" alt="釣果ビュー。日付順の一覧"    loading="lazy" decoding="async" /></div>
+              <div class="phone-carousel__slide"><img src="/assets/img/shot-views-5.png" alt="釣果ビュー。日付順の一覧"           loading="lazy" decoding="async" /></div>
+              <div class="phone-carousel__slide"><img src="/assets/img/shot-views-6.png" alt="地図ビュー。釣果の場所をピンで確認" loading="lazy" decoding="async" /></div>
             </div>
           </div>
           <div class="phone-carousel__nav">
@@ -506,6 +521,7 @@
               <button class="dot" aria-label="3枚目"></button>
               <button class="dot" aria-label="4枚目"></button>
               <button class="dot" aria-label="5枚目"></button>
+              <button class="dot" aria-label="6枚目"></button>
             </div>
             <button class="carousel-next" aria-label="次へ">&#8250;</button>
           </div>
