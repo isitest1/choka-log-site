@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>分析の見方｜釣果ログ</title>
-  <meta name="description" content="釣果ログの「分析」タブの読み方。記録がたまると、下げ潮・朝まづめ・水深×底質など、あなた自身の当たりパターンが「時間あたり」の倍率で見えてきます。" />
+  <meta name="description" content="釣果ログの「分析」タブの読み方。記録がたまると、あなた自身の記録を統計分析して、下げ潮・朝まづめ・水深×底質など、自分の当たりパターンが「時間あたり」の倍率で見えてきます。" />
   <link rel="canonical" href="https://chokalog.margheritaworks.com/analysis/" />
 
   <!-- OGP -->
@@ -202,7 +202,7 @@
 
         <section id="intro" aria-labelledby="intro-h">
           <h2 id="intro-h">はじめに</h2>
-          <p>ボート釣果ログの「分析」タブは、あなた自身の釣果記録から「どんなときに釣れているか」を探して、言葉で教えてくれる機能です。</p>
+          <p>ボート釣果ログの「分析」タブは、あなた自身の釣果記録を統計分析して、「どんなときに釣れているか」を探し、言葉で教えてくれる機能です。自分でも気づいていなかったパターンが見つかることもあります。</p>
           <p>たとえばこんな一文が出ます。</p>
           <div class="insight-quote">
             <strong>下げ潮のときによく釣れています</strong>
@@ -247,7 +247,7 @@
 
           <h3 style="font-size:var(--text-subheading); font-weight:700; margin:32px 0 12px;">水深と底質の組み合わせ</h3>
           <div class="insight-quote"><strong>下げ潮と水深60〜100mが重なると、下げ潮だけのときよりさらに釣れています</strong><span class="meta">時間あたり 2.4倍・8件</span></div>
-          <p>魚探で見た水深と、海底の底質（砂・岩・泥など。公的データから自動で付きます）を組み合わせて、どの層のどんな底で釣れているかが分かります。二つの条件が重なったときに特に良い、という組み合わせも見つけてくれます。</p>
+          <p>水深と、海底の底質（砂・岩・泥など。公的データから自動で付きます）を組み合わせて、どの層のどんな底で釣れているかが分かります。二つの条件が重なったときに特に良い、という組み合わせも見つけてくれます。</p>
 
           <h3 style="font-size:var(--text-subheading); font-weight:700; margin:32px 0 12px;">魚種ごとの当たり条件</h3>
           <div class="insight-quote"><strong>マダイは、上げ潮のときによく釣れています</strong></div>
@@ -268,7 +268,7 @@
           <p>これも大事な情報です。よく行っているのに釣れていない条件が分かれば、その時間を別の場所や別の狙いに使えます。傾向リストでは、釣れていない条件にはグレーの「−」が付きます。</p>
 
           <figure class="shot shot--wide">
-            <img src="/assets/img/analysis-trends.png" alt="傾向リスト。大潮・朝まづめが正の傾向として並び、上げ潮にはグレーのマイナス印が付いて「0件（時間は全体の35%）」と表示されている" loading="lazy" width="460" />
+            <img src="/assets/img/analysis-trends.png" alt="傾向リスト。潮流速い・波の高さに釣れていない条件を示すグレーのマイナス印が付き、その下に大潮などが並ぶ" loading="lazy" width="460" />
             <figcaption>傾向リスト。正の傾向（○）と、釣れていない条件（グレーの「−」）が一緒に並びます。</figcaption>
           </figure>
         </section>
@@ -289,7 +289,7 @@
           <p>カードの「根拠を見る」を押すと、その傾向を支えている釣果の一覧と、数字の内訳が見られます。</p>
 
           <figure class="shot shot--wide">
-            <img src="/assets/img/analysis-card.png" alt="「よく釣れている条件」カードの拡大。下げ潮のときによく釣れている、時間あたり×1.8・15件・釣行7回、右上に◎当たりのバッジ" loading="lazy" width="460" />
+            <img src="/assets/img/analysis-card.png" alt="「よく釣れている条件」カードの拡大。上げ後半のときによく釣れている、時間あたり×2.2・6件・釣行4回、右上に傾向のバッジ" loading="lazy" width="460" />
             <figcaption>「よく釣れている条件」カード。時間あたりの倍率・件数・釣行回数と、自信を示すバッジが付きます。</figcaption>
           </figure>
 
@@ -305,7 +305,7 @@
           <p>この一文が、分析の考え方そのものです。下に該当する釣果が並び、「地図で見る」を押せば、その釣果がどこで出たかを地図で確かめられます。</p>
 
           <figure class="shot">
-            <img src="/assets/img/analysis-evidence.png" alt="根拠画面。件数15/36件・釣行7回・時間あたり×1.8と、その下に説明の一文、該当する釣果の一覧、地図で見るボタン" loading="lazy" width="300" />
+            <img src="/assets/img/analysis-evidence.png" alt="根拠画面。件数・釣行回数・時間あたりの倍率と、その下に説明の一文、該当する釣果の一覧、地図で見るボタン" loading="lazy" width="300" />
             <figcaption>根拠画面。数字の内訳と、傾向を支えている釣果の一覧が見られます。</figcaption>
           </figure>
 
@@ -343,15 +343,15 @@
         <section id="tips" aria-labelledby="tips-h">
           <h2 id="tips-h">記録をためるコツ</h2>
           <p>分析の質は、記録の質で決まります。難しいことはありません。</p>
-          <p><strong>釣れたその場で登録する。</strong> 写真を撮って「＋」から登録するだけで、位置・時刻・そのときの潮・風・波・底質が自動で付きます。あとから登録すると位置が変わってしまうので、船の上で入れるのが一番です。</p>
-          <p><strong>魚探の水深を入れる。</strong> 水深は分析の重要な軸です。登録画面の水深は魚探の値をそのまま入れてください。</p>
+          <p><strong>釣れたその場で登録する。</strong> 画面下の中央のカメラで撮るだけで、位置・時刻・魚種・水深・そのときの潮・風・波・底質が自動で入ります。あとから登録すると位置が変わってしまうので、船の上で撮るのが一番です。</p>
+          <p><strong>魚探の水深があれば、直す。</strong> 水深は海底地形のデータから自動で入りますが、魚探で見た値があれば直してください。分析の精度が上がります。</p>
           <p><strong>ボウズの日も釣行として残す。</strong> 記録タブの「過去の釣行を追加」で、釣れなかった日も残せます。「釣れなかった時間」が分かると、「釣れる条件」の精度が上がります。</p>
           <p><strong>エリアの名前を自分の呼び方にする。</strong> エリアは自動で作られますが、名前は設定のエリア管理で変えられます。「亀城の北」でも「いつもの根」でも、自分が分かる名前にしておくと、分析の文が読みやすくなります。</p>
-          <p><strong>魚種はできるだけ入れる。</strong> 魚種が入っていないと、魚種ごとの傾向に使えません。</p>
+          <p><strong>魚種は候補から確定する。</strong> 魚種が入っていないと、魚種ごとの傾向に使えません。魚種が未確定の釣果は、図鑑の「魚種の確認」からまとめて名前を付けられます。</p>
 
           <figure class="shot">
-            <img src="/assets/img/analysis-trips.png" alt="記録タブの釣行カード。日付・潮回り・出港帰港の時刻・エリア名・匹数・水深帯・底質・魚種が1日ごとにまとまっている" loading="lazy" width="300" />
-            <figcaption>記録タブの釣行カード。1日ぶんの釣果が、潮回り・時刻・エリア・水深・底質とともにまとまります。</figcaption>
+            <img src="/assets/img/analysis-trips.png" alt="釣行の詳細。地図と、出港から帰港までのタイムライン、潮位カーブの上に釣れた時刻が並ぶ" loading="lazy" width="300" />
+            <figcaption>釣行の詳細。地図と、出港から帰港までのタイムラインに、潮・風とともに釣れた時刻が並びます。</figcaption>
           </figure>
         </section>
 
