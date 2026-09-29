@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>釣果ログ｜ボート釣りの釣果を、水深・底質・潮汐とともに記録するアプリ</title>
-  <meta name="description" content="釣れた瞬間に1枚撮るだけ。潮・底質・海底の様子まで記録になり、たまった記録からよく釣れている条件がわかる、ボート釣り用の釣果記録アプリ。" />
+  <title>釣果ログ｜写真1枚で、魚種・水深・潮まで自動で記録するボート釣りアプリ</title>
+  <meta name="description" content="釣れた瞬間に1枚撮るだけ。魚種・水深・潮・底質まで自動で入り、たまった記録を統計分析して、よく釣れている条件がわかる、ボート釣り用の釣果記録アプリ。" />
   <link rel="canonical" href="https://chokalog.margheritaworks.com/" />
   <link rel="icon" href="/favicon.ico" sizes="any" />
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32.png" />
@@ -14,8 +14,8 @@
   <!-- OGP -->
   <meta property="og:type"        content="website" />
   <meta property="og:url"         content="https://chokalog.margheritaworks.com/" />
-  <meta property="og:title"       content="釣果ログ｜ボート釣りの釣果を、水深・底質・潮汐とともに記録するアプリ" />
-  <meta property="og:description" content="釣れた瞬間に1枚撮るだけ。潮・底質・海底の様子まで記録になり、たまった記録からよく釣れている条件がわかる、ボート釣り用の釣果記録アプリ。" />
+  <meta property="og:title"       content="釣果ログ｜写真1枚で、魚種・水深・潮まで自動で記録するボート釣りアプリ" />
+  <meta property="og:description" content="釣れた瞬間に1枚撮るだけ。魚種・水深・潮・底質まで自動で入り、たまった記録を統計分析して、よく釣れている条件がわかる、ボート釣り用の釣果記録アプリ。" />
   <meta property="og:image"       content="https://chokalog.margheritaworks.com/assets/img/og.png" />
   <meta property="og:image:secure_url" content="https://chokalog.margheritaworks.com/assets/img/og.png" />
   <meta property="og:image:type"  content="image/png" />
@@ -25,8 +25,8 @@
   <meta property="og:locale"      content="ja_JP" />
   <meta property="og:site_name"   content="釣果ログ" />
   <meta name="twitter:card"        content="summary_large_image" />
-  <meta name="twitter:title"       content="釣果ログ｜ボート釣りの釣果を、水深・底質・潮汐とともに記録するアプリ" />
-  <meta name="twitter:description" content="釣れた瞬間に1枚撮るだけ。潮・底質・海底の様子まで記録になり、たまった記録からよく釣れている条件がわかる、ボート釣り用の釣果記録アプリ。" />
+  <meta name="twitter:title"       content="釣果ログ｜写真1枚で、魚種・水深・潮まで自動で記録するボート釣りアプリ" />
+  <meta name="twitter:description" content="釣れた瞬間に1枚撮るだけ。魚種・水深・潮・底質まで自動で入り、たまった記録を統計分析して、よく釣れている条件がわかる、ボート釣り用の釣果記録アプリ。" />
   <meta name="twitter:image"       content="https://chokalog.margheritaworks.com/assets/img/og.png" />
 
   <!-- フォント -->
@@ -74,14 +74,6 @@
         "mainEntity": [
           {
             "@type": "Question",
-            "name": "写真がないと記録できませんか？",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "いいえ。写真がなくても、地図から場所を指定して登録できます。記録タブの「＋」から「地図から選ぶ」を選んでください。"
-            }
-          },
-          {
-            "@type": "Question",
             "name": "位置情報がない写真でも登録できますか？",
             "acceptedAnswer": {
               "@type": "Answer",
@@ -93,7 +85,47 @@
             "name": "水深は自動で入りますか？",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "入りません。水深は魚探で読んだ実測値をご自分で入力していただきます。推定値を出さないことが、このアプリの前提です。"
+              "text": "入ります。釣れた位置の海底地形のデータから求めた値です。魚探で見た値に直すと、その値が記録に残ります。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "魚種の判定はどのくらい正確ですか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "多くの場合、そのまま使えます。ただし、ブリとヒラマサ、マダイとチダイのような似た魚は取り違えることがあります。違うときは、候補をタップして選び直してください。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "写真はどこかに送られますか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "送られません。魚種の判定もシェア画像の作成も、すべてiPhoneの中で行います。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "魚種の入力を飛ばして登録するとどうなりますか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "判定に自信があるときだけ、「（推定）」の印を付けて魚種を入れておきます。自信がないときは空のままです。あとから選び直すと、印は消えます。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "図鑑には何が載りますか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "釣った魚種だけが載ります。まだ釣っていない魚の空き枠は出しません。魚種ごとに、自己記録とその伸び、釣れた月、サイズの分布、釣った場所、当たり条件が見られます。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "魚種が決まっていない釣果はどうなりますか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "図鑑の上に「魚種が未確定の釣果」として件数が出ます。そこから候補を選べば、まとめて名前を付けられます。"
             }
           },
           {
@@ -149,7 +181,7 @@
             "name": "オフラインでも使えますか？",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "釣果の記録・閲覧はオフラインでも動作します。分析に使う潮・風のデータと、地図の海底情報の取得にはインターネット接続が必要です（一度取得したものは端末に残ります）。"
+              "text": "釣果の記録・閲覧はオフラインでも動作します。分析に使う潮・風のデータと、地図の海底情報の取得にはインターネット接続が必要です（一度取得したものは端末に残ります）。魚種の判定は、電波のない沖でも動きます。"
             }
           },
           {
@@ -173,7 +205,7 @@
             "name": "他の人の釣果を見たり、共有したりできますか？",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "現在はできません。釣果はすべてご自身の端末内にのみ保存されます。"
+              "text": "他の人の釣果を見ることはできません。ご自身の釣果は、シェア画像にしてSNSなどで共有できます。釣れた場所は画像に出しません。"
             }
           }
         ]
@@ -225,7 +257,7 @@
       <span class="tt-orange">釣れた瞬間に、</span>1枚撮るだけ。
     </h1>
     <p class="hero__sub">
-      場所も時刻も潮回りも、海底が砂だったか岩だったかまで、その1枚から記録になります。
+      魚種も、水深も、潮回りも、海底が砂だったか岩だったかまで、その1枚から全部入ります。違うときだけ直せば、記録は完成です。
     </p>
 
     <!-- App Store バッジ + Android版リンク（1つの塊としてまとめ、内側の余白だけ詰める） -->
@@ -264,8 +296,8 @@
       </div>
       <div class="phone-mockup phone-center">
         <img
-          src="/assets/img/shot-analysis.png"
-          alt="分析タブ。よく釣れている条件と傾向の一覧"
+          src="/assets/img/shot-zukan.png"
+          alt="図鑑の一覧。魚種ごとに写真と自己記録、伸びが並ぶ"
           class="phone-mockup__screen"
           width="264" height="571"
           decoding="async"
@@ -274,8 +306,8 @@
       </div>
       <div class="phone-mockup phone-right">
         <img
-          src="/assets/img/shot-map.png"
-          alt="地図タブ。等深線と底質の上に、選んだ釣行の釣果が色分けで並ぶ"
+          src="/assets/img/shot-share.png"
+          alt="シェア画像のプレビュー。テロップ・マガジン・ポスターから選べる"
           class="phone-mockup__screen"
           width="234" height="507"
           decoding="async"
@@ -289,8 +321,10 @@
       <div class="phone-mockup phone-carousel__mockup" style="width:240px;">
         <div class="phone-carousel__track">
           <div class="phone-carousel__slide"><img src="/assets/img/shot-gallery.png"  alt="ギャラリービュー" decoding="async" /></div>
-          <div class="phone-carousel__slide"><img src="/assets/img/shot-analysis.png" alt="分析タブ。よく釣れている条件と傾向の一覧"   decoding="async" loading="lazy" /></div>
+          <div class="phone-carousel__slide"><img src="/assets/img/shot-zukan.png"    alt="図鑑の一覧。魚種ごとに写真と自己記録、伸びが並ぶ" decoding="async" loading="lazy" /></div>
+          <div class="phone-carousel__slide"><img src="/assets/img/shot-share.png"    alt="シェア画像のプレビュー。テロップ・マガジン・ポスターから選べる" decoding="async" loading="lazy" /></div>
           <div class="phone-carousel__slide"><img src="/assets/img/shot-map.png"      alt="地図タブ。等深線と底質の上に釣果のピン"       decoding="async" loading="lazy" /></div>
+          <div class="phone-carousel__slide"><img src="/assets/img/shot-analysis.png" alt="分析タブ。よく釣れている条件と傾向の一覧"   decoding="async" loading="lazy" /></div>
         </div>
       </div>
       <div class="phone-carousel__nav">
@@ -299,6 +333,8 @@
           <button class="dot dot--active" aria-label="1枚目"></button>
           <button class="dot" aria-label="2枚目"></button>
           <button class="dot" aria-label="3枚目"></button>
+          <button class="dot" aria-label="4枚目"></button>
+          <button class="dot" aria-label="5枚目"></button>
         </div>
         <button class="carousel-next" aria-label="次へ">&#8250;</button>
       </div>
@@ -338,18 +374,75 @@
         <article class="step-card">
           <div class="step-badge" aria-label="ステップ1">1</div>
           <h3 class="step-title">船の上で、1枚撮る</h3>
-          <p class="step-body">撮影日時と位置情報から、場所と時刻を読み取ります。魚を持ったまま操作する必要はありません。</p>
+          <p class="step-body">画面下の中央のカメラで撮るだけ。場所と時刻も、そのとき読み取ります。魚を持ったまま操作する必要はありません。</p>
         </article>
         <article class="step-card">
           <div class="step-badge" aria-label="ステップ2">2</div>
-          <h3 class="step-title">魚種と、魚探の水深を足す</h3>
-          <p class="step-body">帰ってからでも構いません。位置がずれていれば、地図上でドラッグして直せます。</p>
+          <h3 class="step-title">入った内容を、ざっと確認する</h3>
+          <p class="step-body">魚種は写真から判定して、水深は海底地形から、水温は同じ日の直前の釣果から入ります。違うところがあれば、そこだけ直してください。魚探の水深に直せば、その値が記録に残ります。</p>
         </article>
         <article class="step-card">
           <div class="step-badge" aria-label="ステップ3">3</div>
           <h3 class="step-title">分析が動きはじめる</h3>
-          <p class="step-body">5 件・釣行 2 回を超えたあたりから、よく釣れている条件が見えはじめます。<a href="/analysis/">分析の見方はこちら →</a></p>
+          <p class="step-body">5 件・釣行 2 回を超えたあたりから、統計分析で、よく釣れている条件が見えはじめます。<a href="/analysis/">分析の見方はこちら →</a></p>
         </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ D.5: 図鑑（ZUKAN） ============ -->
+  <section id="zukan" class="section" aria-labelledby="zukan-heading">
+    <div class="feature-row feature-row--flip">
+      <div class="feature-visual">
+        <div class="phone-carousel">
+          <div class="phone-mockup phone-carousel__mockup" style="width:280px;">
+            <div class="phone-carousel__track">
+              <div class="phone-carousel__slide"><img src="/assets/img/shot-zukan.png"         alt="図鑑の一覧。魚種ごとに写真と自己記録、伸びが並ぶ" loading="lazy" decoding="async" /></div>
+              <div class="phone-carousel__slide"><img src="/assets/img/shot-zukan-species.png" alt="魚種ページ。自己記録・伸び・尾数・水深"           loading="lazy" decoding="async" /></div>
+              <div class="phone-carousel__slide"><img src="/assets/img/shot-zukan-pb.png"      alt="自己記録の推移。グラフと更新の一覧"               loading="lazy" decoding="async" /></div>
+            </div>
+          </div>
+          <div class="phone-carousel__nav">
+            <button class="carousel-prev" aria-label="前へ">&#8249;</button>
+            <div class="phone-carousel__dots">
+              <button class="dot dot--active" aria-label="1枚目"></button>
+              <button class="dot" aria-label="2枚目"></button>
+              <button class="dot" aria-label="3枚目"></button>
+            </div>
+            <button class="carousel-next" aria-label="次へ">&#8250;</button>
+          </div>
+        </div>
+      </div>
+      <div class="feature-text">
+        <span class="label label--blue">ZUKAN</span>
+        <h2 id="zukan-heading" style="margin:0; font-size:var(--text-heading); font-weight:700; line-height:1.35;">
+          <span class="tt-orange">釣った魚が、</span>図鑑になる
+        </h2>
+        <p style="margin:0; color:var(--color-ink-muted);">釣った魚種ごとに、自己記録と、それがどう伸びてきたかが見られます。釣れた月、サイズの分布、釣った場所、その魚がよく釣れている条件も、1ページにまとまります。</p>
+        <p style="margin:8px 0 0; color:var(--color-ink-muted);">はじめての魚種を記録すると、お祝いの演出が出ます。まだ釣っていない魚の中から、よく行く水深と底質で狙えそうな魚も提案します。</p>
+        <ul class="feature-list" aria-label="図鑑の特徴">
+          <li>魚種ごとの自己記録と、その伸び</li>
+          <li>釣れた月・サイズの分布・釣った場所・当たり条件</li>
+          <li>まだ釣っていない魚から、次に狙えそうな魚を提案</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ D.6: シェア画像（SHARE） ============ -->
+  <section id="share" class="section section--sand" aria-labelledby="share-heading">
+    <div class="col-narrow" style="display:flex; flex-direction:column; gap:24px;">
+      <div>
+        <span class="label label--blue">SHARE</span>
+        <h2 id="share-heading" style="margin:12px 0 0; font-size:var(--text-heading); font-weight:700; line-height:1.35;">
+          <span class="tt-orange">釣果を、</span>1枚の画像に
+        </h2>
+      </div>
+      <p style="margin:0; color:var(--color-ink-muted);">魚種・サイズ・水深・水温・潮を写真に重ねて、1枚の画像にしてシェアできます。デザインは3種類。写真の拡大や位置も調整できます。釣れた場所は画像に出しません。画像はiPhoneの中で作り、どこにも送りません。</p>
+      <div class="share-gallery">
+        <figure class="share-card"><img src="/assets/img/share-poster.jpg"   alt="シェア画像（ポスター）" loading="lazy" decoding="async" /><figcaption>ポスター</figcaption></figure>
+        <figure class="share-card"><img src="/assets/img/share-magazine.jpg" alt="シェア画像（マガジン）" loading="lazy" decoding="async" /><figcaption>マガジン</figcaption></figure>
+        <figure class="share-card"><img src="/assets/img/share-telop.jpg"    alt="シェア画像（テロップ）" loading="lazy" decoding="async" /><figcaption>テロップ</figcaption></figure>
       </div>
     </div>
   </section>
@@ -360,14 +453,14 @@
       <div class="feature-text">
         <span class="label label--blue">ANALYSIS</span>
         <h2 id="analysis-heading" style="margin:0; font-size:var(--text-heading); font-weight:700; line-height:1.35;">
-          <span class="tt-orange">溜めたログが、</span>次の一手になる
+          <span class="tt-orange">溜めたログを統計分析して、</span>次の一手に
         </h2>
         <p style="margin:0; color:var(--color-ink-muted);">釣果は「釣行」ごとに自動でまとまり、出港から帰港までの潮・潮流・風の流れと、釣れた時刻をひとつのタイムラインで振り返れます。</p>
-        <p style="margin:8px 0 0; color:var(--color-ink-muted);">記録がたまると、「下げ潮のときによく釣れている」「マダイは朝まづめによく釣れている」といった条件を、あなた自身の記録から探して表示します。単に釣果が多い条件ではなく、船を出していた時間に対してどれだけ釣れたかで評価するので、よく行っている潮回りがそれらしく見える、ということがありません。魚種別・エリア別に絞って見ることもできます。</p>
+        <p style="margin:8px 0 0; color:var(--color-ink-muted);">記録がたまると、あなた自身の記録を統計分析して、自分でも気づいていなかった当たりパターンを見つけます。「下げ潮のときによく釣れている」「マダイは朝まづめによく釣れている」といった条件を、あなた自身の記録から探して表示します。単に釣果が多い条件ではなく、船を出していた時間に対してどれだけ釣れたかで評価するので、よく行っている潮回りがそれらしく見える、ということがありません。魚種別・エリア別に絞って見ることもできます。</p>
         <ul class="feature-list" aria-label="分析機能の特徴">
-          <li>よく釣れている条件を、自分の記録から自動で表示</li>
+          <li>よく釣れている条件を、自分の記録から統計分析で表示</li>
           <li>水深 × 潮回り、水深 × 底質のマトリクス（件数と、時間あたりの釣れやすさ）</li>
-          <li>魚種ごとの水深レンジ／月別の釣果推移／魚図鑑</li>
+          <li>魚種ごとの水深レンジ／月別の釣果推移／魚種ランキング</li>
         </ul>
         <p style="margin:8px 0 0;"><a href="/analysis/">分析の見方をくわしく見る →</a></p>
       </div>
@@ -403,8 +496,8 @@
         <div class="phone-carousel">
           <div class="phone-mockup phone-carousel__mockup" style="width:280px; background:var(--color-slate-depth);">
             <div class="phone-carousel__track">
-              <div class="phone-carousel__slide"><img src="/assets/img/shot-depth-2.png" alt="水深・水温の入力画面。魚探の実測値を入力する"       loading="lazy" decoding="async" /></div>
-              <div class="phone-carousel__slide"><img src="/assets/img/shot-matrix.png"   alt="水深×底質のマトリクス。件数と魚種ランキング"     loading="lazy" decoding="async" /></div>
+              <div class="phone-carousel__slide"><img src="/assets/img/shot-depth-2.png" alt="登録画面の水深・水温。水深は海底地形から自動で入る"   loading="lazy" decoding="async" /></div>
+              <div class="phone-carousel__slide"><img src="/assets/img/shot-matrix.png"   alt="水深×潮のマトリクスと魚種ランキング"                 loading="lazy" decoding="async" /></div>
             </div>
           </div>
           <div class="phone-carousel__nav">
@@ -420,13 +513,13 @@
       <div class="feature-text">
         <span class="label label--depth">DEPTH</span>
         <h2 id="depth-heading" style="margin:0; font-size:var(--text-heading); font-weight:700; line-height:1.35; color:var(--color-paper);">
-          <span class="tt-orange">水深は、</span>魚探で見た数字だけ
+          <span class="tt-orange">水深は自動で。</span>魚探の値があれば、それが優先
         </h2>
-        <p style="margin:0; color:rgba(255,255,255,.82);">推定水深も水深帯も表示しません。あなたが魚探で読んだ実測値だけを記録します。釣行を重ねるほど、あなたのフィールドの実測水深マップが手元に育っていきます。</p>
+        <p style="margin:0; color:rgba(255,255,255,.82);">釣れた位置の海底地形のデータから、水深を自動で入れます。魚探で見た値に直せば、記録にはその値が残ります。</p>
         <div class="chips" aria-label="記録データの例">
           <div class="chip">
-            <span class="chip__label">水深（魚探）</span>
-            <span class="chip__value chip__value--depth num">98 m</span>
+            <span class="chip__label">水深（海底地形）</span>
+            <span class="chip__value chip__value--depth num">96 m → 魚探 98 m</span>
           </div>
           <div class="chip">
             <span class="chip__label">底質</span>
@@ -448,10 +541,13 @@
       <div class="feature-text">
         <span class="label label--blue">AUTO</span>
         <h2 id="auto-data-heading" style="margin:0; font-size:var(--text-heading); font-weight:700; line-height:1.35;">
-          <span class="tt-orange">天気・海況も、</span>自動で記録される
+          <span class="tt-orange">魚種から海況まで、</span>自動で記録される
         </h2>
-        <p style="margin:0; color:var(--color-ink-muted);">写真を撮った場所と時刻をもとに、天気・風速・潮汐・底質・魚礁を自動取得します。記録を作るとき、インターネットにつながっていれば特別な操作は不要です。</p>
+        <p style="margin:0; color:var(--color-ink-muted);">写真を撮った場所と時刻をもとに、魚種・水深・水温・天気・風速・潮汐・底質・魚礁が自動で入ります。潮や天気の取得には、インターネットへの接続が必要です。</p>
         <ul class="feature-list" aria-label="自動取得されるデータ">
+          <li>魚種（写真からiPhoneの中で判定。候補から選び直せる）</li>
+          <li>水深（釣れた位置の海底地形のデータから）</li>
+          <li>水温（同じ日の直前の釣果から引き継ぎ）</li>
           <li>天気・風速・波高（気象データから自動取得）</li>
           <li>潮回り・干潮/満潮時刻（潮汐データから自動取得）</li>
           <li>底質・魚礁（海しるAPI / 海上保安庁）</li>
@@ -464,7 +560,7 @@
             <div class="phone-carousel__track">
               <div class="phone-carousel__slide"><img src="/assets/img/shot-auto-1.png" alt="釣行詳細。潮位カーブと潮流・風の帯の上に釣果の時刻"      loading="lazy" decoding="async" /></div>
               <div class="phone-carousel__slide"><img src="/assets/img/shot-auto-2.png" alt="水深×潮のマトリクスと魚種ランキング"                                      loading="lazy" decoding="async" /></div>
-              <div class="phone-carousel__slide"><img src="/assets/img/shot-auto-4.png" alt="魚図鑑。魚種ごとに写真と釣獲件数・平均水深が並ぶ"                        loading="lazy" decoding="async" /></div>
+              <div class="phone-carousel__slide"><img src="/assets/img/shot-register.png" alt="登録画面。魚種の候補と水深・水温が入っている"                        loading="lazy" decoding="async" /></div>
             </div>
           </div>
           <div class="phone-carousel__nav">
@@ -501,7 +597,7 @@
         <div class="phone-carousel">
           <div class="phone-mockup phone-carousel__mockup" style="width:280px;">
             <div class="phone-carousel__track">
-              <div class="phone-carousel__slide"><img src="/assets/img/shot-views-1.png" alt="釣行ビュー。出港から帰港までの時間とエリア、写真つきのカード"    loading="lazy" decoding="async" /></div>
+              <div class="phone-carousel__slide"><img src="/assets/img/shot-views-1.png" alt="釣行ビュー。地図と、出港から帰港までのタイムライン、釣れた時刻"    loading="lazy" decoding="async" /></div>
               <div class="phone-carousel__slide"><img src="/assets/img/shot-views-2.png" alt="魚種ビュー。魚種別にグループ化された釣果一覧"                  loading="lazy" decoding="async" /></div>
               <div class="phone-carousel__slide"><img src="/assets/img/shot-views-3.png" alt="水深ビュー。水深の深い順に釣果が並ぶ"                          loading="lazy" decoding="async" /></div>
               <div class="phone-carousel__slide"><img src="/assets/img/shot-views-4.png" alt="ギャラリービュー。釣行写真がタイルグリッドで並ぶ"              loading="lazy" decoding="async" /></div>
@@ -546,17 +642,6 @@
         <div class="faq-item">
           <details>
             <summary>
-              <h3 style="margin:0; font-size:inherit; font-weight:inherit;">写真がないと記録できませんか？</h3>
-              <span class="faq-icon faq-icon-plus" aria-hidden="true">＋</span>
-              <span class="faq-icon faq-icon-minus" aria-hidden="true">−</span>
-            </summary>
-            <div class="faq-answer">いいえ。写真がなくても、地図から場所を指定して登録できます。記録タブの「＋」から「地図から選ぶ」を選んでください。</div>
-          </details>
-        </div>
-
-        <div class="faq-item">
-          <details>
-            <summary>
               <h3 style="margin:0; font-size:inherit; font-weight:inherit;">位置情報がない写真でも登録できますか？</h3>
               <span class="faq-icon faq-icon-plus" aria-hidden="true">＋</span>
               <span class="faq-icon faq-icon-minus" aria-hidden="true">−</span>
@@ -572,7 +657,62 @@
               <span class="faq-icon faq-icon-plus" aria-hidden="true">＋</span>
               <span class="faq-icon faq-icon-minus" aria-hidden="true">−</span>
             </summary>
-            <div class="faq-answer">入りません。水深は魚探で読んだ実測値をご自分で入力していただきます。推定値を出さないことが、このアプリの前提です。</div>
+            <div class="faq-answer">入ります。釣れた位置の海底地形のデータから求めた値です。魚探で見た値に直すと、その値が記録に残ります。</div>
+          </details>
+        </div>
+
+        <div class="faq-item">
+          <details>
+            <summary>
+              <h3 style="margin:0; font-size:inherit; font-weight:inherit;">魚種の判定はどのくらい正確ですか？</h3>
+              <span class="faq-icon faq-icon-plus" aria-hidden="true">＋</span>
+              <span class="faq-icon faq-icon-minus" aria-hidden="true">−</span>
+            </summary>
+            <div class="faq-answer">多くの場合、そのまま使えます。ただし、ブリとヒラマサ、マダイとチダイのような似た魚は取り違えることがあります。違うときは、候補をタップして選び直してください。</div>
+          </details>
+        </div>
+
+        <div class="faq-item">
+          <details>
+            <summary>
+              <h3 style="margin:0; font-size:inherit; font-weight:inherit;">写真はどこかに送られますか？</h3>
+              <span class="faq-icon faq-icon-plus" aria-hidden="true">＋</span>
+              <span class="faq-icon faq-icon-minus" aria-hidden="true">−</span>
+            </summary>
+            <div class="faq-answer">送られません。魚種の判定もシェア画像の作成も、すべてiPhoneの中で行います。</div>
+          </details>
+        </div>
+
+        <div class="faq-item">
+          <details>
+            <summary>
+              <h3 style="margin:0; font-size:inherit; font-weight:inherit;">魚種の入力を飛ばして登録するとどうなりますか？</h3>
+              <span class="faq-icon faq-icon-plus" aria-hidden="true">＋</span>
+              <span class="faq-icon faq-icon-minus" aria-hidden="true">−</span>
+            </summary>
+            <div class="faq-answer">判定に自信があるときだけ、「（推定）」の印を付けて魚種を入れておきます。自信がないときは空のままです。あとから選び直すと、印は消えます。</div>
+          </details>
+        </div>
+
+        <div class="faq-item">
+          <details>
+            <summary>
+              <h3 style="margin:0; font-size:inherit; font-weight:inherit;">図鑑には何が載りますか？</h3>
+              <span class="faq-icon faq-icon-plus" aria-hidden="true">＋</span>
+              <span class="faq-icon faq-icon-minus" aria-hidden="true">−</span>
+            </summary>
+            <div class="faq-answer">釣った魚種だけが載ります。まだ釣っていない魚の空き枠は出しません。魚種ごとに、自己記録とその伸び、釣れた月、サイズの分布、釣った場所、当たり条件が見られます。</div>
+          </details>
+        </div>
+
+        <div class="faq-item">
+          <details>
+            <summary>
+              <h3 style="margin:0; font-size:inherit; font-weight:inherit;">魚種が決まっていない釣果はどうなりますか？</h3>
+              <span class="faq-icon faq-icon-plus" aria-hidden="true">＋</span>
+              <span class="faq-icon faq-icon-minus" aria-hidden="true">−</span>
+            </summary>
+            <div class="faq-answer">図鑑の上に「魚種が未確定の釣果」として件数が出ます。そこから候補を選べば、まとめて名前を付けられます。</div>
           </details>
         </div>
 
@@ -649,7 +789,7 @@
               <span class="faq-icon faq-icon-plus" aria-hidden="true">＋</span>
               <span class="faq-icon faq-icon-minus" aria-hidden="true">−</span>
             </summary>
-            <div class="faq-answer">釣果の記録・閲覧はオフラインでも動作します。分析に使う潮・風のデータと、地図の海底情報の取得にはインターネット接続が必要です（一度取得したものは端末に残ります）。</div>
+            <div class="faq-answer">釣果の記録・閲覧はオフラインでも動作します。分析に使う潮・風のデータと、地図の海底情報の取得にはインターネット接続が必要です（一度取得したものは端末に残ります）。魚種の判定は、電波のない沖でも動きます。</div>
           </details>
         </div>
 
@@ -682,7 +822,7 @@
               <span class="faq-icon faq-icon-plus" aria-hidden="true">＋</span>
               <span class="faq-icon faq-icon-minus" aria-hidden="true">−</span>
             </summary>
-            <div class="faq-answer">現在はできません。釣果はすべてご自身の端末内にのみ保存されます。</div>
+            <div class="faq-answer">他の人の釣果を見ることはできません。ご自身の釣果は、シェア画像にしてSNSなどで共有できます。釣れた場所は画像に出しません。</div>
           </details>
         </div>
 
@@ -699,7 +839,7 @@
       </h2>
       <p style="margin:0 0 8px; font-size:var(--text-body);">現在の方針は2つです。</p>
       <ul class="feature-list" style="margin:0 0 24px;">
-        <li>水深は魚探の実測値だけを扱う方針を続けます</li>
+        <li>入力はできるだけ自動に。直すのは違うときだけ、という方針を続けます</li>
         <li>航海用の海図は持たず、海図アプリ・魚探との併用を前提にします</li>
       </ul>
       <a href="/android/?src=site" class="notice-block" style="margin:0 0 40px; text-decoration:none; color:inherit; box-shadow:0 1px 3px rgba(0,0,0,.06); border:1.5px solid var(--color-hairline);">
@@ -799,6 +939,20 @@
       <h2 id="changelog-heading" style="margin:0 0 24px; font-size:var(--text-heading); font-weight:700; line-height:1.35;">更新履歴</h2>
       <div style="display:flex; flex-direction:column; gap:24px;">
         <div>
+          <p style="margin:0 0 8px; font-size:var(--text-body); font-weight:700;">1.2（2026年10月）</p>
+          <ul class="feature-list">
+            <li>画面下の中央にカメラのボタン。どの画面からでも、すぐに撮って記録</li>
+            <li>写真から魚種を判定して自動で入力。違うときは候補をタップして選び直し。判定はiPhoneの中で</li>
+            <li>釣れた位置の海底地形から、水深を自動で入力。魚探の値に直すこともできる</li>
+            <li>水温は、同じ日の直前の釣果から引き継ぎ</li>
+            <li>図鑑タブを追加。魚種ごとの自己記録の伸び・釣れた月・サイズの分布・釣った場所・当たり条件。次に狙えそうな魚の提案</li>
+            <li>はじめての魚種を記録すると、お祝いの演出</li>
+            <li>魚種が未確定の釣果を、図鑑からまとめて確認</li>
+            <li>釣果をシェア画像に。デザインは3種類、写真の拡大・位置の調整ができ、釣れた場所は出さない</li>
+            <li>設定は、記録の画面の左上の歯車から</li>
+          </ul>
+        </div>
+        <div>
           <p style="margin:0 0 8px; font-size:var(--text-body); font-weight:700;">1.1（2026年9月）</p>
           <ul class="feature-list">
             <li>等深線・底質・沈船・海底障害物を地図に重ねて表示。レイヤーごとにオン・オフ可</li>
@@ -827,6 +981,8 @@
         <!-- 海しるAPI利用規約第5条の文言（一字一句変更禁止） -->
         <p class="notice-text">このサービスは、海しるAPIを利用して取得した情報をもとに作成しているが、サービスの内容は海上保安庁によって保証されたものではない</p>
         <p class="notice-text">出典：海洋状況表示システム（<a href="https://www.msil.go.jp/">https://www.msil.go.jp/</a>）</p>
+        <p class="notice-text">水深：日本海洋データセンター（JODC）「500mメッシュ水深データ（J-EGG500）」をもとに、本アプリで加工して作成</p>
+        <p class="notice-text">魚種の判定：BioCLIP（Imageomics Institute、MIT License）</p>
         <p class="notice-text" style="color:var(--color-ink-muted);">本アプリは、航海・安全・漁業その他の専門的判断には使用できません。</p>
       </div>
     </div>

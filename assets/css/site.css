@@ -1142,3 +1142,35 @@ details:not([open]) .faq-icon-minus { display: none; }
     url('/assets/img/footer-bg.jpg') center 60% / cover no-repeat;
   border-top: none;
 }
+
+/* ── シェア画像ギャラリー（1.2で追加） ── */
+.share-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.share-card { margin: 0; display: flex; flex-direction: column; gap: 8px; }
+.share-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(11, 26, 33, .16);
+  display: block;
+}
+.share-card figcaption {
+  text-align: center;
+  font-size: var(--text-caption);
+  color: var(--color-ink-muted);
+}
+@media (max-width: 640px) {
+  .share-gallery {
+    grid-template-columns: none;
+    grid-auto-flow: column;
+    grid-auto-columns: 72%;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 8px;
+  }
+  .share-card { scroll-snap-align: center; }
+}
