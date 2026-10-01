@@ -432,7 +432,7 @@ QR コード：`https://chokalog.margheritaworks.com/android/?src=qr` を開く�
 **参加の流れ（3 行で。詳しくは `/android/` に任せる）**
 
 > 1. Google グループに参加する
-> 2. 「テスターになる」を押す
+> 2. 「Become a tester」を押す
 > 3. Google Play からインストールする
 
 **ボタン**
