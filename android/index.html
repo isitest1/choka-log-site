@@ -114,14 +114,6 @@
       min-height: 220px;
       padding: 24px;
     }
-    .shot-placeholder--phone {
-      aspect-ratio: 9 / 19.5;
-      min-height: 0;
-      border: none;
-      border-radius: 36px;
-      background: var(--color-slate-depth);
-      color: var(--color-depth-blue);
-    }
 
     /* 参加の手順 */
     .ad-device-note {
@@ -241,13 +233,12 @@
     <h1 class="ad-hero__headline" id="ad-hero-headline">釣果ログ Android版を、先行公開しています</h1>
     <p class="ad-hero__sub">写真1枚で、魚種・水深・潮まで記録するボート釣りのアプリです。iPhone版と同じ機能を、一般公開より先にお使いいただけます。</p>
     <div class="ad-hero__cta">
-      <a href="#join" class="btn-primary" data-track="cta">テストに参加する</a>
+      <a href="#join" class="btn-primary">テストに参加する</a>
       <p class="ad-hero__note">無料・Google Play から配信しています</p>
     </div>
-    <!-- Android 版の画面（記録の一覧か、魚種の候補が出ている登録の画面）。画像を用意したら、下の div を
-         <img src="/assets/img/android-hero.png" alt="…" class="phone-mockup__screen" width="…" height="…" decoding="async" /> に差し替える -->
+    <!-- Android 版の記録の一覧の画面（FishingLog-Android の docs/store/raw/android-records.png を 540×1200 に縮小） -->
     <div class="phone-mockup">
-      <div class="shot-placeholder shot-placeholder--phone">画像を準備中</div>
+      <img src="/assets/img/android-records.png" alt="Android版の記録の画面。釣行ごとに日付・潮・場所・釣果の写真が並ぶ" class="phone-mockup__screen" width="540" height="1200" decoding="async" />
     </div>
   </section>
 
@@ -308,7 +299,7 @@
       <!-- 端末ごとの案内。判定できた場合だけ、スクリプトが hidden を外す -->
       <div class="ad-device-note" data-device="ios" hidden>
         <p>この手順は、Android のスマートフォンで行います。Android をお使いのご家族やお友だちに、このページを送っていただけると助かります。</p>
-        <button type="button" class="btn-primary" id="ad-copy-link" data-track="copy">このページのリンクをコピー</button>
+        <button type="button" class="btn-primary" id="ad-copy-link">このページのリンクをコピー</button>
         <p class="ad-copy-status" id="ad-copy-status" role="status" aria-live="polite"></p>
       </div>
       <div class="ad-device-note" data-device="pc" hidden>
@@ -328,7 +319,7 @@
           <p>参加の設定画面が表示されたら、「登録」の欄を「メールを受け取らない」に変えてから、「グループに参加」を押してください。</p>
           <p>参加すると、グループのページに次の手順のリンクも表示されます。</p>
           <p class="ad-small">画面の上の方に英語の表示が出ることがありますが、Google 側の表示によるもので、参加には影響ありません。</p>
-          <a href="https://groups.google.com/g/chokalog-android/about" class="btn-primary" target="_blank" rel="noopener" data-track="step1">グループのページを開く</a>
+          <a href="https://groups.google.com/g/chokalog-android/about" class="btn-primary" target="_blank" rel="noopener">グループのページを開く</a>
           <!-- Google グループの参加の設定画面（「登録」の欄に印）。画像を用意したら、下の div を img に差し替える -->
           <div class="shot-placeholder">画像を準備中</div>
         </article>
@@ -336,7 +327,7 @@
         <article class="ad-step">
           <h3>2. テストに参加する</h3>
           <p>次のボタンからページを開き、「テスターになる」を押してください。</p>
-          <a href="https://play.google.com/apps/testing/com.margheritaworks.chokalog" class="btn-primary" target="_blank" rel="noopener" data-track="step2">テスト参加のページを開く</a>
+          <a href="https://play.google.com/apps/testing/com.margheritaworks.chokalog" class="btn-primary" target="_blank" rel="noopener">テスト参加のページを開く</a>
           <!-- 「テスターになる」のボタンがある画面。画像を用意したら、下の div を img に差し替える -->
           <div class="shot-placeholder">画像を準備中</div>
         </article>
@@ -497,35 +488,6 @@
 <script>
 (function () {
   'use strict';
-
-  /* ── 参加の経路と、ボタンが押された回数の記録 ──
-     api.margheritaworks.com（mw-feedback-worker）の POST /hit に送る。
-     /hit は Worker 側にまだ無いため、Worker に受け口を追加するまでは記録されない（送信が失敗しても表示には影響しない）。
-     sendBeacon はフォーム形式で送るので、CORS の事前確認は発生しない。 */
-  var TRACK_URL = 'https://api.margheritaworks.com/hit';
-  var params = new URLSearchParams(location.search);
-  var rawSrc = params.get('src') || '';
-  var src = /^[a-z0-9_-]{1,32}$/i.test(rawSrc) ? rawSrc.toLowerCase() : (rawSrc ? 'other' : 'none');
-
-  function track(event) {
-    try {
-      if (!navigator.sendBeacon) return;
-      navigator.sendBeacon(TRACK_URL, new URLSearchParams({ app: 'choka-log', page: 'android', event: event, src: src }));
-    } catch (_) { /* 記録に失敗しても何もしない */ }
-  }
-
-  track('view');
-
-  // アドレス欄から ?src= を外す。アドレスをそのまま共有されたときに、元の経路で数え直されないようにするため
-  if (rawSrc && history.replaceState) {
-    params.delete('src');
-    var rest = params.toString();
-    history.replaceState(null, '', location.pathname + (rest ? '?' + rest : '') + location.hash);
-  }
-
-  document.querySelectorAll('[data-track]').forEach(function (el) {
-    el.addEventListener('click', function () { track(el.getAttribute('data-track')); });
-  });
 
   /* ── 端末ごとの案内 ──
      判定できない場合は何も出さない（今の表示のまま） */

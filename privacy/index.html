@@ -122,15 +122,16 @@
         <a href="#pp-network">3. 海況の取得のために送る情報</a>
         <a href="#pp-map">4. 地図の表示</a>
         <a href="#pp-location">5. 現在地</a>
-        <a href="#pp-feedback">6. ご意見の送信</a>
-        <a href="#pp-backup">7. バックアップと同期</a>
-        <a href="#pp-ads">8. 広告・解析</a>
-        <a href="#pp-https">9. 通信の暗号化</a>
-        <a href="#pp-delete">10. データの削除</a>
-        <a href="#pp-source">11. データの出典と免責</a>
-        <a href="#pp-changes">12. 本ポリシーの変更</a>
-        <a href="#pp-contact">13. お問い合わせ</a>
-        <a href="#pp-notify">14. お知らせの配信希望</a>
+        <a href="#pp-permission">6. 権限の利用目的</a>
+        <a href="#pp-feedback">7. ご意見の送信</a>
+        <a href="#pp-backup">8. バックアップと同期</a>
+        <a href="#pp-ads">9. 第三者提供・広告・解析</a>
+        <a href="#pp-https">10. 通信の暗号化</a>
+        <a href="#pp-delete">11. データの削除</a>
+        <a href="#pp-source">12. データの出典と免責</a>
+        <a href="#pp-changes">13. 本ポリシーの変更</a>
+        <a href="#pp-contact">14. お問い合わせ</a>
+        <a href="#pp-notify">15. お知らせの配信希望</a>
       </aside>
 
       <!-- モバイル目次（<details> で折り畳み） -->
@@ -142,15 +143,16 @@
           <a href="#pp-network">3. 海況の取得のために送る情報</a>
           <a href="#pp-map">4. 地図の表示</a>
           <a href="#pp-location">5. 現在地</a>
-          <a href="#pp-feedback">6. ご意見の送信</a>
-          <a href="#pp-backup">7. バックアップと同期</a>
-          <a href="#pp-ads">8. 広告・解析</a>
-          <a href="#pp-https">9. 通信の暗号化</a>
-          <a href="#pp-delete">10. データの削除</a>
-          <a href="#pp-source">11. データの出典と免責</a>
-          <a href="#pp-changes">12. 本ポリシーの変更</a>
-          <a href="#pp-contact">13. お問い合わせ</a>
-          <a href="#pp-notify">14. お知らせの配信希望</a>
+          <a href="#pp-permission">6. 権限の利用目的</a>
+          <a href="#pp-feedback">7. ご意見の送信</a>
+          <a href="#pp-backup">8. バックアップと同期</a>
+          <a href="#pp-ads">9. 第三者提供・広告・解析</a>
+          <a href="#pp-https">10. 通信の暗号化</a>
+          <a href="#pp-delete">11. データの削除</a>
+          <a href="#pp-source">12. データの出典と免責</a>
+          <a href="#pp-changes">13. 本ポリシーの変更</a>
+          <a href="#pp-contact">14. お問い合わせ</a>
+          <a href="#pp-notify">15. お知らせの配信希望</a>
         </nav>
       </details>
 
@@ -172,7 +174,7 @@
           <p>釣果に潮汐・潮流・天気・底質などを添えるため、釣果の位置と日時を、次の先に送ります。</p>
           <ul>
             <li>気象データ（気温・天気・風・波）：Open-Meteo に、釣果の位置と日付を送ります。送った情報を、運営者が保存することはありません。</li>
-            <li>潮汐・潮流・海底の情報：運営者が管理するサーバー（Cloudflare Workers）に、釣果の位置のまわりの範囲を送ります。取得した結果は、同じ場所の問い合わせに再利用するために保存しますが、どの利用者が問い合わせたかは記録しません。</li>
+            <li>潮汐・潮流・海底の情報：運営者が管理するサーバー（Cloudflare Workers）に送ります。底質・魚礁・沈船を調べるときは、釣果の位置を中心にした範囲を送ります。範囲の中心が釣果の位置なので、送った範囲から釣果の位置が分かります。潮汐と潮流は、釣果の位置に近い推算点と海域の番号を送ります。取得した結果は、同じ場所の問い合わせに再利用するために保存しますが、どの利用者が問い合わせたかは記録しません。</li>
           </ul>
           <p>位置が確定していない釣果については、送りません。</p>
         </section>
@@ -190,8 +192,39 @@
           <p>位置情報の利用を許可した場合に限り、現在地を使います。カメラで撮影したときの釣果の位置、地図の現在地の表示、近くのエリアの選択に使います。Android版では、Google Play 開発者サービスの位置情報の機能を使います。取得した現在地そのものを外部に送ることはありませんが、撮影したときの現在地は釣果の位置となり、上記の海況の取得に使われます。</p>
         </section>
 
+        <section id="pp-permission" aria-labelledby="pp-permission-heading">
+          <h2 id="pp-permission-heading">6. 権限の利用目的</h2>
+          <p>本アプリが要求するシステム権限とその目的は以下のとおりです。</p>
+          <table class="def-table" aria-label="権限の利用目的">
+            <thead>
+              <tr>
+                <th scope="col">権限</th>
+                <th scope="col">なぜ必要か</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>写真ライブラリ<br>（iPhone版）</td>
+                <td>釣果を記録する際に写真を選択するために必要です。撮影日時・位置情報（Exif）を記録の初期値に使用します。写真データはサーバーへ送信しません。</td>
+              </tr>
+              <tr>
+                <td>写真の選択<br>（Android版）</td>
+                <td>Android版は、端末の写真を読み取る権限を使いません。写真を選ぶときは Android の写真選択の機能を使い、選んだ写真だけをアプリが受け取ります。この機能では写真の位置情報がアプリに届かないため、写真を選んで登録した場合は、釣れた場所を地図で指定していただきます。写真データはサーバーへ送信しません。</td>
+              </tr>
+              <tr>
+                <td>カメラ<br>（iPhone版・Android版）</td>
+                <td>その場で写真を撮影して即時記録するために必要です。撮影した写真は端末内にのみ保存されます。</td>
+              </tr>
+              <tr>
+                <td>位置情報（使用中のみ）<br>（iPhone版・Android版）</td>
+                <td>釣果場所を地図上に正確に記録するために必要です。撮影したときの現在地は釣果の位置となり、「海況の取得のために送る情報」に書いた送信に使われます。Android版では、正確な位置とおおよその位置の権限を求めます。アプリを使っていないときに位置情報を使う権限は求めません。位置情報を許可しなくても、釣果は記録できます。</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
         <section id="pp-feedback" aria-labelledby="pp-feedback-heading">
-          <h2 id="pp-feedback-heading">6. ご意見の送信</h2>
+          <h2 id="pp-feedback-heading">7. ご意見の送信</h2>
           <p>アプリの「ご意見を送る」からご意見をお送りいただいた場合、次の情報を運営者のサーバーに送ります。</p>
           <ul>
             <li>ご意見の本文と種類</li>
@@ -202,7 +235,7 @@
         </section>
 
         <section id="pp-backup" aria-labelledby="pp-backup-heading">
-          <h2 id="pp-backup-heading">7. バックアップと同期</h2>
+          <h2 id="pp-backup-heading">8. バックアップと同期</h2>
           <ul>
             <li>iPhone版：iCloud を使っている場合、記録はお使いの iCloud アカウントに同期されます。</li>
             <li>Android版：Android の自動バックアップにより、記録と設定がお使いの Google アカウントにバックアップされます（写真は含みません）。</li>
@@ -211,22 +244,23 @@
         </section>
 
         <section id="pp-ads" aria-labelledby="pp-ads-heading">
-          <h2 id="pp-ads-heading">8. 広告・解析</h2>
+          <h2 id="pp-ads-heading">9. 第三者提供・広告・解析</h2>
           <p>広告は表示しません。利用状況を解析するための仕組みも組み込んでいません。</p>
+          <p>釣果データや個人情報を、第三者に販売・提供することはありません。ただし、「海況の取得のために送る情報」と「地図の表示」に書いた送信を除きます。</p>
         </section>
 
         <section id="pp-https" aria-labelledby="pp-https-heading">
-          <h2 id="pp-https-heading">9. 通信の暗号化</h2>
+          <h2 id="pp-https-heading">10. 通信の暗号化</h2>
           <p>外部との通信は、すべて暗号化（HTTPS）して行います。</p>
         </section>
 
         <section id="pp-delete" aria-labelledby="pp-delete-heading">
-          <h2 id="pp-delete-heading">10. データの削除</h2>
+          <h2 id="pp-delete-heading">11. データの削除</h2>
           <p>端末の中の記録は、アプリの中で削除できます。アプリを削除すると、端末の中の記録もすべて削除されます。お送りいただいたご意見の削除を希望される場合は、<a href="mailto:support@margheritaworks.com">support@margheritaworks.com</a> までご連絡ください。</p>
         </section>
 
         <section id="pp-source" aria-labelledby="pp-source-heading">
-          <h2 id="pp-source-heading">11. データの出典と免責</h2>
+          <h2 id="pp-source-heading">12. データの出典と免責</h2>
           <!-- 海しるAPI利用規約第5条の文言（一字一句変更禁止） -->
           <p>このサービスは、海しるAPIを利用して取得した情報をもとに作成しているが、サービスの内容は海上保安庁によって保証されたものではない</p>
           <p>出典：海洋状況表示システム（<a href="https://www.msil.go.jp/">https://www.msil.go.jp/</a>）</p>
@@ -234,13 +268,13 @@
         </section>
 
         <section id="pp-changes" aria-labelledby="pp-changes-heading">
-          <h2 id="pp-changes-heading">12. 本ポリシーの変更</h2>
+          <h2 id="pp-changes-heading">13. 本ポリシーの変更</h2>
           <p>本ポリシーを変更する場合は、このページの最終更新日を更新します。重要な変更がある場合は、アプリ内でも通知します。</p>
           <p>最新のポリシーは常にこのページでご確認いただけます。</p>
         </section>
 
         <section id="pp-contact" aria-labelledby="pp-contact-heading">
-          <h2 id="pp-contact-heading">13. お問い合わせ</h2>
+          <h2 id="pp-contact-heading">14. お問い合わせ</h2>
           <div class="contact-block">
             <p style="margin:0; font-size:var(--text-heading-sm); font-weight:700; line-height:1.4;">お問い合わせ</p>
             <p style="margin:0; color:var(--color-ink-muted);">本ポリシーおよび本アプリに関するご質問は下記までご連絡ください。</p>
@@ -252,7 +286,7 @@
         </section>
 
         <section id="pp-notify" aria-labelledby="pp-notify-heading">
-          <h2 id="pp-notify-heading">14. お知らせの配信希望</h2>
+          <h2 id="pp-notify-heading">15. お知らせの配信希望</h2>
           <p>Android版などのお知らせを希望される方から、メールアドレスをお預かりすることがあります。お預かりしたアドレスは、テスト参加のお願いと公開のお知らせの送信にのみ使用し、第三者に提供しません。お知らせメール内のリンク、または <a href="mailto:support@margheritaworks.com">support@margheritaworks.com</a> へのご連絡により、いつでも削除できます。</p>
         </section>
 
