@@ -82,23 +82,40 @@
     .ad-text p { margin: 0 0 16px; color: var(--color-ink-muted); }
     .ad-text p:last-child { margin-bottom: 0; }
 
-    /* どんなアプリか */
-    .ad-features {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 24px;
+    /* 釣果ログについて（横にスクロールする画面の帯） */
+    .ad-app__heading { margin: 0 0 24px; text-align: center; font-size: var(--text-heading); font-weight: 700; line-height: 1.35; }
+    .ad-strip {
+      display: flex;
+      gap: 16px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      padding-bottom: 8px;
+      scrollbar-width: none;
     }
-    .ad-feature {
-      background: var(--color-paper);
-      border-radius: var(--radius);
-      padding: var(--card-pad);
+    .ad-strip::-webkit-scrollbar { display: none; }
+    .ad-strip__item {
+      flex: 0 0 184px;
+      margin: 0;
+      scroll-snap-align: center;
       display: flex;
       flex-direction: column;
-      gap: 12px;
+      align-items: center;
+      gap: 10px;
     }
-    .ad-feature .phone-mockup { width: 180px; margin: 0 auto 8px; }
-    .ad-feature h3 { margin: 0; font-size: var(--text-heading-sm); font-weight: 700; line-height: 1.4; }
-    .ad-feature p { margin: 0; font-size: var(--text-body-sm); color: var(--color-ink-muted); line-height: 1.8; }
+    /* 幅に余裕があるときは中央に寄せる（はみ出すときは左から並ぶ） */
+    .ad-strip__item:first-child { margin-left: auto; }
+    .ad-strip__item:last-child { margin-right: auto; }
+    .ad-strip .phone-mockup { width: 150px; padding: 6px; border-radius: 30px; }
+    .ad-strip .phone-mockup__screen { border-radius: 24px; }
+    .ad-strip figcaption {
+      font-size: var(--text-caption);
+      font-weight: 700;
+      white-space: nowrap;
+      color: var(--color-ink);
+    }
+    .ad-app__more { margin: 24px 0 0; text-align: center; font-size: var(--text-body-sm); }
+    .ad-app__ios { margin: 4px 0 0; text-align: center; font-size: var(--text-caption); color: var(--color-ink-muted); }
 
     /* 画像の仮の表示（画像を用意したら img に差し替える） */
     .shot-placeholder {
@@ -252,7 +269,7 @@
   </section>
 
   <!-- ============ 2. 先行公開について ============ -->
-  <section class="section" aria-labelledby="ad-about-heading">
+  <section class="section section--sand" aria-labelledby="ad-about-heading">
     <div class="col-narrow">
       <div class="ad-section-head">
         <h2 id="ad-about-heading">先行公開について</h2>
@@ -264,40 +281,7 @@
     </div>
   </section>
 
-  <!-- ============ 3. どんなアプリか ============ -->
-  <section class="section section--sand" aria-labelledby="ad-app-heading">
-    <div class="container">
-      <div class="ad-section-head">
-        <h2 id="ad-app-heading"><span class="tt-orange">釣れた瞬間に、</span>1枚撮るだけ</h2>
-      </div>
-      <div class="ad-features">
-        <article class="ad-feature">
-          <div class="phone-mockup"><img src="/assets/img/shot-register.png" alt="登録画面。魚種の候補と水深・水温が入っている" class="phone-mockup__screen" loading="lazy" decoding="async" /></div>
-          <h3>魚種は写真から</h3>
-          <p>撮った写真から魚種を判定して、候補を出します。違うときは、候補を選び直すだけです。判定はスマートフォンの中で行い、写真はどこにも送りません。</p>
-        </article>
-        <article class="ad-feature">
-          <div class="phone-mockup"><img src="/assets/img/shot-catch-detail.png" alt="釣果詳細。水深・潮位グラフ・天気・底質が自動で記録されている" class="phone-mockup__screen" loading="lazy" decoding="async" /></div>
-          <h3>水深と潮も自動で</h3>
-          <p>釣れた位置の海底地形から水深を、その日の潮回りや潮汐、天気、底質まで、自動で記録に添えます。魚探で見た水深に直せば、その値が残ります。</p>
-        </article>
-        <article class="ad-feature">
-          <div class="phone-mockup"><img src="/assets/img/shot-analysis.png" alt="分析タブ。よく釣れている条件と傾向の一覧" class="phone-mockup__screen" loading="lazy" decoding="async" /></div>
-          <h3>たまった記録から、当たりパターンを</h3>
-          <p>記録がたまると、ご自身の記録を統計分析して、よく釣れている条件を探して表示します。</p>
-        </article>
-        <article class="ad-feature">
-          <div class="phone-mockup"><img src="/assets/img/shot-zukan.png" alt="図鑑の一覧。魚種ごとに写真と自己記録、伸びが並ぶ" class="phone-mockup__screen" loading="lazy" decoding="async" /></div>
-          <h3>釣った魚が、図鑑になる</h3>
-          <p>魚種ごとに、自己記録とその伸び、釣れた月や場所がまとまります。</p>
-        </article>
-      </div>
-      <p style="margin:40px 0 0; text-align:center;">機能は iPhone版 1.2 と同じです。詳しくは<a href="/">トップページ</a>をご覧ください。</p>
-      <p style="margin:8px 0 0; text-align:center; font-size:var(--text-body-sm); color:var(--color-ink-muted);">iPhone版は <a href="https://apps.apple.com/jp/app/id6808027589">App Store で公開中です</a>。</p>
-    </div>
-  </section>
-
-  <!-- ============ 4. 参加の手順 ============ -->
+  <!-- ============ 3. 参加の手順 ============ -->
   <section id="join" class="section" aria-labelledby="ad-join-heading">
     <div class="col-narrow">
       <div class="ad-section-head">
@@ -353,7 +337,7 @@
     </div>
   </section>
 
-  <!-- ============ 5. 参加してくださった方へ ============ -->
+  <!-- ============ 4. 参加してくださった方へ ============ -->
   <section class="section section--sand" aria-labelledby="ad-thanks-heading">
     <div class="col-narrow">
       <div class="ad-section-head">
@@ -367,7 +351,7 @@
     </div>
   </section>
 
-  <!-- ============ 6. よくある質問 ============ -->
+  <!-- ============ 5. よくある質問 ============ -->
   <section id="faq" class="section" aria-labelledby="ad-faq-heading">
     <div class="col-narrow">
       <h2 id="ad-faq-heading" style="margin:0 0 40px; font-size:var(--text-heading); font-weight:700; line-height:1.35;">よくある質問</h2>
@@ -463,8 +447,35 @@
     </div>
   </section>
 
+  <!-- ============ 6. 釣果ログについて（どんなアプリか） ============ -->
+  <section class="section section--sand ad-app" aria-labelledby="ad-app-heading">
+    <div class="container">
+      <h2 id="ad-app-heading" class="ad-app__heading">釣果ログについて</h2>
+      <div class="ad-strip" role="list">
+        <figure class="ad-strip__item" role="listitem">
+          <div class="phone-mockup"><img src="/assets/img/shot-register.png" alt="登録画面。魚種の候補と水深・水温が入っている" class="phone-mockup__screen" width="1170" height="2532" loading="lazy" decoding="async" /></div>
+          <figcaption>魚種は写真から判定</figcaption>
+        </figure>
+        <figure class="ad-strip__item" role="listitem">
+          <div class="phone-mockup"><img src="/assets/img/shot-catch-detail.png" alt="釣果詳細。水深・潮位グラフ・天気・底質が自動で記録されている" class="phone-mockup__screen" width="1170" height="2532" loading="lazy" decoding="async" /></div>
+          <figcaption>水深と潮も自動で記録</figcaption>
+        </figure>
+        <figure class="ad-strip__item" role="listitem">
+          <div class="phone-mockup"><img src="/assets/img/shot-analysis.png" alt="分析タブ。よく釣れている条件と傾向の一覧" class="phone-mockup__screen" width="1170" height="2532" loading="lazy" decoding="async" /></div>
+          <figcaption>記録から当たりパターンを分析</figcaption>
+        </figure>
+        <figure class="ad-strip__item" role="listitem">
+          <div class="phone-mockup"><img src="/assets/img/shot-zukan.png" alt="図鑑の一覧。魚種ごとに写真と自己記録、伸びが並ぶ" class="phone-mockup__screen" width="1170" height="2532" loading="lazy" decoding="async" /></div>
+          <figcaption>釣った魚が図鑑になる</figcaption>
+        </figure>
+      </div>
+      <p class="ad-app__more">機能は iPhone版 1.2 と同じです。詳しくは<a href="/">トップページ</a>をご覧ください。</p>
+      <p class="ad-app__ios">iPhone版は <a href="https://apps.apple.com/jp/app/id6808027589">App Store で公開中です</a>。</p>
+    </div>
+  </section>
+
   <!-- ============ 7. 運営者 ============ -->
-  <section class="section section--sand" aria-labelledby="ad-operator-heading">
+  <section class="section" aria-labelledby="ad-operator-heading">
     <div class="col-narrow">
       <h2 id="ad-operator-heading" style="margin:0 0 16px; font-size:var(--text-heading-sm); font-weight:700; line-height:1.4;">運営者</h2>
       <p style="margin:0;">釣果ログ（Margherita Works）<br />お問い合わせ：<a href="mailto:support@margheritaworks.com">support@margheritaworks.com</a></p>
