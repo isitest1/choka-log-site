@@ -269,6 +269,7 @@ a:focus-visible {
 .phone-mockup__screen {
   display: block;
   width: 100%;
+  height: auto;
   border-radius: 36px;
 }
 
