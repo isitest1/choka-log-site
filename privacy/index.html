@@ -185,6 +185,7 @@
             <li>iPhone版：Apple のマップを使います。</li>
             <li>Android版：Google マップ（Google Maps SDK for Android）を使います。地図を表示する際、Google が端末の情報、エラーの記録、地図の操作の記録、地図用の識別子などを収集します。詳しくは <a href="https://policies.google.com/privacy">Google のプライバシーポリシー</a> をご覧ください。</li>
           </ul>
+          <p>地図に海の情報（等深線・底質・沈船・魚礁など）を重ねて表示するため、地図を表示・移動したときに、表示している範囲（0.25° の区画）を、運営者が管理するサーバー（Cloudflare Workers）に送ります。Android版では、表示している範囲のまわりの区画も、先に取得します。取得した結果は、同じ区画の問い合わせに再利用するために保存しますが、どの利用者が問い合わせたかは記録しません。地図の海の情報のレイヤーをすべて切ると、送りません。</p>
         </section>
 
         <section id="pp-location" aria-labelledby="pp-location-heading">
