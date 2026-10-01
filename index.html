@@ -37,6 +37,9 @@
   <!-- CSS -->
   <link rel="stylesheet" href="/assets/css/site.css" />
 
+  <!-- Android の端末で開いた場合だけ、最初の画面の Android 版のボタンを先に表示する。判定できない場合は今の並びのまま -->
+  <script>if (/Android/i.test(navigator.userAgent || '')) document.documentElement.classList.add('is-android');</script>
+
   <!-- 構造化データ -->
   <script type="application/ld+json">
   {
@@ -74,6 +77,22 @@
         "mainEntity": [
           {
             "@type": "Question",
+            "name": "Android でも使えますか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "使えます。現在、Google Play で先行公開しています。機能は iPhone版と同じです。参加の方法は Android版のページをご覧ください。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "iPhone と Android の間で、記録を移せますか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "移せます。設定のデータ管理から書き出して、移行先の端末で読み込んでください。"
+            }
+          },
+          {
+            "@type": "Question",
             "name": "位置情報がない写真でも登録できますか？",
             "acceptedAnswer": {
               "@type": "Answer",
@@ -101,7 +120,7 @@
             "name": "写真はどこかに送られますか？",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "送られません。魚種の判定もシェア画像の作成も、すべてiPhoneの中で行います。"
+              "text": "送られません。魚種の判定もシェア画像の作成も、すべてスマートフォンの中で行います。"
             }
           },
           {
@@ -165,15 +184,15 @@
             "name": "機種変更するとき、記録は移せますか？",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "移せます。JSON形式で全件エクスポートでき、新しい端末でインポートできます。iCloudをお使いの場合は自動で同期されます。"
+              "text": "移せます。設定のデータ管理から、全件を書き出して、新しい端末で読み込めます。iPhone版で iCloud をお使いの場合は、自動で同期されます。Android版は、Android の自動バックアップで、機種変更のときに引き継がれます（写真を除く）。"
             }
           },
           {
             "@type": "Question",
-            "name": "iCloud を使っていない端末でも使えますか？",
+            "name": "iCloud を使っていなくても使えますか？（iPhone版）",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "使えます。すべての釣果は端末内に保存され、iCloudがなくても全機能が動作します。"
+              "text": "使えます。すべての釣果は端末の中に保存され、iCloud がなくても全機能が動作します。"
             }
           },
           {
@@ -231,6 +250,7 @@
       <a href="/analysis/" class="nav-link">分析の見方</a>
       <a href="/#faq"     class="nav-link">よくある質問</a>
       <a href="/#contact" class="nav-link">お問い合わせ</a>
+      <a href="/android/?src=header" class="nav-link">Android版</a>
       <a href="https://apps.apple.com/jp/app/id6808027589" class="btn-primary" aria-label="App Store でダウンロード">App Store で見る →</a>
     </nav>
 
@@ -243,6 +263,7 @@
         <a href="/analysis/" class="nav-link">分析の見方</a>
         <a href="/#faq"      class="nav-link">よくある質問</a>
         <a href="/#contact"  class="nav-link">お問い合わせ</a>
+        <a href="/android/?src=header" class="nav-link">Android版</a>
         <a href="https://apps.apple.com/jp/app/id6808027589" class="btn-primary">App Store で見る →</a>
       </nav>
     </details>
@@ -260,8 +281,9 @@
       魚種も、水深も、潮回りも、海底が砂だったか岩だったかまで、その1枚から全部入ります。違うときだけ直せば、記録は完成です。
     </p>
 
-    <!-- App Store バッジ + Android版リンク（1つの塊としてまとめ、内側の余白だけ詰める） -->
-    <div style="display:flex; flex-direction:column; align-items:center; gap:8px;">
+    <!-- App Store バッジ + Android版のボタン（スマートフォンの幅では縦に並ぶ。Android の端末では Android版を先に表示） -->
+    <div class="hero-cta">
+      <div class="hero-cta__item hero-cta__ios">
       <a href="https://apps.apple.com/jp/app/id6808027589" aria-label="App Store でダウンロード">
         <img
           src="/assets/img/appstore-badge-ja.svg"
@@ -276,10 +298,12 @@
           ▶ App Store でダウンロード
         </span>
       </a>
+      </div>
 
-      <p style="margin:0; font-size:var(--text-caption); color:var(--color-ink-muted);">
-        <a href="/android/?src=site">Android版について</a>
-      </p>
+      <div class="hero-cta__item hero-cta__android">
+        <a href="/android/?src=hero" class="btn-primary btn-android">Android版の先行テストに参加する</a>
+        <p class="hero-cta__note">Android版は、Google Play で先行公開中です</p>
+      </div>
     </div>
 
     <!-- 端末モックアップ（扇状 / デスクトップ） -->
@@ -390,6 +414,29 @@
     </div>
   </section>
 
+  <!-- ============ D.2: Android 版（ANDROID） ============ -->
+  <section id="android" class="section" aria-labelledby="android-heading">
+    <div class="col-narrow android-card">
+      <div>
+        <span class="label label--blue">ANDROID</span>
+        <h2 id="android-heading" style="margin:12px 0 0; font-size:var(--text-heading); font-weight:700; line-height:1.35;">
+          <span class="tt-orange">Android版を、</span>先行公開しています
+        </h2>
+      </div>
+      <p style="margin:0; color:var(--color-ink-muted);">魚種の判定、水深の自動入力、図鑑、シェア画像、統計分析まで、iPhone版と同じ機能がそろった Android版を、Google Play で先行公開しています。</p>
+      <p style="margin:0; color:var(--color-ink-muted);">Google Play では、新しいアプリを一般公開する前に、実際に使っていただく方とのテスト期間を設けることが決まりになっています。テストに参加していただくと、一般公開より先に、無料でお使いいただけます。一般公開は、11月中旬から下旬ごろを目指しています。</p>
+      <ol class="android-steps" aria-label="参加の流れ">
+        <li>Google グループに参加する</li>
+        <li>「Become a tester」を押す</li>
+        <li>Google Play からインストールする</li>
+      </ol>
+      <div class="android-card__cta">
+        <a href="/android/?src=section" class="btn-primary">テストに参加する</a>
+        <p class="android-card__note">メールアドレスが公開されることはありません。</p>
+      </div>
+    </div>
+  </section>
+
   <!-- ============ D.5: 図鑑（ZUKAN） ============ -->
   <section id="zukan" class="section" aria-labelledby="zukan-heading">
     <div class="feature-row feature-row--flip">
@@ -438,7 +485,7 @@
           <span class="tt-orange">釣果を、</span>1枚の画像に
         </h2>
       </div>
-      <p style="margin:0; color:var(--color-ink-muted);">魚種・サイズ・水深・水温・潮を写真に重ねて、1枚の画像にしてシェアできます。デザインは3種類。写真の拡大や位置も調整できます。釣れた場所は画像に出しません。画像はiPhoneの中で作り、どこにも送りません。</p>
+      <p style="margin:0; color:var(--color-ink-muted);">魚種・サイズ・水深・水温・潮を写真に重ねて、1枚の画像にしてシェアできます。デザインは3種類。写真の拡大や位置も調整できます。釣れた場所は画像に出しません。画像はスマートフォンの中で作り、どこにも送りません。</p>
       <div class="share-gallery">
         <figure class="share-card"><img src="/assets/img/share-poster.jpg"   alt="シェア画像（ポスター）" loading="lazy" decoding="async" /><figcaption>ポスター</figcaption></figure>
         <figure class="share-card"><img src="/assets/img/share-magazine.jpg" alt="シェア画像（マガジン）" loading="lazy" decoding="async" /><figcaption>マガジン</figcaption></figure>
@@ -545,7 +592,7 @@
         </h2>
         <p style="margin:0; color:var(--color-ink-muted);">写真を撮った場所と時刻をもとに、魚種・水深・水温・天気・風速・潮汐・底質・魚礁が自動で入ります。潮や天気の取得には、インターネットへの接続が必要です。</p>
         <ul class="feature-list" aria-label="自動取得されるデータ">
-          <li>魚種（写真からiPhoneの中で判定。候補から選び直せる）</li>
+          <li>魚種（写真から端末の中で判定。候補から選び直せる）</li>
           <li>水深（釣れた位置の海底地形のデータから）</li>
           <li>水温（同じ日の直前の釣果から引き継ぎ）</li>
           <li>天気・風速・波高（気象データから自動取得）</li>
@@ -642,6 +689,28 @@
         <div class="faq-item">
           <details>
             <summary>
+              <h3 style="margin:0; font-size:inherit; font-weight:inherit;">Android でも使えますか？</h3>
+              <span class="faq-icon faq-icon-plus" aria-hidden="true">＋</span>
+              <span class="faq-icon faq-icon-minus" aria-hidden="true">−</span>
+            </summary>
+            <div class="faq-answer">使えます。現在、Google Play で先行公開しています。機能は iPhone版と同じです。参加の方法は <a href="/android/?src=faq">Android版のページ</a> をご覧ください。</div>
+          </details>
+        </div>
+
+        <div class="faq-item">
+          <details>
+            <summary>
+              <h3 style="margin:0; font-size:inherit; font-weight:inherit;">iPhone と Android の間で、記録を移せますか？</h3>
+              <span class="faq-icon faq-icon-plus" aria-hidden="true">＋</span>
+              <span class="faq-icon faq-icon-minus" aria-hidden="true">−</span>
+            </summary>
+            <div class="faq-answer">移せます。設定のデータ管理から書き出して、移行先の端末で読み込んでください。</div>
+          </details>
+        </div>
+
+        <div class="faq-item">
+          <details>
+            <summary>
               <h3 style="margin:0; font-size:inherit; font-weight:inherit;">位置情報がない写真でも登録できますか？</h3>
               <span class="faq-icon faq-icon-plus" aria-hidden="true">＋</span>
               <span class="faq-icon faq-icon-minus" aria-hidden="true">−</span>
@@ -679,7 +748,7 @@
               <span class="faq-icon faq-icon-plus" aria-hidden="true">＋</span>
               <span class="faq-icon faq-icon-minus" aria-hidden="true">−</span>
             </summary>
-            <div class="faq-answer">送られません。魚種の判定もシェア画像の作成も、すべてiPhoneの中で行います。</div>
+            <div class="faq-answer">送られません。魚種の判定もシェア画像の作成も、すべてスマートフォンの中で行います。</div>
           </details>
         </div>
 
@@ -767,18 +836,18 @@
               <span class="faq-icon faq-icon-plus" aria-hidden="true">＋</span>
               <span class="faq-icon faq-icon-minus" aria-hidden="true">−</span>
             </summary>
-            <div class="faq-answer">移せます。JSON形式で全件エクスポートでき、新しい端末でインポートできます。iCloudをお使いの場合は自動で同期されます。</div>
+            <div class="faq-answer">移せます。設定のデータ管理から、全件を書き出して、新しい端末で読み込めます。iPhone版で iCloud をお使いの場合は、自動で同期されます。Android版は、Android の自動バックアップで、機種変更のときに引き継がれます（写真を除く）。</div>
           </details>
         </div>
 
         <div class="faq-item">
           <details>
             <summary>
-              <h3 style="margin:0; font-size:inherit; font-weight:inherit;">iCloud を使っていない端末でも使えますか？</h3>
+              <h3 style="margin:0; font-size:inherit; font-weight:inherit;">iCloud を使っていなくても使えますか？（iPhone版）</h3>
               <span class="faq-icon faq-icon-plus" aria-hidden="true">＋</span>
               <span class="faq-icon faq-icon-minus" aria-hidden="true">−</span>
             </summary>
-            <div class="faq-answer">使えます。すべての釣果は端末内に保存され、iCloudがなくても全機能が動作します。</div>
+            <div class="faq-answer">使えます。すべての釣果は端末の中に保存され、iCloud がなくても全機能が動作します。</div>
           </details>
         </div>
 
@@ -842,10 +911,10 @@
         <li>入力はできるだけ自動に。直すのは違うときだけ、という方針を続けます</li>
         <li>航海用の海図は持たず、海図アプリ・魚探との併用を前提にします</li>
       </ul>
-      <a href="/android/?src=site" class="notice-block" style="margin:0 0 40px; text-decoration:none; color:inherit; box-shadow:0 1px 3px rgba(0,0,0,.06); border:1.5px solid var(--color-hairline);">
+      <a href="/android/?src=roadmap" class="notice-block" style="margin:0 0 40px; text-decoration:none; color:inherit; box-shadow:0 1px 3px rgba(0,0,0,.06); border:1.5px solid var(--color-hairline);">
         <span class="label label--blue">ANDROID</span>
-        <p style="margin:0; font-size:var(--text-heading-sm); font-weight:700; line-height:1.4; color:var(--color-ink);">Android版について、ご希望を伺っています</p>
-        <p style="margin:0; font-size:var(--text-body-sm); color:var(--color-ink-muted);">対応するかどうかは、登録いただいた人数を見て判断します →</p>
+        <p style="margin:0; font-size:var(--text-heading-sm); font-weight:700; line-height:1.4; color:var(--color-ink);">Android版を先行公開しています</p>
+        <p style="margin:0; font-size:var(--text-body-sm); color:var(--color-ink-muted);">テストに参加していただいた方は、一般公開より先にお使いいただけます →</p>
       </a>
 
       <!-- ── アンケート入口 ── -->
@@ -941,6 +1010,7 @@
         <div>
           <p style="margin:0 0 8px; font-size:var(--text-body); font-weight:700;">1.2（2026年10月）</p>
           <ul class="feature-list">
+            <li>Android版の先行公開を開始<!-- TODO: 日付を入れる（docs/android-launch.md 2-9） --></li>
             <li>画面下の中央にカメラのボタン。どの画面からでも、すぐに撮って記録</li>
             <li>写真から魚種を判定して自動で入力。違うときは候補をタップして選び直し。判定はiPhoneの中で</li>
             <li>釣れた位置の海底地形から、水深を自動で入力。魚探の値に直すこともできる</li>
@@ -994,6 +1064,7 @@
       <h2 id="cta-heading" style="margin:0; font-size:var(--text-heading); font-weight:700; line-height:1.35; color:var(--color-paper);">
         <span class="tt-orange">今日の1枚から、</span>はじめられます
       </h2>
+      <div class="cta-buttons">
       <a href="https://apps.apple.com/jp/app/id6808027589" aria-label="App Store でダウンロード">
         <img
           src="/assets/img/appstore-badge-ja.svg"
@@ -1008,6 +1079,8 @@
           ▶ App Store でダウンロード
         </span>
       </a>
+      <a href="/android/?src=footer" class="btn-primary btn-android">Android版の先行テストに参加する</a>
+      </div>
     </div>
   </section>
 

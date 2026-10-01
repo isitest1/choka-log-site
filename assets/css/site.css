@@ -269,6 +269,7 @@ a:focus-visible {
 .phone-mockup__screen {
   display: block;
   width: 100%;
+  height: auto;
   border-radius: 36px;
 }
 
@@ -1173,4 +1174,90 @@ details:not([open]) .faq-icon-minus { display: none; }
     padding-bottom: 8px;
   }
   .share-card { scroll-snap-align: center; }
+}
+
+/* ─── MARK: Android 版の案内 ────────────────────────── */
+/* App Store のボタンと並べる Android 版のボタン。公式バッジは使わない */
+.btn-android {
+  background: var(--color-ink);
+  color: var(--color-paper);
+  min-height: 52px;
+  line-height: 1.4;
+  white-space: normal;
+  text-align: center;
+  justify-content: center;
+}
+.btn-android:hover { background: var(--color-slate-depth); color: var(--color-paper); }
+.bg-dark .btn-android,
+.bg-dark a.btn-android { background: var(--color-paper); color: var(--color-ink); }
+.bg-dark .btn-android:hover,
+.bg-dark a.btn-android:hover { background: var(--color-sand); color: var(--color-ink); text-decoration: none; }
+
+/* 最初の画面のボタンの並び */
+.hero-cta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 16px 24px;
+}
+.hero-cta__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.hero-cta__note {
+  margin: 0;
+  font-size: var(--text-caption);
+  color: var(--color-ink-muted);
+}
+/* Android の端末で開いた場合だけ、Android 版を先に表示する */
+.is-android .hero-cta__android { order: -1; }
+
+/* ページの最後のボタンの並び */
+.cta-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 16px 24px;
+}
+
+/* トップの Android 版の区画 */
+.android-card {
+  background: var(--color-sand);
+  border-radius: var(--radius);
+  padding: 48px var(--card-pad);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.android-steps {
+  margin: 0;
+  padding-left: 1.6em;
+  font-weight: 500;
+}
+.android-steps li + li { margin-top: 4px; }
+.android-card__cta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+.android-card__note {
+  margin: 0;
+  font-size: var(--text-caption);
+  color: var(--color-ink-muted);
+}
+
+@media (max-width: 767px) {
+  .hero-cta,
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  .android-card { padding: var(--card-pad) 20px; }
+  .android-card__cta { align-items: stretch; }
+  .android-card__cta .btn-primary { justify-content: center; max-width: none; }
 }

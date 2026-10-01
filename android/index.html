@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Android版を検討しています｜釣果ログ</title>
-  <meta name="description" content="釣果ログのAndroid版は、希望される方の人数を見て開発するかどうかを決めます。メールアドレスをご登録いただくと、公開前のテストや公開のお知らせをお送りします。" />
+  <title>釣果ログ Android版 先行公開｜釣果ログ</title>
+  <meta name="description" content="写真1枚で、魚種・水深・潮まで記録するボート釣りのアプリ「釣果ログ」の Android版を、Google Play で先行公開しています。参加の手順と、よくある質問。" />
   <link rel="canonical" href="https://chokalog.margheritaworks.com/android/" />
   <link rel="icon" href="/favicon.ico" sizes="any" />
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32.png" />
@@ -14,8 +14,8 @@
   <!-- OGP -->
   <meta property="og:type"        content="website" />
   <meta property="og:url"         content="https://chokalog.margheritaworks.com/android/" />
-  <meta property="og:title"       content="Android版を検討しています｜釣果ログ" />
-  <meta property="og:description" content="希望される方の人数を見て、Android版を作るかどうかを決めます。メールアドレスをご登録いただくと、公開前のテストや公開のお知らせをお送りします。" />
+  <meta property="og:title"       content="釣果ログ Android版 先行公開｜釣果ログ" />
+  <meta property="og:description" content="写真1枚で、魚種・水深・潮まで記録するボート釣りのアプリ「釣果ログ」の Android版を、Google Play で先行公開しています。参加の手順と、よくある質問。" />
   <meta property="og:image"       content="https://chokalog.margheritaworks.com/assets/img/og.png" />
   <meta property="og:image:secure_url" content="https://chokalog.margheritaworks.com/assets/img/og.png" />
   <meta property="og:image:type"  content="image/png" />
@@ -25,8 +25,8 @@
   <meta property="og:locale"      content="ja_JP" />
   <meta property="og:site_name"   content="釣果ログ" />
   <meta name="twitter:card"        content="summary_large_image" />
-  <meta name="twitter:title"       content="Android版を検討しています｜釣果ログ" />
-  <meta name="twitter:description" content="希望される方の人数を見て、Android版を作るかどうかを決めます。" />
+  <meta name="twitter:title"       content="釣果ログ Android版 先行公開｜釣果ログ" />
+  <meta name="twitter:description" content="写真1枚で、魚種・水深・潮まで記録するボート釣りのアプリ「釣果ログ」の Android版を、Google Play で先行公開しています。参加の手順と、よくある質問。" />
   <meta name="twitter:image"       content="https://chokalog.margheritaworks.com/assets/img/og.png" />
 
   <!-- フォント -->
@@ -37,23 +37,144 @@
   <!-- CSS -->
   <link rel="stylesheet" href="/assets/css/site.css" />
 
-  <!-- このページ専用: ハニーポットとフラッシュメッセージ -->
+  <!-- このページ専用 -->
   <style>
-    .hp { position:absolute; left:-9999px; width:1px; height:1px; overflow:hidden; }
-    .flash {
-      display: none;
-      margin-top: 24px;
-      padding: 20px 24px;
-      border-radius: var(--radius);
-      background: var(--color-sand);
-      color: var(--color-ink);
-      font-size: var(--text-body-sm);
-      line-height: 1.7;
+    .ad-hero {
+      max-width: var(--content-max);
+      margin: 0 auto;
+      padding: 64px 20px 0;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
     }
-    .flash-error { background: #fbeeee; color: var(--color-ink); }
-    .flash:target { display: block; }
-    .wish-form .fb-field { margin-bottom: 24px; }
-    .wish-form .fb-type-group { margin-bottom: 24px; }
+    .ad-hero__brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: var(--text-heading-sm);
+      font-weight: 700;
+    }
+    .ad-hero__brand img { border-radius: 14px; }
+    .ad-hero__headline {
+      margin: 0;
+      font-size: var(--text-display);
+      font-weight: 700;
+      line-height: 1.28;
+      max-width: 840px;
+    }
+    .ad-hero__sub {
+      margin: 0;
+      font-size: var(--text-subheading);
+      font-weight: 500;
+      line-height: 1.75;
+      color: var(--color-ink-muted);
+      max-width: 640px;
+    }
+    .ad-hero__cta { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+    .ad-hero__note { margin: 0; font-size: var(--text-caption); color: var(--color-ink-muted); }
+    .ad-hero .phone-mockup { width: 260px; margin-top: 8px; }
+
+    .ad-section-head { display: flex; flex-direction: column; gap: 12px; margin-bottom: 32px; }
+    .ad-section-head h2 { margin: 0; font-size: var(--text-heading); font-weight: 700; line-height: 1.35; }
+    .ad-section-head p { margin: 0; font-size: var(--text-body-sm); color: var(--color-ink-muted); }
+    .ad-text p { margin: 0 0 16px; color: var(--color-ink-muted); }
+    .ad-text p:last-child { margin-bottom: 0; }
+
+    /* 釣果ログについて（横にスクロールする画面の帯） */
+    .ad-app__heading { margin: 0 0 24px; text-align: center; font-size: var(--text-heading); font-weight: 700; line-height: 1.35; }
+    .ad-strip {
+      display: flex;
+      gap: 16px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      padding-bottom: 8px;
+      scrollbar-width: none;
+    }
+    .ad-strip::-webkit-scrollbar { display: none; }
+    .ad-strip__item {
+      flex: 0 0 184px;
+      margin: 0;
+      scroll-snap-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+    /* 幅に余裕があるときは中央に寄せる（はみ出すときは左から並ぶ） */
+    .ad-strip__item:first-child { margin-left: auto; }
+    .ad-strip__item:last-child { margin-right: auto; }
+    .ad-strip .phone-mockup { width: 150px; padding: 6px; border-radius: 30px; }
+    .ad-strip .phone-mockup__screen { border-radius: 24px; }
+    .ad-strip figcaption {
+      font-size: var(--text-caption);
+      font-weight: 700;
+      white-space: nowrap;
+      color: var(--color-ink);
+    }
+    .ad-app__more { margin: 24px 0 0; text-align: center; font-size: var(--text-body-sm); }
+    .ad-app__ios { margin: 4px 0 0; text-align: center; font-size: var(--text-caption); color: var(--color-ink-muted); }
+
+    /* 参加の手順 */
+    .ad-step-shot {
+      display: block;
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+      border: 1px solid var(--color-hairline);
+      border-radius: var(--radius);
+      background: var(--color-paper);
+    }
+    .ad-device-note {
+      background: var(--color-sand);
+      border-radius: var(--radius);
+      padding: var(--card-pad);
+      margin-bottom: 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+    }
+    .ad-device-note[hidden] { display: none; }
+    .ad-device-note p { margin: 0; }
+    .ad-device-note .ad-copy-status { font-size: var(--text-body-sm); color: var(--color-ink-muted); min-height: 1.5em; word-break: break-all; }
+    .ad-device-note img { display: block; width: 160px; height: 160px; }
+    .ad-caution {
+      background: var(--color-sand);
+      border: 2px solid var(--color-fish-orange);
+      border-radius: var(--radius);
+      padding: var(--card-pad);
+      margin-bottom: 32px;
+    }
+    .ad-caution p { margin: 0 0 12px; }
+    .ad-caution p:last-child { margin-bottom: 0; color: var(--color-ink-muted); }
+    .ad-steps { display: flex; flex-direction: column; gap: 24px; }
+    .ad-step {
+      background: var(--color-sand);
+      border-radius: var(--radius);
+      padding: var(--card-pad);
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .ad-step h3 { margin: 0; font-size: var(--text-heading-sm); font-weight: 700; line-height: 1.4; }
+    .ad-step p { margin: 0; color: var(--color-ink-muted); }
+    .ad-step .ad-small { font-size: var(--text-body-sm); }
+    .ad-step .btn-primary { align-self: flex-start; }
+    .ad-after { margin-top: 24px; }
+    .ad-after p { margin: 0; }
+
+    .ad-faq-answer p { margin: 0 0 12px; }
+    .ad-faq-answer p:last-child { margin-bottom: 0; }
+    .ad-faq-answer ul { margin: 0 0 12px; }
+
+    @media (max-width: 767px) {
+      .ad-hero { padding-top: 40px; }
+      .ad-hero .phone-mockup { width: 220px; }
+      .ad-step .btn-primary { align-self: stretch; justify-content: center; white-space: normal; text-align: center; }
+    }
   </style>
 
   <!-- 構造化データ -->
@@ -66,7 +187,7 @@
         "itemListElement": [
           { "@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://margheritaworks.com/" },
           { "@type": "ListItem", "position": 2, "name": "釣果ログ サポート", "item": "https://chokalog.margheritaworks.com/" },
-          { "@type": "ListItem", "position": 3, "name": "Android版を検討しています", "item": "https://chokalog.margheritaworks.com/android/" }
+          { "@type": "ListItem", "position": 3, "name": "釣果ログ Android版 先行公開", "item": "https://chokalog.margheritaworks.com/android/" }
         ]
       },
       {
@@ -92,6 +213,7 @@
     <nav class="site-header__nav" aria-label="メインナビゲーション">
       <a href="/#howto"    class="nav-link">使い方</a>
       <a href="/#features" class="nav-link">機能</a>
+      <a href="/analysis/" class="nav-link">分析の見方</a>
       <a href="/#faq"      class="nav-link">よくある質問</a>
       <a href="/#contact"  class="nav-link">お問い合わせ</a>
       <a href="https://apps.apple.com/jp/app/id6808027589" class="btn-primary" aria-label="App Store でダウンロード">App Store で見る →</a>
@@ -102,6 +224,7 @@
       <nav class="nav-toggle__menu" aria-label="モバイルナビゲーション">
         <a href="/#howto"    class="nav-link">使い方</a>
         <a href="/#features" class="nav-link">機能</a>
+        <a href="/analysis/" class="nav-link">分析の見方</a>
         <a href="/#faq"      class="nav-link">よくある質問</a>
         <a href="/#contact"  class="nav-link">お問い合わせ</a>
         <a href="https://apps.apple.com/jp/app/id6808027589" class="btn-primary">App Store で見る →</a>
@@ -111,78 +234,246 @@
 </header>
 
 <main id="main">
-  <div class="container">
 
-    <!-- ページヘッダー -->
-    <div class="privacy-page-header" style="padding-top: 48px;">
-      <span class="label label--blue" style="display:block; margin-bottom:16px;">ANDROID</span>
-      <h1 style="margin:0 0 12px; font-size:var(--text-display); font-weight:700; line-height:1.28;">Android版を検討しています</h1>
+  <!-- ============ 1. 最初の画面 ============ -->
+  <section class="ad-hero" aria-labelledby="ad-hero-headline">
+    <div class="ad-hero__brand">
+      <img src="/assets/img/app-icon.png" alt="" width="56" height="56" aria-hidden="true" />
+      <span>釣果ログ</span>
     </div>
+    <h1 class="ad-hero__headline" id="ad-hero-headline">釣果ログ Android版を、先行公開しています</h1>
+    <p class="ad-hero__sub">写真1枚で、魚種・水深・潮まで記録するボート釣りのアプリです。iPhone版と同じ機能を、一般公開より先にお使いいただけます。</p>
+    <div class="ad-hero__cta">
+      <a href="#join" class="btn-primary">テストに参加する</a>
+      <p class="ad-hero__note">無料・Google Play から配信しています</p>
+    </div>
+    <!-- Android 版の記録の一覧の画面（FishingLog-Android の docs/store/raw/android-records.png を 540×1200 に縮小） -->
+    <div class="phone-mockup">
+      <img src="/assets/img/android-records.png" alt="Android版の記録の画面。釣行ごとに日付・潮・場所・釣果の写真が並ぶ" class="phone-mockup__screen" width="540" height="1200" decoding="async" />
+    </div>
+  </section>
 
-    <div class="col-narrow" style="padding-bottom: 80px;">
+  <!-- ============ 2. 先行公開について ============ -->
+  <section class="section section--sand" aria-labelledby="ad-about-heading">
+    <div class="col-narrow">
+      <div class="ad-section-head">
+        <h2 id="ad-about-heading">先行公開について</h2>
+      </div>
+      <div class="ad-text">
+        <p>Google Play では、新しいアプリを一般公開する前に、実際に使っていただく方とのテスト期間を設けることが決まりになっています。釣果ログの Android版は、いまその期間にあります。</p>
+        <p>テストに参加していただいた方は、一般公開より先に、無料でお使いいただけます。一般公開は、11月中旬から下旬ごろを目指しています。</p>
+      </div>
+    </div>
+  </section>
 
-      <p style="margin:0 0 12px; font-size:var(--text-body);">現在は iPhone 版のみです。Android 版は、<strong>希望される方の人数を見て</strong>作るかどうかを決めます。</p>
-      <p style="margin:0 0 12px; font-size:var(--text-body); color:var(--color-ink-muted);">登録いただいた方には、（作ることになった場合）公開前のテスト参加のお願いと、公開のお知らせをメールでお送りします。それ以外の目的には使いません。いつでも解除できます。</p>
-
-      <!-- ── フォーム ── -->
-      <form method="post" action="https://api.margheritaworks.com/wish" class="feedback-card wish-form" style="margin-top:40px;">
-        <input type="hidden" name="app" value="choka-log">
-        <input type="hidden" name="topic" value="android">
-        <input type="hidden" name="src" id="src" value="">
-        <input type="hidden" name="return" value="https://chokalog.margheritaworks.com/android/">
-
-        <!-- ハニーポット。人には見えない -->
-        <div class="hp" aria-hidden="true">
-          <label>ウェブサイト <input type="text" name="website" tabindex="-1" autocomplete="off"></label>
-        </div>
-
-        <div class="fb-field">
-          <label class="fb-field-label" for="wish-email">メールアドレス</label>
-          <input type="email" id="wish-email" name="email" class="fb-input" required maxlength="254"
-                 inputmode="email" autocomplete="email" placeholder="you@example.com">
-        </div>
-
-        <fieldset class="fb-type-group">
-          <legend class="fb-type-legend">お使いの Android 端末（任意）</legend>
-          <div class="fb-type-pills">
-            <input type="radio" name="device" id="wish-dev-pixel"  value="pixel" /><label for="wish-dev-pixel">Pixel</label>
-            <input type="radio" name="device" id="wish-dev-galaxy" value="galaxy" /><label for="wish-dev-galaxy">Galaxy</label>
-            <input type="radio" name="device" id="wish-dev-xperia" value="xperia" /><label for="wish-dev-xperia">Xperia</label>
-            <input type="radio" name="device" id="wish-dev-other"  value="other" /><label for="wish-dev-other">その他</label>
-          </div>
-        </fieldset>
-
-        <p class="fb-hint">登録いただいたアドレスは、Android 版のテスト参加のお願いと公開のお知らせにのみ使います。メール内のリンクからいつでも解除できます。<a href="/privacy/">プライバシーポリシー</a></p>
-
-        <button type="submit" class="btn-primary fb-submit">Android 版を希望する</button>
-      </form>
-
-      <div id="thanks" class="flash">登録しました。作ることになったら、テストのお願いをメールでお送りします。</div>
-      <div id="error-email" class="flash flash-error">メールアドレスの形式を確認してください。</div>
-      <div id="error-rate" class="flash flash-error">しばらく時間をおいて、もう一度お試しください。</div>
-
-      <!-- iPhone版はこちら -->
-      <div style="margin-top:56px; padding-top:32px; border-top:1px solid var(--color-hairline); text-align:center;">
-        <p style="margin:0 0 16px; font-size:var(--text-body-sm); color:var(--color-ink-muted);">iPhone 版はこちらからご利用いただけます。</p>
-        <a href="https://apps.apple.com/jp/app/id6808027589" aria-label="App Store でダウンロード">
-          <img
-            src="/assets/img/appstore-badge-ja.svg"
-            alt="App Store でダウンロード"
-            class="appstore-badge"
-            width="156" height="52"
-            decoding="async"
-            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"
-          />
-          <span class="btn-primary" style="display:none;" aria-hidden="true">▶ App Store でダウンロード</span>
-        </a>
+  <!-- ============ 3. 参加の手順 ============ -->
+  <section id="join" class="section" aria-labelledby="ad-join-heading">
+    <div class="col-narrow">
+      <div class="ad-section-head">
+        <h2 id="ad-join-heading">参加の手順</h2>
+        <p>全部で3分ほどです。</p>
       </div>
 
+      <!-- 端末ごとの案内。判定できた場合だけ、スクリプトが hidden を外す -->
+      <div class="ad-device-note" data-device="ios" hidden>
+        <p>この手順は、Android のスマートフォンで行います。Android をお使いのご家族やお友だちに、このページを送っていただけると助かります。</p>
+        <button type="button" class="btn-primary" id="ad-copy-link">このページのリンクをコピー</button>
+        <p class="ad-copy-status" id="ad-copy-status" role="status" aria-live="polite"></p>
+      </div>
+      <div class="ad-device-note" data-device="pc" hidden>
+        <p>手順は、お使いの Android のスマートフォンで行うと確実です。下の QR コードを読み取ると、このページをスマートフォンで開けます。</p>
+        <img src="/assets/img/android-qr.svg" alt="このページをスマートフォンで開くための QR コード" width="160" height="160" loading="lazy" decoding="async" />
+      </div>
+
+      <div class="ad-caution">
+        <p>手順1と手順2は、同じ Google アカウントで行ってください。スマートフォンに複数のアカウントがある場合、別のアカウントで開くと、インストールできません。</p>
+        <p>お使いのアカウントは、Google Play アプリの右上の丸いアイコンを押すと確かめられます。</p>
+      </div>
+
+      <div class="ad-steps">
+        <article class="ad-step">
+          <h3>1. Google グループに参加する</h3>
+          <p>下のボタンからグループのページを開き、「グループに参加」を押してください。</p>
+          <p>参加の設定画面が表示されたら、「登録」の欄を「メールなし」に変えてから、「グループに参加」を押してください。</p>
+          <p>参加すると、グループのページに次の手順のリンクも表示されます。</p>
+          <p class="ad-small">画面の上の方に英語の表示が出ることがありますが、Google 側の表示によるもので、参加には影響ありません。</p>
+          <a href="https://groups.google.com/g/chokalog-android/about" class="btn-primary" target="_blank" rel="noopener">グループのページを開く</a>
+          <!-- Google グループの参加の設定画面。説明の文字と番号は画像に入っているので、下に説明を重ねて書かない -->
+          <img src="/assets/img/android-step1-group.png" alt="Google グループの参加の設定画面。「登録」の欄を「メールなし」にして、「グループに参加」を押す" class="ad-step-shot" width="540" height="746" loading="lazy" decoding="async" />
+        </article>
+
+        <article class="ad-step">
+          <h3>2. テストに参加する</h3>
+          <p>次のボタンからページを開き、「Become a tester」を押してください。画面は英語で表示されますが、そのまま進めて問題ありません。</p>
+          <a href="https://play.google.com/apps/testing/com.margheritaworks.chokalog" class="btn-primary" target="_blank" rel="noopener">テスト参加のページを開く</a>
+          <!-- テスト参加のページ（英語で表示される）。説明の文字と番号は画像に入っているので、下に説明を重ねて書かない -->
+          <img src="/assets/img/android-step2-tester.png" alt="Google Play のテスト参加のページ。英語で表示される。「Become a tester」を押す" class="ad-step-shot" width="540" height="374" loading="lazy" decoding="async" />
+        </article>
+
+        <article class="ad-step">
+          <h3>3. Google Play からインストールする</h3>
+          <p>表示されたページの「download it on Google Play」を押すと、Google Play が開きます。「インストール」を押してください。Google Play では、アプリ名の後ろに「（早期アクセス）」と表示されます。</p>
+          <!-- 説明の文字と番号は画像に入っているので、下に説明を重ねて書かない -->
+          <img src="/assets/img/android-step3-download.png" alt="テストに参加した後のページ。「download it on Google Play」を押す" class="ad-step-shot" width="540" height="386" loading="lazy" decoding="async" />
+          <img src="/assets/img/android-step3-install.png" alt="Google Play のアプリのページ。アプリ名の後ろに「（早期アクセス）」と表示される。「インストール」を押す" class="ad-step-shot" width="540" height="640" loading="lazy" decoding="async" />
+        </article>
+      </div>
+
+      <div class="notice-block ad-after">
+        <p>うまくいかない場合は、お使いの Google アカウントのメールアドレスを <a href="mailto:support@margheritaworks.com">support@margheritaworks.com</a> までお知らせください。こちらで参加の登録をいたします。</p>
+      </div>
     </div>
-  </div>
+  </section>
+
+  <!-- ============ 4. 参加してくださった方へ ============ -->
+  <section class="section section--sand" aria-labelledby="ad-thanks-heading">
+    <div class="col-narrow">
+      <div class="ad-section-head">
+        <h2 id="ad-thanks-heading">参加してくださった方へ</h2>
+      </div>
+      <div class="ad-text">
+        <p>一般公開は、11月中旬から下旬ごろを目指しています。それまでの間、グループからの退会は少しだけお待ちいただけると助かります。参加者の人数が、一般公開の条件として数えられるためです。一般公開後は、そのまま通常版としてお使いいただけ、記録も引き継がれます。</p>
+        <p>よろしければ、過去の釣果の写真を何枚か登録してみてください。魚種の判定や水深の自動入力が、ご自身の写真でどう動くかを確かめていただけます。写真を選んで登録した場合は、釣れた場所を地図で指定してください。</p>
+        <p>使ってみて気づいたことがあれば、アプリの「設定」→「ご意見を送る」から、一言でもお寄せいただけるとうれしいです。いただいたご意見は、確認させていただきます。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 5. よくある質問 ============ -->
+  <section id="faq" class="section" aria-labelledby="ad-faq-heading">
+    <div class="col-narrow">
+      <h2 id="ad-faq-heading" style="margin:0 0 40px; font-size:var(--text-heading); font-weight:700; line-height:1.35;">よくある質問</h2>
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <details>
+            <summary>
+              <h3 style="margin:0; font-size:inherit; font-weight:inherit;">メールアドレスは公開されますか？</h3>
+              <span class="faq-icon faq-icon-plus" aria-hidden="true">＋</span>
+              <span class="faq-icon faq-icon-minus" aria-hidden="true">−</span>
+            </summary>
+            <div class="faq-answer">公開されません。ほかの参加者を含め、外部に公開されることはなく、確認できるのは開発者だけです。テスト参加者の管理以外の目的には使わず、第三者に提供することもありません。グループからメールをお送りすることもありません。</div>
+          </details>
+        </div>
+
+        <div class="faq-item">
+          <details>
+            <summary>
+              <h3 style="margin:0; font-size:inherit; font-weight:inherit;">料金はかかりますか？</h3>
+              <span class="faq-icon faq-icon-plus" aria-hidden="true">＋</span>
+              <span class="faq-icon faq-icon-minus" aria-hidden="true">−</span>
+            </summary>
+            <div class="faq-answer">かかりません。広告もアプリ内課金もありません。一般公開後も同じです。</div>
+          </details>
+        </div>
+
+        <div class="faq-item">
+          <details>
+            <summary>
+              <h3 style="margin:0; font-size:inherit; font-weight:inherit;">どの Android 端末で使えますか？</h3>
+              <span class="faq-icon faq-icon-plus" aria-hidden="true">＋</span>
+              <span class="faq-icon faq-icon-minus" aria-hidden="true">−</span>
+            </summary>
+            <div class="faq-answer">Android 10 以上の端末でお使いいただけます。Google Play で「お使いのデバイスはこのバージョンに対応していません」と表示された場合は、お手数ですが <a href="mailto:support@margheritaworks.com">support@margheritaworks.com</a> まで機種名をお知らせください。</div>
+          </details>
+        </div>
+
+        <div class="faq-item">
+          <details>
+            <summary>
+              <h3 style="margin:0; font-size:inherit; font-weight:inherit;">テスト中に記録した釣果は、一般公開後も使えますか？</h3>
+              <span class="faq-icon faq-icon-plus" aria-hidden="true">＋</span>
+              <span class="faq-icon faq-icon-minus" aria-hidden="true">−</span>
+            </summary>
+            <div class="faq-answer">使えます。一般公開は、同じアプリがそのまま通常版に切り替わるだけなので、記録は消えません。</div>
+          </details>
+        </div>
+
+        <div class="faq-item">
+          <details>
+            <summary>
+              <h3 style="margin:0; font-size:inherit; font-weight:inherit;">iPhone版と違うところはありますか？</h3>
+              <span class="faq-icon faq-icon-plus" aria-hidden="true">＋</span>
+              <span class="faq-icon faq-icon-minus" aria-hidden="true">−</span>
+            </summary>
+            <div class="faq-answer">機能は同じです。違うのは記録の保存の仕組みで、iPhone版は iCloud で同期しますが、Android版は Android の自動バックアップ（Google アカウント）を使います。iPhone と Android の間で記録を移す場合は、設定のデータ管理から書き出して、移行先の端末で読み込んでください。</div>
+          </details>
+        </div>
+
+        <div class="faq-item">
+          <details>
+            <summary>
+              <h3 style="margin:0; font-size:inherit; font-weight:inherit;">「Become a tester」を押しても、インストールできません。</h3>
+              <span class="faq-icon faq-icon-plus" aria-hidden="true">＋</span>
+              <span class="faq-icon faq-icon-minus" aria-hidden="true">−</span>
+            </summary>
+            <div class="faq-answer ad-faq-answer">
+              <p>次の点をご確認ください。</p>
+              <ul class="feature-list">
+                <li>手順1のグループに参加しているか</li>
+                <li>手順1と手順2を、同じ Google アカウントで行ったか</li>
+                <li>Google Play アプリでも、同じアカウントが選ばれているか</li>
+              </ul>
+              <p>Google Play アプリで使っているアカウントは、右上の丸いアイコンを押すと確かめられます。</p>
+              <p>参加の直後は、反映まで数分かかることがあります。それでも解決しない場合は、お使いの Google アカウントのメールアドレスを <a href="mailto:support@margheritaworks.com">support@margheritaworks.com</a> までお知らせください。こちらで参加の登録をいたします。</p>
+            </div>
+          </details>
+        </div>
+
+        <div class="faq-item">
+          <details>
+            <summary>
+              <h3 style="margin:0; font-size:inherit; font-weight:inherit;">やめたくなったら、どうすればいいですか？</h3>
+              <span class="faq-icon faq-icon-plus" aria-hidden="true">＋</span>
+              <span class="faq-icon faq-icon-minus" aria-hidden="true">−</span>
+            </summary>
+            <div class="faq-answer">グループのページの「グループから退会」を押せば、いつでもやめられます。アプリは通常のアプリと同じ方法で削除できます。</div>
+          </details>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 6. 釣果ログについて（どんなアプリか） ============ -->
+  <section class="section section--sand ad-app" aria-labelledby="ad-app-heading">
+    <div class="container">
+      <h2 id="ad-app-heading" class="ad-app__heading">釣果ログについて</h2>
+      <div class="ad-strip" role="list">
+        <figure class="ad-strip__item" role="listitem">
+          <div class="phone-mockup"><img src="/assets/img/shot-register.png" alt="登録画面。魚種の候補と水深・水温が入っている" class="phone-mockup__screen" width="1170" height="2532" loading="lazy" decoding="async" /></div>
+          <figcaption>魚種は写真から判定</figcaption>
+        </figure>
+        <figure class="ad-strip__item" role="listitem">
+          <div class="phone-mockup"><img src="/assets/img/shot-catch-detail.png" alt="釣果詳細。水深・潮位グラフ・天気・底質が自動で記録されている" class="phone-mockup__screen" width="1170" height="2532" loading="lazy" decoding="async" /></div>
+          <figcaption>水深と潮も自動で記録</figcaption>
+        </figure>
+        <figure class="ad-strip__item" role="listitem">
+          <div class="phone-mockup"><img src="/assets/img/shot-analysis.png" alt="分析タブ。よく釣れている条件と傾向の一覧" class="phone-mockup__screen" width="1170" height="2532" loading="lazy" decoding="async" /></div>
+          <figcaption>記録から当たりパターンを分析</figcaption>
+        </figure>
+        <figure class="ad-strip__item" role="listitem">
+          <div class="phone-mockup"><img src="/assets/img/shot-zukan.png" alt="図鑑の一覧。魚種ごとに写真と自己記録、伸びが並ぶ" class="phone-mockup__screen" width="1170" height="2532" loading="lazy" decoding="async" /></div>
+          <figcaption>釣った魚が図鑑になる</figcaption>
+        </figure>
+      </div>
+      <p class="ad-app__more">機能は iPhone版 1.2 と同じです。詳しくは<a href="/">トップページ</a>をご覧ください。</p>
+      <p class="ad-app__ios">iPhone版は <a href="https://apps.apple.com/jp/app/id6808027589">App Store で公開中です</a>。</p>
+    </div>
+  </section>
+
+  <!-- ============ 7. 運営者 ============ -->
+  <section class="section" aria-labelledby="ad-operator-heading">
+    <div class="col-narrow">
+      <h2 id="ad-operator-heading" style="margin:0 0 16px; font-size:var(--text-heading-sm); font-weight:700; line-height:1.4;">運営者</h2>
+      <p style="margin:0;">釣果ログ（Margherita Works）<br />お問い合わせ：<a href="mailto:support@margheritaworks.com">support@margheritaworks.com</a></p>
+    </div>
+  </section>
+
 </main>
 
 <!-- フッター -->
-<footer class="site-footer" style="margin-top: var(--section-gap);" role="contentinfo">
+<footer class="site-footer" role="contentinfo">
   <div class="site-footer__inner">
     <div class="site-footer__row">
       <a href="/" class="brand brand--footer" aria-label="釣果ログ トップ">
@@ -203,9 +494,63 @@
 </footer>
 
 <script>
-  // ?src=ig などを hidden に写す。JS が無くてもフォーム自体は動く
-  document.getElementById('src').value =
-    (new URLSearchParams(location.search).get('src') || '').slice(0, 16);
+(function () {
+  'use strict';
+
+  /* ── 端末ごとの案内 ──
+     判定できない場合は何も出さない（今の表示のまま） */
+  function detectDevice() {
+    var ua = navigator.userAgent || '';
+    if (/Android/i.test(ua)) return 'android';
+    if (/iPhone|iPad|iPod/.test(ua)) return 'ios';
+    if (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1) return 'ios'; // iPadOS はパソコンの Safari と同じ表記になる
+    if (/Windows NT|Macintosh|X11/.test(ua) && !/Mobile|CrOS/.test(ua)) return 'pc';
+    return '';
+  }
+  var device = detectDevice();
+  if (device === 'ios' || device === 'pc') {
+    var note = document.querySelector('.ad-device-note[data-device="' + device + '"]');
+    if (note) note.hidden = false;
+  }
+
+  /* ── このページのリンクをコピー ── */
+  var SHARE_URL = 'https://chokalog.margheritaworks.com/android/?src=share';
+  var copyBtn = document.getElementById('ad-copy-link');
+  var copyStatus = document.getElementById('ad-copy-status');
+
+  function copyText(text) {
+    if (navigator.clipboard && window.isSecureContext) return navigator.clipboard.writeText(text);
+    return new Promise(function (resolve, reject) {
+      var ta = document.createElement('textarea');
+      ta.value = text;
+      ta.setAttribute('readonly', '');
+      ta.style.position = 'absolute';
+      ta.style.left = '-9999px';
+      document.body.appendChild(ta);
+      ta.select();
+      var ok = false;
+      try { ok = document.execCommand('copy'); } catch (_) { ok = false; }
+      document.body.removeChild(ta);
+      if (ok) resolve(); else reject();
+    });
+  }
+
+  if (copyBtn && copyStatus) {
+    copyBtn.addEventListener('click', function () {
+      copyText(SHARE_URL).then(function () {
+        copyStatus.textContent = 'コピーしました';
+      }, function () {
+        // コピーできない環境では、リンクをそのまま表示して手で写せるようにする
+        copyStatus.textContent = SHARE_URL;
+      });
+    });
+  }
+
+  /* ── ページ内リンクのときだけスムーススクロール（トップページと同じ） ── */
+  window.addEventListener('load', function () {
+    document.documentElement.classList.add('is-smooth-scroll');
+  });
+}());
 </script>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "ede13281e7b5473dad0fcfdd10a4c235"}'></script>
 </body>
