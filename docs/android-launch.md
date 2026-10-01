@@ -264,7 +264,7 @@ QR コード：`https://chokalog.margheritaworks.com/android/?src=qr` を開く�
 
 本文：
 
-> 次のボタンからページを開き、「テスターになる」を押してください。
+> 次のボタンからページを開き、「Become a tester」を押してください。画面は英語で表示されますが、そのまま進めて問題ありません。
 
 ボタン：
 
@@ -272,7 +272,9 @@ QR コード：`https://chokalog.margheritaworks.com/android/?src=qr` を開く�
 
 リンク先：`https://play.google.com/apps/testing/com.margheritaworks.chokalog`
 
-画像：「テスターになる」のボタンがある画面。（画像は開発者が用意する。テストが公開されてから撮る）
+画像：テスト参加のページ（英語で表示される）の「Become a tester」のボタンがある画面。（`assets/img/android-step2-tester.png`）
+
+（※Google Play のテスト参加のページは日本語に切り替えられず、英語で表示されるため、画像と本文を英語の画面に合わせた（2026-10-01））
 
 **手順3**
 
@@ -282,7 +284,9 @@ QR コード：`https://chokalog.margheritaworks.com/android/?src=qr` を開く�
 
 本文：
 
-> 手順2の画面にある Google Play へのリンクを開き、インストールしてください。
+> 表示されたページの「download it on Google Play」を押すと、Google Play が開きます。「インストール」を押してください。Google Play では、アプリ名の後ろに「（早期アクセス）」と表示されます。
+
+画像：テストに参加した後のページの「download it on Google Play」と、Google Play の「インストール」の画面の 2 枚を、この順に縦に並べる。（`assets/img/android-step3-download.png`、`assets/img/android-step3-install.png`）
 
 **手順の後に（枠で）**
 
@@ -349,7 +353,7 @@ QR コード：`https://chokalog.margheritaworks.com/android/?src=qr` を開く�
 
 > 機能は同じです。違うのは記録の保存の仕組みで、iPhone版は iCloud で同期しますが、Android版は Android の自動バックアップ（Google アカウント）を使います。iPhone と Android の間で記録を移す場合は、設定のデータ管理から書き出して、移行先の端末で読み込んでください。
 
-**Q. 「テスターになる」を押しても、インストールできません。**
+**Q. 「Become a tester」を押しても、インストールできません。**
 
 > 次の点をご確認ください。
 >

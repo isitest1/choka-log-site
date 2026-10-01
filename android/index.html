@@ -117,21 +117,6 @@
     .ad-app__more { margin: 24px 0 0; text-align: center; font-size: var(--text-body-sm); }
     .ad-app__ios { margin: 4px 0 0; text-align: center; font-size: var(--text-caption); color: var(--color-ink-muted); }
 
-    /* 画像の仮の表示（画像を用意したら img に差し替える） */
-    .shot-placeholder {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      border: 2px dashed var(--color-hairline);
-      border-radius: var(--radius);
-      background: var(--color-paper);
-      color: var(--color-ink-muted);
-      font-size: var(--text-caption);
-      min-height: 220px;
-      padding: 24px;
-    }
-
     /* 参加の手順 */
     .ad-step-shot {
       display: block;
@@ -319,15 +304,18 @@
 
         <article class="ad-step">
           <h3>2. テストに参加する</h3>
-          <p>次のボタンからページを開き、「テスターになる」を押してください。</p>
+          <p>次のボタンからページを開き、「Become a tester」を押してください。画面は英語で表示されますが、そのまま進めて問題ありません。</p>
           <a href="https://play.google.com/apps/testing/com.margheritaworks.chokalog" class="btn-primary" target="_blank" rel="noopener">テスト参加のページを開く</a>
-          <!-- 「テスターになる」のボタンがある画面。画像を用意したら、下の div を img に差し替える -->
-          <div class="shot-placeholder">画像を準備中</div>
+          <!-- テスト参加のページ（英語で表示される）。説明の文字と番号は画像に入っているので、下に説明を重ねて書かない -->
+          <img src="/assets/img/android-step2-tester.png" alt="Google Play のテスト参加のページ。英語で表示される。「Become a tester」を押す" class="ad-step-shot" width="540" height="950" loading="lazy" decoding="async" />
         </article>
 
         <article class="ad-step">
           <h3>3. Google Play からインストールする</h3>
-          <p>手順2の画面にある Google Play へのリンクを開き、インストールしてください。</p>
+          <p>表示されたページの「download it on Google Play」を押すと、Google Play が開きます。「インストール」を押してください。Google Play では、アプリ名の後ろに「（早期アクセス）」と表示されます。</p>
+          <!-- 説明の文字と番号は画像に入っているので、下に説明を重ねて書かない -->
+          <img src="/assets/img/android-step3-download.png" alt="テストに参加した後のページ。「download it on Google Play」を押す" class="ad-step-shot" width="540" height="386" loading="lazy" decoding="async" />
+          <img src="/assets/img/android-step3-install.png" alt="Google Play のアプリのページ。アプリ名の後ろに「（早期アクセス）」と表示される。「インストール」を押す" class="ad-step-shot" width="540" height="640" loading="lazy" decoding="async" />
         </article>
       </div>
 
@@ -415,7 +403,7 @@
         <div class="faq-item">
           <details>
             <summary>
-              <h3 style="margin:0; font-size:inherit; font-weight:inherit;">「テスターになる」を押しても、インストールできません。</h3>
+              <h3 style="margin:0; font-size:inherit; font-weight:inherit;">「Become a tester」を押しても、インストールできません。</h3>
               <span class="faq-icon faq-icon-plus" aria-hidden="true">＋</span>
               <span class="faq-icon faq-icon-minus" aria-hidden="true">−</span>
             </summary>
