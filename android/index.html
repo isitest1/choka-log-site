@@ -116,6 +116,15 @@
     }
 
     /* 参加の手順 */
+    .ad-step-shot {
+      display: block;
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+      border: 1px solid var(--color-hairline);
+      border-radius: var(--radius);
+      background: var(--color-paper);
+    }
     .ad-device-note {
       background: var(--color-sand);
       border-radius: var(--radius);
@@ -316,12 +325,12 @@
         <article class="ad-step">
           <h3>1. Google グループに参加する</h3>
           <p>下のボタンからグループのページを開き、「グループに参加」を押してください。</p>
-          <p>参加の設定画面が表示されたら、「登録」の欄を「メールを受け取らない」に変えてから、「グループに参加」を押してください。</p>
+          <p>参加の設定画面が表示されたら、「登録」の欄を「メールなし」に変えてから、「グループに参加」を押してください。</p>
           <p>参加すると、グループのページに次の手順のリンクも表示されます。</p>
           <p class="ad-small">画面の上の方に英語の表示が出ることがありますが、Google 側の表示によるもので、参加には影響ありません。</p>
           <a href="https://groups.google.com/g/chokalog-android/about" class="btn-primary" target="_blank" rel="noopener">グループのページを開く</a>
-          <!-- Google グループの参加の設定画面（「登録」の欄に印）。画像を用意したら、下の div を img に差し替える -->
-          <div class="shot-placeholder">画像を準備中</div>
+          <!-- Google グループの参加の設定画面。説明の文字と番号は画像に入っているので、下に説明を重ねて書かない -->
+          <img src="/assets/img/android-step1-group.png" alt="Google グループの参加の設定画面。「登録」の欄を「メールなし」にして、「グループに参加」を押す" class="ad-step-shot" width="540" height="746" loading="lazy" decoding="async" />
         </article>
 
         <article class="ad-step">
