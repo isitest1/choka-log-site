@@ -163,6 +163,14 @@
     .ad-step p { margin: 0; color: var(--color-ink-muted); }
     .ad-step .ad-small { font-size: var(--text-body-sm); }
     .ad-step .btn-primary { align-self: flex-start; }
+    /* 手順の中の注意（目立つ枠） */
+    .ad-step-note {
+      background: var(--color-paper);
+      border: 2px solid var(--color-fish-orange);
+      border-radius: var(--radius);
+      padding: 20px 24px;
+    }
+    .ad-step .ad-step-note p { margin: 0; color: var(--color-ink); }
     .ad-after { margin-top: 24px; }
     .ad-after p { margin: 0; }
 
@@ -304,10 +312,10 @@
 
         <article class="ad-step">
           <h3>2. テストに参加する</h3>
-          <p>次のボタンからページを開き、「Become a tester」を押してください。画面は英語で表示されますが、そのまま進めて問題ありません。</p>
+          <p>次のボタンからページを開き、「Become a tester」（日本語の画面では「テスターになる」）を押してください。画面が英語で表示される場合もございますが、そのままお進みいただいて差し支えございません。</p>
           <a href="https://play.google.com/apps/testing/com.margheritaworks.chokalog" class="btn-primary" target="_blank" rel="noopener">テスト参加のページを開く</a>
           <!-- テスト参加のページ（英語で表示される）。説明の文字と番号は画像に入っているので、下に説明を重ねて書かない -->
-          <img src="/assets/img/android-step2-tester.png" alt="Google Play のテスト参加のページ。英語で表示される。「Become a tester」を押す" class="ad-step-shot" width="540" height="374" loading="lazy" decoding="async" />
+          <img src="/assets/img/android-step2-tester.png" alt="Google Play のテスト参加のページ（英語の画面）。「Become a tester」を押す" class="ad-step-shot" width="540" height="374" loading="lazy" decoding="async" />
         </article>
 
         <article class="ad-step">
@@ -316,6 +324,9 @@
           <!-- 説明の文字と番号は画像に入っているので、下に説明を重ねて書かない -->
           <img src="/assets/img/android-step3-download.png" alt="テストに参加した後のページ。「download it on Google Play」を押す" class="ad-step-shot" width="540" height="386" loading="lazy" decoding="async" />
           <img src="/assets/img/android-step3-install.png" alt="Google Play のアプリのページ。アプリ名の後ろに「（早期アクセス）」と表示される。「インストール」を押す" class="ad-step-shot" width="540" height="640" loading="lazy" decoding="async" />
+          <div class="ad-step-note">
+            <p>テストに参加した直後は、Google Play に反映されるまで数分かかることがあります。「アイテムが見つかりませんでした」と表示された場合や、インストールの途中でエラーになった場合は、少し時間をおいてから、手順2のページをもう一度開き、Google Play へのリンクを押してください。</p>
+          </div>
         </article>
       </div>
 
@@ -403,11 +414,12 @@
         <div class="faq-item">
           <details>
             <summary>
-              <h3 style="margin:0; font-size:inherit; font-weight:inherit;">「Become a tester」を押しても、インストールできません。</h3>
+              <h3 style="margin:0; font-size:inherit; font-weight:inherit;">「Become a tester」（テスターになる）を押しても、インストールできません。</h3>
               <span class="faq-icon faq-icon-plus" aria-hidden="true">＋</span>
               <span class="faq-icon faq-icon-minus" aria-hidden="true">−</span>
             </summary>
             <div class="faq-answer ad-faq-answer">
+              <p>参加した直後は、Google Play に反映されるまで数分かかることがあります。「アイテムが見つかりませんでした」と表示された場合や、インストールの途中でエラーになった場合は、少し時間をおいてからお試しください。</p>
               <p>次の点をご確認ください。</p>
               <ul class="feature-list">
                 <li>手順1のグループに参加しているか</li>
