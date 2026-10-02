@@ -264,7 +264,7 @@ QR コード：`https://chokalog.margheritaworks.com/android/?src=qr` を開く�
 
 本文：
 
-> 次のボタンからページを開き、「Become a tester」を押してください。画面は英語で表示されますが、そのまま進めて問題ありません。
+> 次のボタンからページを開き、「Become a tester」（日本語の画面では「テスターになる」）を押してください。画面が英語で表示される場合もございますが、そのままお進みいただいて差し支えございません。
 
 ボタン：
 
@@ -275,6 +275,8 @@ QR コード：`https://chokalog.margheritaworks.com/android/?src=qr` を開く�
 画像：テスト参加のページ（英語で表示される）の「Become a tester」のボタンがある画面。（`assets/img/android-step2-tester.png`）
 
 （※Google Play のテスト参加のページは日本語に切り替えられず、英語で表示されるため、画像と本文を英語の画面に合わせた（2026-10-01））
+
+（※その後、アカウントの言語の設定によっては日本語で表示されることが分かったため、日本語の画面のボタンの名前「テスターになる」を本文に添えた（2026-10-02））
 
 **手順3**
 
@@ -287,6 +289,12 @@ QR コード：`https://chokalog.margheritaworks.com/android/?src=qr` を開く�
 > 表示されたページの「download it on Google Play」を押すと、Google Play が開きます。「インストール」を押してください。Google Play では、アプリ名の後ろに「（早期アクセス）」と表示されます。
 
 画像：テストに参加した後のページの「download it on Google Play」と、Google Play の「インストール」の画面の 2 枚を、この順に縦に並べる。（`assets/img/android-step3-download.png`、`assets/img/android-step3-install.png`）
+
+画像の下に（目立つ枠で）：
+
+> テストに参加した直後は、Google Play に反映されるまで数分かかることがあります。「アイテムが見つかりませんでした」と表示された場合や、インストールの途中でエラーになった場合は、少し時間をおいてから、手順2のページをもう一度開き、Google Play へのリンクを押してください。
+
+（※参加の直後に Google Play アプリで「アイテムが見つかりませんでした」と表示され、インストールできないという連絡が、複数の参加者から来たため（2026-10-02））
 
 **手順の後に（枠で）**
 
@@ -353,8 +361,10 @@ QR コード：`https://chokalog.margheritaworks.com/android/?src=qr` を開く�
 
 > 機能は同じです。違うのは記録の保存の仕組みで、iPhone版は iCloud で同期しますが、Android版は Android の自動バックアップ（Google アカウント）を使います。iPhone と Android の間で記録を移す場合は、設定のデータ管理から書き出して、移行先の端末で読み込んでください。
 
-**Q. 「Become a tester」を押しても、インストールできません。**
+**Q. 「Become a tester」（テスターになる）を押しても、インストールできません。**
 
+> 参加した直後は、Google Play に反映されるまで数分かかることがあります。「アイテムが見つかりませんでした」と表示された場合や、インストールの途中でエラーになった場合は、少し時間をおいてからお試しください。
+>
 > 次の点をご確認ください。
 >
 > - 手順1のグループに参加しているか
