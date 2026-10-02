@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
+# 作業用の文書は検索エンジンに載せない（ファイル自体は配信される）
+Disallow: /docs/
+Disallow: /CLAUDE.md
 
 Sitemap: https://chokalog.margheritaworks.com/sitemap.xml
