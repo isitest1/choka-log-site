@@ -339,8 +339,8 @@
     <div class="hero__phones hero__phones--fan" aria-hidden="true">
       <div class="phone-mockup phone-left">
         <img
-          src="/assets/img/2.0/map-zoom.webp"
-          alt="地図の拡大。等深線と水深の色分けの上に、底質の記号と釣った魚の名前"
+          src="/assets/img/2.0/recording-map.webp"
+          alt="記録中の地図。三崎港を出て、航跡を引きながら走っている。右上に座標の窓"
           class="phone-mockup__screen"
           width="234" height="509"
           decoding="async"
@@ -373,7 +373,7 @@
     <div class="phone-carousel hero__phones--mobile" aria-hidden="true">
       <div class="phone-mockup phone-carousel__mockup" style="width:240px;">
         <div class="phone-carousel__track">
-          <div class="phone-carousel__slide"><img src="/assets/img/2.0/map-zoom.webp"      alt="地図の拡大。等深線と水深の色分けの上に、底質の記号と釣った魚の名前" width="750" height="1631" decoding="async" /></div>
+          <div class="phone-carousel__slide"><img src="/assets/img/2.0/recording-map.webp" alt="記録中の地図。航跡を引きながら走っている。右上に座標の窓" width="750" height="1631" decoding="async" /></div>
           <div class="phone-carousel__slide"><img src="/assets/img/2.0/trip-detail.webp"   alt="釣行の画面。航行距離・釣りの時間・流しの速さと、航跡の入った地図" width="750" height="1631" decoding="async" loading="lazy" /></div>
           <div class="phone-carousel__slide"><img src="/assets/img/2.0/zukan-hero.webp"    alt="図鑑の一覧。魚種ごとに写真と自己記録、伸びが並ぶ" decoding="async" loading="lazy" /></div>
           <div class="phone-carousel__slide"><img src="/assets/img/2.0/catch-detail.webp"  alt="釣果の画面。マダイ 52cm、水深、潮位のグラフ、天気・風・底質" width="750" height="1631" decoding="async" loading="lazy" /></div>
@@ -472,16 +472,6 @@
         </ul>
       </div>
 
-      <div class="col-narrow map-block">
-        <h3 class="sub-heading">あの日と、この日を重ねる。</h3>
-        <p class="section-lead">過去の釣行を重ねると、どこを流して、どこで釣れたかを見比べられます。期間・魚種・エリアで絞り込んで比べられます。</p>
-      </div>
-      <div class="map-anim map-anim--overlay" data-map-anim="overlay" data-src="/assets/data/trips-2.json">
-        <div class="map-anim__map" role="img" aria-label="過去の土曜 2 回分の航跡を、色を変えて重ねた地図。9月26日は紫、8月8日は橙の線で、それぞれ釣れた場所に魚の名前が出る"></div>
-        <div class="map-anim__hud map-anim__hud--plain" aria-hidden="true"><span data-clock>過去の釣行 2 回</span></div>
-        <ul class="map-anim__legend" data-legend aria-hidden="true"></ul>
-        <noscript><img src="/assets/img/2.0/past-2-trips.webp" alt="" /></noscript>
-      </div>
     </div>
   </section>
 
@@ -507,6 +497,17 @@
         <noscript><img src="/assets/img/2.0/trip-detail.webp" alt="" /></noscript>
       </div>
       <p class="map-anim__caption col-narrow">移動中は細かい点線、釣り中は実線で描きます（デモ用の記録です）。</p>
+
+      <div class="col-narrow map-block">
+        <h3 class="sub-heading">あの日と、この日を重ねる。</h3>
+        <p class="section-lead">過去の釣行を重ねると、どこを流して、どこで釣れたかを見比べられます。期間・魚種・エリアで絞り込んで比べられます。</p>
+      </div>
+      <div class="map-anim map-anim--overlay" data-map-anim="overlay" data-src="/assets/data/trips-2.json">
+        <div class="map-anim__map" role="img" aria-label="過去の土曜 2 回分の航跡を、色を変えて重ねた地図。9月26日は紫、8月8日は橙の線で、それぞれ釣れた場所に魚の名前が出る"></div>
+        <div class="map-anim__hud map-anim__hud--plain" aria-hidden="true"><span data-clock>過去の釣行 2 回</span></div>
+        <ul class="map-anim__legend" data-legend aria-hidden="true"></ul>
+        <noscript><img src="/assets/img/2.0/past-2-trips.webp" alt="" /></noscript>
+      </div>
     </div>
   </section>
 
