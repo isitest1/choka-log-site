@@ -581,9 +581,9 @@
       </div>
       <p style="margin:0; color:var(--color-ink-muted);">魚種・サイズ・水深・水温・潮を写真に重ねて、1枚の画像にしてシェアできます。デザインは3種類。写真の拡大や位置も調整できます。釣れた場所は画像に出しません。画像はスマートフォンの中で作り、どこにも送りません。</p>
       <div class="share-gallery">
-        <figure class="share-card"><img src="/assets/img/share-poster.jpg"   alt="シェア画像（ポスター）" loading="lazy" decoding="async" /><figcaption>ポスター</figcaption></figure>
+        <figure class="share-card"><img src="/assets/img/2.0/share-poster.webp" alt="シェア画像（ポスター）。マダイ 52cm" width="750" height="938" loading="lazy" decoding="async" /><figcaption>ポスター</figcaption></figure>
         <figure class="share-card"><img src="/assets/img/2.0/share-magazine.webp" alt="シェア画像（マガジン）。マダイ 52cm" width="750" height="938" loading="lazy" decoding="async" /><figcaption>マガジン</figcaption></figure>
-        <figure class="share-card"><img src="/assets/img/share-telop.jpg"    alt="シェア画像（テロップ）" loading="lazy" decoding="async" /><figcaption>テロップ</figcaption></figure>
+        <figure class="share-card"><img src="/assets/img/2.0/share-telop.webp" alt="シェア画像（テロップ）。マダイ 52cm" width="750" height="938" loading="lazy" decoding="async" /><figcaption>テロップ</figcaption></figure>
       </div>
     </div>
   </section>
@@ -632,8 +632,21 @@
   <section class="section section--dark bg-dark section--photo-f" aria-labelledby="depth-heading">
     <div class="feature-row feature-row--flip" style="max-width:var(--content-max); margin:0 auto;">
       <div class="feature-visual">
-        <div class="phone-mockup" style="width:280px; background:var(--color-slate-depth);">
-          <img src="/assets/img/2.0/catch-detail.webp" alt="釣果の画面。水深 78m（魚探実測）、潮位のグラフ、天気・風・波高・底質" class="phone-mockup__screen" width="750" height="1631" loading="lazy" decoding="async" />
+        <div class="phone-carousel">
+          <div class="phone-mockup phone-carousel__mockup" style="width:280px; background:var(--color-slate-depth);">
+            <div class="phone-carousel__track">
+              <div class="phone-carousel__slide"><img src="/assets/img/2.0/register.webp" alt="釣果の登録画面。水深は海底地形から自動で入る（推定の印つき）" width="750" height="1631" loading="lazy" decoding="async" /></div>
+              <div class="phone-carousel__slide"><img src="/assets/img/2.0/auto-matrix.webp" alt="水深×潮の表と魚種ランキング" width="750" height="1631" loading="lazy" decoding="async" /></div>
+            </div>
+          </div>
+          <div class="phone-carousel__nav">
+            <button class="carousel-prev" aria-label="前へ">&#8249;</button>
+            <div class="phone-carousel__dots">
+              <button class="dot dot--active" aria-label="1枚目"></button>
+              <button class="dot" aria-label="2枚目"></button>
+            </div>
+            <button class="carousel-next" aria-label="次へ">&#8250;</button>
+          </div>
         </div>
       </div>
       <div class="feature-text">
@@ -684,9 +697,9 @@
         <div class="phone-carousel">
           <div class="phone-mockup phone-carousel__mockup" style="width:280px;">
             <div class="phone-carousel__track">
-              <div class="phone-carousel__slide"><img src="/assets/img/2.0/catch-detail.webp" alt="釣果の画面。水深・潮位のグラフ・天気・風・波高・底質・潮流が自動で入っている" width="750" height="1631" loading="lazy" decoding="async" /></div>
-              <div class="phone-carousel__slide"><img src="/assets/img/2.0/trip-detail.webp" alt="釣行の画面。出港から帰港までの航跡と、潮・風のタイムライン" width="750" height="1631" loading="lazy" decoding="async" /></div>
-              <div class="phone-carousel__slide"><img src="/assets/img/shot-register.png" alt="登録画面。魚種の候補と水深・水温が入っている"                        loading="lazy" decoding="async" /></div>
+              <div class="phone-carousel__slide"><img src="/assets/img/2.0/auto-trip-timeline.webp" alt="釣行の詳細。航跡の入った地図と、潮位のグラフと潮流・風・天気の帯の上に、アジ・マダイ・カワハギの釣れた時刻" width="750" height="1631" loading="lazy" decoding="async" /></div>
+              <div class="phone-carousel__slide"><img src="/assets/img/2.0/auto-matrix.webp" alt="分析の水深×潮の表と、魚種ランキング、魚種ごとの水深レンジ" width="750" height="1631" loading="lazy" decoding="async" /></div>
+              <div class="phone-carousel__slide"><img src="/assets/img/2.0/register.webp" alt="釣果の登録画面。写真から日時が入り、水深は推定の値、魚種の候補からマダイが選ばれている" width="750" height="1631" loading="lazy" decoding="async" /></div>
             </div>
           </div>
           <div class="phone-carousel__nav">
@@ -723,11 +736,11 @@
         <div class="phone-carousel">
           <div class="phone-mockup phone-carousel__mockup" style="width:280px;">
             <div class="phone-carousel__track">
-              <div class="phone-carousel__slide"><img src="/assets/img/2.0/trip-detail.webp" alt="釣行の画面。航跡の入った地図と、出港から帰港までのタイムライン" width="750" height="1631" loading="lazy" decoding="async" /></div>
-              <div class="phone-carousel__slide"><img src="/assets/img/shot-views-2.png" alt="魚種ビュー。魚種別にグループ化された釣果一覧"                  loading="lazy" decoding="async" /></div>
-              <div class="phone-carousel__slide"><img src="/assets/img/shot-views-3.png" alt="水深ビュー。水深の深い順に釣果が並ぶ"                          loading="lazy" decoding="async" /></div>
-              <div class="phone-carousel__slide"><img src="/assets/img/shot-views-4.png" alt="ギャラリービュー。釣行写真がタイルグリッドで並ぶ"              loading="lazy" decoding="async" /></div>
-              <div class="phone-carousel__slide"><img src="/assets/img/shot-views-5.png" alt="釣果ビュー。日付順の一覧"           loading="lazy" decoding="async" /></div>
+              <div class="phone-carousel__slide"><img src="/assets/img/2.0/views-trip.webp" alt="釣行ビュー。釣行のカードに出港・帰港、航行距離・釣りの時間・流しの速度、写真" width="750" height="1631" loading="lazy" decoding="async" /></div>
+              <div class="phone-carousel__slide"><img src="/assets/img/2.0/views-species.webp" alt="魚種ビュー。魚種ごとにまとめた釣果" width="750" height="1631" loading="lazy" decoding="async" /></div>
+              <div class="phone-carousel__slide"><img src="/assets/img/2.0/views-depth.webp" alt="水深ビュー。水深の深い順に釣果が並ぶ" width="750" height="1631" loading="lazy" decoding="async" /></div>
+              <div class="phone-carousel__slide"><img src="/assets/img/2.0/views-gallery.webp" alt="ギャラリービュー。写真のタイル" width="750" height="1631" loading="lazy" decoding="async" /></div>
+              <div class="phone-carousel__slide"><img src="/assets/img/2.0/views-catch.webp" alt="釣果ビュー。日付順の一覧（時刻・潮・水深・底質）" width="750" height="1631" loading="lazy" decoding="async" /></div>
             </div>
           </div>
           <div class="phone-carousel__nav">
