@@ -1442,8 +1442,9 @@ details:not([open]) .faq-icon-minus { display: none; }
 .map-anim {
   position: relative;
   width: 100%;
+  max-width: 760px;
+  margin: 0 auto;
   aspect-ratio: 16 / 10;
-  max-height: 720px;
   border-radius: var(--radius);
   overflow: hidden;
   background: #b9d9f2;
@@ -1579,7 +1580,7 @@ details:not([open]) .faq-icon-minus { display: none; }
 .map-anim__legend li.is-on { opacity: 1; }
 .map-anim__swatch { width: 18px; height: 4px; border-radius: 2px; }
 
-.map-anim__caption { margin: -16px auto 0; font-size: var(--text-body-sm); color: var(--color-ink-muted); width: 100%; }
+.map-anim__caption { margin: -16px auto 0; font-size: var(--text-body-sm); color: var(--color-ink-muted); width: 100%; max-width: 760px; }
 
 .map-anim noscript img { width: 100%; height: 100%; object-fit: cover; }
 
@@ -1593,7 +1594,7 @@ details:not([open]) .faq-icon-minus { display: none; }
     border-left: 0;
     border-right: 0;
   }
-  .map-anim { aspect-ratio: 4 / 5; }
+  .map-anim { aspect-ratio: 1 / 1; }
   .map-anim__hud { font-size: 14px; top: 12px; left: 12px; }
   .map-anim__date { top: auto; bottom: 24px; right: auto; left: 12px; }
   .map-anim__legend { top: auto; bottom: 26px; right: 10px; }
