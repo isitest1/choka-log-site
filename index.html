@@ -550,8 +550,23 @@
   <section id="zukan" class="section section--sand" aria-labelledby="zukan-heading">
     <div class="feature-row feature-row--flip">
       <div class="feature-visual">
-        <div class="phone-mockup" style="width:280px;">
-          <img src="/assets/img/2.0/zukan.webp" alt="図鑑の一覧。魚種ごとに写真と自己記録、伸びが並ぶ" class="phone-mockup__screen" width="750" height="1631" loading="lazy" decoding="async" />
+        <div class="phone-carousel">
+          <div class="phone-mockup phone-carousel__mockup" style="width:280px;">
+            <div class="phone-carousel__track">
+              <div class="phone-carousel__slide"><img src="/assets/img/2.0/zukan.webp" alt="図鑑の一覧。魚種ごとに写真と自己記録、伸びが並ぶ" width="750" height="1631" loading="lazy" decoding="async" /></div>
+              <div class="phone-carousel__slide"><img src="/assets/img/2.0/zukan-species.webp" alt="魚種ページ（マダイ）。自己記録 59cm・伸び +23cm・12 尾・水深 71〜89m" width="750" height="1631" loading="lazy" decoding="async" /></div>
+              <div class="phone-carousel__slide"><img src="/assets/img/2.0/zukan-pb.webp" alt="自己記録の推移。36cm から 59cm までのグラフと、記録を更新した釣果の一覧" width="750" height="1631" loading="lazy" decoding="async" /></div>
+            </div>
+          </div>
+          <div class="phone-carousel__nav">
+            <button class="carousel-prev" aria-label="前へ">&#8249;</button>
+            <div class="phone-carousel__dots">
+              <button class="dot dot--active" aria-label="1枚目"></button>
+              <button class="dot" aria-label="2枚目"></button>
+              <button class="dot" aria-label="3枚目"></button>
+            </div>
+            <button class="carousel-next" aria-label="次へ">&#8250;</button>
+          </div>
         </div>
       </div>
       <div class="feature-text">
@@ -613,6 +628,7 @@
             <div class="phone-carousel__track">
               <div class="phone-carousel__slide"><img src="/assets/img/2.0/analysis.webp" alt="分析の画面。よく釣れている条件「朝まづめ × 中潮のときによく釣れている」と傾向の一覧" width="750" height="1631" loading="lazy" decoding="async" /></div>
               <div class="phone-carousel__slide"><img src="/assets/img/2.0/trip-detail.webp" alt="釣行の画面。航行距離・釣りの時間・流しの速さと、航跡の入った地図" width="750" height="1631" loading="lazy" decoding="async" /></div>
+              <div class="phone-carousel__slide"><img src="/assets/img/2.0/analysis-depth-range.webp" alt="魚種ごとの水深レンジと、条件ごとの分布" width="750" height="1631" loading="lazy" decoding="async" /></div>
             </div>
           </div>
           <div class="phone-carousel__nav">
@@ -620,6 +636,7 @@
             <div class="phone-carousel__dots">
               <button class="dot dot--active" aria-label="1枚目"></button>
               <button class="dot" aria-label="2枚目"></button>
+              <button class="dot" aria-label="3枚目"></button>
             </div>
             <button class="carousel-next" aria-label="次へ">&#8250;</button>
           </div>
