@@ -4,14 +4,14 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>プライバシーポリシー｜釣果ログ</title>
-  <meta name="description" content="釣果ログ（iPhone版・Android版）のプライバシーポリシー。扱う情報、海況の取得のために送る情報、地図の表示、現在地、ご意見の送信、バックアップと同期、データの削除、お問い合わせ先。" />
+  <meta name="description" content="釣果ログ（iPhone版・Android版）のプライバシーポリシー。扱う情報、位置情報と航跡、海況の取得や分析のために送る情報、地図の表示、ご意見の送信、バックアップと同期、データの削除、お問い合わせ先。" />
   <link rel="canonical" href="https://chokalog.margheritaworks.com/privacy/" />
 
   <!-- OGP -->
   <meta property="og:type"        content="website" />
   <meta property="og:url"         content="https://chokalog.margheritaworks.com/privacy/" />
   <meta property="og:title"       content="プライバシーポリシー｜釣果ログ" />
-  <meta property="og:description" content="釣果ログ（iPhone版・Android版）のプライバシーポリシー。扱う情報、海況の取得のために送る情報、地図の表示、現在地、ご意見の送信、バックアップと同期、データの削除、お問い合わせ先。" />
+  <meta property="og:description" content="釣果ログ（iPhone版・Android版）のプライバシーポリシー。扱う情報、位置情報と航跡、海況の取得や分析のために送る情報、地図の表示、ご意見の送信、バックアップと同期、データの削除、お問い合わせ先。" />
   <meta property="og:image"       content="https://chokalog.margheritaworks.com/assets/img/og.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
@@ -81,6 +81,7 @@
     </a>
 
     <nav class="site-header__nav" aria-label="メインナビゲーション">
+      <a href="/#map"      class="nav-link">地図</a>
       <a href="/#howto"    class="nav-link">使い方</a>
       <a href="/#features" class="nav-link">機能</a>
       <a href="/#faq"      class="nav-link">よくある質問</a>
@@ -91,6 +92,7 @@
     <details class="nav-toggle" aria-label="ナビゲーションを開く">
       <summary>☰ メニュー</summary>
       <nav class="nav-toggle__menu" aria-label="モバイルナビゲーション">
+        <a href="/#map"      class="nav-link">地図</a>
         <a href="/#howto"    class="nav-link">使い方</a>
         <a href="/#features" class="nav-link">機能</a>
         <a href="/#faq"      class="nav-link">よくある質問</a>
@@ -108,7 +110,7 @@
     <div class="privacy-page-header" style="padding-top: 48px;">
       <span class="label label--blue" style="display:block; margin-bottom:16px;">LEGAL</span>
       <h1 style="margin:0 0 12px; font-size:var(--text-display); font-weight:700; line-height:1.28;">プライバシーポリシー</h1>
-      <p style="margin:0; font-size:var(--text-caption); font-weight:500; color:var(--color-ink-muted);">最終更新日：2026年10月1日</p>
+      <p style="margin:0; font-size:var(--text-caption); font-weight:500; color:var(--color-ink-muted);">最終更新日：2026年10月11日</p>
     </div>
 
     <!-- 本文レイアウト（デスクトップ: 2カラム） -->
@@ -117,84 +119,116 @@
       <!-- sticky 目次（デスクトップ） -->
       <aside class="privacy-toc" aria-label="目次">
         <div class="privacy-toc__header">CONTENTS</div>
-        <a href="#pp-intro" class="active">1. はじめに</a>
-        <a href="#pp-overview">2. このアプリが扱う情報の全体</a>
-        <a href="#pp-network">3. 海況の取得のために送る情報</a>
-        <a href="#pp-map">4. 地図の表示</a>
-        <a href="#pp-location">5. 現在地</a>
-        <a href="#pp-permission">6. 権限の利用目的</a>
-        <a href="#pp-feedback">7. ご意見の送信</a>
-        <a href="#pp-backup">8. バックアップと同期</a>
-        <a href="#pp-ads">9. 第三者提供・広告・解析</a>
-        <a href="#pp-https">10. 通信の暗号化</a>
-        <a href="#pp-delete">11. データの削除</a>
-        <a href="#pp-source">12. データの出典と免責</a>
-        <a href="#pp-changes">13. 本ポリシーの変更</a>
-        <a href="#pp-contact">14. お問い合わせ</a>
-        <a href="#pp-notify">15. お知らせの配信希望</a>
-      </aside>
+          <a href="#pp-intro" class="active">1. はじめに</a>
+          <a href="#pp-overview">2. このアプリが扱う情報の全体</a>
+          <a href="#pp-location">3. 位置情報と航跡</a>
+          <a href="#pp-network">4. 海況の取得のために送る情報</a>
+          <a href="#pp-analysis">5. 分析のために送る情報（iPhone版）</a>
+          <a href="#pp-map">6. 地図の表示</a>
+          <a href="#pp-place">7. 地名の表示（iPhone版）</a>
+          <a href="#pp-permission">8. 権限の利用目的</a>
+          <a href="#pp-feedback">9. ご意見の送信</a>
+          <a href="#pp-backup">10. バックアップと同期</a>
+          <a href="#pp-ads">11. 第三者提供・広告・解析</a>
+          <a href="#pp-https">12. 通信の暗号化</a>
+          <a href="#pp-delete">13. データの削除</a>
+          <a href="#pp-source">14. データの出典と免責</a>
+          <a href="#pp-changes">15. 本ポリシーの変更</a>
+          <a href="#pp-contact">16. お問い合わせ</a>
+          <a href="#pp-notify">17. お知らせの配信希望</a>
+        </aside>
 
       <!-- モバイル目次（<details> で折り畳み） -->
       <details class="privacy-toc-mobile" aria-label="目次">
         <summary>目次を表示</summary>
         <nav class="privacy-toc-mobile__links" aria-label="プライバシーポリシー目次">
-          <a href="#pp-intro">1. はじめに</a>
-          <a href="#pp-overview">2. このアプリが扱う情報の全体</a>
-          <a href="#pp-network">3. 海況の取得のために送る情報</a>
-          <a href="#pp-map">4. 地図の表示</a>
-          <a href="#pp-location">5. 現在地</a>
-          <a href="#pp-permission">6. 権限の利用目的</a>
-          <a href="#pp-feedback">7. ご意見の送信</a>
-          <a href="#pp-backup">8. バックアップと同期</a>
-          <a href="#pp-ads">9. 第三者提供・広告・解析</a>
-          <a href="#pp-https">10. 通信の暗号化</a>
-          <a href="#pp-delete">11. データの削除</a>
-          <a href="#pp-source">12. データの出典と免責</a>
-          <a href="#pp-changes">13. 本ポリシーの変更</a>
-          <a href="#pp-contact">14. お問い合わせ</a>
-          <a href="#pp-notify">15. お知らせの配信希望</a>
-        </nav>
+            <a href="#pp-intro">1. はじめに</a>
+            <a href="#pp-overview">2. このアプリが扱う情報の全体</a>
+            <a href="#pp-location">3. 位置情報と航跡</a>
+            <a href="#pp-network">4. 海況の取得のために送る情報</a>
+            <a href="#pp-analysis">5. 分析のために送る情報（iPhone版）</a>
+            <a href="#pp-map">6. 地図の表示</a>
+            <a href="#pp-place">7. 地名の表示（iPhone版）</a>
+            <a href="#pp-permission">8. 権限の利用目的</a>
+            <a href="#pp-feedback">9. ご意見の送信</a>
+            <a href="#pp-backup">10. バックアップと同期</a>
+            <a href="#pp-ads">11. 第三者提供・広告・解析</a>
+            <a href="#pp-https">12. 通信の暗号化</a>
+            <a href="#pp-delete">13. データの削除</a>
+            <a href="#pp-source">14. データの出典と免責</a>
+            <a href="#pp-changes">15. 本ポリシーの変更</a>
+            <a href="#pp-contact">16. お問い合わせ</a>
+            <a href="#pp-notify">17. お知らせの配信希望</a>
+          </nav>
       </details>
 
       <!-- 本文 -->
       <article class="privacy-body">
 
-        <section id="pp-intro" aria-labelledby="pp-intro-heading">
+<section id="pp-intro" aria-labelledby="pp-intro-heading">
           <h2 id="pp-intro-heading">1. はじめに</h2>
           <p>本ポリシーは、アプリ「釣果ログ」（iPhone版・Android版。以下、本アプリ）における情報の取り扱いについて説明するものです。本アプリの利用開始をもって、本ポリシーに同意いただいたものとみなします。</p>
         </section>
 
         <section id="pp-overview" aria-labelledby="pp-overview-heading">
           <h2 id="pp-overview-heading">2. このアプリが扱う情報の全体</h2>
-          <p>釣果ログは、アカウントの登録なしでお使いいただけるアプリです。写真と釣果の記録（魚種、全長、水深、メモなど）は、お使いの端末の中に保存し、外部に送ることはありません。魚種の判定も、端末の中で行います。</p>
+          <p>釣果ログは、アカウントの登録なしでお使いいただけるアプリです。写真と釣果の記録（魚種、全長、水深、メモなど）、iPhone版の釣行の航跡は、お使いの端末の中に保存します。運営者のサーバーに保存することはありません。魚種の判定も、端末の中で行います。</p>
+          <p>ただし、潮汐・天気・底質などの取得、地図の表示、分析のために、釣果の位置や、位置を含む範囲を外部に送ります。何を、どこへ送るかは、4〜7 に書きます。</p>
+        </section>
+
+        <section id="pp-location" aria-labelledby="pp-location-heading">
+          <h2 id="pp-location-heading">3. 位置情報と航跡</h2>
+          <p>位置情報の利用を許可した場合に限り、現在地を使います。撮影したときの釣果の位置、地図の現在地の表示、近くのエリアの選択と、iPhone版では釣行の航跡の記録に使います。Android版では、Google Play 開発者サービスの位置情報の機能を使います。</p>
+          <p>iPhone版では、次の 2 つの場合に限り、画面を閉じた後も位置情報を使います。</p>
+          <ul>
+            <li>釣行の記録中：「釣行を開始」を押してから「終了」を押すまで（出港の自動検知で始まった場合は、自動で終わるまで）、画面を閉じても、他のアプリを使っていても、位置情報を使い続けます。この間は、iPhone の画面に位置情報を使っている表示が出ます。記録は、始めてから 12 時間で自動で終わります。</li>
+            <li>出港の自動検知をオンにしているとき（初期はオフ）：登録した出港地のまわり（半径 300m）の出入りを、iPhone が見張ります。出港地を出ると、アプリが起動して位置情報を取り、出港したかどうかを判定します（判定できなければ 20 分でやめます）。出港地に戻ったときに帰港を判定する間も、位置情報を使います。この設定をオンにしたときだけ、位置情報の「常に許可」と、通知の許可を求めます。</li>
+          </ul>
+          <p>釣行を記録していないとき（出港の自動検知もオフのとき）は、アプリが裏に回ると、位置情報の取得を止めます。</p>
+          <p>航跡（時刻、緯度・経度、位置の精度、速さ、進む向き、移動中か釣り中か）は、端末の中だけに保存し、運営者のサーバーにも、ほかのどこにも送りません。航跡が端末の外に出るのは、ご自身でバックアップなどを書き出した場合だけです。分析のために、航跡のまわりのおおまかな範囲を送ることは、5 に書きます。</p>
+          <p>釣行の記録中は、アプリの動作の記録（電池の残量、端末の温度の状態、位置の精度の統計など。緯度・経度は含みません）を、端末の中に 1 分ごとに残します。この記録が端末の外に出るのは、設定からご自身で共有した場合だけです。</p>
+          <p>取得した現在地そのものを外部に送ることはありませんが、撮影したときの現在地は釣果の位置となり、4 の海況の取得に使われます。</p>
         </section>
 
         <section id="pp-network" aria-labelledby="pp-network-heading">
-          <h2 id="pp-network-heading">3. 海況の取得のために送る情報</h2>
+          <h2 id="pp-network-heading">4. 海況の取得のために送る情報</h2>
           <p>釣果に潮汐・潮流・天気・底質などを添えるため、釣果の位置と日時を、次の先に送ります。</p>
           <ul>
-            <li>気象データ（気温・天気・風・波）：Open-Meteo に、釣果の位置と日付を送ります。送った情報を、運営者が保存することはありません。</li>
-            <li>潮汐・潮流・海底の情報：運営者が管理するサーバー（Cloudflare Workers）に送ります。底質・魚礁・沈船を調べるときは、釣果の位置を中心にした範囲を送ります。範囲の中心が釣果の位置なので、送った範囲から釣果の位置が分かります。潮汐と潮流は、釣果の位置に近い推算点と海域の番号を送ります。取得した結果は、同じ場所の問い合わせに再利用するために保存しますが、どの利用者が問い合わせたかは記録しません。</li>
+            <li>気象データ（気温・天気・風・波）：Open-Meteo に、釣果の位置（緯度・経度）と日付を送ります。iPhone版では、位置を丸めず、小数 5 桁（約 1m）の細かさのまま送ります。また iPhone版では、釣行の 1 日分の天気を取るときに、エリアの代表の地点の緯度・経度も、同じように送ります。送った情報を、運営者が保存することはありません。</li>
+            <li>潮汐・潮流・海底の情報：運営者が管理するサーバー（Cloudflare Workers）に送ります。底質・魚礁・沈船を調べるときは、釣果の位置を中心にした範囲（緯度・経度それぞれ ±0.1°）を送ります。範囲の中心が釣果の位置なので、送った範囲から釣果の位置（iPhone版では約 10m の細かさ）が分かります。潮汐と潮流は、端末の中で選んだ、釣果の位置に近い推算点と海域の番号と、日付・時刻を送ります（緯度・経度は送りません）。取得した結果は、同じ場所の問い合わせに再利用するために保存しますが、どの利用者が問い合わせたかは記録しません。</li>
           </ul>
           <p>位置が確定していない釣果については、送りません。</p>
         </section>
 
+        <section id="pp-analysis" aria-labelledby="pp-analysis-heading">
+          <h2 id="pp-analysis-heading">5. 分析のために送る情報（iPhone版）</h2>
+          <p>分析で、水深・底質・魚礁などの場所の条件を「実際に釣りをしていた時間」で数えるため、釣行の航跡の記録を終えた後に、釣り中だった場所の近くの底質・魚礁・沈船を調べます。このとき、運営者が管理するサーバー（Cloudflare Workers）に、航跡のまわりの範囲を送ります。</p>
+          <ul>
+            <li>送るのは、航跡の釣り中の点を含む 0.2° の区画（緯度・経度で区切った、約 20km 四方の升目）ごとに、その区画の中心から緯度・経度それぞれ ±0.12° の範囲だけです。</li>
+            <li>航跡の点そのもの、時刻、釣果の情報は送りません。範囲は升目に合わせて決まるので、送った範囲から分かるのは、どの升目のあたりで釣りをしていたかまでです。</li>
+            <li>航跡の記録を終えたときのほか、まだ調べ終えていない釣行があれば、アプリを開いたときや、アプリに戻ったときにも送ります。</li>
+            <li>水深は、アプリの中のデータから求めるので、送りません。</li>
+          </ul>
+          <p>取得した結果は、同じ場所の問い合わせに再利用するために保存しますが、どの利用者が問い合わせたかは記録しません。</p>
+        </section>
+
         <section id="pp-map" aria-labelledby="pp-map-heading">
-          <h2 id="pp-map-heading">4. 地図の表示</h2>
+          <h2 id="pp-map-heading">6. 地図の表示</h2>
           <ul>
             <li>iPhone版：Apple のマップを使います。</li>
             <li>Android版：Google マップ（Google Maps SDK for Android）を使います。地図を表示する際、Google が端末の情報、エラーの記録、地図の操作の記録、地図用の識別子などを収集します。詳しくは <a href="https://policies.google.com/privacy">Google のプライバシーポリシー</a> をご覧ください。</li>
           </ul>
-          <p>地図に海の情報（等深線・底質・沈船・魚礁など）を重ねて表示するため、地図を表示・移動したときに、表示している範囲（0.25° の区画）を、運営者が管理するサーバー（Cloudflare Workers）に送ります。Android版では、表示している範囲のまわりの区画も、先に取得します。取得した結果は、同じ区画の問い合わせに再利用するために保存しますが、どの利用者が問い合わせたかは記録しません。地図の海の情報のレイヤーをすべて切ると、送りません。</p>
+          <p>iPhone版（2.0 以降）では、等深線と水深の色分けを描くため、運営者が管理するサーバー（data.margheritaworks.com）から、地図データのファイルを取ります。ファイルは緯度・経度 1° ごとの区画に分かれていて、送るのは、取りたい区画の名前（例：N35E139）とデータの版だけです。緯度・経度、現在地、端末を見分ける番号は送りません。区画の名前から分かるのは、おおよそどのあたり（1° 四方）の地図を取ったかまでです。地図を動かしたとき、アプリを開いたとき（新しい版があるかの確認。24 時間に 1 回）、地図データの画面でまとめて取るときに通信します。なお、通信の仕組みとして、IP アドレスなどの通信そのものの情報は、サーバーに届きます。</p>
+          <p>地図に底質・魚礁・沈船など（Android版では等深線も）の海の情報を重ねて表示するため、地図を表示・移動したときに、表示している範囲（0.25° の区画）を、運営者が管理するサーバー（Cloudflare Workers）に送ります。Android版では、表示している範囲のまわりの区画も、先に取得します。取得した結果は、同じ区画の問い合わせに再利用するために保存しますが、どの利用者が問い合わせたかは記録しません。地図の海の情報のレイヤーをすべて切ると、送りません。</p>
         </section>
 
-        <section id="pp-location" aria-labelledby="pp-location-heading">
-          <h2 id="pp-location-heading">5. 現在地</h2>
-          <p>位置情報の利用を許可した場合に限り、現在地を使います。カメラで撮影したときの釣果の位置、地図の現在地の表示、近くのエリアの選択に使います。Android版では、Google Play 開発者サービスの位置情報の機能を使います。取得した現在地そのものを外部に送ることはありませんが、撮影したときの現在地は釣果の位置となり、上記の海況の取得に使われます。</p>
+        <section id="pp-place" aria-labelledby="pp-place-heading">
+          <h2 id="pp-place-heading">7. 地名の表示（iPhone版）</h2>
+          <p>釣果の画面に地名を出すため、釣果の位置（緯度・経度）を、Apple の地名を調べる機能（iOS の位置情報の機能）に渡します。渡した情報の扱いは、<a href="https://www.apple.com/jp/legal/privacy/">Apple のプライバシーポリシー</a>に従います。</p>
         </section>
 
         <section id="pp-permission" aria-labelledby="pp-permission-heading">
-          <h2 id="pp-permission-heading">6. 権限の利用目的</h2>
+          <h2 id="pp-permission-heading">8. 権限の利用目的</h2>
           <p>本アプリが要求するシステム権限とその目的は以下のとおりです。</p>
           <table class="def-table" aria-label="権限の利用目的">
             <thead>
@@ -206,7 +240,7 @@
             <tbody>
               <tr>
                 <td>写真ライブラリ<br>（iPhone版）</td>
-                <td>釣果を記録する際に写真を選択するために必要です。撮影日時・位置情報（Exif）を記録の初期値に使用します。写真データはサーバーへ送信しません。</td>
+                <td>釣果を記録する際に写真を選択するために必要です。撮影日時・位置情報（Exif）を記録の初期値に使用します。撮影した釣果の写真を写真ライブラリに保存するときにも使います。写真データはサーバーへ送信しません。</td>
               </tr>
               <tr>
                 <td>写真の選択<br>（Android版）</td>
@@ -218,14 +252,22 @@
               </tr>
               <tr>
                 <td>位置情報（使用中のみ）<br>（iPhone版・Android版）</td>
-                <td>釣果場所を地図上に正確に記録するために必要です。撮影したときの現在地は釣果の位置となり、「海況の取得のために送る情報」に書いた送信に使われます。Android版では、正確な位置とおおよその位置の権限を求めます。アプリを使っていないときに位置情報を使う権限は求めません。位置情報を許可しなくても、釣果は記録できます。</td>
+                <td>釣果場所を地図上に正確に記録するため、地図に現在地を出すため、iPhone版では釣行の航跡を記録するために必要です。iPhone版では、釣行の記録中に限り、画面を閉じた後も位置情報を使います（「位置情報と航跡」を参照）。撮影したときの現在地は釣果の位置となり、「海況の取得のために送る情報」に書いた送信に使われます。Android版では、正確な位置とおおよその位置の権限を求めます。位置情報を許可しなくても、釣果は記録できます。</td>
+              </tr>
+              <tr>
+                <td>位置情報（常に）<br>（iPhone版）</td>
+                <td>出港を自動で検知して釣行の記録を始めるために使います。設定の「出港を自動で検知して記録を始める」（初期はオフ）をオンにしたときだけ求め、オフの間は求めません。Android版は、アプリを使っていないときに位置情報を使う権限を求めません。</td>
+              </tr>
+              <tr>
+                <td>通知<br>（iPhone版）</td>
+                <td>出港の自動検知で、釣行の記録を始めたとき・終えたときにお知らせするために使います。出港の自動検知をオンにしたときだけ求めます。</td>
               </tr>
             </tbody>
           </table>
         </section>
 
-        <section id="pp-feedback" aria-labelledby="pp-feedback-heading">
-          <h2 id="pp-feedback-heading">7. ご意見の送信</h2>
+<section id="pp-feedback" aria-labelledby="pp-feedback-heading">
+          <h2 id="pp-feedback-heading">9. ご意見の送信</h2>
           <p>アプリの「ご意見を送る」からご意見をお送りいただいた場合、次の情報を運営者のサーバーに送ります。</p>
           <ul>
             <li>ご意見の本文と種類</li>
@@ -236,46 +278,46 @@
         </section>
 
         <section id="pp-backup" aria-labelledby="pp-backup-heading">
-          <h2 id="pp-backup-heading">8. バックアップと同期</h2>
+          <h2 id="pp-backup-heading">10. バックアップと同期</h2>
           <ul>
-            <li>iPhone版：iCloud を使っている場合、記録はお使いの iCloud アカウントに同期されます。</li>
+            <li>iPhone版：iCloud での同期は行いません。記録は端末の中にあります。設定の「データ管理」から、バックアップ（JSON、または写真と航跡を含む zip）を書き出せます。書き出したファイルは iOS の共有の画面で渡し、保存先はご自身で選びます。アプリがどこかへ送ることはありません。</li>
             <li>Android版：Android の自動バックアップにより、記録と設定がお使いの Google アカウントにバックアップされます（写真は含みません）。</li>
           </ul>
           <p>いずれも、運営者に届くことはありません。</p>
         </section>
 
-        <section id="pp-ads" aria-labelledby="pp-ads-heading">
-          <h2 id="pp-ads-heading">9. 第三者提供・広告・解析</h2>
+<section id="pp-ads" aria-labelledby="pp-ads-heading">
+          <h2 id="pp-ads-heading">11. 第三者提供・広告・解析</h2>
           <p>広告は表示しません。アプリ自体には、利用状況を解析するための仕組みを組み込んでいません。ただし、Google Play からインストールした Android版では、Google Play が、アプリが異常終了したときの記録や、アプリの動作の統計を集め、開発者に提供することがあります（Google Play の仕組みによるもので、詳しくは <a href="https://policies.google.com/privacy">Google のプライバシーポリシー</a> をご覧ください）。</p>
-          <p>釣果データや個人情報を、第三者に販売・提供することはありません。ただし、「海況の取得のために送る情報」と「地図の表示」に書いた送信を除きます。</p>
+          <p>釣果データや個人情報を、第三者に販売・提供することはありません。ただし、「海況の取得のために送る情報」「分析のために送る情報」「地図の表示」「地名の表示」に書いた送信を除きます。</p>
         </section>
 
-        <section id="pp-https" aria-labelledby="pp-https-heading">
-          <h2 id="pp-https-heading">10. 通信の暗号化</h2>
+<section id="pp-https" aria-labelledby="pp-https-heading">
+          <h2 id="pp-https-heading">12. 通信の暗号化</h2>
           <p>外部との通信は、すべて暗号化（HTTPS）して行います。</p>
         </section>
 
-        <section id="pp-delete" aria-labelledby="pp-delete-heading">
-          <h2 id="pp-delete-heading">11. データの削除</h2>
+<section id="pp-delete" aria-labelledby="pp-delete-heading">
+          <h2 id="pp-delete-heading">13. データの削除</h2>
           <p>端末の中の記録は、アプリの中で削除できます。アプリを削除すると、端末の中の記録もすべて削除されます。お送りいただいたご意見の削除を希望される場合は、<a href="mailto:support@margheritaworks.com">support@margheritaworks.com</a> までご連絡ください。</p>
         </section>
 
-        <section id="pp-source" aria-labelledby="pp-source-heading">
-          <h2 id="pp-source-heading">12. データの出典と免責</h2>
+<section id="pp-source" aria-labelledby="pp-source-heading">
+          <h2 id="pp-source-heading">14. データの出典と免責</h2>
           <!-- 海しるAPI利用規約第5条の文言（一字一句変更禁止） -->
           <p>このサービスは、海しるAPIを利用して取得した情報をもとに作成しているが、サービスの内容は海上保安庁によって保証されたものではない</p>
           <p>出典：海洋状況表示システム（<a href="https://www.msil.go.jp/">https://www.msil.go.jp/</a>）</p>
           <p style="color:var(--color-ink-muted);">本アプリは、航海・安全・漁業その他の専門的判断には使用できません。</p>
         </section>
 
-        <section id="pp-changes" aria-labelledby="pp-changes-heading">
-          <h2 id="pp-changes-heading">13. 本ポリシーの変更</h2>
+<section id="pp-changes" aria-labelledby="pp-changes-heading">
+          <h2 id="pp-changes-heading">15. 本ポリシーの変更</h2>
           <p>本ポリシーを変更する場合は、このページの最終更新日を更新します。重要な変更がある場合は、アプリ内でも通知します。</p>
           <p>最新のポリシーは常にこのページでご確認いただけます。</p>
         </section>
 
-        <section id="pp-contact" aria-labelledby="pp-contact-heading">
-          <h2 id="pp-contact-heading">14. お問い合わせ</h2>
+<section id="pp-contact" aria-labelledby="pp-contact-heading">
+          <h2 id="pp-contact-heading">16. お問い合わせ</h2>
           <div class="contact-block">
             <p style="margin:0; font-size:var(--text-heading-sm); font-weight:700; line-height:1.4;">お問い合わせ</p>
             <p style="margin:0; color:var(--color-ink-muted);">本ポリシーおよび本アプリに関するご質問は下記までご連絡ください。</p>
@@ -286,8 +328,8 @@
           </div>
         </section>
 
-        <section id="pp-notify" aria-labelledby="pp-notify-heading">
-          <h2 id="pp-notify-heading">15. お知らせの配信希望</h2>
+<section id="pp-notify" aria-labelledby="pp-notify-heading">
+          <h2 id="pp-notify-heading">17. お知らせの配信希望</h2>
           <p>Android版などのお知らせを希望される方から、メールアドレスをお預かりすることがあります。お預かりしたアドレスは、テスト参加のお願いと公開のお知らせの送信にのみ使用し、第三者に提供しません。お知らせメール内のリンク、または <a href="mailto:support@margheritaworks.com">support@margheritaworks.com</a> へのご連絡により、いつでも削除できます。</p>
         </section>
 
