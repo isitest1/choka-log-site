@@ -1607,3 +1607,15 @@ details:not([open]) .faq-icon-minus { display: none; }
   .map-anim__map { transition: none; }
 }
 .map-anim .leaflet-container { background: #b9d9f2; font-family: var(--font-body); }
+
+/* トップの左の画面の動画（1 日の釣行の地図） */
+.phone-mockup video.phone-mockup__screen { background: #b9d9f2; aspect-ratio: 750 / 1631; object-fit: cover; }
+.phone-carousel__slide video {
+  width: 100%;
+  height: auto;
+  display: block;
+  aspect-ratio: 750 / 1631;
+  object-fit: cover;
+  border-radius: 36px;
+  background: #b9d9f2;
+}

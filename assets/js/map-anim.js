@@ -424,6 +424,23 @@
     }).catch(function () { root.classList.add('is-failed'); });
   }
 
+  // トップの左の画面の動画：画面に見えている間だけ再生する（横に送る部品では、その 1 枚が見えている間だけ）。
+  // 動きを減らす設定の人には、ポスターだけを出す（動画は読み込まない）
+  document.querySelectorAll('video.js-loop-video').forEach(function (v) {
+    v.muted = true;
+    if (reduceMotion || !('IntersectionObserver' in window)) return;
+    new IntersectionObserver(function (es) {
+      es.forEach(function (e) {
+        if (e.isIntersecting) {
+          if (v.preload === 'none') { v.preload = 'auto'; }
+          var p = v.play(); if (p && p.catch) p.catch(function () {});
+        } else {
+          v.pause();
+        }
+      });
+    }, { threshold: 0.5 }).observe(v);
+  });
+
   // 地図の埋め込み：この節に近づいたときに iframe を入れる（埋め込みの側も、押すまで地図のデータを読まない）
   document.querySelectorAll('.map-embed iframe[data-src]').forEach(function (f) {
     var load = function () { f.src = f.getAttribute('data-src'); f.removeAttribute('data-src'); };

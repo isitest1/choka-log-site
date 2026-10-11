@@ -338,14 +338,15 @@
     <!-- 端末モックアップ（扇状 / デスクトップ） -->
     <div class="hero__phones hero__phones--fan" aria-hidden="true">
       <div class="phone-mockup phone-left">
-        <img
-          src="/assets/img/2.0/recording-map.webp"
-          alt="記録中の地図。三崎港を出て、航跡を引きながら走っている。右上に座標の窓"
-          class="phone-mockup__screen"
+        <video
+          class="phone-mockup__screen js-loop-video"
           width="234" height="509"
-          decoding="async"
-          onerror="this.closest('.phone-mockup').style.background='#1b2227'"
-        />
+          muted loop playsinline preload="none"
+          poster="/assets/img/2.0/map-day-poster.webp"
+          aria-label="地図のタブで、2026年10月3日の釣行を再生する動画。三崎港を出て、釣り場で流し、アジ・マダイ・カワハギを釣って帰港するまで">
+          <source src="/assets/img/2.0/map-day.webm" type="video/webm" />
+          <source src="/assets/img/2.0/map-day.mp4" type="video/mp4" />
+        </video>
       </div>
       <div class="phone-mockup phone-center">
         <img
@@ -373,7 +374,15 @@
     <div class="phone-carousel hero__phones--mobile" aria-hidden="true">
       <div class="phone-mockup phone-carousel__mockup" style="width:240px;">
         <div class="phone-carousel__track">
-          <div class="phone-carousel__slide"><img src="/assets/img/2.0/recording-map.webp" alt="記録中の地図。航跡を引きながら走っている。右上に座標の窓" width="750" height="1631" decoding="async" /></div>
+          <div class="phone-carousel__slide"><video
+            class="phone-carousel__video js-loop-video"
+            width="750" height="1631"
+            muted loop playsinline preload="none"
+            poster="/assets/img/2.0/map-day-poster.webp"
+            aria-label="地図のタブで、2026年10月3日の釣行を再生する動画。三崎港を出て、釣り場で流し、アジ・マダイ・カワハギを釣って帰港するまで">
+            <source src="/assets/img/2.0/map-day.webm" type="video/webm" />
+            <source src="/assets/img/2.0/map-day.mp4" type="video/mp4" />
+        </video></div>
           <div class="phone-carousel__slide"><img src="/assets/img/2.0/trip-detail.webp"   alt="釣行の画面。航行距離・釣りの時間・流しの速さと、航跡の入った地図" width="750" height="1631" decoding="async" loading="lazy" /></div>
           <div class="phone-carousel__slide"><img src="/assets/img/2.0/zukan-hero.webp"    alt="図鑑の一覧。魚種ごとに写真と自己記録、伸びが並ぶ" decoding="async" loading="lazy" /></div>
           <div class="phone-carousel__slide"><img src="/assets/img/2.0/catch-detail.webp"  alt="釣果の画面。マダイ 52cm、水深、潮位のグラフ、天気・風・底質" width="750" height="1631" decoding="async" loading="lazy" /></div>
