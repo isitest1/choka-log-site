@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>釣果ログ｜写真1枚で、魚種・水深・潮まで自動で記録するボート釣りアプリ</title>
-  <meta name="description" content="釣れた瞬間に1枚撮るだけ。魚種・水深・潮・底質まで自動で入り、たまった記録を統計分析して、よく釣れている条件がわかる、ボート釣り用の釣果記録アプリ。" />
+  <meta name="description" content="釣れた瞬間に1枚撮るだけ。魚種・水深・潮・底質まで自動で入り、出港から帰港までの航跡と、等深線で海の底が見える地図も残ります。たまった記録を統計分析して、よく釣れている条件がわかる、ボート釣り用の釣果記録アプリ。" />
   <link rel="canonical" href="https://chokalog.margheritaworks.com/" />
   <link rel="icon" href="/favicon.ico" sizes="any" />
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32.png" />
@@ -15,18 +15,18 @@
   <meta property="og:type"        content="website" />
   <meta property="og:url"         content="https://chokalog.margheritaworks.com/" />
   <meta property="og:title"       content="釣果ログ｜写真1枚で、魚種・水深・潮まで自動で記録するボート釣りアプリ" />
-  <meta property="og:description" content="釣れた瞬間に1枚撮るだけ。魚種・水深・潮・底質まで自動で入り、たまった記録を統計分析して、よく釣れている条件がわかる、ボート釣り用の釣果記録アプリ。" />
+  <meta property="og:description" content="釣れた瞬間に1枚撮るだけ。魚種・水深・潮・底質まで自動で入り、出港から帰港までの航跡と、等深線で海の底が見える地図も残ります。たまった記録を統計分析して、よく釣れている条件がわかる、ボート釣り用の釣果記録アプリ。" />
   <meta property="og:image"       content="https://chokalog.margheritaworks.com/assets/img/og.png" />
   <meta property="og:image:secure_url" content="https://chokalog.margheritaworks.com/assets/img/og.png" />
   <meta property="og:image:type"  content="image/png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt"   content="釣果ログ — 釣れた瞬間に、1枚撮るだけ。" />
+  <meta property="og:image:alt"   content="釣果ログ 2.0 — 航跡と、海の底が見える地図" />
   <meta property="og:locale"      content="ja_JP" />
   <meta property="og:site_name"   content="釣果ログ" />
   <meta name="twitter:card"        content="summary_large_image" />
   <meta name="twitter:title"       content="釣果ログ｜写真1枚で、魚種・水深・潮まで自動で記録するボート釣りアプリ" />
-  <meta name="twitter:description" content="釣れた瞬間に1枚撮るだけ。魚種・水深・潮・底質まで自動で入り、たまった記録を統計分析して、よく釣れている条件がわかる、ボート釣り用の釣果記録アプリ。" />
+  <meta name="twitter:description" content="釣れた瞬間に1枚撮るだけ。魚種・水深・潮・底質まで自動で入り、出港から帰港までの航跡と、等深線で海の底が見える地図も残ります。たまった記録を統計分析して、よく釣れている条件がわかる、ボート釣り用の釣果記録アプリ。" />
   <meta name="twitter:image"       content="https://chokalog.margheritaworks.com/assets/img/og.png" />
 
   <!-- フォント -->
@@ -77,10 +77,42 @@
         "mainEntity": [
           {
             "@type": "Question",
+            "name": "航跡はどこかに送られますか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "送られません。航跡は、端末の中だけに保存します。分析で底質などを調べるときにも、航跡の点そのものは送らず、航跡が通ったあたりのおおまかな範囲だけを使います。詳しくはプライバシーポリシーをご覧ください。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "位置情報の許可は「常に」が必要ですか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "必要ありません。「使用中のみ」で記録できます。記録中は、画面を消しても航跡の記録が続きます。「常に」が要るのは、出港を自動で見つけて記録を始める設定（初期はオフ）を使うときだけです。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "電池はどのくらい減りますか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "記録中は位置情報を使い続けるので、そのぶん電池を使います。航跡は画面を消したままでも記録できます。長い釣行では、予備の電池をお持ちになることをおすすめします。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "記録中にアプリが閉じたらどうなりますか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "次にアプリを開いたときに、同じ釣行の続きから記録します。なお、記録は始めてから 12 時間で自動で終わります。"
+            }
+          },
+          {
+            "@type": "Question",
             "name": "Android でも使えますか？",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "使えます。現在、Google Play で先行公開しています。機能は iPhone版と同じです。参加の方法は Android版のページをご覧ください。"
+              "text": "使えます。現在、Google Play で先行公開しています。今の Android版の機能は iPhone版の 1.2 と同じで、2.0 の航跡の記録と新しい海底の地図は、まだ入っていません。一般公開の後に、順に入れていきます。参加の方法は Android版のページ をご覧ください。"
             }
           },
           {
@@ -88,7 +120,7 @@
             "name": "iPhone と Android の間で、記録を移せますか？",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "移せます。設定のデータ管理から書き出して、移行先の端末で読み込んでください。"
+              "text": "Android版で書き出した記録（設定のデータ管理から書き出すバックアップ）は、iPhone版でそのまま読み込めます。Android版には航跡の機能がまだないため、iPhone版で記録した航跡は、Android版では見られません。写真と航跡を含めて移せる「写真付きのバックアップ」は、iPhone版どうしで使えます。"
             }
           },
           {
@@ -152,7 +184,7 @@
             "name": "海図は表示できますか？",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "等深線・底質・沈船・海底障害物を地図に重ねて表示できます（海上保安庁「海しる」のデータ）。ただし航海用の海図ではなく、等深線は 20m・50m・100m といった粗い間隔です。詳しい地形は海図アプリ、水深は魚探と併用してください。"
+              "text": "航海用の海図は表示しません。地図には、全国の等深線と水深の色分けを描き、底質・魚礁・沈船も重ねられます。根や駆け上がりの位置、水深帯の広がり、底質の違いといった、釣り場の地形を読むために要るものは、この地図に入っています。元になっているのは 500m ごとの水深のデータなので、小さな根や漁礁の形までは出ません。航海と安全の判断は、海図と魚探で行ってください。"
             }
           },
           {
@@ -160,7 +192,7 @@
             "name": "底質・魚礁の情報はどこから来ていますか？",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "海上保安庁の海洋状況表示システム（海しるAPI）から取得しています。端末ではなく、Cloudflare Workers を経由して参照します。出典表示は「データの出典」セクションをご覧ください。"
+              "text": "海上保安庁の海洋状況表示システム（海しるAPI）から取得しています。端末ではなく、Cloudflare Workers を経由して参照します。詳しくはデータの出典をご覧ください。"
             }
           },
           {
@@ -184,15 +216,7 @@
             "name": "機種変更するとき、記録は移せますか？",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "移せます。設定のデータ管理から、全件を書き出して、新しい端末で読み込めます。iPhone版で iCloud をお使いの場合は、自動で同期されます。Android版は、Android の自動バックアップで、機種変更のときに引き継がれます（写真を除く）。"
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "iCloud を使っていなくても使えますか？（iPhone版）",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "使えます。すべての釣果は端末の中に保存され、iCloud がなくても全機能が動作します。"
+              "text": "移せます。iPhone版は、設定のデータ管理の「写真付きでバックアップ（zip）」で書き出し、新しい iPhone で「バックアップから復元」を選んでください。写真と航跡も一緒に移ります。復元は、まだ入っていない記録だけを足すので、今ある記録は書き換えません。iPhone版は iCloud で同期しないので、機種変更の前にバックアップを書き出してください。Android版は、Android の自動バックアップで、機種変更のときに引き継がれます（写真を除く）。"
             }
           },
           {
@@ -200,7 +224,7 @@
             "name": "オフラインでも使えますか？",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "釣果の記録・閲覧はオフラインでも動作します。分析に使う潮・風のデータと、地図の海底情報の取得にはインターネット接続が必要です（一度取得したものは端末に残ります）。魚種の判定は、電波のない沖でも動きます。"
+              "text": "釣果の記録・閲覧と、航跡の記録は、電波がなくても動きます。一度見た場所の地図は、電波のない沖でも表示されます。設定の地図データの画面で、行く海の区画を前もって取っておくこともできます。潮・風のデータと、底質などの海の情報の取得にはインターネットへの接続が必要です（一度取得したものは端末に残ります）。魚種の判定は、電波のない沖でも動きます。"
             }
           },
           {
@@ -216,7 +240,7 @@
             "name": "分析に傾向が出ません",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "記録が 5 件・釣行 2 回未満のあいだは表示されません。また、潮・風のデータ取得が終わるまでは出ないことがあります。設定 → データ管理で取得状況を確認できます。詳しくは「分析の見方」をご覧ください。"
+              "text": "記録が 5 件・釣行 2 回未満のあいだは表示されません。また、潮・風のデータ取得が終わるまでは出ないことがあります。設定 → データ管理で取得状況を確認できます。詳しくは分析の見方をご覧ください。"
             }
           },
           {
@@ -245,6 +269,7 @@
 
     <!-- デスクトップナビ -->
     <nav class="site-header__nav" aria-label="メインナビゲーション">
+      <a href="/#map"     class="nav-link">地図</a>
       <a href="/#howto"   class="nav-link">使い方</a>
       <a href="/#features" class="nav-link">機能</a>
       <a href="/analysis/" class="nav-link">分析の見方</a>
@@ -258,6 +283,7 @@
     <details class="nav-toggle" aria-label="ナビゲーションを開く">
       <summary>☰ メニュー</summary>
       <nav class="nav-toggle__menu" aria-label="モバイルナビゲーション">
+        <a href="/#map"      class="nav-link">地図</a>
         <a href="/#howto"    class="nav-link">使い方</a>
         <a href="/#features" class="nav-link">機能</a>
         <a href="/analysis/" class="nav-link">分析の見方</a>
@@ -279,6 +305,9 @@
     </h1>
     <p class="hero__sub">
       魚種も、水深も、潮回りも、海底が砂だったか岩だったかまで、その1枚から全部入ります。違うときだけ直せば、記録は完成です。
+    </p>
+    <p class="hero__sub hero__sub--new">
+      2.0 から、出港から帰港までの航跡と、海の底が見える地図も残ります。
     </p>
 
     <!-- App Store バッジ + Android版のボタン（スマートフォンの幅では縦に並ぶ。Android の端末では Android版を先に表示） -->
@@ -310,30 +339,30 @@
     <div class="hero__phones hero__phones--fan" aria-hidden="true">
       <div class="phone-mockup phone-left">
         <img
-          src="/assets/img/shot-gallery.png"
-          alt="記録タブのギャラリービュー。釣行写真がグリッドで並ぶ"
+          src="/assets/img/2.0/recording-map.webp"
+          alt="記録中の地図。三崎港を出て、航跡を引きながら走っている"
           class="phone-mockup__screen"
-          width="234" height="507"
+          width="234" height="509"
           decoding="async"
           onerror="this.closest('.phone-mockup').style.background='#1b2227'"
         />
       </div>
       <div class="phone-mockup phone-center">
         <img
-          src="/assets/img/shot-zukan.png"
-          alt="図鑑の一覧。魚種ごとに写真と自己記録、伸びが並ぶ"
+          src="/assets/img/2.0/trip-detail.webp"
+          alt="釣行の画面。出港と帰港の時刻、航行距離・釣りの時間・流しの速さ、航跡の入った地図"
           class="phone-mockup__screen"
-          width="264" height="571"
+          width="264" height="574"
           decoding="async"
           onerror="this.closest('.phone-mockup').style.background='#1b2227'"
         />
       </div>
       <div class="phone-mockup phone-right">
         <img
-          src="/assets/img/shot-share.png"
-          alt="シェア画像のプレビュー。テロップ・マガジン・ポスターから選べる"
+          src="/assets/img/2.0/map-zoom.webp"
+          alt="地図の拡大。等深線と水深の色分けの上に、底質の記号と釣った魚の名前"
           class="phone-mockup__screen"
-          width="234" height="507"
+          width="234" height="509"
           decoding="async"
           onerror="this.closest('.phone-mockup').style.background='#1b2227'"
         />
@@ -344,11 +373,11 @@
     <div class="phone-carousel hero__phones--mobile" aria-hidden="true">
       <div class="phone-mockup phone-carousel__mockup" style="width:240px;">
         <div class="phone-carousel__track">
-          <div class="phone-carousel__slide"><img src="/assets/img/shot-gallery.png"  alt="ギャラリービュー" decoding="async" /></div>
-          <div class="phone-carousel__slide"><img src="/assets/img/shot-zukan.png"    alt="図鑑の一覧。魚種ごとに写真と自己記録、伸びが並ぶ" decoding="async" loading="lazy" /></div>
-          <div class="phone-carousel__slide"><img src="/assets/img/shot-share.png"    alt="シェア画像のプレビュー。テロップ・マガジン・ポスターから選べる" decoding="async" loading="lazy" /></div>
-          <div class="phone-carousel__slide"><img src="/assets/img/shot-map.png"      alt="地図タブ。等深線と底質の上に釣果のピン"       decoding="async" loading="lazy" /></div>
-          <div class="phone-carousel__slide"><img src="/assets/img/shot-analysis.png" alt="分析タブ。よく釣れている条件と傾向の一覧"   decoding="async" loading="lazy" /></div>
+          <div class="phone-carousel__slide"><img src="/assets/img/2.0/recording-map.webp" alt="記録中の地図。航跡を引きながら走っている" width="750" height="1631" decoding="async" /></div>
+          <div class="phone-carousel__slide"><img src="/assets/img/2.0/catch-detail.webp"  alt="釣果の画面。マダイ 52cm、水深、潮位のグラフ、天気・風・底質" width="750" height="1631" decoding="async" loading="lazy" /></div>
+          <div class="phone-carousel__slide"><img src="/assets/img/2.0/trip-detail.webp"   alt="釣行の画面。航行距離・釣りの時間・流しの速さと、航跡の入った地図" width="750" height="1631" decoding="async" loading="lazy" /></div>
+          <div class="phone-carousel__slide"><img src="/assets/img/2.0/map-zoom.webp"      alt="地図の拡大。等深線と水深の色分けの上に、底質の記号と釣った魚の名前" width="750" height="1631" decoding="async" loading="lazy" /></div>
+          <div class="phone-carousel__slide"><img src="/assets/img/2.0/analysis.webp"      alt="分析の画面。よく釣れている条件と傾向の一覧" width="750" height="1631" decoding="async" loading="lazy" /></div>
         </div>
       </div>
       <div class="phone-carousel__nav">
@@ -388,8 +417,101 @@
     </div>
   </div>
 
+  <!-- ============ D.0: 地図（MAP） ============ -->
+  <section id="map" class="section" aria-labelledby="map-heading">
+    <div class="container map-section">
+      <div class="col-narrow map-section__intro">
+        <span class="label label--blue">MAP</span>
+        <h2 id="map-heading" class="section-heading">
+          <span class="tt-orange">無料で、</span>ここまで見える。
+        </h2>
+        <p class="section-lead">全国の等深線と水深の色分けを、拡大するほど細かく描きます。200〜400m の深場の斜面も 10m ごと。根や駆け上がり、水深帯の広がりが、地図を見るだけでつかめます。</p>
+      </div>
+
+      <figure class="map-embed">
+        <iframe
+          data-src="https://map.margheritaworks.com/?embed=1"
+          title="全国の海底の地図（相模湾）"
+          loading="lazy"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allow="fullscreen"></iframe>
+      </figure>
+      <div class="col-narrow map-section__after">
+        <p class="map-embed__note">アプリなら、この上に底質（泥・岩・砂など）と、航跡と、釣った魚が乗ります。</p>
+        <p class="map-embed__link"><a href="https://map.margheritaworks.com/" target="_blank" rel="noopener">全国の海底の地図を開く →</a></p>
+      </div>
+
+      <div class="col-narrow map-block">
+        <h3 class="sub-heading">同じ海が、ここまで変わりました。</h3>
+        <div class="compare" style="--pos:50%">
+          <img class="compare__img compare__img--before" src="/assets/img/2.0/map-1x.webp" alt="" width="1206" height="690" loading="lazy" decoding="async" />
+          <div class="compare__after" aria-hidden="true">
+            <img class="compare__img" src="/assets/img/2.0/map-2.0.webp" alt="" width="1206" height="690" loading="lazy" decoding="async" />
+          </div>
+          <span class="compare__tag compare__tag--left" aria-hidden="true">1.x</span>
+          <span class="compare__tag compare__tag--right" aria-hidden="true">2.0</span>
+          <div class="compare__handle" role="slider" tabindex="0"
+               aria-label="1.x と 2.0 の地図の比べ"
+               aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"
+               aria-valuetext="左が 1.x、右が 2.0。境目は左から 50%">
+            <span class="compare__grip" aria-hidden="true"></span>
+          </div>
+        </div>
+        <p class="compare__caption">相模湾の同じ場所・同じ拡大率の地図です。境目を左右に動かして見比べられます。左の 1.x は粗い等深線、右の 2.0 は 5m ごとの等深線と底質の記号です。</p>
+      </div>
+
+      <div class="col-narrow map-block">
+        <h3 class="sub-heading">航海には使えません。でも、釣り場を読むには、これで十分です。</h3>
+        <p class="section-lead">根や駆け上がりの位置、水深帯の広がり、底質の違い。釣り場の地形を読むために要るものは、この地図に入っています。元になっているのは 500m ごとの水深のデータなので、小さな根や漁礁の形までは出ません。航海と安全の判断は、海図と魚探で。</p>
+        <ul class="feature-list" aria-label="地図の機能">
+          <li>座標と、十字までの距離・方角</li>
+          <li>進んでいる向きの線</li>
+          <li>回したときだけ出る方位磁石</li>
+          <li>底質（泥・岩・砂など）の表示</li>
+          <li>一度見た場所は、電波のない沖でも表示</li>
+        </ul>
+      </div>
+
+      <div class="col-narrow map-block">
+        <h3 class="sub-heading">あの日と、この日を重ねる。</h3>
+        <p class="section-lead">過去の釣行を重ねると、どこを流して、どこで釣れたかを見比べられます。期間・魚種・エリアで絞り込んで比べられます。</p>
+      </div>
+      <div class="map-anim map-anim--overlay" data-map-anim="overlay" data-src="/assets/data/trips-2.json">
+        <div class="map-anim__map" role="img" aria-label="過去の土曜 2 回分の航跡を、色を変えて重ねた地図。9月26日は紫、8月8日は橙の線で、それぞれ釣れた場所に魚の名前が出る"></div>
+        <div class="map-anim__hud map-anim__hud--plain" aria-hidden="true"><span data-clock>過去の釣行 2 回</span></div>
+        <ul class="map-anim__legend" data-legend aria-hidden="true"></ul>
+        <noscript><img src="/assets/img/2.0/past-2-trips.webp" alt="" /></noscript>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ D.1: 航跡（TRACK） ============ -->
+  <section id="track" class="section section--sand" aria-labelledby="track-heading">
+    <div class="container map-section">
+      <div class="col-narrow map-section__intro">
+        <span class="label label--blue">TRACK</span>
+        <h2 id="track-heading" class="section-heading">
+          <span class="tt-orange">出港から帰港まで、</span>走った線が残る。
+        </h2>
+        <p class="section-lead">出港したら「釣行を開始」を押すだけ。画面を消しても航跡を記録し、走っている所と釣っている所を自動で分けて描きます。途中でアプリが閉じても、続きから記録します。</p>
+        <ul class="feature-list" aria-label="航跡の機能">
+          <li>航行距離・出港と帰港の時刻・流しの速さ</li>
+          <li>釣行のメモ</li>
+          <li>出港を自動で見つけて記録を始める設定（初期はオフ）</li>
+        </ul>
+      </div>
+      <div class="map-anim map-anim--day" data-map-anim="day" data-src="/assets/data/track-day.json">
+        <div class="map-anim__map" role="img" aria-label="2026年10月3日の釣行の航跡。6時12分に三崎港を出て、城ヶ島の西の釣り場を回り、アジ・マダイ・カワハギを釣って13時30分に帰港するまでを再生する地図"></div>
+        <div class="map-anim__hud" aria-hidden="true"><span class="map-anim__rec"></span><span data-clock>06:12</span><span class="map-anim__sep">・</span><span data-state>移動中</span></div>
+        <p class="map-anim__date" aria-hidden="true">2026年10月3日（土）</p>
+        <noscript><img src="/assets/img/2.0/trip-detail.webp" alt="" /></noscript>
+      </div>
+      <p class="map-anim__caption col-narrow">移動中は細かい点線、釣り中は実線で描きます（デモ用の記録です）。</p>
+    </div>
+  </section>
+
   <!-- ============ D: 使い方 3ステップ ============ -->
-  <section id="howto" class="section section--sand" aria-labelledby="howto-heading">
+  <section id="howto" class="section" aria-labelledby="howto-heading">
     <div class="container">
       <h2 id="howto-heading" style="margin:0; font-size:var(--text-heading); font-weight:700; line-height:1.35;">
         <span class="tt-orange">3ステップで、</span>記録が残る。
@@ -397,13 +519,13 @@
       <div class="steps-grid">
         <article class="step-card">
           <div class="step-badge" aria-label="ステップ1">1</div>
-          <h3 class="step-title">船の上で、1枚撮る</h3>
-          <p class="step-body">画面下の中央のカメラで撮るだけ。場所と時刻も、そのとき読み取ります。魚を持ったまま操作する必要はありません。</p>
+          <h3 class="step-title">出港したら「釣行を開始」</h3>
+          <p class="step-body">地図の左上の「釣行を開始」を押すと、航跡の記録が始まります。帰港したら「終了」を押してください。押し忘れても、釣果はいつも通り記録できます。</p>
         </article>
         <article class="step-card">
           <div class="step-badge" aria-label="ステップ2">2</div>
-          <h3 class="step-title">入った内容を、ざっと確認する</h3>
-          <p class="step-body">魚種は写真から判定して、水深は海底地形から、水温は同じ日の直前の釣果から入ります。違うところがあれば、そこだけ直してください。魚探の水深に直せば、その値が記録に残ります。</p>
+          <h3 class="step-title">釣れたら、1枚撮って確かめる</h3>
+          <p class="step-body">画面下の中央のカメラで撮るだけ。場所と時刻も、そのとき読み取ります。魚種は写真から判定して、水深は海底地形から、水温は同じ日の直前の釣果から入ります。違うところがあれば、そこだけ直してください。魚探の水深に直せば、その値が記録に残ります。</p>
         </article>
         <article class="step-card">
           <div class="step-badge" aria-label="ステップ3">3</div>
@@ -414,50 +536,12 @@
     </div>
   </section>
 
-  <!-- ============ D.2: Android 版（ANDROID） ============ -->
-  <section id="android" class="section" aria-labelledby="android-heading">
-    <div class="col-narrow android-card">
-      <div>
-        <span class="label label--blue">ANDROID</span>
-        <h2 id="android-heading" style="margin:12px 0 0; font-size:var(--text-heading); font-weight:700; line-height:1.35;">
-          <span class="tt-orange">Android版を、</span>先行公開しています
-        </h2>
-      </div>
-      <p style="margin:0; color:var(--color-ink-muted);">魚種の判定、水深の自動入力、図鑑、シェア画像、統計分析まで、iPhone版と同じ機能がそろった Android版を、Google Play で先行公開しています。</p>
-      <p style="margin:0; color:var(--color-ink-muted);">Google Play では、新しいアプリを一般公開する前に、実際に使っていただく方とのテスト期間を設けることが決まりになっています。テストに参加していただくと、一般公開より先に、無料でお使いいただけます。一般公開は、11月中旬から下旬ごろを目指しています。</p>
-      <ol class="android-steps" aria-label="参加の流れ">
-        <li>Google グループに参加する</li>
-        <li>「Become a tester」を押す</li>
-        <li>Google Play からインストールする</li>
-      </ol>
-      <div class="android-card__cta">
-        <a href="/android/?src=section" class="btn-primary">テストに参加する</a>
-        <p class="android-card__note">メールアドレスが公開されることはありません。</p>
-      </div>
-    </div>
-  </section>
-
   <!-- ============ D.5: 図鑑（ZUKAN） ============ -->
-  <section id="zukan" class="section" aria-labelledby="zukan-heading">
+  <section id="zukan" class="section section--sand" aria-labelledby="zukan-heading">
     <div class="feature-row feature-row--flip">
       <div class="feature-visual">
-        <div class="phone-carousel">
-          <div class="phone-mockup phone-carousel__mockup" style="width:280px;">
-            <div class="phone-carousel__track">
-              <div class="phone-carousel__slide"><img src="/assets/img/shot-zukan.png"         alt="図鑑の一覧。魚種ごとに写真と自己記録、伸びが並ぶ" loading="lazy" decoding="async" /></div>
-              <div class="phone-carousel__slide"><img src="/assets/img/shot-zukan-species.png" alt="魚種ページ。自己記録・伸び・尾数・水深"           loading="lazy" decoding="async" /></div>
-              <div class="phone-carousel__slide"><img src="/assets/img/shot-zukan-pb.png"      alt="自己記録の推移。グラフと更新の一覧"               loading="lazy" decoding="async" /></div>
-            </div>
-          </div>
-          <div class="phone-carousel__nav">
-            <button class="carousel-prev" aria-label="前へ">&#8249;</button>
-            <div class="phone-carousel__dots">
-              <button class="dot dot--active" aria-label="1枚目"></button>
-              <button class="dot" aria-label="2枚目"></button>
-              <button class="dot" aria-label="3枚目"></button>
-            </div>
-            <button class="carousel-next" aria-label="次へ">&#8250;</button>
-          </div>
+        <div class="phone-mockup" style="width:280px;">
+          <img src="/assets/img/2.0/zukan.webp" alt="図鑑の一覧。魚種ごとに写真と自己記録、伸びが並ぶ" class="phone-mockup__screen" width="750" height="1631" loading="lazy" decoding="async" />
         </div>
       </div>
       <div class="feature-text">
@@ -477,7 +561,7 @@
   </section>
 
   <!-- ============ D.6: シェア画像（SHARE） ============ -->
-  <section id="share" class="section section--sand" aria-labelledby="share-heading">
+  <section id="share" class="section" aria-labelledby="share-heading">
     <div class="col-narrow" style="display:flex; flex-direction:column; gap:24px;">
       <div>
         <span class="label label--blue">SHARE</span>
@@ -488,14 +572,14 @@
       <p style="margin:0; color:var(--color-ink-muted);">魚種・サイズ・水深・水温・潮を写真に重ねて、1枚の画像にしてシェアできます。デザインは3種類。写真の拡大や位置も調整できます。釣れた場所は画像に出しません。画像はスマートフォンの中で作り、どこにも送りません。</p>
       <div class="share-gallery">
         <figure class="share-card"><img src="/assets/img/share-poster.jpg"   alt="シェア画像（ポスター）" loading="lazy" decoding="async" /><figcaption>ポスター</figcaption></figure>
-        <figure class="share-card"><img src="/assets/img/share-magazine.jpg" alt="シェア画像（マガジン）" loading="lazy" decoding="async" /><figcaption>マガジン</figcaption></figure>
+        <figure class="share-card"><img src="/assets/img/2.0/share-magazine.webp" alt="シェア画像（マガジン）。マダイ 52cm" width="750" height="938" loading="lazy" decoding="async" /><figcaption>マガジン</figcaption></figure>
         <figure class="share-card"><img src="/assets/img/share-telop.jpg"    alt="シェア画像（テロップ）" loading="lazy" decoding="async" /><figcaption>テロップ</figcaption></figure>
       </div>
     </div>
   </section>
 
   <!-- ============ E: 機能：分析 ============ -->
-  <section id="features" class="section" aria-labelledby="analysis-heading">
+  <section id="features" class="section section--sand" aria-labelledby="analysis-heading">
     <div class="feature-row">
       <div class="feature-text">
         <span class="label label--blue">ANALYSIS</span>
@@ -503,7 +587,9 @@
           <span class="tt-orange">溜めたログを統計分析して、</span>次の一手に
         </h2>
         <p style="margin:0; color:var(--color-ink-muted);">釣果は「釣行」ごとに自動でまとまり、出港から帰港までの潮・潮流・風の流れと、釣れた時刻をひとつのタイムラインで振り返れます。</p>
-        <p style="margin:8px 0 0; color:var(--color-ink-muted);">記録がたまると、あなた自身の記録を統計分析して、自分でも気づいていなかった当たりパターンを見つけます。「下げ潮のときによく釣れている」「マダイは朝まづめによく釣れている」といった条件を、あなた自身の記録から探して表示します。単に釣果が多い条件ではなく、船を出していた時間に対してどれだけ釣れたかで評価するので、よく行っている潮回りがそれらしく見える、ということがありません。魚種別・エリア別に絞って見ることもできます。</p>
+        <p style="margin:8px 0 0; color:var(--color-ink-muted);">記録がたまると、あなた自身の記録を統計分析して、自分でも気づいていなかった当たりパターンを見つけます。「下げ潮のときによく釣れている」「マダイは朝まづめによく釣れている」といった条件を、あなた自身の記録から探して表示します。単に釣果が多い条件ではなく、時間に対してどれだけ釣れたかで評価するので、よく行っている潮回りがそれらしく見える、ということがありません。潮回りや時間帯は、出港から帰港までの時間に対して数えます。</p>
+        <p style="margin:8px 0 0; color:var(--color-ink);"><strong>2.0 から、水深・底質・魚礁などの場所の条件は、航跡から分かる、実際に釣りをしていた時間に対して数えます。</strong>いつも流している場所だから釣果が多く見える、ということがなくなり、釣れなかった日の流しの時間も数に入ります。場所の条件は、魚種を選んだときに出ます。航跡のない釣行は、これまでどおり数えます。</p>
+        <p style="margin:8px 0 0; color:var(--color-ink-muted);">魚種別・エリア別に絞って見ることもできます。</p>
         <ul class="feature-list" aria-label="分析機能の特徴">
           <li>よく釣れている条件を、自分の記録から統計分析で表示</li>
           <li>水深 × 潮回り、水深 × 底質のマトリクス（件数と、時間あたりの釣れやすさ）</li>
@@ -515,10 +601,8 @@
         <div class="phone-carousel">
           <div class="phone-mockup phone-carousel__mockup" style="width:280px;">
             <div class="phone-carousel__track">
-              <div class="phone-carousel__slide"><img src="/assets/img/shot-catch-detail.png" alt="釣果詳細。水深・潮位グラフ・天気・底質が自動で記録されている" loading="lazy" decoding="async" /></div>
-              <div class="phone-carousel__slide"><img src="/assets/img/shot-insight.png"       alt="根拠画面。条件の時間割合と釣果の割合、該当する釣果の一覧"           loading="lazy" decoding="async" /></div>
-              <div class="phone-carousel__slide"><img src="/assets/img/shot-analysis-2.png"   alt="分析タブ。水深×潮のマトリクスと魚種ランキング"                     loading="lazy" decoding="async" /></div>
-              <div class="phone-carousel__slide"><img src="/assets/img/shot-analysis-3.png"   alt="全魚種の水深レンジ一覧"                                           loading="lazy" decoding="async" /></div>
+              <div class="phone-carousel__slide"><img src="/assets/img/2.0/analysis.webp" alt="分析の画面。よく釣れている条件「朝まづめ × 中潮のときによく釣れている」と傾向の一覧" width="750" height="1631" loading="lazy" decoding="async" /></div>
+              <div class="phone-carousel__slide"><img src="/assets/img/2.0/trip-detail.webp" alt="釣行の画面。航行距離・釣りの時間・流しの速さと、航跡の入った地図" width="750" height="1631" loading="lazy" decoding="async" /></div>
             </div>
           </div>
           <div class="phone-carousel__nav">
@@ -526,8 +610,6 @@
             <div class="phone-carousel__dots">
               <button class="dot dot--active" aria-label="1枚目"></button>
               <button class="dot" aria-label="2枚目"></button>
-              <button class="dot" aria-label="3枚目"></button>
-              <button class="dot" aria-label="4枚目"></button>
             </div>
             <button class="carousel-next" aria-label="次へ">&#8250;</button>
           </div>
@@ -540,21 +622,8 @@
   <section class="section section--dark bg-dark section--photo-f" aria-labelledby="depth-heading">
     <div class="feature-row feature-row--flip" style="max-width:var(--content-max); margin:0 auto;">
       <div class="feature-visual">
-        <div class="phone-carousel">
-          <div class="phone-mockup phone-carousel__mockup" style="width:280px; background:var(--color-slate-depth);">
-            <div class="phone-carousel__track">
-              <div class="phone-carousel__slide"><img src="/assets/img/shot-depth-2.png" alt="登録画面の水深・水温。水深は海底地形から自動で入る"   loading="lazy" decoding="async" /></div>
-              <div class="phone-carousel__slide"><img src="/assets/img/shot-matrix.png"   alt="水深×潮のマトリクスと魚種ランキング"                 loading="lazy" decoding="async" /></div>
-            </div>
-          </div>
-          <div class="phone-carousel__nav">
-            <button class="carousel-prev" aria-label="前へ">&#8249;</button>
-            <div class="phone-carousel__dots">
-              <button class="dot dot--active" aria-label="1枚目"></button>
-              <button class="dot" aria-label="2枚目"></button>
-            </div>
-            <button class="carousel-next" aria-label="次へ">&#8250;</button>
-          </div>
+        <div class="phone-mockup" style="width:280px; background:var(--color-slate-depth);">
+          <img src="/assets/img/2.0/catch-detail.webp" alt="釣果の画面。水深 78m（魚探実測）、潮位のグラフ、天気・風・波高・底質" class="phone-mockup__screen" width="750" height="1631" loading="lazy" decoding="async" />
         </div>
       </div>
       <div class="feature-text">
@@ -597,7 +666,7 @@
           <li>水温（同じ日の直前の釣果から引き継ぎ）</li>
           <li>天気・風速・波高（気象データから自動取得）</li>
           <li>潮回り・干潮/満潮時刻（潮汐データから自動取得）</li>
-          <li>底質・魚礁（海しるAPI / 海上保安庁）</li>
+          <li>底質（泥・岩・砂など）・魚礁（海しるAPI / 海上保安庁）</li>
         </ul>
         <p style="margin:0; font-size:var(--text-body-sm); color:var(--color-ink-muted);">取得に失敗した場合も、釣果の記録は必ず保存されます。</p>
       </div>
@@ -632,7 +701,7 @@
         <h2 id="views-heading" style="margin:0; font-size:var(--text-heading); font-weight:700; line-height:1.35;">
           <span class="tt-orange">5つの見方で</span>振り返る
         </h2>
-        <p style="margin:0; color:var(--color-ink-muted);">釣行・釣果・魚種・水深・ギャラリーの5ビューを切り替えて、同じ釣果をさまざまな角度から見られます。地図では釣果の場所をピンで確認でき、釣行を選んで日ごとに比べられます。</p>
+        <p style="margin:0; color:var(--color-ink-muted);">釣行・釣果・魚種・水深・ギャラリーの5ビューを切り替えて、同じ釣果をさまざまな角度から見られます。</p>
         <ul class="feature-list" aria-label="ビューの種類">
           <li>釣行：出港から帰港までのタイムラインと、その日の釣果</li>
           <li>釣果：日付順の一覧</li>
@@ -649,7 +718,6 @@
               <div class="phone-carousel__slide"><img src="/assets/img/shot-views-3.png" alt="水深ビュー。水深の深い順に釣果が並ぶ"                          loading="lazy" decoding="async" /></div>
               <div class="phone-carousel__slide"><img src="/assets/img/shot-views-4.png" alt="ギャラリービュー。釣行写真がタイルグリッドで並ぶ"              loading="lazy" decoding="async" /></div>
               <div class="phone-carousel__slide"><img src="/assets/img/shot-views-5.png" alt="釣果ビュー。日付順の一覧"           loading="lazy" decoding="async" /></div>
-              <div class="phone-carousel__slide"><img src="/assets/img/shot-views-6.png" alt="地図ビュー。釣果の場所をピンで確認" loading="lazy" decoding="async" /></div>
             </div>
           </div>
           <div class="phone-carousel__nav">
@@ -660,7 +728,6 @@
               <button class="dot" aria-label="3枚目"></button>
               <button class="dot" aria-label="4枚目"></button>
               <button class="dot" aria-label="5枚目"></button>
-              <button class="dot" aria-label="6枚目"></button>
             </div>
             <button class="carousel-next" aria-label="次へ">&#8250;</button>
           </div>
@@ -669,14 +736,26 @@
     </div>
   </section>
 
-  <!-- ============ H: 併用前提 ============ -->
-  <section class="section section--sand" aria-labelledby="companion-heading">
-    <div class="col-narrow" style="display:flex; flex-direction:column; gap:24px;">
-      <h2 id="companion-heading" style="margin:0; font-size:var(--text-heading); font-weight:700; line-height:1.35;">
-        <span class="tt-orange">海図アプリと魚探との、</span>併用前提です
-      </h2>
-      <p style="margin:0; color:var(--color-ink-muted);">地図には海しる（海上保安庁）の等深線・底質・沈船・海底障害物を重ねられますが、航海用の海図ではなく、等深線も粗い間隔のものです。航海と詳しい地形は既存の海図アプリで、水深は魚探で、記録と分析はこのアプリで。そういう組み合わせで使っていただく前提で設計しています。</p>
-      <p style="margin:0; color:var(--color-ink-muted);">底質・魚礁のデータは海上保安庁の海しるAPIから自動取得しますが、いずれも参考情報です。安全判断・航海・漁業など専門的な用途には使えません。</p>
+  <!-- ============ D.2: Android 版（ANDROID） ============ -->
+  <section id="android" class="section section--sand" aria-labelledby="android-heading">
+    <div class="col-narrow android-card">
+      <div>
+        <span class="label label--blue">ANDROID</span>
+        <h2 id="android-heading" style="margin:12px 0 0; font-size:var(--text-heading); font-weight:700; line-height:1.35;">
+          <span class="tt-orange">Android版を、</span>先行公開しています
+        </h2>
+      </div>
+      <p style="margin:0; color:var(--color-ink-muted);">Android版を、Google Play で先行公開しています。今の Android版の機能は、iPhone版の 1.2 と同じです。魚種の判定、水深の自動入力、図鑑、シェア画像、統計分析までがそろっています。2.0 の航跡の記録と新しい海底の地図は、まだ入っていません。一般公開の後に、順に入れていきます。</p>
+      <p style="margin:0; color:var(--color-ink-muted);">Google Play では、新しいアプリを一般公開する前に、実際に使っていただく方とのテスト期間を設けることが決まりになっています。テストに参加していただくと、一般公開より先に、無料でお使いいただけます。一般公開は、11月中旬から下旬ごろを目指しています。</p>
+      <ol class="android-steps" aria-label="参加の流れ">
+        <li>Google グループに参加する</li>
+        <li>「Become a tester」を押す</li>
+        <li>Google Play からインストールする</li>
+      </ol>
+      <div class="android-card__cta">
+        <a href="/android/?src=section" class="btn-primary">テストに参加する</a>
+        <p class="android-card__note">メールアドレスが公開されることはありません。</p>
+      </div>
     </div>
   </section>
 
@@ -689,11 +768,55 @@
         <div class="faq-item">
           <details>
             <summary>
+              <h3 style="margin:0; font-size:inherit; font-weight:inherit;">航跡はどこかに送られますか？</h3>
+              <span class="faq-icon faq-icon-plus" aria-hidden="true">＋</span>
+              <span class="faq-icon faq-icon-minus" aria-hidden="true">−</span>
+            </summary>
+            <div class="faq-answer">送られません。航跡は、端末の中だけに保存します。分析で底質などを調べるときにも、航跡の点そのものは送らず、航跡が通ったあたりのおおまかな範囲だけを使います。詳しくは<a href="/privacy/#pp-analysis">プライバシーポリシー</a>をご覧ください。</div>
+          </details>
+        </div>
+
+        <div class="faq-item">
+          <details>
+            <summary>
+              <h3 style="margin:0; font-size:inherit; font-weight:inherit;">位置情報の許可は「常に」が必要ですか？</h3>
+              <span class="faq-icon faq-icon-plus" aria-hidden="true">＋</span>
+              <span class="faq-icon faq-icon-minus" aria-hidden="true">−</span>
+            </summary>
+            <div class="faq-answer">必要ありません。「使用中のみ」で記録できます。記録中は、画面を消しても航跡の記録が続きます。「常に」が要るのは、出港を自動で見つけて記録を始める設定（初期はオフ）を使うときだけです。</div>
+          </details>
+        </div>
+
+        <div class="faq-item">
+          <details>
+            <summary>
+              <h3 style="margin:0; font-size:inherit; font-weight:inherit;">電池はどのくらい減りますか？</h3>
+              <span class="faq-icon faq-icon-plus" aria-hidden="true">＋</span>
+              <span class="faq-icon faq-icon-minus" aria-hidden="true">−</span>
+            </summary>
+            <div class="faq-answer">記録中は位置情報を使い続けるので、そのぶん電池を使います。航跡は画面を消したままでも記録できます。長い釣行では、予備の電池をお持ちになることをおすすめします。</div>
+          </details>
+        </div>
+
+        <div class="faq-item">
+          <details>
+            <summary>
+              <h3 style="margin:0; font-size:inherit; font-weight:inherit;">記録中にアプリが閉じたらどうなりますか？</h3>
+              <span class="faq-icon faq-icon-plus" aria-hidden="true">＋</span>
+              <span class="faq-icon faq-icon-minus" aria-hidden="true">−</span>
+            </summary>
+            <div class="faq-answer">次にアプリを開いたときに、同じ釣行の続きから記録します。なお、記録は始めてから 12 時間で自動で終わります。</div>
+          </details>
+        </div>
+
+        <div class="faq-item">
+          <details>
+            <summary>
               <h3 style="margin:0; font-size:inherit; font-weight:inherit;">Android でも使えますか？</h3>
               <span class="faq-icon faq-icon-plus" aria-hidden="true">＋</span>
               <span class="faq-icon faq-icon-minus" aria-hidden="true">−</span>
             </summary>
-            <div class="faq-answer">使えます。現在、Google Play で先行公開しています。機能は iPhone版と同じです。参加の方法は <a href="/android/?src=faq">Android版のページ</a> をご覧ください。</div>
+            <div class="faq-answer">使えます。現在、Google Play で先行公開しています。今の Android版の機能は iPhone版の 1.2 と同じで、2.0 の航跡の記録と新しい海底の地図は、まだ入っていません。一般公開の後に、順に入れていきます。参加の方法は <a href="/android/?src=faq">Android版のページ</a> をご覧ください。</div>
           </details>
         </div>
 
@@ -704,7 +827,7 @@
               <span class="faq-icon faq-icon-plus" aria-hidden="true">＋</span>
               <span class="faq-icon faq-icon-minus" aria-hidden="true">−</span>
             </summary>
-            <div class="faq-answer">移せます。設定のデータ管理から書き出して、移行先の端末で読み込んでください。</div>
+            <div class="faq-answer">Android版で書き出した記録（設定のデータ管理から書き出すバックアップ）は、iPhone版でそのまま読み込めます。Android版には航跡の機能がまだないため、iPhone版で記録した航跡は、Android版では見られません。写真と航跡を含めて移せる「写真付きのバックアップ」は、iPhone版どうしで使えます。</div>
           </details>
         </div>
 
@@ -792,7 +915,7 @@
               <span class="faq-icon faq-icon-plus" aria-hidden="true">＋</span>
               <span class="faq-icon faq-icon-minus" aria-hidden="true">−</span>
             </summary>
-            <div class="faq-answer">等深線・底質・沈船・海底障害物を地図に重ねて表示できます（海上保安庁「海しる」のデータ）。ただし航海用の海図ではなく、等深線は 20m・50m・100m といった粗い間隔です。詳しい地形は海図アプリ、水深は魚探と併用してください。</div>
+            <div class="faq-answer">航海用の海図は表示しません。地図には、全国の等深線と水深の色分けを描き、底質・魚礁・沈船も重ねられます。根や駆け上がりの位置、水深帯の広がり、底質の違いといった、釣り場の地形を読むために要るものは、この地図に入っています。元になっているのは 500m ごとの水深のデータなので、小さな根や漁礁の形までは出ません。航海と安全の判断は、海図と魚探で行ってください。</div>
           </details>
         </div>
 
@@ -836,18 +959,7 @@
               <span class="faq-icon faq-icon-plus" aria-hidden="true">＋</span>
               <span class="faq-icon faq-icon-minus" aria-hidden="true">−</span>
             </summary>
-            <div class="faq-answer">移せます。設定のデータ管理から、全件を書き出して、新しい端末で読み込めます。iPhone版で iCloud をお使いの場合は、自動で同期されます。Android版は、Android の自動バックアップで、機種変更のときに引き継がれます（写真を除く）。</div>
-          </details>
-        </div>
-
-        <div class="faq-item">
-          <details>
-            <summary>
-              <h3 style="margin:0; font-size:inherit; font-weight:inherit;">iCloud を使っていなくても使えますか？（iPhone版）</h3>
-              <span class="faq-icon faq-icon-plus" aria-hidden="true">＋</span>
-              <span class="faq-icon faq-icon-minus" aria-hidden="true">−</span>
-            </summary>
-            <div class="faq-answer">使えます。すべての釣果は端末の中に保存され、iCloud がなくても全機能が動作します。</div>
+            <div class="faq-answer">移せます。iPhone版は、設定のデータ管理の「写真付きでバックアップ（zip）」で書き出し、新しい iPhone で「バックアップから復元」を選んでください。写真と航跡も一緒に移ります。復元は、まだ入っていない記録だけを足すので、今ある記録は書き換えません。iPhone版は iCloud で同期しないので、機種変更の前にバックアップを書き出してください。Android版は、Android の自動バックアップで、機種変更のときに引き継がれます（写真を除く）。</div>
           </details>
         </div>
 
@@ -858,7 +970,7 @@
               <span class="faq-icon faq-icon-plus" aria-hidden="true">＋</span>
               <span class="faq-icon faq-icon-minus" aria-hidden="true">−</span>
             </summary>
-            <div class="faq-answer">釣果の記録・閲覧はオフラインでも動作します。分析に使う潮・風のデータと、地図の海底情報の取得にはインターネット接続が必要です（一度取得したものは端末に残ります）。魚種の判定は、電波のない沖でも動きます。</div>
+            <div class="faq-answer">釣果の記録・閲覧と、航跡の記録は、電波がなくても動きます。一度見た場所の地図は、電波のない沖でも表示されます。設定の地図データの画面で、行く海の区画を前もって取っておくこともできます。潮・風のデータと、底質などの海の情報の取得にはインターネットへの接続が必要です（一度取得したものは端末に残ります）。魚種の判定は、電波のない沖でも動きます。</div>
           </details>
         </div>
 
@@ -1008,6 +1120,26 @@
       <h2 id="changelog-heading" style="margin:0 0 24px; font-size:var(--text-heading); font-weight:700; line-height:1.35;">更新履歴</h2>
       <div style="display:flex; flex-direction:column; gap:24px;">
         <div>
+          <p style="margin:0 0 8px; font-size:var(--text-body); font-weight:700;">2.0（2026年10月）</p>
+          <ul class="feature-list">
+            <li>航跡の記録。地図の左上の「釣行を開始」で、出港から帰港までの線を残す。走っている所と釣っている所を自動で分けて描き、画面を消しても記録が続く</li>
+            <li>新しい海底の地図。全国の等深線と水深の色分けを、拡大するほど細かく描く。一度見た場所は電波のない沖でも表示</li>
+            <li>過去の釣行を地図に重ねて比べる。期間・魚種・エリアで絞り込み</li>
+            <li>分析の正確さ。水深・底質・魚礁などの場所の条件を、航跡から分かる、実際に釣りをしていた時間で数える</li>
+            <li>写真付きのバックアップと復元。写真と航跡も一緒に書き出し、新しい iPhone に戻せる</li>
+            <li>ようこそ画面を作り直し。ある 1 日の釣行で、使い方を紹介</li>
+          </ul>
+          <p style="margin:16px 0 8px; font-size:var(--text-body-sm); font-weight:700; color:var(--color-ink-muted);">直した点</p>
+          <ul class="feature-list">
+            <li>写真の保存の仕方を見直し、写真の多い記録でも、釣果の一覧とバックアップが軽くなった</li>
+            <li>風の矢印が逆を向いていたのを、吹いていく方向に直した（文字は「北から」のように表示）</li>
+            <li>一覧の行が、文字の所しか押せなかったのを、行の全体で押せるようにした</li>
+            <li>地図を常に明るい表示にした（ダークモードで明るさがちらつくため）</li>
+            <li>シェア画像を Instagram に共有して戻ると、画面が固まることがあったのを直した</li>
+            <li>写真の向きを、90 度ずつ回せるようにした</li>
+          </ul>
+        </div>
+        <div>
           <p style="margin:0 0 8px; font-size:var(--text-body); font-weight:700;">1.2（2026年10月）</p>
           <ul class="feature-list">
             <li>Android版の先行公開を開始（2026年10月1日）</li>
@@ -1051,7 +1183,10 @@
         <!-- 海しるAPI利用規約第5条の文言（一字一句変更禁止） -->
         <p class="notice-text">このサービスは、海しるAPIを利用して取得した情報をもとに作成しているが、サービスの内容は海上保安庁によって保証されたものではない</p>
         <p class="notice-text">出典：海洋状況表示システム（<a href="https://www.msil.go.jp/">https://www.msil.go.jp/</a>）</p>
-        <p class="notice-text">水深：日本海洋データセンター（JODC）「500mメッシュ水深データ（J-EGG500）」をもとに、本アプリで加工して作成</p>
+        <p class="notice-text">底質・魚礁・沈船：海洋状況表示システム（海しる、海上保安庁）から取得（等深線には使っていません）</p>
+        <p class="notice-text">水深の自動入力・等深線・水深の色分け：日本海洋データセンター（JODC）「500mメッシュ水深データ（J-EGG500）」をもとに、本アプリで加工して作成</p>
+        <p class="notice-text">陸の形：「国土数値情報（行政区域データ）」（国土交通省、CC BY 4.0）をもとに加工して作成</p>
+        <p class="notice-text">このページの地図の埋め込みの背景：国土地理院「<a href="https://maps.gsi.go.jp/development/ichiran.html">地理院タイル</a>」（淡色地図）</p>
         <p class="notice-text">魚種の判定：BioCLIP（Imageomics Institute、MIT License）</p>
         <p class="notice-text" style="color:var(--color-ink-muted);">本アプリは、航海・安全・漁業その他の専門的判断には使用できません。</p>
       </div>
@@ -1238,6 +1373,7 @@
 }());
 </script>
 
+<script defer src="/assets/js/map-anim.js"></script>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "ede13281e7b5473dad0fcfdd10a4c235"}'></script>
 </body>
 </html>

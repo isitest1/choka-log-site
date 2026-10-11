@@ -911,6 +911,7 @@ details:not([open]) .faq-icon-minus { display: none; }
 .phone-carousel__slide img {
   width: 100%;
   display: block;
+  height: auto;
   border-radius: 36px;  /* match phone-mockup__screen */
 }
 .phone-carousel__nav {
@@ -1261,3 +1262,347 @@ details:not([open]) .faq-icon-minus { display: none; }
   .android-card__cta { align-items: stretch; }
   .android-card__cta .btn-primary { justify-content: center; max-width: none; }
 }
+
+/* ─── MARK: 2.0 地図・航跡の節 ───────────────────────── */
+.hero__sub--new {
+  margin-top: -16px;
+  color: var(--color-ink);
+}
+
+.section-heading {
+  margin: 12px 0 0;
+  font-size: var(--text-heading);
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.section-lead {
+  margin: 0;
+  color: var(--color-ink-muted);
+}
+
+.sub-heading {
+  margin: 0 0 16px;
+  font-size: var(--text-heading-sm);
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.map-section {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 0;
+}
+
+.map-section__intro {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.map-section__after { width: 100%; margin-top: -16px; }
+
+.map-block {
+  width: 100%;
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* 地図の埋め込み（スマホの幅では横いっぱい・高さ 70vh） */
+.map-embed {
+  margin: 0;
+  width: 100%;
+  height: 70vh;
+  min-height: 420px;
+  max-height: 760px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--color-depth-blue);
+  border: 1px solid var(--color-hairline);
+}
+
+.map-embed iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.map-embed__note { margin: 0; color: var(--color-ink-muted); font-size: var(--text-body-sm); }
+.map-embed__link { margin: 4px 0 0; font-weight: 700; }
+
+/* 1.x と 2.0 の見比べ */
+.compare {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1206 / 690;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--color-depth-blue);
+  touch-action: pan-y;
+  user-select: none;
+  -webkit-user-select: none;
+  cursor: ew-resize;
+}
+
+.compare__img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  pointer-events: none;
+  -webkit-user-drag: none;
+}
+
+.compare__after {
+  position: absolute;
+  inset: 0;
+  clip-path: inset(0 0 0 var(--pos));
+}
+
+.compare__tag {
+  position: absolute;
+  top: 12px;
+  padding: 2px 12px;
+  border-radius: 999px;
+  background: rgba(11, 26, 33, .72);
+  color: var(--color-paper);
+  font-family: var(--font-num);
+  font-size: var(--text-caption);
+  font-weight: 700;
+  line-height: 1.8;
+  pointer-events: none;
+}
+
+.compare__tag--left  { left: 12px; }
+.compare__tag--right { right: 12px; }
+
+.compare__handle {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: var(--pos);
+  width: 44px;
+  margin-left: -22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+}
+
+.compare__handle::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 3px;
+  margin-left: -1.5px;
+  background: var(--color-paper);
+  box-shadow: 0 0 4px rgba(0, 0, 0, .35);
+}
+
+.compare__grip {
+  position: relative;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--color-paper);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, .3);
+}
+
+.compare__grip::before,
+.compare__grip::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 0;
+  height: 0;
+  margin-top: -6px;
+  border: 6px solid transparent;
+}
+
+.compare__grip::before { left: 3px;  border-right-color: var(--color-ink); }
+.compare__grip::after  { right: 3px; border-left-color: var(--color-ink); }
+
+.compare__handle:focus-visible .compare__grip {
+  outline: 3px solid var(--color-fish-orange);
+  outline-offset: 2px;
+}
+
+.compare__caption { margin: 0; font-size: var(--text-body-sm); color: var(--color-ink-muted); }
+
+/* 航跡の動き */
+.map-anim {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  max-height: 720px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: #b9d9f2;
+  border: 1px solid var(--color-hairline);
+}
+
+.map-anim__map {
+  position: absolute;
+  inset: 0;
+  background: #b9d9f2;
+  opacity: 0;
+  transition: opacity .4s;
+}
+
+.map-anim.is-ready .map-anim__map { opacity: 1; }
+
+/* 地図は指で動かせない。ページを下に送る邪魔をしない */
+.map-anim .leaflet-container,
+.map-anim .leaflet-pane,
+.map-anim .leaflet-marker-icon { touch-action: pan-y !important; cursor: default; }
+
+.map-anim .leaflet-control-attribution {
+  font-size: 10px;
+  line-height: 1.5;
+  background: rgba(255, 255, 255, .78);
+  color: var(--color-ink-muted);
+}
+
+.map-anim__place span {
+  display: inline-block;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  font-size: 13px;
+  font-weight: 700;
+  color: #6c6253;
+  letter-spacing: .08em;
+  text-shadow: 0 0 2px #fff, 0 0 2px #fff, 0 0 3px #fff;
+}
+
+.map-anim__fish span {
+  display: inline-block;
+  transform: translate(9px, -50%);
+  white-space: nowrap;
+  font-size: 14px;
+  font-weight: 700;
+  color: #e0312b;
+  text-shadow:
+    -1.5px -1.5px 0 #fff, 1.5px -1.5px 0 #fff, -1.5px 1.5px 0 #fff, 1.5px 1.5px 0 #fff,
+    0 -1.5px 0 #fff, 0 1.5px 0 #fff, -1.5px 0 0 #fff, 1.5px 0 0 #fff;
+  animation: fish-in .5s ease-out;
+}
+
+@keyframes fish-in {
+  from { opacity: 0; transform: translate(9px, -30%); }
+  to   { opacity: 1; transform: translate(9px, -50%); }
+}
+
+.map-anim__boat svg { display: block; transform-origin: 50% 50%; }
+
+/* アプリの記録中の表示（橙の札）に似せた、時計と状態 */
+.map-anim__hud {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  z-index: 800;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px 6px 12px;
+  border-radius: 999px;
+  background: var(--color-fish-orange);
+  color: var(--color-paper);
+  font-family: var(--font-num);
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.4;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .18);
+  font-variant-numeric: tabular-nums;
+  pointer-events: none;
+}
+
+.map-anim__hud [data-state] { font-family: var(--font-body); }
+.map-anim__sep { opacity: .7; }
+
+.map-anim__rec {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-paper);
+  animation: rec-blink 1.2s steps(2, start) infinite;
+}
+
+.map-anim__hud.is-done .map-anim__rec { animation: none; opacity: .6; }
+
+@keyframes rec-blink { to { visibility: hidden; } }
+
+.map-anim__hud--plain {
+  background: rgba(11, 26, 33, .78);
+  font-family: var(--font-body);
+  font-size: 14px;
+}
+
+.map-anim__date {
+  position: absolute;
+  top: 18px;
+  right: 16px;
+  z-index: 800;
+  margin: 0;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--color-ink);
+  text-shadow: 0 0 3px #fff, 0 0 3px #fff;
+  pointer-events: none;
+}
+
+.map-anim__legend {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 800;
+  margin: 0;
+  padding: 8px 12px;
+  list-style: none;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, .88);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.7;
+  pointer-events: none;
+}
+
+.map-anim__legend li { display: flex; align-items: center; gap: 8px; opacity: .3; transition: opacity .3s; }
+.map-anim__legend li.is-on { opacity: 1; }
+.map-anim__swatch { width: 18px; height: 4px; border-radius: 2px; }
+
+.map-anim__caption { margin: -16px auto 0; font-size: var(--text-body-sm); color: var(--color-ink-muted); width: 100%; }
+
+.map-anim noscript img { width: 100%; height: 100%; object-fit: cover; }
+
+.map-anim.is-failed .map-anim__map { opacity: 1; }
+
+@media (max-width: 767px) {
+  .map-embed {
+    width: calc(100% + 40px);
+    margin: 0 -20px;
+    border-radius: 0;
+    border-left: 0;
+    border-right: 0;
+  }
+  .map-anim { aspect-ratio: 4 / 5; }
+  .map-anim__hud { font-size: 14px; top: 12px; left: 12px; }
+  .map-anim__date { top: auto; bottom: 24px; right: auto; left: 12px; }
+  .map-anim__legend { top: auto; bottom: 26px; right: 10px; }
+  .compare { border-radius: 18px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .map-anim__rec { animation: none; }
+  .map-anim__fish span { animation: none; }
+  .map-anim__map { transition: none; }
+}
+.map-anim .leaflet-container { background: #b9d9f2; font-family: var(--font-body); }
