@@ -91,7 +91,7 @@ a:focus-visible {
 .site-header {
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 1100;
   background: var(--color-paper);
   border-bottom: 1px solid var(--color-hairline);
 }
@@ -1618,4 +1618,42 @@ details:not([open]) .faq-icon-minus { display: none; }
   object-fit: cover;
   border-radius: 36px;
   background: #b9d9f2;
+}
+
+/* 見出し：句読点・空白で区切ったかたまりの途中では折らない */
+.nw { display: inline-block; max-width: 100%; }
+
+/* 地図（Leaflet）の重なりを中に閉じ込め、上に固定した帯より下にする */
+.map-anim, .map-embed { isolation: isolate; position: relative; z-index: 0; }
+
+/* 幅 768〜1199px：上の帯のメニューを「メニュー」のボタンにまとめる */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .site-header__nav { display: none; }
+  .nav-toggle { display: block; }
+  .nav-toggle summary {
+    list-style: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--color-ink);
+    min-width: 44px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+  .nav-toggle summary::-webkit-details-marker { display: none; }
+  .nav-toggle__menu {
+    position: absolute;
+    top: 72px;
+    left: 0;
+    right: 0;
+    background: var(--color-paper);
+    border-bottom: 1px solid var(--color-hairline);
+    padding: 16px 40px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    z-index: 99;
+  }
+  .nav-toggle__menu .btn-primary { align-self: flex-start; }
 }

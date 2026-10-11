@@ -80,7 +80,7 @@
             "name": "航跡はどこかに送られますか？",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "送られません。航跡は、端末の中だけに保存します。分析で底質などを調べるときにも、航跡の点そのものは送らず、航跡が通ったあたりのおおまかな範囲だけを使います。詳しくはプライバシーポリシーをご覧ください。"
+              "text": "航跡は、端末の中だけに保存し、外へは送りません。ただし、次の 2 つの場合に限り、航跡の一部の情報を送ります。釣果の無い釣行では、その日の天気を取るために、航跡の中の 1 点（最初に釣りをしていた点。無ければ最初の点）の座標を、気象のサービス（Open-Meteo）へ送ります。分析で底質・魚礁・沈船を調べるときは、航跡の点そのものは送らず、航跡が通ったあたりのおおまかな範囲（約 20km 四方の升目ごと）だけを、運営者のサーバーへ送ります。詳しくはプライバシーポリシーの 4・5 をご覧ください。"
             }
           },
           {
@@ -184,7 +184,7 @@
             "name": "海図は表示できますか？",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "航海用の海図は表示しません。地図には、全国の等深線と水深の色分けを描き、底質・魚礁・沈船も重ねられます。根や駆け上がりの位置、水深帯の広がり、底質の違いといった、釣り場の地形を読むために要るものは、この地図に入っています。元になっているのは 500m ごとの水深のデータなので、小さな根や漁礁の形までは出ません。航海と安全の判断は、海図と魚探で行ってください。"
+              "text": "航海用の海図は表示しません。地図には、全国の等深線と水深の色分けを描き、底質・魚礁・沈船も重ねられます。根や駆け上がりの位置、水深帯の広がり、底質の違いといった、釣り場の地形を読むために要るものは、この地図に入っています。元になっているのは 500m ごとの水深のデータなので、小さな根や魚礁の形までは出ません。航海と安全の判断は、海図と魚探で行ってください。"
             }
           },
           {
@@ -301,7 +301,7 @@
   <!-- ============ B: ヒーロー ============ -->
   <section class="hero" aria-labelledby="hero-headline">
     <h1 class="hero__headline" id="hero-headline">
-      <span class="tt-orange">釣れた瞬間に、</span>1枚撮るだけ。
+      <span class="tt-orange"><span class="nw">釣れた</span><span class="nw">瞬間に、</span></span><span class="nw">1枚撮るだけ。</span>
     </h1>
     <p class="hero__sub">
       魚種も、水深も、潮回りも、海底が砂だったか岩だったかまで、その1枚から全部入ります。違うときだけ直せば、記録は完成です。
@@ -421,7 +421,7 @@
     <div class="ocean-hero__overlay" aria-hidden="true"></div>
     <div class="ocean-hero__text">
       <span class="ocean-hero__label">SAGAMI BAY</span>
-      <h2 class="ocean-hero__heading">あの日、なぜ釣れたのか。</h2>
+      <h2 class="ocean-hero__heading"><span class="nw">あの</span><span class="nw">日、</span><span class="nw">なぜ</span><span class="nw">釣れたのか。</span></h2>
       <p class="ocean-hero__desc">ボート釣りの釣果を、底質・魚礁・潮汐とともに残すためのアプリです。</p>
     </div>
   </div>
@@ -432,7 +432,7 @@
       <div class="col-narrow map-section__intro">
         <span class="label label--blue">MAP</span>
         <h2 id="map-heading" class="section-heading">
-          <span class="tt-orange">無料で、</span>ここまで見える。
+          <span class="tt-orange"><span class="nw">無料で、</span></span><span class="nw">ここまで</span><span class="nw">見える。</span>
         </h2>
         <p class="section-lead">全国の等深線と水深の色分けを、拡大するほど細かく描きます。200〜400m の深場の斜面も 10m ごと。根や駆け上がり、水深帯の広がりが、地図を見るだけでつかめます。</p>
       </div>
@@ -451,7 +451,7 @@
       </div>
 
       <div class="col-narrow map-block">
-        <h3 class="sub-heading">同じ海が、ここまで変わりました。</h3>
+        <h3 class="sub-heading"><span class="nw">同じ</span><span class="nw">海が、</span><span class="nw">ここまで</span><span class="nw">変わりました。</span></h3>
         <div class="compare" style="--pos:50%">
           <img class="compare__img compare__img--before" src="/assets/img/2.0/map-1x.webp" alt="" width="1206" height="690" loading="lazy" decoding="async" />
           <div class="compare__after" aria-hidden="true">
@@ -470,8 +470,8 @@
       </div>
 
       <div class="col-narrow map-block">
-        <h3 class="sub-heading">航海には使えません。でも、釣り場を読むには、これで十分です。</h3>
-        <p class="section-lead">根や駆け上がりの位置、水深帯の広がり、底質の違い。釣り場の地形を読むために要るものは、この地図に入っています。元になっているのは 500m ごとの水深のデータなので、小さな根や漁礁の形までは出ません。航海と安全の判断は、海図と魚探で。</p>
+        <h3 class="sub-heading"><span class="nw">航海には</span><span class="nw">使えません。</span><span class="nw">でも、</span><span class="nw">釣り</span><span class="nw">場を</span><span class="nw">読むには、</span><span class="nw">これで</span><span class="nw">十分です。</span></h3>
+        <p class="section-lead">根や駆け上がりの位置、水深帯の広がり、底質の違い。釣り場の地形を読むために要るものは、この地図に入っています。元になっているのは 500m ごとの水深のデータなので、小さな根や魚礁の形までは出ません。航海と安全の判断は、海図と魚探で。</p>
         <ul class="feature-list" aria-label="地図の機能">
           <li>座標と、十字までの距離・方角</li>
           <li>進んでいる向きの線</li>
@@ -490,7 +490,7 @@
       <div class="col-narrow map-section__intro">
         <span class="label label--blue">TRACK</span>
         <h2 id="track-heading" class="section-heading">
-          <span class="tt-orange">出港から帰港まで、</span>走った線が残る。
+          <span class="tt-orange"><span class="nw">出港から</span><span class="nw">帰港まで、</span></span><span class="nw">走った</span><span class="nw">線が</span><span class="nw">残る。</span>
         </h2>
         <p class="section-lead">出港したら「釣行を開始」を押すだけ。画面を消しても航跡を記録し、走っている所と釣っている所を自動で分けて描きます。途中でアプリが閉じても、続きから記録します。</p>
         <ul class="feature-list" aria-label="航跡の機能">
@@ -508,7 +508,7 @@
       <p class="map-anim__caption col-narrow">移動中は細かい点線、釣り中は実線で描きます（デモ用の記録です）。</p>
 
       <div class="col-narrow map-block">
-        <h3 class="sub-heading">あの日と、この日を重ねる。</h3>
+        <h3 class="sub-heading"><span class="nw">あの</span><span class="nw">日と、</span><span class="nw">この</span><span class="nw">日を</span><span class="nw">重ねる。</span></h3>
         <p class="section-lead">過去の釣行を重ねると、どこを流して、どこで釣れたかを見比べられます。期間・魚種・エリアで絞り込んで比べられます。</p>
       </div>
       <div class="map-anim map-anim--overlay" data-map-anim="overlay" data-src="/assets/data/trips-2.json">
@@ -524,22 +524,22 @@
   <section id="howto" class="section" aria-labelledby="howto-heading">
     <div class="container">
       <h2 id="howto-heading" style="margin:0; font-size:var(--text-heading); font-weight:700; line-height:1.35;">
-        <span class="tt-orange">3ステップで、</span>記録が残る。
+        <span class="tt-orange"><span class="nw">3ステップで、</span></span><span class="nw">記録が</span><span class="nw">残る。</span>
       </h2>
       <div class="steps-grid">
         <article class="step-card">
           <div class="step-badge" aria-label="ステップ1">1</div>
-          <h3 class="step-title">出港したら「釣行を開始」</h3>
+          <h3 class="step-title"><span class="nw">出港したら</span><span class="nw">「釣行を</span><span class="nw">開始」</span></h3>
           <p class="step-body">地図の左上の「釣行を開始」を押すと、航跡の記録が始まります。帰港したら「終了」を押してください。押し忘れても、釣果はいつも通り記録できます。</p>
         </article>
         <article class="step-card">
           <div class="step-badge" aria-label="ステップ2">2</div>
-          <h3 class="step-title">釣れたら、1枚撮って確かめる</h3>
+          <h3 class="step-title"><span class="nw">釣れたら、</span><span class="nw">1枚撮って</span><span class="nw">確かめる</span></h3>
           <p class="step-body">画面下の中央のカメラで撮るだけ。場所と時刻も、そのとき読み取ります。魚種は写真から判定して、水深は海底地形から、水温は同じ日の直前の釣果から入ります。違うところがあれば、そこだけ直してください。魚探の水深に直せば、その値が記録に残ります。</p>
         </article>
         <article class="step-card">
           <div class="step-badge" aria-label="ステップ3">3</div>
-          <h3 class="step-title">分析が動きはじめる</h3>
+          <h3 class="step-title"><span class="nw">分析が</span><span class="nw">動きはじめる</span></h3>
           <p class="step-body">5 件・釣行 2 回を超えたあたりから、統計分析で、よく釣れている条件が見えはじめます。<a href="/analysis/">分析の見方はこちら →</a></p>
         </article>
       </div>
@@ -572,7 +572,7 @@
       <div class="feature-text">
         <span class="label label--blue">ZUKAN</span>
         <h2 id="zukan-heading" style="margin:0; font-size:var(--text-heading); font-weight:700; line-height:1.35;">
-          <span class="tt-orange">釣った魚が、</span>図鑑になる
+          <span class="tt-orange"><span class="nw">釣った</span><span class="nw">魚が、</span></span><span class="nw">図鑑になる</span>
         </h2>
         <p style="margin:0; color:var(--color-ink-muted);">釣った魚種ごとに、自己記録と、それがどう伸びてきたかが見られます。釣れた月、サイズの分布、釣った場所、その魚がよく釣れている条件も、1ページにまとまります。</p>
         <p style="margin:8px 0 0; color:var(--color-ink-muted);">はじめての魚種を記録すると、お祝いの演出が出ます。まだ釣っていない魚の中から、よく行く水深と底質で狙えそうな魚も提案します。</p>
@@ -591,7 +591,7 @@
       <div>
         <span class="label label--blue">SHARE</span>
         <h2 id="share-heading" style="margin:12px 0 0; font-size:var(--text-heading); font-weight:700; line-height:1.35;">
-          <span class="tt-orange">釣果を、</span>1枚の画像に
+          <span class="tt-orange"><span class="nw">釣果を、</span></span><span class="nw">1枚の</span><span class="nw">画像に</span>
         </h2>
       </div>
       <p style="margin:0; color:var(--color-ink-muted);">魚種・サイズ・水深・水温・潮を写真に重ねて、1枚の画像にしてシェアできます。デザインは3種類。写真の拡大や位置も調整できます。釣れた場所は画像に出しません。画像はスマートフォンの中で作り、どこにも送りません。</p>
@@ -609,7 +609,7 @@
       <div class="feature-text">
         <span class="label label--blue">ANALYSIS</span>
         <h2 id="analysis-heading" style="margin:0; font-size:var(--text-heading); font-weight:700; line-height:1.35;">
-          <span class="tt-orange">溜めたログを統計分析して、</span>次の一手に
+          <span class="tt-orange"><span class="nw">溜めた</span><span class="nw">ログを</span><span class="nw">統計分析して、</span></span><span class="nw">次の</span><span class="nw">一手に</span>
         </h2>
         <p style="margin:0; color:var(--color-ink-muted);">釣果は「釣行」ごとに自動でまとまり、出港から帰港までの潮・潮流・風の流れと、釣れた時刻をひとつのタイムラインで振り返れます。</p>
         <p style="margin:8px 0 0; color:var(--color-ink-muted);">記録がたまると、あなた自身の記録を統計分析して、自分でも気づいていなかった当たりパターンを見つけます。「下げ潮のときによく釣れている」「マダイは朝まづめによく釣れている」といった条件を、あなた自身の記録から探して表示します。単に釣果が多い条件ではなく、時間に対してどれだけ釣れたかで評価するので、よく行っている潮回りがそれらしく見える、ということがありません。潮回りや時間帯は、出港から帰港までの時間に対して数えます。</p>
@@ -669,13 +669,13 @@
       <div class="feature-text">
         <span class="label label--depth">DEPTH</span>
         <h2 id="depth-heading" style="margin:0; font-size:var(--text-heading); font-weight:700; line-height:1.35; color:var(--color-paper);">
-          <span class="tt-orange">水深は自動で。</span>魚探の値があれば、それが優先
+          <span class="tt-orange"><span class="nw">水深は</span><span class="nw">自動で。</span></span><span class="nw">魚探の</span><span class="nw">値があれば、</span><span class="nw">それが</span><span class="nw">優先</span>
         </h2>
         <p style="margin:0; color:rgba(255,255,255,.82);">釣れた位置の海底地形のデータから、水深を自動で入れます。魚探で見た値に直せば、記録にはその値が残ります。</p>
         <div class="chips" aria-label="記録データの例">
           <div class="chip">
             <span class="chip__label">水深（海底地形）</span>
-            <span class="chip__value chip__value--depth num">96 m → 魚探 98 m</span>
+            <span class="chip__value chip__value--depth num">89 m → 魚探 91 m</span>
           </div>
           <div class="chip">
             <span class="chip__label">底質</span>
@@ -683,7 +683,7 @@
           </div>
           <div class="chip">
             <span class="chip__label">潮回り</span>
-            <span class="chip__value">小潮</span>
+            <span class="chip__value">中潮</span>
           </div>
         </div>
       </div>
@@ -697,7 +697,7 @@
       <div class="feature-text">
         <span class="label label--blue">AUTO</span>
         <h2 id="auto-data-heading" style="margin:0; font-size:var(--text-heading); font-weight:700; line-height:1.35;">
-          <span class="tt-orange">魚種から海況まで、</span>自動で記録される
+          <span class="tt-orange"><span class="nw">魚種から</span><span class="nw">海況まで、</span></span><span class="nw">自動で</span><span class="nw">記録される</span>
         </h2>
         <p style="margin:0; color:var(--color-ink-muted);">写真を撮った場所と時刻をもとに、魚種・水深・水温・天気・風速・潮汐・底質・魚礁が自動で入ります。潮や天気の取得には、インターネットへの接続が必要です。</p>
         <ul class="feature-list" aria-label="自動取得されるデータ">
@@ -739,7 +739,7 @@
       <div class="feature-text">
         <span class="label label--blue">VIEWS</span>
         <h2 id="views-heading" style="margin:0; font-size:var(--text-heading); font-weight:700; line-height:1.35;">
-          <span class="tt-orange">5つの見方で</span>振り返る
+          <span class="tt-orange"><span class="nw">5つの</span><span class="nw">見方で</span></span><span class="nw">振り</span><span class="nw">返る</span>
         </h2>
         <p style="margin:0; color:var(--color-ink-muted);">釣行・釣果・魚種・水深・ギャラリーの5ビューを切り替えて、同じ釣果をさまざまな角度から見られます。</p>
         <ul class="feature-list" aria-label="ビューの種類">
@@ -782,7 +782,7 @@
       <div>
         <span class="label label--blue">ANDROID</span>
         <h2 id="android-heading" style="margin:12px 0 0; font-size:var(--text-heading); font-weight:700; line-height:1.35;">
-          <span class="tt-orange">Android版を、</span>先行公開しています
+          <span class="tt-orange"><span class="nw">Android版を、</span></span><span class="nw">先行公開しています</span>
         </h2>
       </div>
       <p style="margin:0; color:var(--color-ink-muted);">Android版を、Google Play で先行公開しています。今の Android版の機能は、iPhone版の 1.2 と同じです。魚種の判定、水深の自動入力、図鑑、シェア画像、統計分析までがそろっています。2.0 の航跡の記録と新しい海底の地図は、まだ入っていません。一般公開の後に、順に入れていきます。</p>
@@ -802,24 +802,24 @@
   <!-- ============ I: FAQ ============ -->
   <section id="faq" class="section" aria-labelledby="faq-heading">
     <div class="col-narrow">
-      <h2 id="faq-heading" style="margin:0 0 40px; font-size:var(--text-heading); font-weight:700; line-height:1.35;">よくある質問</h2>
+      <h2 id="faq-heading" style="margin:0 0 40px; font-size:var(--text-heading); font-weight:700; line-height:1.35;"><span class="nw">よくある</span><span class="nw">質問</span></h2>
       <div class="faq-list">
 
         <div class="faq-item">
           <details>
             <summary>
-              <h3 style="margin:0; font-size:inherit; font-weight:inherit;">航跡はどこかに送られますか？</h3>
+              <h3 style="margin:0; font-size:inherit; font-weight:inherit;"><span class="nw">航跡はどこかに</span><span class="nw">送られますか？</span></h3>
               <span class="faq-icon faq-icon-plus" aria-hidden="true">＋</span>
               <span class="faq-icon faq-icon-minus" aria-hidden="true">−</span>
             </summary>
-            <div class="faq-answer">送られません。航跡は、端末の中だけに保存します。分析で底質などを調べるときにも、航跡の点そのものは送らず、航跡が通ったあたりのおおまかな範囲だけを使います。詳しくは<a href="/privacy/#pp-analysis">プライバシーポリシー</a>をご覧ください。</div>
+            <div class="faq-answer">航跡は、端末の中だけに保存し、外へは送りません。ただし、次の 2 つの場合に限り、航跡の一部の情報を送ります。釣果の無い釣行では、その日の天気を取るために、航跡の中の 1 点（最初に釣りをしていた点。無ければ最初の点）の座標を、気象のサービス（Open-Meteo）へ送ります。分析で底質・魚礁・沈船を調べるときは、航跡の点そのものは送らず、航跡が通ったあたりのおおまかな範囲（約 20km 四方の升目ごと）だけを、運営者のサーバーへ送ります。詳しくは<a href="/privacy/#pp-network">プライバシーポリシー</a>の 4・5 をご覧ください。</div>
           </details>
         </div>
 
         <div class="faq-item">
           <details>
             <summary>
-              <h3 style="margin:0; font-size:inherit; font-weight:inherit;">位置情報の許可は「常に」が必要ですか？</h3>
+              <h3 style="margin:0; font-size:inherit; font-weight:inherit;"><span class="nw">位置情報の</span><span class="nw">許可は</span><span class="nw">「常に」が</span><span class="nw">必要ですか？</span></h3>
               <span class="faq-icon faq-icon-plus" aria-hidden="true">＋</span>
               <span class="faq-icon faq-icon-minus" aria-hidden="true">−</span>
             </summary>
@@ -830,7 +830,7 @@
         <div class="faq-item">
           <details>
             <summary>
-              <h3 style="margin:0; font-size:inherit; font-weight:inherit;">電池はどのくらい減りますか？</h3>
+              <h3 style="margin:0; font-size:inherit; font-weight:inherit;"><span class="nw">電池はどのくらい</span><span class="nw">減りますか？</span></h3>
               <span class="faq-icon faq-icon-plus" aria-hidden="true">＋</span>
               <span class="faq-icon faq-icon-minus" aria-hidden="true">−</span>
             </summary>
@@ -841,7 +841,7 @@
         <div class="faq-item">
           <details>
             <summary>
-              <h3 style="margin:0; font-size:inherit; font-weight:inherit;">記録中にアプリが閉じたらどうなりますか？</h3>
+              <h3 style="margin:0; font-size:inherit; font-weight:inherit;"><span class="nw">記録中に</span><span class="nw">アプリが</span><span class="nw">閉じたらどうなりますか？</span></h3>
               <span class="faq-icon faq-icon-plus" aria-hidden="true">＋</span>
               <span class="faq-icon faq-icon-minus" aria-hidden="true">−</span>
             </summary>
@@ -852,7 +852,7 @@
         <div class="faq-item">
           <details>
             <summary>
-              <h3 style="margin:0; font-size:inherit; font-weight:inherit;">Android でも使えますか？</h3>
+              <h3 style="margin:0; font-size:inherit; font-weight:inherit;"><span class="nw">Android</span> <span class="nw">でも</span><span class="nw">使えますか？</span></h3>
               <span class="faq-icon faq-icon-plus" aria-hidden="true">＋</span>
               <span class="faq-icon faq-icon-minus" aria-hidden="true">−</span>
             </summary>
@@ -863,7 +863,7 @@
         <div class="faq-item">
           <details>
             <summary>
-              <h3 style="margin:0; font-size:inherit; font-weight:inherit;">iPhone と Android の間で、記録を移せますか？</h3>
+              <h3 style="margin:0; font-size:inherit; font-weight:inherit;"><span class="nw">iPhone</span> <span class="nw">と</span> <span class="nw">Android</span> <span class="nw">の</span><span class="nw">間で、</span><span class="nw">記録を</span><span class="nw">移せますか？</span></h3>
               <span class="faq-icon faq-icon-plus" aria-hidden="true">＋</span>
               <span class="faq-icon faq-icon-minus" aria-hidden="true">−</span>
             </summary>
@@ -874,7 +874,7 @@
         <div class="faq-item">
           <details>
             <summary>
-              <h3 style="margin:0; font-size:inherit; font-weight:inherit;">位置情報がない写真でも登録できますか？</h3>
+              <h3 style="margin:0; font-size:inherit; font-weight:inherit;"><span class="nw">位置情報がない</span><span class="nw">写真でも</span><span class="nw">登録できますか？</span></h3>
               <span class="faq-icon faq-icon-plus" aria-hidden="true">＋</span>
               <span class="faq-icon faq-icon-minus" aria-hidden="true">−</span>
             </summary>
@@ -885,7 +885,7 @@
         <div class="faq-item">
           <details>
             <summary>
-              <h3 style="margin:0; font-size:inherit; font-weight:inherit;">水深は自動で入りますか？</h3>
+              <h3 style="margin:0; font-size:inherit; font-weight:inherit;"><span class="nw">水深は</span><span class="nw">自動で</span><span class="nw">入りますか？</span></h3>
               <span class="faq-icon faq-icon-plus" aria-hidden="true">＋</span>
               <span class="faq-icon faq-icon-minus" aria-hidden="true">−</span>
             </summary>
@@ -896,7 +896,7 @@
         <div class="faq-item">
           <details>
             <summary>
-              <h3 style="margin:0; font-size:inherit; font-weight:inherit;">魚種の判定はどのくらい正確ですか？</h3>
+              <h3 style="margin:0; font-size:inherit; font-weight:inherit;"><span class="nw">魚種の</span><span class="nw">判定はどのくらい</span><span class="nw">正確ですか？</span></h3>
               <span class="faq-icon faq-icon-plus" aria-hidden="true">＋</span>
               <span class="faq-icon faq-icon-minus" aria-hidden="true">−</span>
             </summary>
@@ -907,7 +907,7 @@
         <div class="faq-item">
           <details>
             <summary>
-              <h3 style="margin:0; font-size:inherit; font-weight:inherit;">写真はどこかに送られますか？</h3>
+              <h3 style="margin:0; font-size:inherit; font-weight:inherit;"><span class="nw">写真はどこかに</span><span class="nw">送られますか？</span></h3>
               <span class="faq-icon faq-icon-plus" aria-hidden="true">＋</span>
               <span class="faq-icon faq-icon-minus" aria-hidden="true">−</span>
             </summary>
@@ -918,7 +918,7 @@
         <div class="faq-item">
           <details>
             <summary>
-              <h3 style="margin:0; font-size:inherit; font-weight:inherit;">魚種の入力を飛ばして登録するとどうなりますか？</h3>
+              <h3 style="margin:0; font-size:inherit; font-weight:inherit;"><span class="nw">魚種の</span><span class="nw">入力を</span><span class="nw">飛ばして</span><span class="nw">登録するとどうなりますか？</span></h3>
               <span class="faq-icon faq-icon-plus" aria-hidden="true">＋</span>
               <span class="faq-icon faq-icon-minus" aria-hidden="true">−</span>
             </summary>
@@ -929,7 +929,7 @@
         <div class="faq-item">
           <details>
             <summary>
-              <h3 style="margin:0; font-size:inherit; font-weight:inherit;">図鑑には何が載りますか？</h3>
+              <h3 style="margin:0; font-size:inherit; font-weight:inherit;"><span class="nw">図鑑には</span><span class="nw">何が</span><span class="nw">載りますか？</span></h3>
               <span class="faq-icon faq-icon-plus" aria-hidden="true">＋</span>
               <span class="faq-icon faq-icon-minus" aria-hidden="true">−</span>
             </summary>
@@ -940,7 +940,7 @@
         <div class="faq-item">
           <details>
             <summary>
-              <h3 style="margin:0; font-size:inherit; font-weight:inherit;">魚種が決まっていない釣果はどうなりますか？</h3>
+              <h3 style="margin:0; font-size:inherit; font-weight:inherit;"><span class="nw">魚種が</span><span class="nw">決まっていない</span><span class="nw">釣果はどうなりますか？</span></h3>
               <span class="faq-icon faq-icon-plus" aria-hidden="true">＋</span>
               <span class="faq-icon faq-icon-minus" aria-hidden="true">−</span>
             </summary>
@@ -951,18 +951,18 @@
         <div class="faq-item">
           <details>
             <summary>
-              <h3 style="margin:0; font-size:inherit; font-weight:inherit;">海図は表示できますか？</h3>
+              <h3 style="margin:0; font-size:inherit; font-weight:inherit;"><span class="nw">海図は</span><span class="nw">表示できますか？</span></h3>
               <span class="faq-icon faq-icon-plus" aria-hidden="true">＋</span>
               <span class="faq-icon faq-icon-minus" aria-hidden="true">−</span>
             </summary>
-            <div class="faq-answer">航海用の海図は表示しません。地図には、全国の等深線と水深の色分けを描き、底質・魚礁・沈船も重ねられます。根や駆け上がりの位置、水深帯の広がり、底質の違いといった、釣り場の地形を読むために要るものは、この地図に入っています。元になっているのは 500m ごとの水深のデータなので、小さな根や漁礁の形までは出ません。航海と安全の判断は、海図と魚探で行ってください。</div>
+            <div class="faq-answer">航海用の海図は表示しません。地図には、全国の等深線と水深の色分けを描き、底質・魚礁・沈船も重ねられます。根や駆け上がりの位置、水深帯の広がり、底質の違いといった、釣り場の地形を読むために要るものは、この地図に入っています。元になっているのは 500m ごとの水深のデータなので、小さな根や魚礁の形までは出ません。航海と安全の判断は、海図と魚探で行ってください。</div>
           </details>
         </div>
 
         <div class="faq-item">
           <details>
             <summary>
-              <h3 style="margin:0; font-size:inherit; font-weight:inherit;">底質・魚礁の情報はどこから来ていますか？</h3>
+              <h3 style="margin:0; font-size:inherit; font-weight:inherit;"><span class="nw">底質・魚礁の</span><span class="nw">情報はどこから</span><span class="nw">来ていますか？</span></h3>
               <span class="faq-icon faq-icon-plus" aria-hidden="true">＋</span>
               <span class="faq-icon faq-icon-minus" aria-hidden="true">−</span>
             </summary>
@@ -973,7 +973,7 @@
         <div class="faq-item">
           <details>
             <summary>
-              <h3 style="margin:0; font-size:inherit; font-weight:inherit;">アカウント登録は必要ですか？</h3>
+              <h3 style="margin:0; font-size:inherit; font-weight:inherit;"><span class="nw">アカウント登録は</span><span class="nw">必要ですか？</span></h3>
               <span class="faq-icon faq-icon-plus" aria-hidden="true">＋</span>
               <span class="faq-icon faq-icon-minus" aria-hidden="true">−</span>
             </summary>
@@ -984,7 +984,7 @@
         <div class="faq-item">
           <details>
             <summary>
-              <h3 style="margin:0; font-size:inherit; font-weight:inherit;">料金はかかりますか？広告は出ますか？</h3>
+              <h3 style="margin:0; font-size:inherit; font-weight:inherit;"><span class="nw">料金はかかりますか？</span><span class="nw">広告は</span><span class="nw">出ますか？</span></h3>
               <span class="faq-icon faq-icon-plus" aria-hidden="true">＋</span>
               <span class="faq-icon faq-icon-minus" aria-hidden="true">−</span>
             </summary>
@@ -995,7 +995,7 @@
         <div class="faq-item">
           <details>
             <summary>
-              <h3 style="margin:0; font-size:inherit; font-weight:inherit;">機種変更するとき、記録は移せますか？</h3>
+              <h3 style="margin:0; font-size:inherit; font-weight:inherit;"><span class="nw">機種変更するとき、</span><span class="nw">記録は</span><span class="nw">移せますか？</span></h3>
               <span class="faq-icon faq-icon-plus" aria-hidden="true">＋</span>
               <span class="faq-icon faq-icon-minus" aria-hidden="true">−</span>
             </summary>
@@ -1006,7 +1006,7 @@
         <div class="faq-item">
           <details>
             <summary>
-              <h3 style="margin:0; font-size:inherit; font-weight:inherit;">オフラインでも使えますか？</h3>
+              <h3 style="margin:0; font-size:inherit; font-weight:inherit;"><span class="nw">オフラインでも</span><span class="nw">使えますか？</span></h3>
               <span class="faq-icon faq-icon-plus" aria-hidden="true">＋</span>
               <span class="faq-icon faq-icon-minus" aria-hidden="true">−</span>
             </summary>
@@ -1017,7 +1017,7 @@
         <div class="faq-item">
           <details>
             <summary>
-              <h3 style="margin:0; font-size:inherit; font-weight:inherit;">過去の釣行をあとから登録できますか？</h3>
+              <h3 style="margin:0; font-size:inherit; font-weight:inherit;"><span class="nw">過去の</span><span class="nw">釣行をあとから</span><span class="nw">登録できますか？</span></h3>
               <span class="faq-icon faq-icon-plus" aria-hidden="true">＋</span>
               <span class="faq-icon faq-icon-minus" aria-hidden="true">−</span>
             </summary>
@@ -1028,7 +1028,7 @@
         <div class="faq-item">
           <details>
             <summary>
-              <h3 style="margin:0; font-size:inherit; font-weight:inherit;">分析に傾向が出ません</h3>
+              <h3 style="margin:0; font-size:inherit; font-weight:inherit;"><span class="nw">分析に</span><span class="nw">傾向が</span><span class="nw">出ません</span></h3>
               <span class="faq-icon faq-icon-plus" aria-hidden="true">＋</span>
               <span class="faq-icon faq-icon-minus" aria-hidden="true">−</span>
             </summary>
@@ -1039,7 +1039,7 @@
         <div class="faq-item">
           <details>
             <summary>
-              <h3 style="margin:0; font-size:inherit; font-weight:inherit;">他の人の釣果を見たり、共有したりできますか？</h3>
+              <h3 style="margin:0; font-size:inherit; font-weight:inherit;"><span class="nw">他の</span><span class="nw">人の</span><span class="nw">釣果を</span><span class="nw">見たり、</span><span class="nw">共有したりできますか？</span></h3>
               <span class="faq-icon faq-icon-plus" aria-hidden="true">＋</span>
               <span class="faq-icon faq-icon-minus" aria-hidden="true">−</span>
             </summary>
@@ -1056,7 +1056,7 @@
     <div class="col-narrow">
       <span class="label label--blue" style="display:block; margin-bottom:16px;">ROADMAP</span>
       <h2 id="roadmap-heading" style="margin:0 0 24px; font-size:var(--text-heading); font-weight:700; line-height:1.35;">
-        <span class="tt-orange">今後の予定と、</span>ご意見
+        <span class="tt-orange"><span class="nw">今後の</span><span class="nw">予定と、</span></span><span class="nw">ご</span><span class="nw">意見</span>
       </h2>
       <p style="margin:0 0 8px; font-size:var(--text-body);">現在の方針は2つです。</p>
       <ul class="feature-list" style="margin:0 0 24px;">
@@ -1152,7 +1152,7 @@
   <!-- ============ J-1: 更新履歴 ============ -->
   <section id="changelog" class="section" aria-labelledby="changelog-heading">
     <div class="col-narrow">
-      <h2 id="changelog-heading" style="margin:0 0 24px; font-size:var(--text-heading); font-weight:700; line-height:1.35;">更新履歴</h2>
+      <h2 id="changelog-heading" style="margin:0 0 24px; font-size:var(--text-heading); font-weight:700; line-height:1.35;"><span class="nw">更新履歴</span></h2>
       <div style="display:flex; flex-direction:column; gap:24px;">
         <div>
           <p style="margin:0 0 8px; font-size:var(--text-body); font-weight:700;">2.0（2026年10月）</p>
@@ -1212,7 +1212,7 @@
   <!-- ============ K: データの出典（法的表示） ============ -->
   <section id="data-sources" class="section" aria-labelledby="data-sources-heading">
     <div class="container">
-      <h2 id="data-sources-heading" style="margin:0 0 24px; font-size:var(--text-heading); font-weight:700; line-height:1.35;">データの出典</h2>
+      <h2 id="data-sources-heading" style="margin:0 0 24px; font-size:var(--text-heading); font-weight:700; line-height:1.35;"><span class="nw">データの</span><span class="nw">出典</span></h2>
       <div class="notice-block">
         <span class="label label--blue">DATA SOURCE</span>
         <!-- 海しるAPI利用規約第5条の文言（一字一句変更禁止） -->
@@ -1232,7 +1232,7 @@
   <section class="section section--dark bg-dark" aria-labelledby="cta-heading">
     <div style="max-width:var(--col-max); margin:0 auto; text-align:center; display:flex; flex-direction:column; align-items:center; gap:32px;">
       <h2 id="cta-heading" style="margin:0; font-size:var(--text-heading); font-weight:700; line-height:1.35; color:var(--color-paper);">
-        <span class="tt-orange">今日の1枚から、</span>はじめられます
+        <span class="tt-orange"><span class="nw">今日の</span><span class="nw">1枚から、</span></span><span class="nw">はじめられます</span>
       </h2>
       <div class="cta-buttons">
       <a href="https://apps.apple.com/jp/app/id6808027589" aria-label="App Store でダウンロード">
