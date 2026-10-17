@@ -1657,3 +1657,9 @@ details:not([open]) .faq-icon-minus { display: none; }
   }
   .nav-toggle__menu .btn-primary { align-self: flex-start; }
 }
+
+/* Google Play のバッジ（公式の画像。読めないときは文字のボタンを出す） */
+.gp-badge { display: inline-flex; align-items: center; line-height: 0; }
+.gp-badge img { display: block; width: 180px; height: auto; }
+.gp-badge:hover { text-decoration: none; }
+.gp-badge__fallback { line-height: 1.4; }

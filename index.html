@@ -64,7 +64,7 @@
         "@type": "SoftwareApplication",
         "name": "釣果ログ",
         "alternateName": "釣果ログ - ボート釣りの水深・底質・潮汐",
-        "operatingSystem": "iOS",
+        "operatingSystem": "iOS, Android",
         "applicationCategory": "SportsApplication",
         "offers": {
           "@type": "Offer",
@@ -112,7 +112,7 @@
             "name": "Android でも使えますか？",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "使えます。現在、Google Play で先行公開しています。今の Android版の機能は iPhone版の 1.2 と同じで、2.0 の航跡の記録と新しい海底の地図は、まだ入っていません。一般公開の後に、順に入れていきます。参加の方法は Android版のページ をご覧ください。"
+              "text": "使えます。Google Play で公開しています。機能は iPhone版と同じです。Android 10 以上の端末でお使いいただけます。詳しくは Android版のページ をご覧ください。"
             }
           },
           {
@@ -120,7 +120,7 @@
             "name": "iPhone と Android の間で、記録を移せますか？",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Android版で書き出した記録（設定のデータ管理から書き出すバックアップ）は、iPhone版でそのまま読み込めます。Android版には航跡の機能がまだないため、iPhone版で記録した航跡は、Android版では見られません。写真と航跡を含めて移せる「写真付きのバックアップ」は、iPhone版どうしで使えます。"
+              "text": "Android版で書き出した記録（設定のデータ管理から書き出すバックアップ）は、iPhone版でそのまま読み込めます。写真と航跡を含めて移せる「写真付きのバックアップ」は、iPhone版どうしで使えます。"
             }
           },
           {
@@ -310,7 +310,7 @@
       <span class="nw">2.0 から、</span><span class="nw">出港から</span><span class="nw">帰港までの</span><span class="nw">航跡と、</span><span class="nw">海の</span><span class="nw">底が</span><span class="nw">見える</span><span class="nw">地図も</span><span class="nw">残ります。</span>
     </p>
 
-    <!-- App Store バッジ + Android版のボタン（スマートフォンの幅では縦に並ぶ。Android の端末では Android版を先に表示） -->
+    <!-- App Store バッジ + Google Play バッジ（スマートフォンの幅では縦に並ぶ。Android の端末では Android版を先に表示） -->
     <div class="hero-cta">
       <div class="hero-cta__item hero-cta__ios">
       <a href="https://apps.apple.com/jp/app/id6808027589" aria-label="App Store でダウンロード">
@@ -330,8 +330,11 @@
       </div>
 
       <div class="hero-cta__item hero-cta__android">
-        <a href="/android/?src=hero" class="btn-primary btn-android">Android版の先行テストに参加する</a>
-        <p class="hero-cta__note">Android版は、Google Play で先行公開中です</p>
+        <a href="https://play.google.com/store/apps/details?id=com.margheritaworks.chokalog" class="gp-badge" aria-label="Google Play で手に入れよう">
+          <img src="https://play.google.com/intl/en_us/badges/static/images/badges/ja_badge_web_generic.png" alt="Google Play で手に入れよう" width="180" height="70" decoding="async" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-flex'" />
+          <span class="btn-primary btn-android gp-badge__fallback" style="display:none">Google Play で手に入れよう</span>
+        </a>
+        <p class="hero-cta__note">Android版は、Google Play で公開中です</p>
       </div>
     </div>
 
@@ -782,19 +785,18 @@
       <div>
         <span class="label label--blue">ANDROID</span>
         <h2 id="android-heading" style="margin:12px 0 0; font-size:var(--text-heading); font-weight:700; line-height:1.35;">
-          <span class="tt-orange"><span class="nw">Android版を、</span></span><span class="nw">先行公開しています</span>
+          <span class="tt-orange"><span class="nw">Android版も、</span></span><span class="nw">Google Play で</span><span class="nw">公開中です</span>
         </h2>
       </div>
-      <p style="margin:0; color:var(--color-ink-muted);">Android版を、Google Play で先行公開しています。今の Android版の機能は、iPhone版の 1.2 と同じです。魚種の判定、水深の自動入力、図鑑、シェア画像、統計分析までがそろっています。2.0 の航跡の記録と新しい海底の地図は、まだ入っていません。一般公開の後に、順に入れていきます。</p>
-      <p style="margin:0; color:var(--color-ink-muted);">Google Play では、新しいアプリを一般公開する前に、実際に使っていただく方とのテスト期間を設けることが決まりになっています。テストに参加していただくと、一般公開より先に、無料でお使いいただけます。一般公開は、11月中旬から下旬ごろを目指しています。</p>
-      <ol class="android-steps" aria-label="参加の流れ">
-        <li>Google グループに参加する</li>
-        <li>「Become a tester」を押す</li>
-        <li>Google Play からインストールする</li>
-      </ol>
+      <!-- 機能の書き方：公開する Android版が iPhone版と同じ機能であることを、公開の前に確かめる -->
+      <p style="margin:0; color:var(--color-ink-muted);">釣果ログの Android版を、Google Play で公開しています。機能は iPhone版と同じです。無料で、広告もありません。Android 10 以上の端末でお使いいただけます。</p>
+      <p style="margin:0; color:var(--color-ink-muted);">先行公開のテストに参加してくださった皆さま、ありがとうございました。</p>
       <div class="android-card__cta">
-        <a href="/android/?src=section" class="btn-primary">テストに参加する</a>
-        <p class="android-card__note">メールアドレスが公開されることはありません。</p>
+        <a href="https://play.google.com/store/apps/details?id=com.margheritaworks.chokalog" class="gp-badge" aria-label="Google Play で手に入れよう">
+          <img src="https://play.google.com/intl/en_us/badges/static/images/badges/ja_badge_web_generic.png" alt="Google Play で手に入れよう" width="180" height="70" decoding="async" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-flex'" />
+          <span class="btn-primary btn-android gp-badge__fallback" style="display:none">Google Play で手に入れよう</span>
+        </a>
+        <p class="android-card__note"><a href="/android/?src=section">Android版のページを見る →</a></p>
       </div>
     </div>
   </section>
@@ -856,7 +858,7 @@
               <span class="faq-icon faq-icon-plus" aria-hidden="true">＋</span>
               <span class="faq-icon faq-icon-minus" aria-hidden="true">−</span>
             </summary>
-            <div class="faq-answer">使えます。現在、Google Play で先行公開しています。今の Android版の機能は iPhone版の 1.2 と同じで、2.0 の航跡の記録と新しい海底の地図は、まだ入っていません。一般公開の後に、順に入れていきます。参加の方法は <a href="/android/?src=faq">Android版のページ</a> をご覧ください。</div>
+            <div class="faq-answer">使えます。<a href="https://play.google.com/store/apps/details?id=com.margheritaworks.chokalog">Google Play</a> で公開しています。機能は iPhone版と同じです。Android 10 以上の端末でお使いいただけます。詳しくは <a href="/android/?src=faq">Android版のページ</a> をご覧ください。</div>
           </details>
         </div>
 
@@ -867,7 +869,7 @@
               <span class="faq-icon faq-icon-plus" aria-hidden="true">＋</span>
               <span class="faq-icon faq-icon-minus" aria-hidden="true">−</span>
             </summary>
-            <div class="faq-answer">Android版で書き出した記録（設定のデータ管理から書き出すバックアップ）は、iPhone版でそのまま読み込めます。Android版には航跡の機能がまだないため、iPhone版で記録した航跡は、Android版では見られません。写真と航跡を含めて移せる「写真付きのバックアップ」は、iPhone版どうしで使えます。</div>
+            <div class="faq-answer">Android版で書き出した記録（設定のデータ管理から書き出すバックアップ）は、iPhone版でそのまま読み込めます。写真と航跡を含めて移せる「写真付きのバックアップ」は、iPhone版どうしで使えます。</div>
           </details>
         </div>
 
@@ -1154,6 +1156,13 @@
     <div class="col-narrow">
       <h2 id="changelog-heading" style="margin:0 0 24px; font-size:var(--text-heading); font-weight:700; line-height:1.35;"><span class="nw">更新履歴</span></h2>
       <div style="display:flex; flex-direction:column; gap:24px;">
+        <!-- Android 版の公開の日に、見出しと項目の日付を正しい日に直す -->
+        <div>
+          <p style="margin:0 0 8px; font-size:var(--text-body); font-weight:700;">Android版の公開（2026年11月）</p>
+          <ul class="feature-list">
+            <li>Android版を Google Play で公開（2026年11月）</li>
+          </ul>
+        </div>
         <div>
           <p style="margin:0 0 8px; font-size:var(--text-body); font-weight:700;">2.0（2026年10月）</p>
           <ul class="feature-list">
@@ -1223,6 +1232,7 @@
         <p class="notice-text">陸の形：「国土数値情報（行政区域データ）」（国土交通省、CC BY 4.0）をもとに加工して作成</p>
         <p class="notice-text">このページの地図の埋め込みの背景：国土地理院「<a href="https://maps.gsi.go.jp/development/ichiran.html">地理院タイル</a>」（淡色地図）</p>
         <p class="notice-text">魚種の判定：BioCLIP（Imageomics Institute、MIT License）</p>
+        <p class="notice-text">Google Play および Google Play ロゴは、Google LLC の商標です。</p>
         <p class="notice-text" style="color:var(--color-ink-muted);">本アプリは、航海・安全・漁業その他の専門的判断には使用できません。</p>
       </div>
     </div>
@@ -1249,7 +1259,10 @@
           ▶ App Store でダウンロード
         </span>
       </a>
-      <a href="/android/?src=footer" class="btn-primary btn-android">Android版の先行テストに参加する</a>
+      <a href="https://play.google.com/store/apps/details?id=com.margheritaworks.chokalog" class="gp-badge" aria-label="Google Play で手に入れよう">
+        <img src="https://play.google.com/intl/en_us/badges/static/images/badges/ja_badge_web_generic.png" alt="Google Play で手に入れよう" width="180" height="70" decoding="async" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-flex'" />
+        <span class="btn-primary btn-android gp-badge__fallback" style="display:none">Google Play で手に入れよう</span>
+      </a>
       </div>
     </div>
   </section>
