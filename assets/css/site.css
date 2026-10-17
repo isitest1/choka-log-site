@@ -686,22 +686,23 @@ details:not([open]) .faq-icon-minus { display: none; }
   gap: 12px;
 }
 
+/* 項の中にリンクがあっても文が分かれないよう、flex にせず、点は左に置く */
 .privacy-body ul li {
-  display: flex;
-  gap: 12px;
-  align-items: flex-start;
+  position: relative;
+  padding-left: 16px;
   font-size: var(--text-body);
   line-height: 1.85;
 }
 
 .privacy-body ul li::before {
   content: '';
+  position: absolute;
+  left: 0;
+  top: 14px;
   width: 4px;
   height: 4px;
   border-radius: 50%;
   background: var(--color-fish-orange);
-  margin-top: 14px;
-  flex-shrink: 0;
 }
 
 /* 定義テーブル */
