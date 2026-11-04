@@ -635,14 +635,21 @@
     <div class="container" id="features" style="margin-top:var(--section-gap);">
       <h3 class="sub-heading" style="font-size:var(--text-heading);"><span class="tt-orange"><span class="nw">たまるほど、</span></span><span class="nw">自分の</span><span class="nw">海になる。</span></h3>
       <p class="section-lead">分析、図鑑、シェア画像は、無料のままです。</p>
-      <div class="mini-grid">
+      <div class="mini-grid mini-grid--many">
         <figure class="mini-card"><img src="/assets/img/2.0/past-2-trips.webp" alt="地図に過去の釣行を2回分出した画面。釣行ごとに色を変えた航跡の線と、釣れた魚の名前（デモ用の記録）" width="750" height="1631" loading="lazy" decoding="async" /><figcaption>釣行の航跡</figcaption></figure>
+        <figure class="mini-card"><img src="/assets/img/2.0/catch-detail.webp" alt="釣果の画面。マダイ 52cm、水深 78m、釣った時の潮位のグラフ、天気・風・底質・潮流（デモ用の記録）" width="750" height="1631" loading="lazy" decoding="async" /><figcaption>釣果の詳細</figcaption></figure>
+        <figure class="mini-card"><img src="/assets/img/2.0/auto-trip-timeline.webp" alt="釣行の画面。航跡の入った地図と、潮位・潮流・風・天気の帯の上に釣れた時刻が並ぶタイムライン（デモ用の記録）" width="750" height="1631" loading="lazy" decoding="async" /><figcaption>釣行のタイムライン</figcaption></figure>
         <figure class="mini-card" id="auto-data"><img src="/assets/img/2.0/analysis.webp" alt="分析の画面。よく釣れている条件と傾向の一覧" width="750" height="1631" loading="lazy" decoding="async" /><figcaption>統計分析</figcaption></figure>
-        <figure class="mini-card"><img src="/assets/img/2.0/views-trip-real.webp" alt="釣行ビュー。釣行ごとのカード" width="750" height="1625" loading="lazy" decoding="async" /><figcaption>5つの見方</figcaption></figure>
+        <figure class="mini-card"><img src="/assets/img/2.0/auto-matrix.webp" alt="分析の水深×潮の表と、魚種ランキング、魚種ごとの水深レンジ（デモ用の記録）" width="750" height="1631" loading="lazy" decoding="async" /><figcaption>水深×潮</figcaption></figure>
+        <figure class="mini-card"><img src="/assets/img/2.0/views-gallery-real.webp" alt="記録のギャラリー。釣った魚の写真がタイルで並ぶ" width="750" height="1625" loading="lazy" decoding="async" /><figcaption>ギャラリー</figcaption></figure>
+        <figure class="mini-card"><img src="/assets/img/2.0/views-species-real.webp" alt="記録を魚種ごとにまとめた一覧" width="750" height="1625" loading="lazy" decoding="async" /><figcaption>魚種ごと</figcaption></figure>
+        <figure class="mini-card"><img src="/assets/img/2.0/views-depth-real.webp" alt="記録を水深の深い順に並べた一覧" width="750" height="1625" loading="lazy" decoding="async" /><figcaption>水深の順</figcaption></figure>
         <figure class="mini-card" id="zukan"><img src="/assets/img/3.0/zukan-now.webp" alt="図鑑のワラサの画面の「今の相模湾」。始まった、7日前より上がった船宿5軒中1軒、直近14日の推移" width="750" height="1101" loading="lazy" decoding="async" /><figcaption>図鑑</figcaption></figure>
+        <figure class="mini-card"><img src="/assets/img/2.0/zukan-pb-real.webp" alt="図鑑のワラサの自己記録の推移。75cm から 86cm までのグラフと、すべての記録の一覧" width="750" height="1625" loading="lazy" decoding="async" /><figcaption>自己記録の推移</figcaption></figure>
         <figure class="mini-card" id="share"><img src="/assets/img/3.0/share-line.webp" alt="シェア画像。ワラサ 70cm に、今の海の一行「相模湾 ブリ 始まりの日の1尾」。場所は出ない" width="750" height="1631" loading="lazy" decoding="async" /><figcaption>シェア画像</figcaption></figure>
         <figure class="mini-card"><img src="/assets/img/3.0/bulk-review-top.webp" alt="まとめた振り返り。30釣行を4つに分けたます目と、海に乗るのがうまいタイプ" width="750" height="1631" loading="lazy" decoding="async" /><figcaption>まとめた振り返り<span class="tag tag--plus" style="margin:2px 0 0;">プラス</span></figcaption></figure>
       </div>
+      <p class="price-fine" style="margin-top:12px;">釣行の航跡、釣果の詳細、釣行のタイムライン、水深×潮の画面はデモ用の記録です。</p>
       <p class="section-link" style="margin-top:24px;"><a href="/analysis/">分析の見方をくわしく見る →</a></p>
     </div>
   </section>
@@ -716,7 +723,7 @@
         <li><details name="import-flow" class="flow__item">
           <summary><span class="flow__n" aria-hidden="true">1</span><span>バックアップを選ぶ</span></summary>
           <div class="flow__body flow__body--steps">
-          <ol class="import-steps" style="counter-reset: imp 0;">
+          <ol class="import-steps">
         <li class="no-shot"><div><h4>海釣図V のバックアップの機能で zip を作る</h4></div></li>
         <li><div><h4>釣果ログの 設定 →「釣行の記録」→「海釣図のバックアップから取り込む」で、その zip を選ぶ</h4><p>ファイルのアプリから zip を選ぶと、中に入っている航跡とマイポイントの数が出ます。</p></div><div class="import-steps__shots"><img src="/assets/img/3.0/import-1.webp" alt="設定の「釣行の記録」。GPX から釣行を取り込む、海釣図のバックアップから取り込む" width="750" height="1631" loading="lazy" decoding="async" /><img src="/assets/img/3.0/import-2.webp" alt="海釣図のバックアップの中身。航跡171回（2022年5月〜2026年10月）、マイポイント803か所" width="750" height="1631" loading="lazy" decoding="async" /></div></li>
           </ol>
@@ -725,7 +732,7 @@
         <li><details name="import-flow" class="flow__item">
           <summary><span class="flow__n" aria-hidden="true">2</span><span>釣果にする点を選ぶ</span></summary>
           <div class="flow__body flow__body--steps">
-          <ol class="import-steps" style="counter-reset: imp 2;">
+          <ol class="import-steps">
         <li><div><h4>取り込む航跡を選ぶ</h4><p>期間で絞れます。すでにアプリにある航跡と時間が重なる回は、「取り込み済み」として最初から外れます。</p></div><div class="import-steps__shots"><img src="/assets/img/3.0/import-3.webp" alt="取り込む航跡の一覧。日時・時間・距離が並び、取り込む航跡171回" width="750" height="1631" loading="lazy" decoding="async" /></div></li>
         <li><div><h4>釣果にするマイポイントを選ぶ</h4><p>最初は何も選ばれていません。アイコン、色、付けた日、「釣行中に付けた点だけ」、名前のまとまりで絞って選びます。点を選ばず、航跡だけを取り込むこともできます。</p></div><div class="import-steps__shots"><img src="/assets/img/3.0/import-4.webp" alt="釣果にする点を選ぶ画面。アイコンの「魚 27」を選んだところ。色・付けた日・釣行中に付けた点だけの絞り込み" width="750" height="1631" loading="lazy" decoding="async" /></div></li>
         <li class="no-shot"><div><h4>魚の名前を確かめる</h4><p>点の名前が魚の一覧に合えば、自動で入ります（ひらがなや、カッコ書き、絵文字の付いた名前も見ます）。合わない名前は、まとまりごとに一度に決められます。</p></div></li>
@@ -735,7 +742,7 @@
         <li><details name="import-flow" class="flow__item">
           <summary><span class="flow__n" aria-hidden="true">3</span><span>取り込む</span></summary>
           <div class="flow__body flow__body--steps">
-          <ol class="import-steps" style="counter-reset: imp 5;">
+          <ol class="import-steps">
         <li><div><h4>写真を「iPhone から自動で探す」か「何もしない」を選ぶ</h4><p>自動のときは、釣果の時刻の前後10分以内に撮った写真を、いちばん近い釣果に1枚付けます。写真の位置は使いません。写真ライブラリの許可を求めるのは、このときだけです。写真はスマートフォンの外へ送りません。</p></div><div class="import-steps__shots"><img src="/assets/img/3.0/import-5.webp" alt="写真の選び方。iPhone から自動で探す、何もしない" width="750" height="1631" loading="lazy" decoding="async" /></div></li>
         <li><div><h4>件数を確かめて取り込む</h4><p>途中で「やめる」を押すと、その回の分は何も残りません。</p></div><div class="import-steps__shots"><img src="/assets/img/3.0/import-6-confirm.webp" alt="確かめて取り込む画面。航跡171回、釣果27件、写真（数えています）を取り込みます" width="750" height="1631" loading="lazy" decoding="async" /></div></li>
           </ol>

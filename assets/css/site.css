@@ -2141,6 +2141,8 @@ details.terms-box .plus-words { margin: 0 0 16px; }
 details.more { border: 1px solid var(--color-hairline); border-radius: var(--radius); padding: 18px 24px; }
 details.more[open] > summary { margin-bottom: 8px; }
 @media (min-width: 900px) { .mini-grid--5 { grid-template-columns: repeat(5, 1fr); } }
+/* たまるほど：12 枚を 6 枚 × 2 段に */
+.mini-grid--many { align-items: start; row-gap: 24px; }
 .plan-table thead th { white-space: nowrap; }
 
 /* ヒーロー（スマートフォンの幅）：3 枚を扇形に。上の部分だけ見せて、下はぼかして切る */
@@ -2225,3 +2227,10 @@ details.more[open] > summary { margin-bottom: 8px; }
   .changelog-table th, .changelog-table td { padding: 12px 10px; }
 }
 .flow--stack { align-items: stretch; }
+
+/* 取り込みの 1・2・3 の中の手順には番号を出さない（外の 1・2・3 と見分けがつかなくなるため）。
+   丸い数字の代わりに、左に細い線を引いて、ひとつの手順のまとまりに見せる */
+.flow .import-steps h4 { display: block; }
+.flow .import-steps h4::before { content: none; }
+.flow .import-steps > li > div:first-child { border-left: 3px solid var(--color-fish-orange); padding-left: 12px; }
+.flow .import-steps p { margin-left: 0; }
