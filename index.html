@@ -259,6 +259,7 @@
 </head>
 <body>
 
+
 <!-- ============ A: ヘッダー ============ -->
 <header class="site-header" role="banner">
   <div class="site-header__inner">
@@ -269,10 +270,11 @@
 
     <!-- デスクトップナビ -->
     <nav class="site-header__nav" aria-label="メインナビゲーション">
+      <a href="/#now"     class="nav-link">いま</a>
       <a href="/#map"     class="nav-link">地図</a>
-      <a href="/#howto"   class="nav-link">使い方</a>
-      <a href="/#features" class="nav-link">機能</a>
-      <a href="/analysis/" class="nav-link">分析の見方</a>
+      <a href="/#review"  class="nav-link">振り返り</a>
+      <a href="/#plus"    class="nav-link">プラス</a>
+      <a href="/#import"  class="nav-link">取り込み</a>
       <a href="/#faq"     class="nav-link">よくある質問</a>
       <a href="/#contact" class="nav-link">お問い合わせ</a>
       <a href="/android/?src=header" class="nav-link">Android版</a>
@@ -283,10 +285,11 @@
     <details class="nav-toggle" aria-label="ナビゲーションを開く">
       <summary>☰ メニュー</summary>
       <nav class="nav-toggle__menu" aria-label="モバイルナビゲーション">
+        <a href="/#now"      class="nav-link">いま</a>
         <a href="/#map"      class="nav-link">地図</a>
-        <a href="/#howto"    class="nav-link">使い方</a>
-        <a href="/#features" class="nav-link">機能</a>
-        <a href="/analysis/" class="nav-link">分析の見方</a>
+        <a href="/#review"   class="nav-link">振り返り</a>
+        <a href="/#plus"     class="nav-link">プラス</a>
+        <a href="/#import"   class="nav-link">取り込み</a>
         <a href="/#faq"      class="nav-link">よくある質問</a>
         <a href="/#contact"  class="nav-link">お問い合わせ</a>
         <a href="/android/?src=header" class="nav-link">Android版</a>
@@ -303,12 +306,11 @@
     <h1 class="hero__headline" id="hero-headline">
       <span class="tt-orange"><span class="nw">釣れた</span><span class="nw">瞬間に、</span></span><span class="nw">1枚撮るだけ。</span>
     </h1>
-    <p class="hero__sub">
-      <span class="nw">魚種も、</span><span class="nw">水深も、</span><span class="nw">潮回りも、</span><span class="nw">海底が</span><span class="nw">砂だったか</span><span class="nw">岩だったかまで、</span><span class="nw">その1枚から</span><span class="nw">全部入ります。</span><span class="nw">違うときだけ</span><span class="nw">直せば、</span><span class="nw">記録は</span><span class="nw">完成です。</span>
+    <p class="hero__sub hero__sub--lead">
+      <span class="nw">3.0から、</span><span class="nw">その1枚を、</span><span class="nw">いまの海と</span><span class="nw">答え合わせ</span><span class="nw">できるように</span><span class="nw">なりました。</span>
     </p>
-    <p class="hero__sub hero__sub--new">
-      <span class="nw">2.0 から、</span><span class="nw">出港から</span><span class="nw">帰港までの</span><span class="nw">航跡と、</span><span class="nw">海の</span><span class="nw">底が</span><span class="nw">見える</span><span class="nw">地図も</span><span class="nw">残ります。</span>
-    </p>
+    <p class="hero__sub hero__sub--body">その日の海の調子が、魚ごとに分かります。物差しは、船宿の釣果です。1枚撮るだけで、水深・潮・海面水温・航跡が残り、帰ったら船宿の釣果と自分の釣果を並べて振り返れます。</p>
+    <p class="hero__fine">地図・航跡・統計分析・いまの海は無料です。振り返りも最初の3回まで無料。</p>
 
     <!-- App Store バッジ + Google Play バッジ（スマートフォンの幅では縦に並ぶ。Android の端末では Android版を先に表示） -->
     <div class="hero-cta">
@@ -334,62 +336,18 @@
           <img src="https://play.google.com/intl/en_us/badges/static/images/badges/ja_badge_web_generic.png" alt="Google Play で手に入れよう" width="180" height="70" decoding="async" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-flex'" />
           <span class="btn-primary btn-android gp-badge__fallback" style="display:none">Google Play で手に入れよう</span>
         </a>
-        <p class="hero-cta__note">Android版は、Google Play で公開中です</p>
       </div>
     </div>
+    <p class="hero__plus-link"><a href="#plus">釣果ログ プラスについて →</a></p>
 
-    <!-- 端末モックアップ（扇状 / デスクトップ） -->
-    <div class="hero__phones hero__phones--fan" aria-hidden="true">
-      <div class="phone-mockup phone-left">
-        <video
-          class="phone-mockup__screen js-loop-video"
-          width="234" height="509"
-          muted loop playsinline preload="none"
-          poster="/assets/img/2.0/map-day-poster.webp"
-          aria-label="地図のタブで、2026年10月3日の釣行を再生する動画。三崎港を出て、釣り場で流し、アジ・マダイ・カワハギを釣って帰港するまで">
-          <source src="/assets/img/2.0/map-day.webm" type="video/webm" />
-          <source src="/assets/img/2.0/map-day.mp4" type="video/mp4" />
-        </video>
-      </div>
-      <div class="phone-mockup phone-center">
-        <img
-          src="/assets/img/2.0/trip-detail.webp"
-          alt="釣行の画面。出港と帰港の時刻、航行距離・釣りの時間・流しの速さ、航跡の入った地図"
-          class="phone-mockup__screen"
-          width="264" height="574"
-          decoding="async"
-          onerror="this.closest('.phone-mockup').style.background='#1b2227'"
-        />
-      </div>
-      <div class="phone-mockup phone-right">
-        <img
-          src="/assets/img/2.0/zukan-hero.webp"
-          alt="図鑑の一覧。魚種ごとに写真と自己記録、伸びが並ぶ"
-          class="phone-mockup__screen"
-          width="234" height="509"
-          decoding="async"
-          onerror="this.closest('.phone-mockup').style.background='#1b2227'"
-        />
-      </div>
-    </div>
-
-    <!-- 端末モックアップ（スワイプ / モバイル） -->
-    <div class="phone-carousel hero__phones--mobile" aria-hidden="true">
-      <div class="phone-mockup phone-carousel__mockup" style="width:240px;">
+    <!-- 横に送る画面（静止画だけ。動画は置かない） -->
+    <div class="phone-carousel hero__carousel">
+      <div class="phone-mockup phone-carousel__mockup">
         <div class="phone-carousel__track">
-          <div class="phone-carousel__slide"><video
-            class="phone-carousel__video js-loop-video"
-            width="750" height="1631"
-            muted loop playsinline preload="none"
-            poster="/assets/img/2.0/map-day-poster.webp"
-            aria-label="地図のタブで、2026年10月3日の釣行を再生する動画。三崎港を出て、釣り場で流し、アジ・マダイ・カワハギを釣って帰港するまで">
-            <source src="/assets/img/2.0/map-day.webm" type="video/webm" />
-            <source src="/assets/img/2.0/map-day.mp4" type="video/mp4" />
-        </video></div>
-          <div class="phone-carousel__slide"><img src="/assets/img/2.0/trip-detail.webp"   alt="釣行の画面。航行距離・釣りの時間・流しの速さと、航跡の入った地図" width="750" height="1631" decoding="async" loading="lazy" /></div>
-          <div class="phone-carousel__slide"><img src="/assets/img/2.0/zukan-hero.webp"    alt="図鑑の一覧。魚種ごとに写真と自己記録、伸びが並ぶ" decoding="async" loading="lazy" /></div>
-          <div class="phone-carousel__slide"><img src="/assets/img/2.0/catch-detail.webp"  alt="釣果の画面。マダイ 52cm、水深、潮位のグラフ、天気・風・底質" width="750" height="1631" decoding="async" loading="lazy" /></div>
-          <div class="phone-carousel__slide"><img src="/assets/img/2.0/analysis.webp"      alt="分析の画面。よく釣れている条件と傾向の一覧" width="750" height="1631" decoding="async" loading="lazy" /></div>
+          <div class="phone-carousel__slide"><div class="ph">仮：hero-chokyo</div></div>
+          <div class="phone-carousel__slide"><div class="ph">仮：hero-review</div></div>
+          <div class="phone-carousel__slide"><img src="/assets/img/2.0/map-zoom.webp" alt="地図の画面。等深線と水深の色分けで、海の底の形が見える" width="750" height="1631" decoding="async" loading="lazy" /></div>
+          <div class="phone-carousel__slide"><div class="ph">仮：hero-plan</div></div>
         </div>
       </div>
       <div class="phone-carousel__nav">
@@ -399,44 +357,122 @@
           <button class="dot" aria-label="2枚目"></button>
           <button class="dot" aria-label="3枚目"></button>
           <button class="dot" aria-label="4枚目"></button>
-          <button class="dot" aria-label="5枚目"></button>
         </div>
         <button class="carousel-next" aria-label="次へ">&#8250;</button>
       </div>
     </div>
   </section>
 
-  <!-- ============ C: 海の大写真（full-bleed） ============ -->
-  <div class="ocean-hero" role="img" aria-label="相模湾の静かな海。ボート釣りの釣果を底質・魚礁・潮汐とともに残すためのアプリです">
-    <picture>
-      <source srcset="/assets/img/hero-ocean-1600.webp" media="(min-width: 1001px)" width="1600" height="933" />
-      <source srcset="/assets/img/hero-ocean-1000.webp" media="(min-width: 641px)"  width="1000" height="583" />
-      <img
-        src="/assets/img/hero-ocean-640.webp"
-        alt="水平線が見える静かな外洋。ボート釣りのフィールド"
-        class="ocean-hero__img"
-        width="640" height="373"
-        fetchpriority="high"
-        loading="eager"
-        decoding="sync"
-      />
-    </picture>
-    <div class="ocean-hero__overlay" aria-hidden="true"></div>
-    <div class="ocean-hero__text">
-      <span class="ocean-hero__label">SAGAMI BAY</span>
-      <h2 class="ocean-hero__heading"><span class="nw">あの</span><span class="nw">日、</span><span class="nw">なぜ</span><span class="nw">釣れたのか。</span></h2>
-      <p class="ocean-hero__desc">ボート釣りの釣果を、底質・魚礁・潮汐とともに残すためのアプリです。</p>
+  <!-- ============ B.5: 3.0で、変わったこと。変わらないこと。 ============ -->
+  <section id="whats-new" class="section section--sand" aria-labelledby="whats-new-heading">
+    <div class="container">
+      <span class="label label--blue">3.0</span>
+      <h2 id="whats-new-heading" class="section-heading">
+        <span class="tt-orange"><span class="nw">3.0で、</span><span class="nw">変わったこと。</span></span><span class="nw">変わらないこと。</span>
+      </h2>
+      <div class="changes">
+        <div class="changes__col">
+          <h3 class="changes__title">変わらないこと</h3>
+          <ul class="feature-list">
+            <li>地図・航跡・統計分析は、無料のままです</li>
+            <li>広告は入りません</li>
+            <li>釣った場所は、どこにも出ません</li>
+          </ul>
+        </div>
+        <div class="changes__col">
+          <h3 class="changes__title">変わったこと</h3>
+          <ul class="feature-list">
+            <li><a href="#now">いまの海</a></li>
+            <li><a href="#howto">海面水温の自動入力</a></li>
+            <li><a href="#review">AI の振り返り</a></li>
+            <li><a href="#import">海釣図V の記録の取り込み</a></li>
+            <li><a href="#plus">釣果ログ プラス</a></li>
+          </ul>
+        </div>
+      </div>
     </div>
-  </div>
+  </section>
 
-  <!-- ============ D.0: 地図（MAP） ============ -->
+  <!-- ============ 1: いま（NOW） ============ -->
+  <section id="now" class="section" aria-labelledby="now-heading">
+    <div class="split">
+      <div class="split__text">
+        <span class="label label--blue">NOW<span class="tag">無料</span></span>
+        <h2 id="now-heading" class="section-heading">
+          <!-- 魚の名前は固定の文字。公開の前にオーナーが決める -->
+          <span class="tt-orange"><span class="nw">今週の</span><span class="nw">相模湾、</span></span><span class="nw">マダイが</span><span class="nw">好調。</span>
+        </h2>
+        <p class="section-lead"><span class="draft-note">下書き</span> 海の調子を、魚ごとに「好調」「終盤」などで出します。物差しにしているのは、船宿が出している釣果です。船宿同士の数は比べず、それぞれの船宿の「ふだん」と比べています。推移・上向いたときの通知・出船の目安も見られます。更新の時刻は features-3.0.md で確かめて書きます。</p>
+        <p class="note-line">釣況と出船の目安は参考です。出るかどうかは、船宿とご自身で決めてください。</p>
+        <div class="area-note" id="now-area">
+          <p>「いまの海」は、いまは相模湾と東京湾だけです。記録・魚種判定・地図・航跡・統計は、全国の海で使えます。</p>
+          <p>他の海は、順番に増やしています。見たい海を教えてください。次の海域は、声の多いところから決めます。<a href="#survey-area">見たい海を教える →</a></p>
+        </div>
+      </div>
+      <figure class="loop-video">
+        <div class="loop-video__frame">
+          <video class="js-section-video" muted loop playsinline preload="none" width="1080" height="1920"
+            poster="/assets/img/3.0/r2-poster.webp" aria-label="（仮）いまの海の画面を、魚ごとに見ていく動画">
+            <source src="/assets/img/3.0/r2.mp4" type="video/mp4" />
+          </video>
+          <button type="button" class="loop-video__play" aria-label="動画を再生する">▶ 再生</button>
+        </div>
+        <figcaption>（仮）いまの海の画面を、魚ごとに見ていく動画</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============ 2: 撮るだけ（HOWTO） ============ -->
+  <section id="howto" class="section section--sand" aria-labelledby="howto-heading">
+    <div class="split split--flip">
+      <div class="split__text">
+        <span class="label label--blue">HOW TO<span class="tag">無料</span></span>
+        <h2 id="howto-heading" class="section-heading">
+          <span class="tt-orange"><span class="nw">船の上で、</span></span><span class="nw">入力なんて</span><span class="nw">してられない。</span>
+        </h2>
+        <p class="section-lead"><span class="draft-note">下書き</span> 釣れたら1枚撮るだけで、魚種・水深・潮・海面水温（衛星）が入ります。記録した直後に、その日の海と答え合わせができます。電波がなくても記録でき、魚種の判定は端末の中で終わります。電波が要るものは features-3.0.md で確かめて書きます。</p>
+      </div>
+      <figure class="loop-video">
+        <div class="loop-video__frame">
+          <video class="js-section-video" muted loop playsinline preload="none" width="1080" height="1920"
+            poster="/assets/img/3.0/r3-poster.webp" aria-label="（仮）1枚撮って、記録した直後の答え合わせまでの動画">
+            <source src="/assets/img/3.0/r3.mp4" type="video/mp4" />
+          </video>
+          <button type="button" class="loop-video__play" aria-label="動画を再生する">▶ 再生</button>
+        </div>
+        <figcaption>（仮）1枚撮って、記録した直後の答え合わせまでの動画</figcaption>
+      </figure>
+    </div>
+    <div class="container">
+      <div class="steps-grid">
+        <article class="step-card">
+          <div class="step-badge" aria-label="ステップ1">1</div>
+          <h3 class="step-title"><span class="nw">出港したら</span><span class="nw">「釣行を</span><span class="nw">開始」</span></h3>
+          <p class="step-body">地図の左上の「釣行を開始」を押すと、航跡の記録が始まります。帰港したら「終了」を押してください。押し忘れても、釣果はいつも通り記録できます。</p>
+        </article>
+        <article class="step-card">
+          <div class="step-badge" aria-label="ステップ2">2</div>
+          <h3 class="step-title"><span class="nw">釣れたら、</span><span class="nw">1枚撮る</span></h3>
+          <p class="step-body"><span class="draft-note">下書き</span> 画面下の中央のカメラで撮るだけ。違うところがあれば、そこだけ直してください。</p>
+        </article>
+        <article class="step-card">
+          <div class="step-badge" aria-label="ステップ3">3</div>
+          <h3 class="step-title"><span class="nw">帰ったら、</span><span class="nw">振り返り</span></h3>
+          <p class="step-body"><span class="draft-note">下書き</span> その日の船宿の釣果と、自分の釣果を並べて振り返ります。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 3: 地図・航跡（MAP / TRACK） ============ -->
   <section id="map" class="section" aria-labelledby="map-heading">
     <div class="container map-section">
       <div class="col-narrow map-section__intro">
-        <span class="label label--blue">MAP</span>
+        <span class="label label--blue">MAP<span class="tag">無料</span></span>
         <h2 id="map-heading" class="section-heading">
-          <span class="tt-orange"><span class="nw">無料で、</span></span><span class="nw">ここまで</span><span class="nw">見える。</span>
+          <span class="tt-orange"><span class="nw">この地図、</span></span><span class="nw">無料です。</span>
         </h2>
+        <p class="sub-heading" style="margin:0;"><span class="nw">無料で、</span><span class="nw">ここまで</span><span class="nw">見える。</span></p>
         <p class="section-lead">全国の等深線と水深の色分けを、拡大するほど細かく描きます。200〜400m の深場の斜面も 10m ごと。根や駆け上がり、水深帯の広がりが、地図を見るだけでつかめます。</p>
       </div>
 
@@ -484,17 +520,9 @@
         </ul>
       </div>
 
-    </div>
-  </section>
-
-  <!-- ============ D.1: 航跡（TRACK） ============ -->
-  <section id="track" class="section section--sand" aria-labelledby="track-heading">
-    <div class="container map-section">
-      <div class="col-narrow map-section__intro">
-        <span class="label label--blue">TRACK</span>
-        <h2 id="track-heading" class="section-heading">
-          <span class="tt-orange"><span class="nw">出港から</span><span class="nw">帰港まで、</span></span><span class="nw">走った</span><span class="nw">線が</span><span class="nw">残る。</span>
-        </h2>
+      <!-- 航跡（2.0 の TRACK の節。古い飛び先 #track を残す） -->
+      <div class="col-narrow map-block" id="track">
+        <h3 class="sub-heading"><span class="tt-orange"><span class="nw">出港から</span><span class="nw">帰港まで、</span></span><span class="nw">走った</span><span class="nw">線が</span><span class="nw">残る。</span></h3>
         <p class="section-lead">出港したら「釣行を開始」を押すだけ。画面を消しても航跡を記録し、走っている所と釣っている所を自動で分けて描きます。途中でアプリが閉じても、続きから記録します。</p>
         <ul class="feature-list" aria-label="航跡の機能">
           <li>航行距離・出港と帰港の時刻・流しの速さ</li>
@@ -520,262 +548,181 @@
         <ul class="map-anim__legend" data-legend aria-hidden="true"></ul>
         <noscript><img src="/assets/img/2.0/past-2-trips.webp" alt="" /></noscript>
       </div>
-    </div>
-  </section>
 
-  <!-- ============ D: 使い方 3ステップ ============ -->
-  <section id="howto" class="section" aria-labelledby="howto-heading">
-    <div class="container">
-      <h2 id="howto-heading" style="margin:0; font-size:var(--text-heading); font-weight:700; line-height:1.35;">
-        <span class="tt-orange"><span class="nw">3ステップで、</span></span><span class="nw">記録が</span><span class="nw">残る。</span>
-      </h2>
-      <div class="steps-grid">
-        <article class="step-card">
-          <div class="step-badge" aria-label="ステップ1">1</div>
-          <h3 class="step-title"><span class="nw">出港したら</span><span class="nw">「釣行を</span><span class="nw">開始」</span></h3>
-          <p class="step-body">地図の左上の「釣行を開始」を押すと、航跡の記録が始まります。帰港したら「終了」を押してください。押し忘れても、釣果はいつも通り記録できます。</p>
-        </article>
-        <article class="step-card">
-          <div class="step-badge" aria-label="ステップ2">2</div>
-          <h3 class="step-title"><span class="nw">釣れたら、</span><span class="nw">1枚撮って</span><span class="nw">確かめる</span></h3>
-          <p class="step-body">画面下の中央のカメラで撮るだけ。場所と時刻も、そのとき読み取ります。魚種は写真から判定して、水深は海底地形から、水温は同じ日の直前の釣果から入ります。違うところがあれば、そこだけ直してください。魚探の水深に直せば、その値が記録に残ります。</p>
-        </article>
-        <article class="step-card">
-          <div class="step-badge" aria-label="ステップ3">3</div>
-          <h3 class="step-title"><span class="nw">分析が</span><span class="nw">動きはじめる</span></h3>
-          <p class="step-body">5 件・釣行 2 回を超えたあたりから、統計分析で、よく釣れている条件が見えはじめます。<a href="/analysis/">分析の見方はこちら →</a></p>
-        </article>
+      <!-- 水深の自動入力（2.0 の DEPTH の節から） -->
+      <div class="col-narrow map-block">
+        <h3 class="sub-heading"><span class="tt-orange"><span class="nw">水深は</span><span class="nw">自動で。</span></span><span class="nw">魚探の</span><span class="nw">値があれば、</span><span class="nw">それが</span><span class="nw">優先</span></h3>
+        <p class="section-lead">釣れた位置の海底地形のデータから、水深を自動で入れます。魚探で見た値に直せば、記録にはその値が残ります。</p>
       </div>
-    </div>
-  </section>
 
-  <!-- ============ D.5: 図鑑（ZUKAN） ============ -->
-  <section id="zukan" class="section section--sand" aria-labelledby="zukan-heading">
-    <div class="feature-row feature-row--flip">
-      <div class="feature-visual">
-        <div class="phone-carousel">
-          <div class="phone-mockup phone-carousel__mockup" style="width:280px;">
-            <div class="phone-carousel__track">
-              <div class="phone-carousel__slide"><img src="/assets/img/2.0/zukan.webp" alt="図鑑の一覧。魚種ごとに写真と自己記録、伸びが並ぶ" width="750" height="1631" loading="lazy" decoding="async" /></div>
-              <div class="phone-carousel__slide"><img src="/assets/img/2.0/zukan-species-real.webp" alt="魚種ページ（ワラサ）。自己記録 86cm・伸び +11cm・8 尾・水深 18〜88m と、自己記録の推移のグラフ" width="750" height="1625" loading="lazy" decoding="async" /></div>
-              <div class="phone-carousel__slide"><img src="/assets/img/2.0/zukan-pb-real.webp" alt="ワラサの自己記録の推移（75cm から 86cm）と、すべての記録 8 件の一覧" width="750" height="1625" loading="lazy" decoding="async" /></div>
-            </div>
-          </div>
-          <div class="phone-carousel__nav">
-            <button class="carousel-prev" aria-label="前へ">&#8249;</button>
-            <div class="phone-carousel__dots">
-              <button class="dot dot--active" aria-label="1枚目"></button>
-              <button class="dot" aria-label="2枚目"></button>
-              <button class="dot" aria-label="3枚目"></button>
-            </div>
-            <button class="carousel-next" aria-label="次へ">&#8250;</button>
-          </div>
+      <!-- 2.0 の地図の動画（ヒーローから移した） -->
+      <figure class="loop-video col-narrow">
+        <div class="loop-video__frame">
+          <video class="js-section-video" muted loop playsinline preload="none" width="750" height="1631" style="aspect-ratio:750/1631"
+            poster="/assets/img/2.0/map-day-poster.webp"
+            aria-label="地図のタブで、2026年10月3日の釣行を再生する動画。三崎港を出て、釣り場で流し、アジ・マダイ・カワハギを釣って帰港するまで">
+            <source src="/assets/img/2.0/map-day.webm" type="video/webm" />
+            <source src="/assets/img/2.0/map-day.mp4" type="video/mp4" />
+          </video>
+          <button type="button" class="loop-video__play" aria-label="動画を再生する">▶ 再生</button>
         </div>
-      </div>
-      <div class="feature-text">
-        <span class="label label--blue">ZUKAN</span>
-        <h2 id="zukan-heading" style="margin:0; font-size:var(--text-heading); font-weight:700; line-height:1.35;">
-          <span class="tt-orange"><span class="nw">釣った</span><span class="nw">魚が、</span></span><span class="nw">図鑑になる</span>
-        </h2>
-        <p style="margin:0; color:var(--color-ink-muted);">釣った魚種ごとに、自己記録と、それがどう伸びてきたかが見られます。釣れた月、サイズの分布、釣った場所、その魚がよく釣れている条件も、1ページにまとまります。</p>
-        <p style="margin:8px 0 0; color:var(--color-ink-muted);">はじめての魚種を記録すると、お祝いの演出が出ます。まだ釣っていない魚の中から、よく行く水深と底質で狙えそうな魚も提案します。</p>
-        <ul class="feature-list" aria-label="図鑑の特徴">
-          <li>魚種ごとの自己記録と、その伸び</li>
-          <li>釣れた月・サイズの分布・釣った場所・当たり条件</li>
-          <li>まだ釣っていない魚から、次に狙えそうな魚を提案</li>
-        </ul>
-      </div>
+        <figcaption>地図のタブで、ある 1 日の釣行を、出港から帰港まで再生したところです。</figcaption>
+      </figure>
     </div>
   </section>
 
-  <!-- ============ D.6: シェア画像（SHARE） ============ -->
-  <section id="share" class="section" aria-labelledby="share-heading">
-    <div class="col-narrow" style="display:flex; flex-direction:column; gap:24px;">
+  <!-- ============ 4: 振り返り（REVIEW） ============ -->
+  <section id="review" class="section section--sand" aria-labelledby="review-heading">
+    <div class="split">
+      <div class="split__text">
+        <span class="label label--blue">REVIEW<span class="tag">最初の3回まで無料</span></span>
+        <h2 id="review-heading" class="section-heading">
+          <span class="tt-orange"><span class="nw">海のせい？</span></span><span class="nw">自分のせい？</span>
+        </h2>
+        <p class="sub-heading" style="margin:0;"><span class="nw">自分の</span><span class="nw">釣果を、</span><span class="nw">船宿の</span><span class="nw">釣果と</span><span class="nw">同じ</span><span class="nw">物差しで。</span></p>
+        <p class="section-lead"><span class="draft-note">下書き</span> その日の船宿の釣果の中に、自分の釣果を置いて見ます。4 つに分けたうえで（分け方の正式な名前は features で確かめます）、次に試すことを書きます。数字と分類はアプリが計算し、AI が書くのは文章だけです。緯度経度は送りません。</p>
+        <p style="margin:0; font-weight:700;">振り返りは、最初の3回までは無料です。</p>
+      </div>
+      <figure class="loop-video">
+        <div class="loop-video__frame">
+          <video class="js-section-video" muted loop playsinline preload="none" width="1080" height="1920"
+            poster="/assets/img/3.0/r4-poster.webp" aria-label="（仮）振り返りの画面の動画">
+            <source src="/assets/img/3.0/r4.mp4" type="video/mp4" />
+          </video>
+          <button type="button" class="loop-video__play" aria-label="動画を再生する">▶ 再生</button>
+        </div>
+        <figcaption>（仮）振り返りの画面の動画</figcaption>
+      </figure>
+    </div>
+    <div class="review-sample">
+      <div class="review-sample__shot"><div class="ph">仮：振り返りの画面</div></div>
       <div>
-        <span class="label label--blue">SHARE</span>
-        <h2 id="share-heading" style="margin:12px 0 0; font-size:var(--text-heading); font-weight:700; line-height:1.35;">
-          <span class="tt-orange"><span class="nw">釣果を、</span></span><span class="nw">1枚の</span><span class="nw">画像に</span>
-        </h2>
-      </div>
-      <p style="margin:0; color:var(--color-ink-muted);">魚種・サイズ・水深・水温・潮を写真に重ねて、1枚の画像にしてシェアできます。デザインは3種類。写真の拡大や位置も調整できます。釣れた場所は画像に出しません。画像はスマートフォンの中で作り、どこにも送りません。</p>
-      <div class="share-gallery">
-        <figure class="share-card"><img src="/assets/img/2.0/share-poster.webp" alt="シェア画像（ポスター）。マダイ 52cm" width="750" height="938" loading="lazy" decoding="async" /><figcaption>ポスター</figcaption></figure>
-        <figure class="share-card"><img src="/assets/img/2.0/share-magazine.webp" alt="シェア画像（マガジン）。マダイ 52cm" width="750" height="938" loading="lazy" decoding="async" /><figcaption>マガジン</figcaption></figure>
-        <figure class="share-card"><img src="/assets/img/2.0/share-telop.webp" alt="シェア画像（テロップ）。マダイ 52cm" width="750" height="938" loading="lazy" decoding="async" /><figcaption>テロップ</figcaption></figure>
+        <div class="review-sample__text">（review-sample.md の全文がここに入ります。印の付いた 1 行は<span class="review-sample__mark">このように枠で囲みます</span>）</div>
+        <p class="review-sample__caption">開発者の実際の釣行（2匹の日）の振り返りです。</p>
       </div>
     </div>
   </section>
 
-  <!-- ============ E: 機能：分析 ============ -->
-  <section id="features" class="section section--sand" aria-labelledby="analysis-heading">
-    <div class="feature-row">
-      <div class="feature-text">
-        <span class="label label--blue">ANALYSIS</span>
-        <h2 id="analysis-heading" style="margin:0; font-size:var(--text-heading); font-weight:700; line-height:1.35;">
-          <span class="tt-orange"><span class="nw">溜めた</span><span class="nw">ログを</span><span class="nw">統計分析して、</span></span><span class="nw">次の</span><span class="nw">一手に</span>
+  <!-- ============ 5: 作戦（PLAN） ============ -->
+  <section id="plan" class="section" aria-labelledby="plan-heading">
+    <div class="split split--flip">
+      <div class="split__text">
+        <span class="label label--blue">PLAN<span class="tag tag--plus">プラス</span></span>
+        <h2 id="plan-heading" class="section-heading">
+          <span class="tt-orange"><span class="nw">金曜の夜、</span></span><span class="nw">もう釣りは</span><span class="nw">始まってる。</span>
         </h2>
-        <p style="margin:0; color:var(--color-ink-muted);">釣果は「釣行」ごとに自動でまとまり、出港から帰港までの潮・潮流・風の流れと、釣れた時刻をひとつのタイムラインで振り返れます。</p>
-        <p style="margin:8px 0 0; color:var(--color-ink-muted);">記録がたまると、あなた自身の記録を統計分析して、自分でも気づいていなかった当たりパターンを見つけます。「下げ潮のときによく釣れている」「マダイは朝まづめによく釣れている」といった条件を、あなた自身の記録から探して表示します。単に釣果が多い条件ではなく、時間に対してどれだけ釣れたかで評価するので、よく行っている潮回りがそれらしく見える、ということがありません。潮回りや時間帯は、出港から帰港までの時間に対して数えます。</p>
-        <p style="margin:8px 0 0; color:var(--color-ink);"><strong>2.0 から、水深・底質・魚礁などの場所の条件は、航跡から分かる、実際に釣りをしていた時間に対して数えます。</strong>いつも流している場所だから釣果が多く見える、ということがなくなり、釣れなかった日の流しの時間も数に入ります。場所の条件は、魚種を選んだときに出ます。航跡のない釣行は、これまでどおり数えます。</p>
-        <p style="margin:8px 0 0; color:var(--color-ink-muted);">魚種別・エリア別に絞って見ることもできます。</p>
-        <ul class="feature-list" aria-label="分析機能の特徴">
-          <li>よく釣れている条件を、自分の記録から統計分析で表示</li>
-          <li>水深 × 潮回り、水深 × 底質のマトリクス（件数と、時間あたりの釣れやすさ）</li>
-          <li>魚種ごとの水深レンジ／月別の釣果推移／魚種ランキング</li>
-        </ul>
-        <p style="margin:8px 0 0;"><a href="/analysis/">分析の見方をくわしく見る →</a></p>
+        <p class="section-lead"><span class="draft-note">下書き</span> 前回の振り返りの「次に試すこと」から始まります。狙う魚・潮・水深・一番近かった過去の日と、その理由。「次に行ける日」を選んでおくと、海の上でも知らせます（出港したら作戦／水深から外れたら／当たり条件と重なる日の前日）。帰ったら、作戦の答え合わせ。</p>
       </div>
-      <div class="feature-visual">
-        <div class="phone-carousel">
-          <div class="phone-mockup phone-carousel__mockup" style="width:280px;">
-            <div class="phone-carousel__track">
-              <div class="phone-carousel__slide"><img src="/assets/img/2.0/analysis.webp" alt="分析の画面。よく釣れている条件「朝まづめ × 中潮のときによく釣れている」と傾向の一覧" width="750" height="1631" loading="lazy" decoding="async" /></div>
-              <div class="phone-carousel__slide"><img src="/assets/img/2.0/trip-detail.webp" alt="釣行の画面。航行距離・釣りの時間・流しの速さと、航跡の入った地図" width="750" height="1631" loading="lazy" decoding="async" /></div>
-              <div class="phone-carousel__slide"><img src="/assets/img/2.0/analysis-depth-range.webp" alt="魚種ごとの水深レンジと、条件ごとの分布" width="750" height="1631" loading="lazy" decoding="async" /></div>
-            </div>
-          </div>
-          <div class="phone-carousel__nav">
-            <button class="carousel-prev" aria-label="前へ">&#8249;</button>
-            <div class="phone-carousel__dots">
-              <button class="dot dot--active" aria-label="1枚目"></button>
-              <button class="dot" aria-label="2枚目"></button>
-              <button class="dot" aria-label="3枚目"></button>
-            </div>
-            <button class="carousel-next" aria-label="次へ">&#8250;</button>
-          </div>
+      <figure class="loop-video">
+        <div class="loop-video__frame">
+          <video class="js-section-video" muted loop playsinline preload="none" width="1080" height="1920"
+            poster="/assets/img/3.0/r5-poster.webp" aria-label="（仮）作戦の画面の動画">
+            <source src="/assets/img/3.0/r5.mp4" type="video/mp4" />
+          </video>
+          <button type="button" class="loop-video__play" aria-label="動画を再生する">▶ 再生</button>
         </div>
+        <figcaption>（仮）作戦の画面の動画</figcaption>
+      </figure>
+    </div>
+
+    <!-- たまるほど、自分の海になる。（2.0 の ZUKAN・SHARE・ANALYSIS・DEPTH・AUTO・VIEWS を畳んだ段。古い飛び先を残す） -->
+    <div class="container" id="features" style="margin-top:var(--section-gap);">
+      <h3 class="sub-heading" style="font-size:var(--text-heading);"><span class="tt-orange"><span class="nw">たまるほど、</span></span><span class="nw">自分の</span><span class="nw">海になる。</span></h3>
+      <div class="grow-cols">
+        <div>
+          <h4>無料</h4>
+          <p style="margin:0; color:var(--color-ink-muted);"><span class="draft-note">下書き</span> 統計分析・5つの見方・図鑑（いまの海つき）・シェア画像（場所は出ない。いまの海の一行つき）・去年の今ごろ。</p>
+        </div>
+        <div>
+          <h4>プラス</h4>
+          <p style="margin:0; color:var(--color-ink-muted);"><span class="draft-note">下書き</span> まとめた振り返り・月報。</p>
+        </div>
+      </div>
+      <div class="mini-grid">
+        <figure class="mini-card" id="auto-data"><img src="/assets/img/2.0/analysis.webp" alt="分析の画面。よく釣れている条件と傾向の一覧" width="750" height="1631" loading="lazy" decoding="async" /><figcaption><strong>統計分析</strong>よく釣れている条件を、自分の記録から</figcaption></figure>
+        <figure class="mini-card"><img src="/assets/img/2.0/views-trip-real.webp" alt="釣行ビュー。釣行ごとのカード" width="750" height="1625" loading="lazy" decoding="async" /><figcaption><strong>5つの見方</strong>釣行・釣果・魚種・水深・ギャラリー</figcaption></figure>
+        <figure class="mini-card" id="zukan"><img src="/assets/img/2.0/zukan.webp" alt="図鑑の一覧" width="750" height="1631" loading="lazy" decoding="async" /><figcaption><strong>図鑑</strong>釣った魚ごとの自己記録（いまの海つき）</figcaption></figure>
+        <figure class="mini-card" id="share"><img src="/assets/img/2.0/share-poster.webp" alt="シェア画像" width="750" height="938" loading="lazy" decoding="async" /><figcaption><strong>シェア画像</strong>場所は出ません</figcaption></figure>
+        <figure class="mini-card"><div class="ph">仮：去年の今ごろ</div><figcaption><strong>去年の今ごろ</strong>去年の同じころの自分の記録</figcaption></figure>
+        <figure class="mini-card"><div class="ph">仮：月報</div><figcaption><strong>まとめた振り返り・月報</strong><span class="tag tag--plus" style="margin:2px 0 0;">プラス</span></figcaption></figure>
+      </div>
+      <p style="margin:24px 0 0;"><a href="/analysis/">分析の見方をくわしく見る →</a></p>
+    </div>
+  </section>
+
+  <!-- ============ 6: プラン（PLUS） ============ -->
+  <section id="plus" class="section section--sand" aria-labelledby="plus-heading">
+    <div class="col-narrow">
+      <span class="label label--blue">PLAN</span>
+      <h2 id="plus-heading" class="section-heading">釣果ログ プラス</h2>
+      <table class="plan-table">
+        <caption class="sr-only">無料とプラスで使えるもの</caption>
+        <thead>
+          <tr><th scope="col"></th><th scope="col">無料</th><th scope="col" class="plan-table__plus">プラス</th></tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">1枚撮るだけの記録</th><td>○</td><td>○</td></tr>
+          <tr><th scope="row">地図・航跡</th><td>○</td><td>○</td></tr>
+          <tr><th scope="row">いまの海</th><td>○</td><td>○</td></tr>
+          <tr><th scope="row">これまで（分析・図鑑・シェア・去年の今ごろ）</th><td>○</td><td>○</td></tr>
+          <tr><th scope="row">他のアプリの記録の取り込み</th><td>○</td><td>○</td></tr>
+          <tr><th scope="row">釣行ごとの AI の振り返り</th><td>最初の3回</td><td>すべての釣行</td></tr>
+          <tr><th scope="row">まとめた振り返り・月報</th><td class="is-no">−</td><td>○</td></tr>
+          <tr><th scope="row">作戦と答え合わせ</th><td class="is-no">−</td><td>○</td></tr>
+          <tr><th scope="row">海の上の通知</th><td class="is-no">−</td><td>○</td></tr>
+        </tbody>
+      </table>
+      <p class="price">年額 5,400円（月あたり450円）／月額 600円。税込、App Store・Google Play で自動更新。</p>
+      <p class="price-sub">月額で1か月だけ試すこともできます。</p>
+      <p class="price-fine">価格は、App Store・Google Play に表示される価格が優先します。</p>
+      <div class="plus-words">
+        <p>振り返りは最初の3回まで、誰でも無料で使えます。無料体験の代わりです。</p>
+        <p>有料にしたのは、AIに文章を書かせる部分だけです。</p>
+        <p>2.0で使えていたものは、すべてそのまま無料です。有料にする予定はありません。広告も入れません。</p>
+        <p>解約しても記録は消えません。書いてもらった振り返りも残り、無料の機能はそのまま使えます。 <span class="draft-note">振り返りが残ることを features で確かめる</span></p>
+      </div>
+      <div class="terms-box" id="plus-terms">
+        <h3>購入の前に</h3>
+        <dl>
+          <dt>価格</dt><dd>年額 5,400円（月あたり450円）／月額 600円（税込）</dd>
+          <dt>期間</dt><dd><span class="draft-note">下書き</span> 年額は1年、月額は1か月ごと</dd>
+          <dt>自動更新</dt><dd><span class="draft-note">下書き</span> 期間の終わりの24時間前までに解約しない限り、自動で更新されます</dd>
+          <dt>解約の方法</dt><dd><span class="draft-note">下書き</span> iPhone は App Store の「サブスクリプション」、Android は Google Play の「定期購入」から</dd>
+          <dt>利用規約</dt><dd><a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener">Apple の標準の利用規約（EULA）</a></dd>
+          <dt>プライバシー</dt><dd><a href="/privacy/">プライバシーポリシー</a></dd>
+        </dl>
       </div>
     </div>
   </section>
 
-  <!-- ============ F: 機能：水深（ダーク帯） ============ -->
-  <section class="section section--dark bg-dark section--photo-f" aria-labelledby="depth-heading">
-    <div class="feature-row feature-row--flip" style="max-width:var(--content-max); margin:0 auto;">
-      <div class="feature-visual">
-        <div class="phone-carousel">
-          <div class="phone-mockup phone-carousel__mockup" style="width:280px; background:var(--color-slate-depth);">
-            <div class="phone-carousel__track">
-              <div class="phone-carousel__slide"><img src="/assets/img/2.0/register.webp" alt="釣果の登録画面。水深は海底地形から自動で入る（推定の印つき）" width="750" height="1631" loading="lazy" decoding="async" /></div>
-              <div class="phone-carousel__slide"><img src="/assets/img/2.0/auto-matrix.webp" alt="水深×潮の表と魚種ランキング" width="750" height="1631" loading="lazy" decoding="async" /></div>
-            </div>
-          </div>
-          <div class="phone-carousel__nav">
-            <button class="carousel-prev" aria-label="前へ">&#8249;</button>
-            <div class="phone-carousel__dots">
-              <button class="dot dot--active" aria-label="1枚目"></button>
-              <button class="dot" aria-label="2枚目"></button>
-            </div>
-            <button class="carousel-next" aria-label="次へ">&#8250;</button>
-          </div>
-        </div>
-      </div>
-      <div class="feature-text">
-        <span class="label label--depth">DEPTH</span>
-        <h2 id="depth-heading" style="margin:0; font-size:var(--text-heading); font-weight:700; line-height:1.35; color:var(--color-paper);">
-          <span class="tt-orange"><span class="nw">水深は</span><span class="nw">自動で。</span></span><span class="nw">魚探の</span><span class="nw">値があれば、</span><span class="nw">それが</span><span class="nw">優先</span>
+  <!-- ============ 7: 取り込み（IMPORT） ============ -->
+  <section id="import" class="section" aria-labelledby="import-heading">
+    <div class="split">
+      <div class="split__text">
+        <span class="label label--blue">IMPORT<span class="tag">無料</span></span>
+        <h2 id="import-heading" class="section-heading">
+          <span class="tt-orange"><span class="nw">これまでの</span><span class="nw">記録も、</span></span><span class="nw">いっしょに。</span>
         </h2>
-        <p style="margin:0; color:rgba(255,255,255,.82);">釣れた位置の海底地形のデータから、水深を自動で入れます。魚探で見た値に直せば、記録にはその値が残ります。</p>
-        <div class="chips" aria-label="記録データの例">
-          <div class="chip">
-            <span class="chip__label">水深（海底地形）</span>
-            <span class="chip__value chip__value--depth num">89 m → 魚探 91 m</span>
-          </div>
-          <div class="chip">
-            <span class="chip__label">底質</span>
-            <span class="chip__value">岩</span>
-          </div>
-          <div class="chip">
-            <span class="chip__label">潮回り</span>
-            <span class="chip__value">中潮</span>
-          </div>
-        </div>
+        <p class="section-lead"><span class="draft-note">下書き</span> 海釣図V のバックアップから、航跡と、釣果にしたいマイポイントを取り込めます。海釣図V との併用もできます。取り込みは端末の中だけで行い、外には何も送りません。取り込んだ記録も、ふだんの記録と同じく、分析・図鑑・振り返りに入ります。釣った場所は、どこにも出ません。</p>
       </div>
+      <figure class="loop-video">
+        <div class="loop-video__frame">
+          <video class="js-section-video" muted loop playsinline preload="none" width="1080" height="1920"
+            poster="/assets/img/3.0/r6-poster.webp" aria-label="（仮）海釣図V のバックアップを取り込む動画">
+            <source src="/assets/img/3.0/r6.mp4" type="video/mp4" />
+          </video>
+          <button type="button" class="loop-video__play" aria-label="動画を再生する">▶ 再生</button>
+        </div>
+        <figcaption>（仮）海釣図V のバックアップを取り込む動画</figcaption>
+      </figure>
     </div>
-  </section>
-
-
-  <!-- ============ F.5: 天気・海況の自動取得 ============ -->
-  <section id="auto-data" class="section section--sand" aria-labelledby="auto-data-heading">
-    <div class="feature-row">
-      <div class="feature-text">
-        <span class="label label--blue">AUTO</span>
-        <h2 id="auto-data-heading" style="margin:0; font-size:var(--text-heading); font-weight:700; line-height:1.35;">
-          <span class="tt-orange"><span class="nw">魚種から</span><span class="nw">海況まで、</span></span><span class="nw">自動で</span><span class="nw">記録される</span>
-        </h2>
-        <p style="margin:0; color:var(--color-ink-muted);">写真を撮った場所と時刻をもとに、魚種・水深・水温・天気・風速・潮汐・底質・魚礁が自動で入ります。潮や天気の取得には、インターネットへの接続が必要です。</p>
-        <ul class="feature-list" aria-label="自動取得されるデータ">
-          <li>魚種（写真から端末の中で判定。候補から選び直せる）</li>
-          <li>水深（釣れた位置の海底地形のデータから）</li>
-          <li>水温（同じ日の直前の釣果から引き継ぎ）</li>
-          <li>天気・風速・波高（気象データから自動取得）</li>
-          <li>潮回り・干潮/満潮時刻（潮汐データから自動取得）</li>
-          <li>底質（泥・岩・砂など）・魚礁（海しるAPI / 海上保安庁）</li>
-        </ul>
-        <p style="margin:0; font-size:var(--text-body-sm); color:var(--color-ink-muted);">取得に失敗した場合も、釣果の記録は必ず保存されます。</p>
-      </div>
-      <div class="feature-visual">
-        <div class="phone-carousel">
-          <div class="phone-mockup phone-carousel__mockup" style="width:280px;">
-            <div class="phone-carousel__track">
-              <div class="phone-carousel__slide"><img src="/assets/img/2.0/auto-trip-timeline.webp" alt="釣行の詳細。航跡の入った地図と、潮位のグラフと潮流・風・天気の帯の上に、アジ・マダイ・カワハギの釣れた時刻" width="750" height="1631" loading="lazy" decoding="async" /></div>
-              <div class="phone-carousel__slide"><img src="/assets/img/2.0/auto-matrix.webp" alt="分析の水深×潮の表と、魚種ランキング、魚種ごとの水深レンジ" width="750" height="1631" loading="lazy" decoding="async" /></div>
-              <div class="phone-carousel__slide"><img src="/assets/img/2.0/register.webp" alt="釣果の登録画面。写真から日時が入り、水深は推定の値、魚種の候補からマダイが選ばれている" width="750" height="1631" loading="lazy" decoding="async" /></div>
-            </div>
-          </div>
-          <div class="phone-carousel__nav">
-            <button class="carousel-prev" aria-label="前へ">&#8249;</button>
-            <div class="phone-carousel__dots">
-              <button class="dot dot--active" aria-label="1枚目"></button>
-              <button class="dot" aria-label="2枚目"></button>
-              <button class="dot" aria-label="3枚目"></button>
-            </div>
-            <button class="carousel-next" aria-label="次へ">&#8250;</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ G: 機能：5つの見方と地図 ============ -->
-  <section class="section" aria-labelledby="views-heading">
-    <div class="feature-row">
-      <div class="feature-text">
-        <span class="label label--blue">VIEWS</span>
-        <h2 id="views-heading" style="margin:0; font-size:var(--text-heading); font-weight:700; line-height:1.35;">
-          <span class="tt-orange"><span class="nw">5つの</span><span class="nw">見方で</span></span><span class="nw">振り</span><span class="nw">返る</span>
-        </h2>
-        <p style="margin:0; color:var(--color-ink-muted);">釣行・釣果・魚種・水深・ギャラリーの5ビューを切り替えて、同じ釣果をさまざまな角度から見られます。</p>
-        <ul class="feature-list" aria-label="ビューの種類">
-          <li>釣行：出港から帰港までのタイムラインと、その日の釣果</li>
-          <li>釣果：日付順の一覧</li>
-          <li>魚種・水深：グループ別集計</li>
-          <li>ギャラリー：写真タイルで振り返る</li>
-        </ul>
-      </div>
-      <div class="feature-visual">
-        <div class="phone-carousel">
-          <div class="phone-mockup phone-carousel__mockup" style="width:280px;">
-            <div class="phone-carousel__track">
-              <div class="phone-carousel__slide"><img src="/assets/img/2.0/views-trip-real.webp" alt="釣行ビュー。10月10日・10月9日の釣行のカードに、出港・帰港、航行距離・釣りの時間・流しの速さ、写真と水深・底質・魚種" width="750" height="1625" loading="lazy" decoding="async" /></div>
-              <div class="phone-carousel__slide"><img src="/assets/img/2.0/views-species-real.webp" alt="魚種ビュー。アオリイカ・アカハタなど、魚種ごとにまとめた釣果" width="750" height="1625" loading="lazy" decoding="async" /></div>
-              <div class="phone-carousel__slide"><img src="/assets/img/2.0/views-depth-real.webp" alt="水深ビュー。234m のサメから、水深の深い順に釣果が並ぶ" width="750" height="1625" loading="lazy" decoding="async" /></div>
-              <div class="phone-carousel__slide"><img src="/assets/img/2.0/views-gallery-real.webp" alt="ギャラリービュー。ワラサ・カンパチ・アカハタなどの写真のタイル" width="750" height="1625" loading="lazy" decoding="async" /></div>
-              <div class="phone-carousel__slide"><img src="/assets/img/2.0/views-catch-real.webp" alt="釣果ビュー。日付ごとに、時刻・魚種・大きさ・水深・底質の一覧" width="750" height="1625" loading="lazy" decoding="async" /></div>
-            </div>
-          </div>
-          <div class="phone-carousel__nav">
-            <button class="carousel-prev" aria-label="前へ">&#8249;</button>
-            <div class="phone-carousel__dots">
-              <button class="dot dot--active" aria-label="1枚目"></button>
-              <button class="dot" aria-label="2枚目"></button>
-              <button class="dot" aria-label="3枚目"></button>
-              <button class="dot" aria-label="4枚目"></button>
-              <button class="dot" aria-label="5枚目"></button>
-            </div>
-            <button class="carousel-next" aria-label="次へ">&#8250;</button>
-          </div>
-        </div>
-      </div>
+    <div class="col-narrow" style="margin-top:64px;">
+      <h3 class="sub-heading" id="import-steps">取り込みの手順</h3>
+      <ol class="import-steps"><li><div><h4>海釣図V でバックアップを作り、iPhone の「ファイル」に保存する</h4><p><span class="draft-note">下書き</span></p></div><div class="ph">仮：import-1</div></li><li><div><h4>釣果ログで、その zip を選ぶ</h4><p><span class="draft-note">下書き</span></p></div><div class="ph">仮：import-2</div></li><li><div><h4>取り込む航跡を選ぶ</h4><p><span class="draft-note">下書き</span></p></div><div class="ph">仮：import-3</div></li><li><div><h4>釣果にするマイポイントを選ぶ</h4><p><span class="draft-note">下書き</span></p></div><div class="ph">仮：import-4</div></li><li><div><h4>魚の名前を確かめる</h4><p><span class="draft-note">下書き</span></p></div><div class="ph">仮：import-5</div></li><li><div><h4>写真の付け方を選ぶ</h4><p><span class="draft-note">下書き</span></p></div><div class="ph">仮：import-6</div></li><li><div><h4>件数を確かめて取り込む</h4><p><span class="draft-note">下書き</span></p></div><div class="ph">仮：import-7</div></li></ol>
+      <h3 class="sub-heading" style="margin-top:48px;">取り込んだ後</h3>
+      <p class="section-lead"><span class="draft-note">下書き</span> 水深・水温・天気・潮は、取り込みの後に少しずつ入ります。回ごとに取り消せます。</p><div class="ph" style="max-width:180px;margin-top:16px;">仮：import-undo</div>
+      <h3 class="sub-heading" style="margin-top:48px;">取り込めないもの</h3>
+      <p class="section-lead"><span class="draft-note">下書き</span> zip に入っていないもの（features で確かめる）。</p>
     </div>
   </section>
 
@@ -1382,6 +1329,37 @@
       }
     });
   }
+
+  /* ── 節の動画：画面に入ったら再生し、外れたら止める ──
+     動きを減らす設定のときは自動では再生せず、ポスターと再生のボタンを出す */
+  var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.querySelectorAll('video.js-section-video').forEach(function (v) {
+    var fig = v.closest('.loop-video');
+    var btn = fig && fig.querySelector('.loop-video__play');
+    v.muted = true;
+    if (reduceMotion || !('IntersectionObserver' in window)) {
+      v.removeAttribute('autoplay');
+      v.controls = false;
+      if (fig) fig.classList.add('is-manual');
+      if (btn) btn.addEventListener('click', function () {
+        v.preload = 'auto';
+        v.controls = true;
+        var p = v.play(); if (p && p.catch) p.catch(function () {});
+        fig.classList.add('is-playing');
+      });
+      return;
+    }
+    new IntersectionObserver(function (es) {
+      es.forEach(function (e) {
+        if (e.isIntersecting) {
+          if (v.preload === 'none') { v.preload = 'auto'; }
+          var p = v.play(); if (p && p.catch) p.catch(function () {});
+        } else {
+          v.pause();
+        }
+      });
+    }, { threshold: 0.5 }).observe(v);
+  });
 
   /* ── カルーセル ── */
   document.querySelectorAll('.phone-carousel').forEach(function (car) {
