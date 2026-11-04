@@ -536,10 +536,20 @@
       </figure>
     </div>
     <div class="container">
-      <ol class="flow">
-        <li><span class="flow__n" aria-hidden="true">1</span><span>出港したら、釣行を開始</span></li>
-        <li><span class="flow__n" aria-hidden="true">2</span><span>釣れたら、1枚撮る</span></li>
-        <li><span class="flow__n" aria-hidden="true">3</span><span>帰ったら、振り返り</span></li>
+      <!-- 押すと説明が開く。1 つ開くと、ほかは閉じる -->
+      <ol class="flow flow--open">
+        <li><details name="howto-flow" class="flow__item">
+          <summary><span class="flow__n" aria-hidden="true">1</span><span>出港したら、釣行を開始</span></summary>
+          <p class="flow__body">地図の左上の「釣行を開始」を押すと、航跡の記録が始まります。帰港したら「終了」を押してください。押し忘れても、釣果はいつも通り記録できます。</p>
+        </details></li>
+        <li><details name="howto-flow" class="flow__item">
+          <summary><span class="flow__n" aria-hidden="true">2</span><span>釣れたら、1枚撮る</span></summary>
+          <p class="flow__body">画面下の中央のカメラで撮るだけ。魚種・水深・潮・海面水温が入り、そのまま、いまの海と答え合わせができます。違うところがあれば、そこだけ直してください。</p>
+        </details></li>
+        <li><details name="howto-flow" class="flow__item">
+          <summary><span class="flow__n" aria-hidden="true">3</span><span>帰ったら、振り返り</span></summary>
+          <p class="flow__body">釣行の画面で押すと、その日の船宿の釣果と並べた振り返りを作ります。船宿の釣果は夜9時ごろに届くので、作れるのはそれ以降です。</p>
+        </details></li>
       </ol>
     </div>
   </section>
@@ -626,7 +636,8 @@
     <div class="container" id="features" style="margin-top:var(--section-gap);">
       <h3 class="sub-heading" style="font-size:var(--text-heading);"><span class="tt-orange"><span class="nw">たまるほど、</span></span><span class="nw">自分の</span><span class="nw">海になる。</span></h3>
       <p class="section-lead">分析、図鑑、シェア画像は、無料のままです。</p>
-      <div class="mini-grid mini-grid--5">
+      <div class="mini-grid">
+        <figure class="mini-card"><img src="/assets/img/2.0/past-2-trips.webp" alt="地図に過去の釣行を2回分出した画面。釣行ごとに色を変えた航跡の線と、釣れた魚の名前（デモ用の記録）" width="750" height="1631" loading="lazy" decoding="async" /><figcaption>釣行の航跡</figcaption></figure>
         <figure class="mini-card" id="auto-data"><img src="/assets/img/2.0/analysis.webp" alt="分析の画面。よく釣れている条件と傾向の一覧" width="750" height="1631" loading="lazy" decoding="async" /><figcaption>統計分析</figcaption></figure>
         <figure class="mini-card"><img src="/assets/img/2.0/views-trip-real.webp" alt="釣行ビュー。釣行ごとのカード" width="750" height="1625" loading="lazy" decoding="async" /><figcaption>5つの見方</figcaption></figure>
         <figure class="mini-card" id="zukan"><img src="/assets/img/3.0/zukan-now.webp" alt="図鑑のワラサの画面の「今の相模湾」。始まった、7日前より上がった船宿5軒中1軒、直近14日の推移" width="750" height="1101" loading="lazy" decoding="async" /><figcaption>図鑑</figcaption></figure>
@@ -1588,6 +1599,17 @@
         }
       });
     }, { threshold: 0.5 }).observe(v);
+  });
+
+  /* ── 撮るだけの 1・2・3：1 つ開いたら、ほかを閉じる（details の name が効かないブラウザのため） ── */
+  document.querySelectorAll('.flow--open').forEach(function (list) {
+    var items = list.querySelectorAll('details');
+    items.forEach(function (d) {
+      d.addEventListener('toggle', function () {
+        if (!d.open) return;
+        items.forEach(function (o) { if (o !== d) o.open = false; });
+      });
+    });
   });
 
   /* ── カルーセル ── */
