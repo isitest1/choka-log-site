@@ -309,8 +309,8 @@
     <p class="hero__sub hero__sub--lead">
       <span class="nw">3.0から、</span><span class="nw">その1枚を、</span><span class="nw">いまの海と</span><span class="nw">答え合わせ</span><span class="nw">できるように</span><span class="nw">なりました。</span>
     </p>
-    <p class="hero__sub hero__sub--body">その日の海の調子が、魚ごとに分かります。物差しは、船宿の釣果です。1枚撮るだけで、水深・潮・海面水温・航跡が残り、帰ったら船宿の釣果と自分の釣果を並べて振り返れます。</p>
-    <p class="hero__fine">地図・航跡・統計分析・いまの海は無料です。振り返りも最初の3回まで無料。</p>
+    <p class="hero__sub hero__sub--body">その日の海の調子が、船宿の釣果を物差しにして、魚ごとに分かります。釣れたら1枚撮るだけで、水深も、潮も、海面水温も、航跡も残ります。帰ったら、船宿の釣果と自分の釣果を並べて振り返れます。</p>
+    <p class="hero__fine">地図・航跡・統計分析・いまの海は無料です。振り返りと作戦も、合わせて最初の3回まで無料。</p>
 
     <!-- App Store バッジ + Google Play バッジ（スマートフォンの幅では縦に並ぶ。Android の端末では Android版を先に表示） -->
     <div class="hero-cta">
@@ -344,10 +344,10 @@
     <div class="phone-carousel hero__carousel">
       <div class="phone-mockup phone-carousel__mockup">
         <div class="phone-carousel__track">
-          <div class="phone-carousel__slide"><div class="ph">仮：hero-chokyo</div></div>
-          <div class="phone-carousel__slide"><div class="ph">仮：hero-review</div></div>
+          <div class="phone-carousel__slide"><img src="/assets/img/3.0/hero-chokyo.webp" alt="釣況の「いま」の画面。相模湾のアオリイカが「好調続く」、比べられた船宿9軒のうち8軒が普段以上。直近14日の推移と、明日の出船の目安" width="750" height="1631" decoding="async" loading="lazy" /></div>
+          <div class="phone-carousel__slide"><img src="/assets/img/3.0/hero-review.webp" alt="釣行の振り返りの画面。10月30日の釣行（2匹）は「腕で釣った日」。海とあなたの2行と、作戦の答え合わせ" width="750" height="1631" decoding="async" loading="lazy" /></div>
           <div class="phone-carousel__slide"><img src="/assets/img/2.0/map-zoom.webp" alt="地図の画面。等深線と水深の色分けで、海の底の形が見える" width="750" height="1631" decoding="async" loading="lazy" /></div>
-          <div class="phone-carousel__slide"><div class="ph">仮：hero-plan</div></div>
+          <div class="phone-carousel__slide"><img src="/assets/img/3.0/hero-plan.webp" alt="次の釣行の作戦の画面。11月7日（土）の狙い目の1位はブリ、14:52からの下げ潮で25〜65m。2位カワハギ、3位マダイ" width="750" height="1631" decoding="async" loading="lazy" /></div>
         </div>
       </div>
       <div class="phone-carousel__nav">
@@ -382,11 +382,11 @@
         <div class="changes__col">
           <h3 class="changes__title">変わったこと</h3>
           <ul class="feature-list">
-            <li><a href="#now">いまの海</a></li>
-            <li><a href="#howto">海面水温の自動入力</a></li>
-            <li><a href="#review">AI の振り返り</a></li>
-            <li><a href="#import">海釣図V の記録の取り込み</a></li>
-            <li><a href="#plus">釣果ログ プラス</a></li>
+            <li><span><a href="#now">いまの海</a>：船宿の釣果をもとに、海の調子を魚ごとに出します（無料）</span></li>
+            <li><span><a href="#howto">海面水温の自動入力</a>：衛星で測った海の表面の水温が入ります（無料）</span></li>
+            <li><span><a href="#review">AI の振り返り</a>：その日の船宿の釣果と並べて読みます（最初の3回まで無料）</span></li>
+            <li><span><a href="#import">海釣図V の記録の取り込み</a>：航跡とマイポイントを取り込めます（無料）</span></li>
+            <li><span><a href="#plus">釣果ログ プラス</a>：振り返り・作戦・月報などを、すべての釣行で</span></li>
           </ul>
         </div>
       </div>
@@ -402,22 +402,27 @@
           <!-- 魚の名前は固定の文字。公開の前にオーナーが決める -->
           <span class="tt-orange"><span class="nw">今週の</span><span class="nw">相模湾、</span></span><span class="nw">マダイが</span><span class="nw">好調。</span>
         </h2>
-        <p class="section-lead"><span class="draft-note">下書き</span> 海の調子を、魚ごとに「好調」「終盤」などで出します。物差しにしているのは、船宿が出している釣果です。船宿同士の数は比べず、それぞれの船宿の「ふだん」と比べています。推移・上向いたときの通知・出船の目安も見られます。更新の時刻は features-3.0.md で確かめて書きます。</p>
+        <p class="section-lead">船宿が出している釣果を物差しにして、いまの海の調子を魚ごとに出します。「好調続く」「上向き」「始まった」のように一言で出し、直近14日の推移も見られます。</p>
+        <p class="section-lead">船宿同士の数は比べません。それぞれの船宿の「ふだん」と比べて、何軒がふだん以上に釣っているかを見ています。</p>
+        <p class="section-lead">気になる魚が上向いたら、朝に知らせます。明日の出船の目安も、風と波から出します。</p>
+        <p class="section-lead">船宿の釣果は、毎晩9時ごろにまとめて届きます。遅れて載った釣果は、翌朝に足されます。</p>
         <p class="note-line">釣況と出船の目安は参考です。出るかどうかは、船宿とご自身で決めてください。</p>
         <div class="area-note" id="now-area">
-          <p>「いまの海」は、いまは相模湾と東京湾だけです。記録・魚種判定・地図・航跡・統計は、全国の海で使えます。</p>
+          <p>「いまの海」は、いまは相模湾、東京湾、外房・南房、茨城、伊豆・駿河湾、大阪湾・明石の6つの海域です。記録・魚種判定・地図・航跡・統計は、全国の海で使えます。</p>
           <p>他の海は、順番に増やしています。見たい海を教えてください。次の海域は、声の多いところから決めます。<a href="#survey-area">見たい海を教える →</a></p>
         </div>
       </div>
       <figure class="loop-video">
         <div class="loop-video__frame">
-          <video class="js-section-video" muted loop playsinline preload="none" width="1080" height="1920"
-            poster="/assets/img/3.0/r2-poster.webp" aria-label="（仮）いまの海の画面を、魚ごとに見ていく動画">
-            <source src="/assets/img/3.0/r2.mp4" type="video/mp4" />
+          <video class="js-section-video" muted loop playsinline preload="none" width="720" height="1280"
+            poster="/assets/img/3.0/r2-sawara-poster.webp"
+            aria-label="釣況の「いま」で、東京湾のサワラのカードから、サワラの画面の推移に進む動画">
+            <source src="/assets/img/3.0/r2-sawara.webm" type="video/webm" />
+            <source src="/assets/img/3.0/r2-sawara.mp4" type="video/mp4" />
           </video>
           <button type="button" class="loop-video__play" aria-label="動画を再生する">▶ 再生</button>
         </div>
-        <figcaption>（仮）いまの海の画面を、魚ごとに見ていく動画</figcaption>
+        <figcaption>東京湾のいまの海。サワラは、比べられた船宿8軒のうち6軒が、ふだん以上に釣っています。</figcaption>
       </figure>
     </div>
   </section>
@@ -430,17 +435,21 @@
         <h2 id="howto-heading" class="section-heading">
           <span class="tt-orange"><span class="nw">船の上で、</span></span><span class="nw">入力なんて</span><span class="nw">してられない。</span>
         </h2>
-        <p class="section-lead"><span class="draft-note">下書き</span> 釣れたら1枚撮るだけで、魚種・水深・潮・海面水温（衛星）が入ります。記録した直後に、その日の海と答え合わせができます。電波がなくても記録でき、魚種の判定は端末の中で終わります。電波が要るものは features-3.0.md で確かめて書きます。</p>
+        <p class="section-lead">釣れたら、画面の下のカメラで1枚撮るだけ。魚種は写真から判定し、水深は海底地形から、潮・天気・風・波・底質も自動で入ります。3.0 から、水温には衛星で測った海面水温が入ります。手で入れた値があれば、そちらが優先です。</p>
+        <p class="section-lead">記録した直後に、いまの海と答え合わせ。その魚が船宿でどうだったかと、今日のあなたが何匹目で、ふだんは何匹かを並べて出します。</p>
+        <p class="section-lead">電波がなくても記録できます。魚種の判定はスマートフォンの中で終わるので、沖でも動きます。潮・天気・水温は、電波が戻ったときに取り直して入れます。いまの海の更新と、AI の振り返り・作戦には、電波が要ります。</p>
       </div>
       <figure class="loop-video">
         <div class="loop-video__frame">
-          <video class="js-section-video" muted loop playsinline preload="none" width="1080" height="1920"
-            poster="/assets/img/3.0/r3-poster.webp" aria-label="（仮）1枚撮って、記録した直後の答え合わせまでの動画">
-            <source src="/assets/img/3.0/r3.mp4" type="video/mp4" />
+          <video class="js-section-video" muted loop playsinline preload="none" width="720" height="1280"
+            poster="/assets/img/3.0/r3-auto-poster.webp"
+            aria-label="アカハタを1枚撮り、登録の画面で魚の名前・水深・水温の枠に順に寄る動画">
+            <source src="/assets/img/3.0/r3-auto.webm" type="video/webm" />
+            <source src="/assets/img/3.0/r3-auto.mp4" type="video/mp4" />
           </video>
           <button type="button" class="loop-video__play" aria-label="動画を再生する">▶ 再生</button>
         </div>
-        <figcaption>（仮）1枚撮って、記録した直後の答え合わせまでの動画</figcaption>
+        <figcaption>アカハタを1枚撮ると、魚種・水深・海面水温（衛星）が入ります。</figcaption>
       </figure>
     </div>
     <div class="container">
@@ -453,13 +462,17 @@
         <article class="step-card">
           <div class="step-badge" aria-label="ステップ2">2</div>
           <h3 class="step-title"><span class="nw">釣れたら、</span><span class="nw">1枚撮る</span></h3>
-          <p class="step-body"><span class="draft-note">下書き</span> 画面下の中央のカメラで撮るだけ。違うところがあれば、そこだけ直してください。</p>
+          <p class="step-body">画面下の中央のカメラで撮るだけ。魚種・水深・潮・海面水温が入り、そのまま、いまの海と答え合わせができます。違うところがあれば、そこだけ直してください。</p>
         </article>
         <article class="step-card">
           <div class="step-badge" aria-label="ステップ3">3</div>
           <h3 class="step-title"><span class="nw">帰ったら、</span><span class="nw">振り返り</span></h3>
-          <p class="step-body"><span class="draft-note">下書き</span> その日の船宿の釣果と、自分の釣果を並べて振り返ります。</p>
+          <p class="step-body">釣行の画面で押すと、その日の船宿の釣果と並べた振り返りを作ります。船宿の釣果は夜9時ごろに届くので、作れるのはそれ以降です。</p>
         </article>
+      </div>
+      <div class="sst-row">
+        <img src="/assets/img/3.0/after-catch.webp" alt="記録した直後の画面。アカハタ 13:31・中潮・48m。いまの海と答え合わせの、海とあなたの2行" width="750" height="1631" loading="lazy" decoding="async" />
+        <img src="/assets/img/3.0/sst.webp" alt="登録の画面の水温の枠。水深は推定の48m、水温は海面水温（衛星）の22.3℃" width="750" height="348" loading="lazy" decoding="async" />
       </div>
     </div>
   </section>
@@ -501,25 +514,62 @@
           <span class="tt-orange"><span class="nw">海のせい？</span></span><span class="nw">自分のせい？</span>
         </h2>
         <p class="sub-heading" style="margin:0;"><span class="nw">自分の</span><span class="nw">釣果を、</span><span class="nw">船宿の</span><span class="nw">釣果と</span><span class="nw">同じ</span><span class="nw">物差しで。</span></p>
-        <p class="section-lead"><span class="draft-note">下書き</span> その日の船宿の釣果の中に、自分の釣果を置いて見ます。4 つに分けたうえで（分け方の正式な名前は features で確かめます）、次に試すことを書きます。数字と分類はアプリが計算し、AI が書くのは文章だけです。緯度経度は送りません。</p>
-        <p style="margin:0; font-weight:700;">振り返りは、最初の3回までは無料です。</p>
+        <p class="section-lead">釣行の画面で押すと、その日の船宿の釣果の中に、自分の釣果を置いて読みます。海は良かったのか、渋かったのか。自分はふだんより釣れたのか。</p>
+        <p class="section-lead">その組み合わせで「腕で釣った日」「海に乗った日」「海が渋かった日」「取りこぼした日」の4つに分け、よかったことと、次に試すことを書きます。</p>
+        <p class="section-lead">数字と分類はアプリが計算し、AI が書くのは文章だけです。釣った場所の緯度経度、航跡、写真は送りません。送るのは、海域・日付・潮・水深・魚種などの数字と、あなたが付けたエリアの名前、約10km四方の区画です。</p>
+        <p style="margin:0; font-weight:700;">振り返りは、作戦と合わせて最初の3回までは無料です。</p>
+        <p style="margin:0; font-size:var(--text-body-sm); color:var(--color-ink-muted);">いまの海に対応している海域の釣行で、その日の船宿の釣果が届いた後（夜9時ごろ以降）に作れます。</p>
       </div>
       <figure class="loop-video">
         <div class="loop-video__frame">
-          <video class="js-section-video" muted loop playsinline preload="none" width="1080" height="1920"
-            poster="/assets/img/3.0/r4-poster.webp" aria-label="（仮）振り返りの画面の動画">
-            <source src="/assets/img/3.0/r4.mp4" type="video/mp4" />
+          <video class="js-section-video" muted loop playsinline preload="none" width="720" height="1280"
+            poster="/assets/img/3.0/r4-review-poster.webp"
+            aria-label="振り返りの画面で、海の行、あなたの行、「腕で釣った日」の見出しを順に囲む動画">
+            <source src="/assets/img/3.0/r4-review.webm" type="video/webm" />
+            <source src="/assets/img/3.0/r4-review.mp4" type="video/mp4" />
           </video>
           <button type="button" class="loop-video__play" aria-label="動画を再生する">▶ 再生</button>
         </div>
-        <figcaption>（仮）振り返りの画面の動画</figcaption>
+        <figcaption>海の行とあなたの行。2つを合わせて「腕で釣った日」になりました。</figcaption>
       </figure>
     </div>
     <div class="review-sample">
-      <div class="review-sample__shot"><div class="ph">仮：振り返りの画面</div></div>
+      <div class="review-sample__shot">
+        <img src="/assets/img/3.0/hero-review.webp" alt="振り返りの画面の上。腕で釣った日の見出しと、海とあなたの2行、作戦の答え合わせ" width="750" height="1631" loading="lazy" decoding="async" />
+        <img src="/assets/img/3.0/hero-review-next.webp" alt="振り返りの画面の下。時間の使い方、自分の過去との比べ、よかったこと、次に試すこと" width="750" height="995" loading="lazy" decoding="async" style="margin-top:16px;" />
+      </div>
       <div>
-        <div class="review-sample__text">（review-sample.md の全文がここに入ります。印の付いた 1 行は<span class="review-sample__mark">このように枠で囲みます</span>）</div>
-        <p class="review-sample__caption">開発者の実際の釣行（2匹の日）の振り返りです。</p>
+        <div class="review-sample__text">
+          <h3>この日の振り返り</h3>
+          <p>10月30日 金 中潮　06:49 → 10:00（3h10m）　相模湾　2匹</p>
+          <h4>腕で釣った日</h4>
+          <p>海は渋かったのに、ふだん以上に釣れた日</p>
+          <p class="review-sample__mark">海　相模湾の船宿 7軒のうち 5軒が、ふだんより少ない釣果でした。</p>
+          <p class="review-sample__mark">あなた　2匹は、あなたの41釣行のうち上から16番目の結果です（ふだんは2匹）。</p>
+          <h4>作戦の答え合わせ（10/30 金の作戦）</h4>
+          <ul><li>1位　アカハタ　狙い 12:56〜 上げ潮・25m　結果 釣れず</li><li>2位　カンパチ　狙い 12:56〜 上げ潮・25〜40m　結果 釣れず</li><li>3位　アオリイカ　狙い 7:50〜 下げ潮・25〜50m　結果 釣れず</li></ul>
+          <p>作戦の外で：ワラサ 1匹・ブリ 1匹</p>
+          <p>外れ　アカハタ、カンパチ、アオリイカは予定した時間や水深で釣れませんでした。</p>
+          <p>次の作戦に生かす　下げ潮のタイミングと60m以上の水深を意識してください。</p>
+          <h4>潮</h4>
+          <p>06:00から07:00にかけての上げ潮では釣果がありませんでした。08:00からの下げ潮が始まった後に、09:08と09:26に釣果がありました。</p>
+          <h4>風と波</h4>
+          <p>08:00から風速8.5m/s、波1.4mとなり、風が強まっていました。流しの速さは0.2から0.4knでした。</p>
+          <h4>場所と水深</h4>
+          <p>相模湾の64mから65mの水深でワラサとブリが釣れました。それ以外の場所では釣果がありませんでした。</p>
+          <h4>船宿との比べ</h4>
+          <p>船宿のデータでは、ブリはふだんより少なめでした。あなたは64mから65mの水深で釣果を上げています。</p>
+          <h4>時間の使い方</h4>
+          <p>06:49に出港して10:00に帰港しました。潮が動いていた時間は365分でした。</p>
+          <h4>自分の過去との比べ</h4>
+          <p>過去の同じ時期の釣行では、ふだんは3匹釣れています。今回の釣果は2匹でした。</p>
+          <h4>よかったこと</h4>
+          <ul><li>09:00過ぎの下げ潮のタイミングで釣果を得られました。</li><li>64mから65mの水深を捉えることができました。</li></ul>
+          <h4>次に試すこと</h4>
+          <ol style="margin:0 0 8px; padding-left:1.4em;"><li>09:00前後の下げ潮の動きに合わせて場所を探してください。</li><li>風速が8m/sを超える状況での流し方を検討してください。</li></ol>
+          <p style="color:var(--color-ink-muted); font-size:var(--text-caption);">11/3 7:31 に作成・AI が書いた文章です</p>
+        </div>
+        <p class="review-sample__caption">開発者の実際の釣行（2匹の日）の振り返りです。枠で囲んだ「海」と「あなた」の2行が、この日の要点です。</p>
       </div>
     </div>
   </section>
@@ -532,17 +582,23 @@
         <h2 id="plan-heading" class="section-heading">
           <span class="tt-orange"><span class="nw">金曜の夜、</span></span><span class="nw">もう釣りは</span><span class="nw">始まってる。</span>
         </h2>
-        <p class="section-lead"><span class="draft-note">下書き</span> 前回の振り返りの「次に試すこと」から始まります。狙う魚・潮・水深・一番近かった過去の日と、その理由。「次に行ける日」を選んでおくと、海の上でも知らせます（出港したら作戦／水深から外れたら／当たり条件と重なる日の前日）。帰ったら、作戦の答え合わせ。</p>
+        <p class="section-lead">行く日の潮・天気・風と、船宿の釣況、あなたの記録から、次の釣行の作戦を立てます。</p>
+        <p class="section-lead">次に行ける日を選ぶと、狙う魚の順位と、狙う時間・潮・水深、その理由が出ます。あなたの過去の釣行のうち、いちばん近かった日とも照らし合わせます。</p>
+        <p class="section-lead">海の上でも知らせます。出港したら、その日の作戦を。流している水深が作戦から外れたら、そのことを。あなたの当たりの条件と重なる日は、前の日の夕方6時に。</p>
+        <p class="section-lead">帰ったら、作戦の答え合わせ。順位ごとに釣れたかどうかと、次の作戦に生かすことを出します。</p>
+        <p style="margin:0; font-size:var(--text-body-sm); color:var(--color-ink-muted);">作戦も、振り返りと合わせて最初の3回までは無料で作れます。海の上の通知は、プラスだけです。</p>
       </div>
       <figure class="loop-video">
         <div class="loop-video__frame">
-          <video class="js-section-video" muted loop playsinline preload="none" width="1080" height="1920"
-            poster="/assets/img/3.0/r5-poster.webp" aria-label="（仮）作戦の画面の動画">
-            <source src="/assets/img/3.0/r5.mp4" type="video/mp4" />
+          <video class="js-section-video" muted loop playsinline preload="none" width="720" height="1280"
+            poster="/assets/img/3.0/r5-plan-poster.webp"
+            aria-label="作戦の日を選ぶ画面から、狙い目ランキングの1位のブリに寄って囲む動画">
+            <source src="/assets/img/3.0/r5-plan.webm" type="video/webm" />
+            <source src="/assets/img/3.0/r5-plan.mp4" type="video/mp4" />
           </video>
           <button type="button" class="loop-video__play" aria-label="動画を再生する">▶ 再生</button>
         </div>
-        <figcaption>（仮）作戦の画面の動画</figcaption>
+        <figcaption>作戦の日を選ぶと、1位はブリ。14:52からの下げ潮で、25〜65mを狙います。</figcaption>
       </figure>
     </div>
 
@@ -552,20 +608,19 @@
       <div class="grow-cols">
         <div>
           <h4>無料</h4>
-          <p style="margin:0; color:var(--color-ink-muted);"><span class="draft-note">下書き</span> 統計分析・5つの見方・図鑑（いまの海つき）・シェア画像（場所は出ない。いまの海の一行つき）・去年の今ごろ。</p>
+          <p style="margin:0; color:var(--color-ink-muted);">統計分析と5つの見方は、2.0 のまま、釣況の「これまで」に入りました。図鑑には、その魚の今の海が付きます。シェア画像には、場所を出さずに、今の海の一行を入れられます。去年の今ごろの自分の釣果も出ます（記録があるときだけ）。</p>
         </div>
         <div>
           <h4>プラス</h4>
-          <p style="margin:0; color:var(--color-ink-muted);"><span class="draft-note">下書き</span> まとめた振り返り・月報。</p>
+          <p style="margin:0; color:var(--color-ink-muted);">まとめた振り返りは、これまでの釣行をまとめて読み、あなたの当たりの形を探します。月報は、ひと月の釣行をまとめて振り返ります。</p>
         </div>
       </div>
-      <div class="mini-grid">
+      <div class="mini-grid" style="grid-template-columns:repeat(5, 1fr);">
         <figure class="mini-card" id="auto-data"><img src="/assets/img/2.0/analysis.webp" alt="分析の画面。よく釣れている条件と傾向の一覧" width="750" height="1631" loading="lazy" decoding="async" /><figcaption><strong>統計分析</strong>よく釣れている条件を、自分の記録から</figcaption></figure>
         <figure class="mini-card"><img src="/assets/img/2.0/views-trip-real.webp" alt="釣行ビュー。釣行ごとのカード" width="750" height="1625" loading="lazy" decoding="async" /><figcaption><strong>5つの見方</strong>釣行・釣果・魚種・水深・ギャラリー</figcaption></figure>
-        <figure class="mini-card" id="zukan"><img src="/assets/img/2.0/zukan.webp" alt="図鑑の一覧" width="750" height="1631" loading="lazy" decoding="async" /><figcaption><strong>図鑑</strong>釣った魚ごとの自己記録（いまの海つき）</figcaption></figure>
-        <figure class="mini-card" id="share"><img src="/assets/img/2.0/share-poster.webp" alt="シェア画像" width="750" height="938" loading="lazy" decoding="async" /><figcaption><strong>シェア画像</strong>場所は出ません</figcaption></figure>
-        <figure class="mini-card"><div class="ph">仮：去年の今ごろ</div><figcaption><strong>去年の今ごろ</strong>去年の同じころの自分の記録</figcaption></figure>
-        <figure class="mini-card"><div class="ph">仮：月報</div><figcaption><strong>まとめた振り返り・月報</strong><span class="tag tag--plus" style="margin:2px 0 0;">プラス</span></figcaption></figure>
+        <figure class="mini-card" id="zukan"><img src="/assets/img/3.0/zukan-now.webp" alt="図鑑のワラサの画面の「今の相模湾」。始まった、7日前より上がった船宿5軒中1軒、直近14日の推移" width="750" height="1101" loading="lazy" decoding="async" /><figcaption><strong>図鑑</strong>その魚の、今の海つき</figcaption></figure>
+        <figure class="mini-card" id="share"><img src="/assets/img/3.0/share-line.webp" alt="シェア画像。ワラサ 70cm に、今の海の一行「相模湾 ブリ 始まりの日の1尾」。場所は出ない" width="750" height="1631" loading="lazy" decoding="async" /><figcaption><strong>シェア画像</strong>場所は出さず、今の海の一行を</figcaption></figure>
+        <figure class="mini-card"><img src="/assets/img/3.0/bulk-review-top.webp" alt="まとめた振り返り。30釣行を4つに分けたます目と、海に乗るのがうまいタイプ" width="750" height="1631" loading="lazy" decoding="async" /><figcaption><strong>まとめた振り返り</strong><span class="tag tag--plus" style="margin:2px 0 0;">プラス</span></figcaption></figure>
       </div>
       <p style="margin:24px 0 0;"><a href="/analysis/">分析の見方をくわしく見る →</a></p>
     </div>
@@ -579,36 +634,36 @@
       <table class="plan-table">
         <caption class="sr-only">無料とプラスで使えるもの</caption>
         <thead>
-          <tr><th scope="col"></th><th scope="col">無料</th><th scope="col" class="plan-table__plus">プラス</th></tr>
+          <tr><th scope="col"><span class="sr-only">機能</span></th><th scope="col">無料</th><th scope="col" class="plan-table__plus">プラス</th></tr>
         </thead>
         <tbody>
           <tr><th scope="row">1枚撮るだけの記録</th><td>○</td><td>○</td></tr>
           <tr><th scope="row">地図・航跡</th><td>○</td><td>○</td></tr>
-          <tr><th scope="row">いまの海</th><td>○</td><td>○</td></tr>
+          <tr><th scope="row">いまの海<sup>※1</sup></th><td>○</td><td>○</td></tr>
           <tr><th scope="row">これまで（分析・図鑑・シェア・去年の今ごろ）</th><td>○</td><td>○</td></tr>
           <tr><th scope="row">他のアプリの記録の取り込み</th><td>○</td><td>○</td></tr>
-          <tr><th scope="row">釣行ごとの AI の振り返り</th><td>最初の3回</td><td>すべての釣行</td></tr>
+          <tr><th scope="row">釣行ごとの AI の振り返り</th><td>最初の3回<sup>※2</sup></td><td>すべての釣行</td></tr>
           <tr><th scope="row">まとめた振り返り・月報</th><td class="is-no">−</td><td>○</td></tr>
-          <tr><th scope="row">作戦と答え合わせ</th><td class="is-no">−</td><td>○</td></tr>
+          <tr><th scope="row">作戦と答え合わせ</th><td>最初の3回<sup>※2</sup></td><td>○</td></tr>
           <tr><th scope="row">海の上の通知</th><td class="is-no">−</td><td>○</td></tr>
         </tbody>
       </table>
+      <p class="price-fine">※1 船宿ごとの直近の一覧（船宿の名前と釣果）は、プラスだけです。　※2 振り返りと作戦を、合わせて3回までです。</p>
       <p class="price">年額 5,400円（月あたり450円）／月額 600円。税込、App Store・Google Play で自動更新。</p>
       <p class="price-sub">月額で1か月だけ試すこともできます。</p>
       <p class="price-fine">価格は、App Store・Google Play に表示される価格が優先します。</p>
       <div class="plus-words">
-        <p>振り返りは最初の3回まで、誰でも無料で使えます。無料体験の代わりです。</p>
-        <p>有料にしたのは、AIに文章を書かせる部分だけです。</p>
+        <p>振り返りと作戦は、合わせて最初の3回まで、誰でも無料で使えます。無料体験の代わりです。</p>
+        <p>有料にしたのは、AIに文章を書かせる部分と、作戦につながる海の上の通知、船宿ごとの直近の一覧です。</p>
         <p>2.0で使えていたものは、すべてそのまま無料です。有料にする予定はありません。広告も入れません。</p>
-        <p>解約しても記録は消えません。書いてもらった振り返りも残り、無料の機能はそのまま使えます。 <span class="draft-note">振り返りが残ることを features で確かめる</span></p>
+        <p>解約しても記録は消えません。書いてもらった振り返りも残り、無料の機能はそのまま使えます。</p>
       </div>
       <div class="terms-box" id="plus-terms">
         <h3>購入の前に</h3>
         <dl>
-          <dt>価格</dt><dd>年額 5,400円（月あたり450円）／月額 600円（税込）</dd>
-          <dt>期間</dt><dd><span class="draft-note">下書き</span> 年額は1年、月額は1か月ごと</dd>
-          <dt>自動更新</dt><dd><span class="draft-note">下書き</span> 期間の終わりの24時間前までに解約しない限り、自動で更新されます</dd>
-          <dt>解約の方法</dt><dd><span class="draft-note">下書き</span> iPhone は App Store の「サブスクリプション」、Android は Google Play の「定期購入」から</dd>
+          <dt>価格</dt><dd>年額 5,400円（税込）／月額 600円（税込）。無料体験はありません</dd>
+          <dt>期間と自動更新</dt><dd>年額は1年ごと、月額は1か月ごとに自動で更新されます。お支払いは購入の確定時に Apple ID（Android版は Google アカウント）に請求されます。期間が終わる24時間前までに解約しない限り、同じ料金で自動更新されます</dd>
+          <dt>解約の方法</dt><dd>iPhone の「設定」→ 自分の名前 →「サブスクリプション」（Android版は Google Play の「定期購入」）。アプリの設定の「プランの管理」からも開けます</dd>
           <dt>利用規約</dt><dd><a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener">Apple の標準の利用規約（EULA）</a></dd>
           <dt>プライバシー</dt><dd><a href="/privacy/">プライバシーポリシー</a></dd>
         </dl>
@@ -624,26 +679,48 @@
         <h2 id="import-heading" class="section-heading">
           <span class="tt-orange"><span class="nw">これまでの</span><span class="nw">記録も、</span></span><span class="nw">いっしょに。</span>
         </h2>
-        <p class="section-lead"><span class="draft-note">下書き</span> 海釣図V のバックアップから、航跡と、釣果にしたいマイポイントを取り込めます。海釣図V との併用もできます。取り込みは端末の中だけで行い、外には何も送りません。取り込んだ記録も、ふだんの記録と同じく、分析・図鑑・振り返りに入ります。釣った場所は、どこにも出ません。</p>
+        <p class="section-lead">海釣図V のバックアップ（zip）から、航跡と、釣果にしたいマイポイントを取り込めます。</p>
+        <p class="section-lead">同じ zip を2回取り込んでも、二重にはなりません。海釣図V と併用しながら、ときどき取り込むこともできます。</p>
+        <p class="section-lead">取り込みはスマートフォンの中だけで行い、外には何も送りません。取り込んだ記録も、ふだんの記録と同じく、分析・図鑑・振り返りに入ります。釣った場所は、どこにも出ません。</p>
       </div>
       <figure class="loop-video">
         <div class="loop-video__frame">
-          <video class="js-section-video" muted loop playsinline preload="none" width="1080" height="1920"
-            poster="/assets/img/3.0/r6-poster.webp" aria-label="（仮）海釣図V のバックアップを取り込む動画">
-            <source src="/assets/img/3.0/r6.mp4" type="video/mp4" />
+          <video class="js-section-video" muted loop playsinline preload="none" width="720" height="1280"
+            poster="/assets/img/3.0/r6-import-poster.webp"
+            aria-label="海釣図のバックアップの取り込みで、点を「魚」の札で絞り、写真を自動で探すを選び、確かめて取り込むまでの動画">
+            <source src="/assets/img/3.0/r6-import.webm" type="video/webm" />
+            <source src="/assets/img/3.0/r6-import.mp4" type="video/mp4" />
           </video>
           <button type="button" class="loop-video__play" aria-label="動画を再生する">▶ 再生</button>
         </div>
-        <figcaption>（仮）海釣図V のバックアップを取り込む動画</figcaption>
+        <figcaption>マイポイントを「魚」の札で絞り、写真を自動で探して、取り込むまで。</figcaption>
       </figure>
     </div>
     <div class="col-narrow" style="margin-top:64px;">
       <h3 class="sub-heading" id="import-steps">取り込みの手順</h3>
-      <ol class="import-steps"><li><div><h4>海釣図V でバックアップを作り、iPhone の「ファイル」に保存する</h4><p><span class="draft-note">下書き</span></p></div><div class="ph">仮：import-1</div></li><li><div><h4>釣果ログで、その zip を選ぶ</h4><p><span class="draft-note">下書き</span></p></div><div class="ph">仮：import-2</div></li><li><div><h4>取り込む航跡を選ぶ</h4><p><span class="draft-note">下書き</span></p></div><div class="ph">仮：import-3</div></li><li><div><h4>釣果にするマイポイントを選ぶ</h4><p><span class="draft-note">下書き</span></p></div><div class="ph">仮：import-4</div></li><li><div><h4>魚の名前を確かめる</h4><p><span class="draft-note">下書き</span></p></div><div class="ph">仮：import-5</div></li><li><div><h4>写真の付け方を選ぶ</h4><p><span class="draft-note">下書き</span></p></div><div class="ph">仮：import-6</div></li><li><div><h4>件数を確かめて取り込む</h4><p><span class="draft-note">下書き</span></p></div><div class="ph">仮：import-7</div></li></ol>
+      <ol class="import-steps">
+        <li class="no-shot"><div><h4>海釣図V のバックアップの機能で zip を作る</h4></div></li>
+        <li><div><h4>釣果ログの 設定 →「釣行の記録」→「海釣図のバックアップから取り込む」で、その zip を選ぶ</h4><p>ファイルのアプリから zip を選ぶと、中に入っている航跡とマイポイントの数が出ます。</p></div><div class="import-steps__shots"><img src="/assets/img/3.0/import-1.webp" alt="設定の「釣行の記録」。GPX から釣行を取り込む、海釣図のバックアップから取り込む" width="750" height="1631" loading="lazy" decoding="async" /><img src="/assets/img/3.0/import-2.webp" alt="海釣図のバックアップの中身。航跡171回（2022年5月〜2026年10月）、マイポイント803か所" width="750" height="1631" loading="lazy" decoding="async" /></div></li>
+        <li><div><h4>取り込む航跡を選ぶ</h4><p>期間で絞れます。すでにアプリにある航跡と時間が重なる回は、「取り込み済み」として最初から外れます。</p></div><div class="import-steps__shots"><img src="/assets/img/3.0/import-3.webp" alt="取り込む航跡の一覧。日時・時間・距離が並び、取り込む航跡171回" width="750" height="1631" loading="lazy" decoding="async" /></div></li>
+        <li><div><h4>釣果にするマイポイントを選ぶ</h4><p>最初は何も選ばれていません。アイコン、色、付けた日、「釣行中に付けた点だけ」、名前のまとまりで絞って選びます。点を選ばず、航跡だけを取り込むこともできます。</p></div><div class="import-steps__shots"><img src="/assets/img/3.0/import-4.webp" alt="釣果にする点を選ぶ画面。アイコンの「魚 27」を選んだところ。色・付けた日・釣行中に付けた点だけの絞り込み" width="750" height="1631" loading="lazy" decoding="async" /></div></li>
+        <li class="no-shot"><div><h4>魚の名前を確かめる</h4><p>点の名前が魚の一覧に合えば、自動で入ります（ひらがなや、カッコ書き、絵文字の付いた名前も見ます）。合わない名前は、まとまりごとに一度に決められます。</p></div></li>
+        <li><div><h4>写真を「iPhone から自動で探す」か「何もしない」を選ぶ</h4><p>自動のときは、釣果の時刻の前後10分以内に撮った写真を、いちばん近い釣果に1枚付けます。写真の位置は使いません。写真ライブラリの許可を求めるのは、このときだけです。写真はスマートフォンの外へ送りません。</p></div><div class="import-steps__shots"><img src="/assets/img/3.0/import-5.webp" alt="写真の選び方。iPhone から自動で探す、何もしない" width="750" height="1631" loading="lazy" decoding="async" /></div></li>
+        <li><div><h4>件数を確かめて取り込む</h4><p>途中で「やめる」を押すと、その回の分は何も残りません。</p></div><div class="import-steps__shots"><img src="/assets/img/3.0/import-6-confirm.webp" alt="確かめて取り込む画面。航跡171回、釣果27件、写真（数えています）を取り込みます" width="750" height="1631" loading="lazy" decoding="async" /></div></li>
+      </ol>
       <h3 class="sub-heading" style="margin-top:48px;">取り込んだ後</h3>
-      <p class="section-lead"><span class="draft-note">下書き</span> 水深・水温・天気・潮は、取り込みの後に少しずつ入ります。回ごとに取り消せます。</p><div class="ph" style="max-width:180px;margin-top:16px;">仮：import-undo</div>
+      <div class="import-after">
+        <div>
+          <p class="section-lead">水深・水温・天気・潮は、取り込んだ後に、ふだん釣果を入れたときと同じ自動の入力で、少しずつ入ります。過去の日で取れないものは空のままです。</p>
+        <p class="section-lead">取り込みの終わりの画面の「この取り込みを取り消す」か、設定の「海釣図から取り込んだ分」から、回ごとに取り消せます。</p>
+        <p class="section-lead">航跡171回・釣果27件で写真を自動で探す取り込みは、試験の環境で30秒から1分ほどでした。実際の iPhone では、機種によってその数倍かかることがあります。水深などが入るのは、その後です。</p>
+        </div>
+        <div class="import-steps__shots">
+          <img src="/assets/img/3.0/import-6.webp" alt="取り込みが終わった画面。航跡171回、釣果27件、写真4枚を取り込みました。この取り込みを取り消す" width="750" height="1631" loading="lazy" decoding="async" />
+          <img src="/assets/img/3.0/import-undo.webp" alt="設定の「海釣図から取り込んだ分」。2026/11/4 16:58 の取り込み（釣行171・釣果27件・写真4枚）と、取り消す" width="750" height="1631" loading="lazy" decoding="async" />
+        </div>
+      </div>
       <h3 class="sub-heading" style="margin-top:48px;">取り込めないもの</h3>
-      <p class="section-lead"><span class="draft-note">下書き</span> zip に入っていないもの（features で確かめる）。</p>
+      <p class="section-lead">海釣図V のバックアップには、写真が入っていません。写真は、手順の6で iPhone の写真から探すか、あとで釣果の編集の「写真を付ける」から付けてください。選ばなかったマイポイントは取り込みません。名前が魚の一覧に合わず、決めなかった点の魚種は空のままです。</p>
     </div>
   </section>
 

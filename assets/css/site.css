@@ -1981,3 +1981,28 @@ details:not([open]) .faq-icon-minus { display: none; }
   #map .loop-video video { width: 50vw; }
   #map .split { gap: 24px; }
 }
+
+/* 取り込みの手順の画面（1 つの手順に 2 枚のときは縦に並べる） */
+.import-steps__shots { display: flex; flex-direction: column; gap: 12px; }
+.import-steps__shots img { width: 100%; height: auto; display: block; border-radius: 18px; box-shadow: 0 6px 18px rgba(11, 26, 33, .14); }
+.import-after { display: grid; grid-template-columns: 1fr 180px; gap: 24px; align-items: start; }
+.import-after .section-lead + .section-lead { margin-top: 12px; }
+.import-after .import-steps__shots { flex-direction: column; }
+@media (max-width: 640px) {
+  .import-after { grid-template-columns: 1fr; }
+  .import-after .import-steps__shots { flex-direction: row; }
+  .import-after .import-steps__shots img { width: 46%; }
+}
+
+/* 撮るだけの節：記録した直後の画面と、水温の枠 */
+.sst-row { display: flex; gap: 24px; justify-content: center; align-items: flex-start; margin-top: 40px; }
+.sst-row img { display: block; height: auto; border-radius: 18px; box-shadow: 0 6px 18px rgba(11, 26, 33, .14); }
+.sst-row img:first-child { width: 240px; }
+.sst-row img:last-child { width: 360px; align-self: center; }
+@media (max-width: 640px) {
+  .sst-row { flex-direction: column; align-items: center; }
+  .sst-row img:first-child { width: 60%; }
+  .sst-row img:last-child { width: 100%; }
+}
+/* 節の本文の段落の間 */
+.split__text .section-lead + .section-lead { margin-top: -4px; }
