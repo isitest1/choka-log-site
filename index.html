@@ -468,8 +468,21 @@
     </div>
     <p class="hero__plus-link"><a href="#plus">釣果ログ プラスについて →</a></p>
 
-    <!-- 横に送る画面（静止画だけ。動画は置かない） -->
-    <div class="phone-carousel hero__carousel">
+    <!-- 端末の画面（扇形 / デスクトップ。静止画だけ。動画は置かない） -->
+    <div class="hero__phones hero__phones--fan" aria-hidden="true">
+      <div class="phone-mockup phone-left">
+        <img src="/assets/img/3.0/hero-chokyo.webp" alt="" class="phone-mockup__screen" width="234" height="509" decoding="async" />
+      </div>
+      <div class="phone-mockup phone-center">
+        <img src="/assets/img/3.0/hero-review.webp" alt="" class="phone-mockup__screen" width="264" height="574" decoding="async" />
+      </div>
+      <div class="phone-mockup phone-right">
+        <img src="/assets/img/3.0/hero-plan.webp" alt="" class="phone-mockup__screen" width="234" height="509" decoding="async" />
+      </div>
+    </div>
+
+    <!-- 横に送る画面（スワイプ / モバイル。静止画だけ） -->
+    <div class="phone-carousel hero__carousel hero__phones--mobile">
       <div class="phone-mockup phone-carousel__mockup">
         <div class="phone-carousel__track">
           <div class="phone-carousel__slide"><img src="/assets/img/3.0/hero-chokyo.webp" alt="釣況の「いま」の画面。相模湾のアオリイカが「好調続く」、比べられた船宿9軒のうち8軒が普段以上。直近14日の推移と、明日の出船の目安" width="750" height="1631" decoding="async" loading="lazy" /></div>
