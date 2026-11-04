@@ -2142,3 +2142,28 @@ details.more { border: 1px solid var(--color-hairline); border-radius: var(--rad
 details.more[open] > summary { margin-bottom: 8px; }
 @media (min-width: 900px) { .mini-grid--5 { grid-template-columns: repeat(5, 1fr); } }
 .plan-table thead th { white-space: nowrap; }
+
+/* ヒーロー（スマートフォンの幅）：3 枚を扇形に。上の部分だけ見せて、下はぼかして切る */
+@media (max-width: 767px) {
+  .hero__shot {
+    width: 100%;
+    max-width: 360px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 10px;
+  }
+  .hero__shot .phone-mockup { flex-shrink: 0; }
+  .hero__shot-center { width: 160px; position: relative; z-index: 2; }
+  .hero__shot-side { width: 128px; margin-top: 22px; }
+  .hero__shot-left { margin-right: -26px; transform: rotate(-5deg); }
+  .hero__shot-right { margin-left: -26px; transform: rotate(5deg); }
+  .hero__shot .phone-mockup { padding: 5px 5px 0; border-radius: 26px 26px 0 0; }
+  .hero__shot .phone-mockup__screen { border-radius: 22px 22px 0 0; }
+}
+@media (max-width: 767px) {
+  .hero__shot-center { width: 150px; }
+  .hero__shot-side { width: 116px; }
+  .hero__shot-left { margin-right: -30px; }
+  .hero__shot-right { margin-left: -30px; }
+}

@@ -436,9 +436,11 @@
     </h1>
     <p class="hero__sub hero__sub--lead">ボート釣りの釣果を記録するアプリです。</p>
 
-    <!-- スマートフォンの幅：記録した直後の画面を 1 枚（上の部分だけ見せる） -->
-    <div class="hero__shot">
-      <div class="phone-mockup"><img src="/assets/img/3.0/after-catch.webp" alt="記録した直後の画面。アカハタ 13:31・中潮・48m と、いまの海と答え合わせ" class="phone-mockup__screen" width="750" height="1631" decoding="async" /></div>
+    <!-- スマートフォンの幅：PC と同じ 3 枚を扇形に（上の部分だけ見せる） -->
+    <div class="hero__shot" aria-hidden="true">
+      <div class="phone-mockup hero__shot-side hero__shot-left"><img src="/assets/img/3.0/hero-chokyo.webp" alt="" class="phone-mockup__screen" width="750" height="1631" decoding="async" /></div>
+      <div class="phone-mockup hero__shot-center"><img src="/assets/img/3.0/after-catch.webp" alt="" class="phone-mockup__screen" width="750" height="1631" decoding="async" /></div>
+      <div class="phone-mockup hero__shot-side hero__shot-right"><img src="/assets/img/3.0/hero-review.webp" alt="" class="phone-mockup__screen" width="750" height="1631" decoding="async" /></div>
     </div>
 
     <!-- App Store バッジ + Google Play バッジ（スマートフォンの幅では縦に並ぶ。Android の端末では Android版を先に表示） -->
