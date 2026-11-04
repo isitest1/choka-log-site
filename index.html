@@ -465,98 +465,20 @@
   </section>
 
   <!-- ============ 3: 地図・航跡（MAP / TRACK） ============ -->
-  <section id="map" class="section" aria-labelledby="map-heading">
-    <div class="container map-section">
-      <div class="col-narrow map-section__intro">
+  <!-- 2.0 の TRACK の節への古い飛び先 #track も、#map と同じ所に飛ぶ -->
+  <div id="track" aria-hidden="true"></div>
+  <section id="map" class="section section--compact" aria-labelledby="map-heading">
+    <div class="split">
+      <div class="split__text">
         <span class="label label--blue">MAP<span class="tag">無料</span></span>
         <h2 id="map-heading" class="section-heading">
           <span class="tt-orange"><span class="nw">この地図、</span></span><span class="nw">無料です。</span>
         </h2>
-        <p class="sub-heading" style="margin:0;"><span class="nw">無料で、</span><span class="nw">ここまで</span><span class="nw">見える。</span></p>
-        <p class="section-lead">全国の等深線と水深の色分けを、拡大するほど細かく描きます。200〜400m の深場の斜面も 10m ごと。根や駆け上がり、水深帯の広がりが、地図を見るだけでつかめます。</p>
+        <p class="section-lead">全国の等深線と水深の色分けを、無料で見られます。「釣行を開始」を押せば、出港から帰港までの航跡が残ります。過去の釣行を重ねると、どこを流して、どこで釣れたかを見比べられます。</p>
+        <p style="margin:0; font-weight:700;"><a href="https://map.margheritaworks.com/" target="_blank" rel="noopener">全国の海底の地図を開く →</a></p>
+        <p class="note-line">航海には使えません。航海と安全の判断は、海図と魚探で。</p>
       </div>
-
-      <figure class="map-embed">
-        <iframe
-          data-src="https://map.margheritaworks.com/?embed=1"
-          title="全国の海底の地図（相模湾）"
-          loading="lazy"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allow="fullscreen"></iframe>
-      </figure>
-      <div class="col-narrow map-section__after">
-        <p class="map-embed__note">アプリなら、この上に底質（泥・岩・砂など）と、航跡と、釣った魚が乗ります。</p>
-        <p class="map-embed__link"><a href="https://map.margheritaworks.com/" target="_blank" rel="noopener">全国の海底の地図を開く →</a></p>
-      </div>
-
-      <div class="col-narrow map-block">
-        <h3 class="sub-heading"><span class="nw">同じ</span><span class="nw">海が、</span><span class="nw">ここまで</span><span class="nw">変わりました。</span></h3>
-        <div class="compare" style="--pos:50%">
-          <img class="compare__img compare__img--before" src="/assets/img/2.0/map-1x.webp" alt="" width="1206" height="690" loading="lazy" decoding="async" />
-          <div class="compare__after" aria-hidden="true">
-            <img class="compare__img" src="/assets/img/2.0/map-2.0.webp" alt="" width="1206" height="690" loading="lazy" decoding="async" />
-          </div>
-          <span class="compare__tag compare__tag--left" aria-hidden="true">1.x</span>
-          <span class="compare__tag compare__tag--right" aria-hidden="true">2.0</span>
-          <div class="compare__handle" role="slider" tabindex="0"
-               aria-label="1.x と 2.0 の地図の比べ"
-               aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"
-               aria-valuetext="左が 1.x、右が 2.0。境目は左から 50%">
-            <span class="compare__grip" aria-hidden="true"></span>
-          </div>
-        </div>
-        <p class="compare__caption">相模湾の同じ場所・同じ拡大率の地図です。境目を左右に動かして見比べられます。左の 1.x は粗い等深線、右の 2.0 は 5m ごとの等深線と底質の記号です。</p>
-      </div>
-
-      <div class="col-narrow map-block">
-        <h3 class="sub-heading"><span class="nw">航海には</span><span class="nw">使えません。</span><span class="nw">でも、</span><span class="nw">釣り</span><span class="nw">場を</span><span class="nw">読むには、</span><span class="nw">これで</span><span class="nw">十分です。</span></h3>
-        <p class="section-lead">根や駆け上がりの位置、水深帯の広がり、底質の違い。釣り場の地形を読むために要るものは、この地図に入っています。元になっているのは 500m ごとの水深のデータなので、小さな根や魚礁の形までは出ません。航海と安全の判断は、海図と魚探で。</p>
-        <ul class="feature-list" aria-label="地図の機能">
-          <li>座標と、十字までの距離・方角</li>
-          <li>進んでいる向きの線</li>
-          <li>回したときだけ出る方位磁石</li>
-          <li>底質（泥・岩・砂など）の表示</li>
-          <li>一度見た場所は、電波のない沖でも表示</li>
-        </ul>
-      </div>
-
-      <!-- 航跡（2.0 の TRACK の節。古い飛び先 #track を残す） -->
-      <div class="col-narrow map-block" id="track">
-        <h3 class="sub-heading"><span class="tt-orange"><span class="nw">出港から</span><span class="nw">帰港まで、</span></span><span class="nw">走った</span><span class="nw">線が</span><span class="nw">残る。</span></h3>
-        <p class="section-lead">出港したら「釣行を開始」を押すだけ。画面を消しても航跡を記録し、走っている所と釣っている所を自動で分けて描きます。途中でアプリが閉じても、続きから記録します。</p>
-        <ul class="feature-list" aria-label="航跡の機能">
-          <li>航行距離・出港と帰港の時刻・流しの速さ</li>
-          <li>釣行のメモ</li>
-          <li>出港を自動で見つけて記録を始める設定（初期はオフ）</li>
-        </ul>
-      </div>
-      <div class="map-anim map-anim--day" data-map-anim="day" data-src="/assets/data/track-day.json">
-        <div class="map-anim__map" role="img" aria-label="2026年10月3日の釣行の航跡。6時12分に三崎港を出て、城ヶ島の西の釣り場を回り、アジ・マダイ・カワハギを釣って13時30分に帰港するまでを再生する地図"></div>
-        <div class="map-anim__hud" aria-hidden="true"><span class="map-anim__rec"></span><span data-clock>06:12</span><span class="map-anim__sep">・</span><span data-state>移動中</span></div>
-        <p class="map-anim__date" aria-hidden="true">2026年10月3日（土）</p>
-        <noscript><img src="/assets/img/2.0/trip-detail.webp" alt="" /></noscript>
-      </div>
-      <p class="map-anim__caption col-narrow">移動中は細かい点線、釣り中は実線で描きます（デモ用の記録です）。</p>
-
-      <div class="col-narrow map-block">
-        <h3 class="sub-heading"><span class="nw">あの</span><span class="nw">日と、</span><span class="nw">この</span><span class="nw">日を</span><span class="nw">重ねる。</span></h3>
-        <p class="section-lead">過去の釣行を重ねると、どこを流して、どこで釣れたかを見比べられます。期間・魚種・エリアで絞り込んで比べられます。</p>
-      </div>
-      <div class="map-anim map-anim--overlay" data-map-anim="overlay" data-src="/assets/data/trips-2.json">
-        <div class="map-anim__map" role="img" aria-label="過去の土曜 2 回分の航跡を、色を変えて重ねた地図。9月26日は紫、8月8日は橙の線で、それぞれ釣れた場所に魚の名前が出る"></div>
-        <div class="map-anim__hud map-anim__hud--plain" aria-hidden="true"><span data-clock>過去の釣行 2 回</span></div>
-        <ul class="map-anim__legend" data-legend aria-hidden="true"></ul>
-        <noscript><img src="/assets/img/2.0/past-2-trips.webp" alt="" /></noscript>
-      </div>
-
-      <!-- 水深の自動入力（2.0 の DEPTH の節から） -->
-      <div class="col-narrow map-block">
-        <h3 class="sub-heading"><span class="tt-orange"><span class="nw">水深は</span><span class="nw">自動で。</span></span><span class="nw">魚探の</span><span class="nw">値があれば、</span><span class="nw">それが</span><span class="nw">優先</span></h3>
-        <p class="section-lead">釣れた位置の海底地形のデータから、水深を自動で入れます。魚探で見た値に直せば、記録にはその値が残ります。</p>
-      </div>
-
-      <!-- 2.0 の地図の動画（ヒーローから移した） -->
-      <figure class="loop-video col-narrow">
+      <figure class="loop-video">
         <div class="loop-video__frame">
           <video class="js-section-video" muted loop playsinline preload="none" width="750" height="1631" style="aspect-ratio:750/1631"
             poster="/assets/img/2.0/map-day-poster.webp"
@@ -570,7 +492,6 @@
       </figure>
     </div>
   </section>
-
   <!-- ============ 4: 振り返り（REVIEW） ============ -->
   <section id="review" class="section section--sand" aria-labelledby="review-heading">
     <div class="split">

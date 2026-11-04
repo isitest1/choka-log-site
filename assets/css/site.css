@@ -1974,3 +1974,10 @@ details:not([open]) .faq-icon-minus { display: none; }
 .site-header__nav { gap: 22px; flex-wrap: nowrap; }
 .site-header__nav .nav-link { white-space: nowrap; font-size: 15px; }
 .site-header__nav .btn-primary { padding: 12px 18px; font-size: 15px; }
+
+/* 地図の節（3.0 では短く、1 画面に収める） */
+.section--compact { padding-top: 56px; padding-bottom: 56px; }
+@media (max-width: 767px) {
+  #map .loop-video video { width: 50vw; }
+  #map .split { gap: 24px; }
+}
