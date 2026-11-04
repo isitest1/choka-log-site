@@ -2006,3 +2006,7 @@ details:not([open]) .faq-icon-minus { display: none; }
 }
 /* 節の本文の段落の間 */
 .split__text .section-lead + .section-lead { margin-top: -4px; }
+@media (max-width: 640px) {
+  .changes { grid-template-columns: 1fr; gap: 16px; }
+  .changes__col { padding: 24px; }
+}
