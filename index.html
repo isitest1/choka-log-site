@@ -495,14 +495,13 @@
     <div class="split">
       <div class="split__text">
         <span class="tag">無料</span>
-        <!-- 魚の名前は固定の文字。公開の前にオーナーが決める -->
-        <h2 id="now-heading" class="section-heading"><span class="tt-orange"><span class="nw">今週の</span><span class="nw">相模湾、</span></span><span class="nw">マダイが</span><span class="nw">好調。</span></h2>
+        <h2 id="now-heading" class="section-heading"><span class="tt-orange"><span class="nw">いま、</span></span><span class="nw">何が</span><span class="nw">釣れているか。</span></h2>
         <p class="section-lead">船宿の釣果を毎晩まとめて、いま好調な魚を海域ごとに出します。対応している海は、相模湾・東京湾など6つです。</p>
         <p class="section-link"><a href="#survey-area">見たい海を教える →</a></p>
       </div>
       <figure class="loop-video">
         <div class="loop-video__frame">
-          <video class="js-section-video" muted loop playsinline preload="none" width="720" height="1280"
+          <video class="js-section-video" data-rate="1.6" muted loop playsinline preload="none" width="720" height="1280"
             poster="/assets/img/3.0/r2-sawara-poster.webp"
             aria-label="釣況の「いま」で、東京湾のサワラのカードから、サワラの画面の推移に進む動画">
             <source src="/assets/img/3.0/r2-sawara.webm" type="video/webm" />
@@ -1503,6 +1502,13 @@
     var fig = v.closest('.loop-video');
     var btn = fig && fig.querySelector('.loop-video__play');
     v.muted = true;
+    /* data-rate があれば、その速さで流す（画面の切り替わりを早くする） */
+    var rate = parseFloat(v.getAttribute('data-rate'));
+    if (rate > 0) {
+      v.defaultPlaybackRate = rate;
+      v.playbackRate = rate;
+      v.addEventListener('play', function () { if (v.playbackRate !== rate) v.playbackRate = rate; });
+    }
     if (reduceMotion || !('IntersectionObserver' in window)) {
       v.removeAttribute('autoplay');
       v.controls = false;
