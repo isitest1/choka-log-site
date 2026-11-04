@@ -2010,3 +2010,135 @@ details:not([open]) .faq-icon-minus { display: none; }
   .changes { grid-template-columns: 1fr; gap: 16px; }
   .changes__col { padding: 24px; }
 }
+
+/* ─── MARK: 3.0 上の方を絵で見せる（2026-11 の直し） ─── */
+/* ヒーロー：スマートフォンの幅だけ、記録した直後の画面を 1 枚。上の部分だけ見せて、下はぼかして切る */
+.hero__shot { display: none; }
+.hero__fine { margin: -16px 0 0; }
+@media (max-width: 767px) {
+  .hero { padding-top: 20px; gap: 12px; }
+  .hero__headline { font-size: 34px; }
+  .hero__sub--lead { font-size: 16px; color: var(--color-ink); }
+  .hero__shot {
+    display: block;
+    width: 216px;
+    height: 34vh;
+    min-height: 220px;
+    max-height: 330px;
+    overflow: hidden;
+    margin: 4px 0 0;
+    -webkit-mask-image: linear-gradient(#000 80%, transparent);
+            mask-image: linear-gradient(#000 80%, transparent);
+  }
+  .hero__shot .phone-mockup { border-radius: 36px 36px 0 0; padding: 7px 7px 0; }
+  .hero__shot .phone-mockup__screen { border-radius: 30px 30px 0 0; }
+  .hero .hero-cta { flex-direction: row; align-items: center; gap: 10px; flex-wrap: nowrap; }
+  .hero .appstore-badge { height: 44px; }
+  .hero .gp-badge img { width: 150px; }
+  .hero .hero-cta .btn-primary { padding: 10px 14px; font-size: 14px; }
+  .hero__fine { margin: 0; font-size: 13px; }
+}
+
+/* 3.0 の帯（細い 1 行） */
+.band-30 {
+  background: var(--color-ocean-deep);
+  color: var(--color-paper);
+  text-align: center;
+  padding: 14px 20px;
+  margin-top: 56px;
+}
+.band-30 p { margin: 0; font-size: var(--text-body-sm); font-weight: 700; line-height: 1.6; }
+
+/* 節の札（文の上に 1 つだけ置く） */
+.split__text > .tag { margin-left: 0; align-self: flex-start; }
+.section-link { margin: 0; font-weight: 700; }
+
+/* 3 つの流れ（番号と短い言葉。PC は横、スマートフォンは縦） */
+.flow {
+  list-style: none;
+  margin: 40px auto 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  max-width: var(--content-max);
+}
+.flow li {
+  flex: 1 1 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--color-paper);
+  border-radius: 999px;
+  padding: 12px 20px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+.section:not(.section--sand) .flow li { background: var(--color-sand); }
+.flow__n {
+  flex-shrink: 0;
+  width: 30px; height: 30px;
+  border-radius: 50%;
+  background: var(--color-fish-orange);
+  color: #ffffff;
+  font: 700 15px / 30px var(--font-num);
+  text-align: center;
+}
+@media (max-width: 767px) {
+  .flow { flex-direction: column; gap: 10px; }
+}
+
+/* 振り返りの 4 つの日（2×2 のタイル） */
+.kinds {
+  list-style: none;
+  margin: 8px 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  max-width: 420px;
+}
+.kinds li {
+  background: var(--color-ocean-deep);
+  color: var(--color-fish-orange);
+  border-radius: 16px;
+  padding: 16px 12px;
+  text-align: center;
+  font-weight: 700;
+  font-size: var(--text-body);
+}
+
+/* 動画と静止画を並べる */
+.media-pair { display: flex; gap: 20px; align-items: center; justify-content: center; }
+.media-pair .loop-video video { height: 60vh; max-height: 620px; }
+.media-pair__shot { width: 240px; flex-shrink: 0; }
+.media-pair__shot img { width: 100%; height: auto; display: block; border-radius: 28px; box-shadow: 0 10px 30px rgba(11, 26, 33, .16); }
+@media (max-width: 767px) {
+  .media-pair { gap: 10px; }
+  .media-pair .loop-video video { width: 44vw; height: auto; }
+  .media-pair__shot { width: 44vw; }
+}
+
+/* 押すと開くまとまり（購入の前に・取り込みの手順） */
+details.terms-box > summary,
+details.more > summary {
+  cursor: pointer;
+  font-weight: 700;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+details.terms-box > summary::-webkit-details-marker,
+details.more > summary::-webkit-details-marker { display: none; }
+details.terms-box > summary::after,
+details.more > summary::after { content: '＋'; color: var(--color-deep-orange); }
+details.terms-box[open] > summary::after,
+details.more[open] > summary::after { content: '−'; }
+details.terms-box[open] > summary { margin-bottom: 12px; }
+details.terms-box .plus-words { margin: 0 0 16px; }
+details.more { border: 1px solid var(--color-hairline); border-radius: var(--radius); padding: 18px 24px; }
+details.more[open] > summary { margin-bottom: 8px; }
+@media (min-width: 900px) { .mini-grid--5 { grid-template-columns: repeat(5, 1fr); } }
+.plan-table thead th { white-space: nowrap; }
