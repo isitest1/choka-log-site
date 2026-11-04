@@ -2234,3 +2234,14 @@ details.more[open] > summary { margin-bottom: 8px; }
 .flow .import-steps h4::before { content: none; }
 .flow .import-steps > li > div:first-child { border-left: 3px solid var(--color-fish-orange); padding-left: 12px; }
 .flow .import-steps p { margin-left: 0; }
+
+/* 取り込みの 1・2・3 の中の手順：外の 1・2・3（オレンジの丸）と色を分ける。
+   白い札に、青い線で見せる */
+.flow .import-steps > li,
+.section:not(.section--sand) .flow .import-steps > li {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 14px 14px 14px 0;
+}
+.flow .import-steps > li > div:first-child { border-left-color: var(--color-depth-blue-ink); }
+.flow .import-steps h4 { color: var(--color-depth-blue-ink); }
