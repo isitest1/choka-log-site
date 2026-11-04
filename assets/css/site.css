@@ -2245,3 +2245,18 @@ details.more[open] > summary { margin-bottom: 8px; }
 }
 .flow .import-steps > li > div:first-child { border-left-color: var(--color-depth-blue-ink); }
 .flow .import-steps h4 { color: var(--color-depth-blue-ink); }
+
+/* App Store と Google Play のバッジの高さをそろえる。
+   App Store のバッジ（Apple の SVG。108.85:40）は、形・色・比率を変えずに高さだけを決める。
+   Google Play のバッジ（646×250 の PNG）は、上下に透明の余白（各 29px）があり、見えている部分は高さ 192。
+   見えている高さを App Store と同じにするため、PNG の幅 = 高さ × 646 / 192 にする。
+   バッジの間は、Apple の決まりの余白（バッジの高さの 1/4 以上）を取る */
+.hero-cta, .cta-buttons { --badge-h: 52px; align-items: center; column-gap: 24px; }
+.hero-cta .appstore-badge, .cta-buttons .appstore-badge { height: var(--badge-h); width: auto; display: block; }
+.hero-cta .gp-badge img, .cta-buttons .gp-badge img { width: calc(var(--badge-h) * 646 / 192); height: auto; }
+.hero-cta a, .cta-buttons > a { line-height: 0; }
+@media (max-width: 767px) {
+  .hero .hero-cta { --badge-h: 44px; column-gap: 14px; }
+  .hero .hero-cta .appstore-badge { height: var(--badge-h); }
+  .hero .hero-cta .gp-badge img { width: calc(var(--badge-h) * 646 / 192); }
+}
