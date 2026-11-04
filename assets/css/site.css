@@ -2193,3 +2193,35 @@ details.more[open] > summary { margin-bottom: 8px; }
 @media (max-width: 767px) {
   .flow__body { padding-left: 20px; }
 }
+
+/* 取り込みの 1・2・3（中に手順と画面が入るので、どの幅でも縦に並べる） */
+.flow--stack { flex-direction: column; max-width: var(--col-max); gap: 10px; }
+.flow__body--steps { padding: 0 20px 20px; color: var(--color-ink); }
+.flow__body--steps .import-steps { margin-top: 8px; gap: 24px; }
+
+/* 更新履歴の表 */
+.changelog-table th[scope="row"] { white-space: nowrap; width: 9em; font-weight: 700; color: var(--color-ink); }
+.changelog__date { font-weight: 400; font-size: var(--text-caption); color: var(--color-ink-muted); }
+.changelog-table td { font-size: var(--text-body-sm); line-height: 1.8; }
+
+/* 取り込みの 1・2・3 の中の手順は、外側の .flow の形を受け継がない */
+.flow .import-steps > li {
+  display: grid;
+  grid-template-columns: 1fr 180px;
+  gap: 24px;
+  align-items: start;
+  flex: none;
+  background: none;
+  padding: 0;
+  border-radius: 0;
+  font-weight: 400;
+}
+.flow .import-steps > li.no-shot { grid-template-columns: 1fr; }
+@media (max-width: 640px) {
+  .flow .import-steps > li { grid-template-columns: 1fr 110px; gap: 12px; }
+}
+@media (max-width: 640px) {
+  .changelog-table th[scope="row"] { width: auto; white-space: normal; padding-right: 8px; }
+  .changelog-table th, .changelog-table td { padding: 12px 10px; }
+}
+.flow--stack { align-items: stretch; }

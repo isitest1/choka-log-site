@@ -712,25 +712,37 @@
       </figure>
     </div>
     <div class="container">
-      <ol class="flow">
-        <li><span class="flow__n" aria-hidden="true">1</span><span>バックアップを選ぶ</span></li>
-        <li><span class="flow__n" aria-hidden="true">2</span><span>釣果にする点を選ぶ</span></li>
-        <li><span class="flow__n" aria-hidden="true">3</span><span>取り込む</span></li>
-      </ol>
-    </div>
-    <div class="col-narrow" style="margin-top:40px;">
-      <details class="more" id="import-steps">
-        <summary>取り込みの手順をくわしく見る</summary>
-        <ol class="import-steps">
+      <!-- 押すと手順が開く。1 つ開くと、ほかは閉じる（中に画面が入るので、PC でも縦に並べる） -->
+      <ol class="flow flow--open flow--stack" id="import-steps">
+        <li><details name="import-flow" class="flow__item">
+          <summary><span class="flow__n" aria-hidden="true">1</span><span>バックアップを選ぶ</span></summary>
+          <div class="flow__body flow__body--steps">
+          <ol class="import-steps" style="counter-reset: imp 0;">
         <li class="no-shot"><div><h4>海釣図V のバックアップの機能で zip を作る</h4></div></li>
         <li><div><h4>釣果ログの 設定 →「釣行の記録」→「海釣図のバックアップから取り込む」で、その zip を選ぶ</h4><p>ファイルのアプリから zip を選ぶと、中に入っている航跡とマイポイントの数が出ます。</p></div><div class="import-steps__shots"><img src="/assets/img/3.0/import-1.webp" alt="設定の「釣行の記録」。GPX から釣行を取り込む、海釣図のバックアップから取り込む" width="750" height="1631" loading="lazy" decoding="async" /><img src="/assets/img/3.0/import-2.webp" alt="海釣図のバックアップの中身。航跡171回（2022年5月〜2026年10月）、マイポイント803か所" width="750" height="1631" loading="lazy" decoding="async" /></div></li>
+          </ol>
+          </div>
+        </details></li>
+        <li><details name="import-flow" class="flow__item">
+          <summary><span class="flow__n" aria-hidden="true">2</span><span>釣果にする点を選ぶ</span></summary>
+          <div class="flow__body flow__body--steps">
+          <ol class="import-steps" style="counter-reset: imp 2;">
         <li><div><h4>取り込む航跡を選ぶ</h4><p>期間で絞れます。すでにアプリにある航跡と時間が重なる回は、「取り込み済み」として最初から外れます。</p></div><div class="import-steps__shots"><img src="/assets/img/3.0/import-3.webp" alt="取り込む航跡の一覧。日時・時間・距離が並び、取り込む航跡171回" width="750" height="1631" loading="lazy" decoding="async" /></div></li>
         <li><div><h4>釣果にするマイポイントを選ぶ</h4><p>最初は何も選ばれていません。アイコン、色、付けた日、「釣行中に付けた点だけ」、名前のまとまりで絞って選びます。点を選ばず、航跡だけを取り込むこともできます。</p></div><div class="import-steps__shots"><img src="/assets/img/3.0/import-4.webp" alt="釣果にする点を選ぶ画面。アイコンの「魚 27」を選んだところ。色・付けた日・釣行中に付けた点だけの絞り込み" width="750" height="1631" loading="lazy" decoding="async" /></div></li>
         <li class="no-shot"><div><h4>魚の名前を確かめる</h4><p>点の名前が魚の一覧に合えば、自動で入ります（ひらがなや、カッコ書き、絵文字の付いた名前も見ます）。合わない名前は、まとまりごとに一度に決められます。</p></div></li>
+          </ol>
+          </div>
+        </details></li>
+        <li><details name="import-flow" class="flow__item">
+          <summary><span class="flow__n" aria-hidden="true">3</span><span>取り込む</span></summary>
+          <div class="flow__body flow__body--steps">
+          <ol class="import-steps" style="counter-reset: imp 5;">
         <li><div><h4>写真を「iPhone から自動で探す」か「何もしない」を選ぶ</h4><p>自動のときは、釣果の時刻の前後10分以内に撮った写真を、いちばん近い釣果に1枚付けます。写真の位置は使いません。写真ライブラリの許可を求めるのは、このときだけです。写真はスマートフォンの外へ送りません。</p></div><div class="import-steps__shots"><img src="/assets/img/3.0/import-5.webp" alt="写真の選び方。iPhone から自動で探す、何もしない" width="750" height="1631" loading="lazy" decoding="async" /></div></li>
         <li><div><h4>件数を確かめて取り込む</h4><p>途中で「やめる」を押すと、その回の分は何も残りません。</p></div><div class="import-steps__shots"><img src="/assets/img/3.0/import-6-confirm.webp" alt="確かめて取り込む画面。航跡171回、釣果27件、写真（数えています）を取り込みます" width="750" height="1631" loading="lazy" decoding="async" /></div></li>
+          </ol>
+          </div>
+        </details></li>
       </ol>
-      </details>
     </div>
   </section>
 
@@ -1191,14 +1203,9 @@
       <h2 id="roadmap-heading" style="margin:0 0 24px; font-size:var(--text-heading); font-weight:700; line-height:1.35;">
         <span class="tt-orange"><span class="nw">今後の</span><span class="nw">予定と、</span></span><span class="nw">ご</span><span class="nw">意見</span>
       </h2>
-      <p style="margin:0 0 8px; font-size:var(--text-body);">現在の方針は2つです。</p>
-      <ul class="feature-list" style="margin:0 0 24px;">
-        <li>入力はできるだけ自動に。直すのは違うときだけ、という方針を続けます</li>
-        <li>航海用の海図は持たず、海図アプリ・魚探との併用を前提にします</li>
-      </ul>
 
       <!-- ── アンケート入口 ── -->
-      <div style="margin-top:40px; padding-top:32px; border-top:1px solid var(--color-hairline); margin-bottom:12px;">
+      <div style="margin-top:8px; margin-bottom:12px;">
         <span class="label label--blue" style="display:block; margin-bottom:12px;">SURVEY</span>
         <p style="margin:0 0 6px; font-size:var(--text-heading-sm); font-weight:700; line-height:1.35;">検討中のことについて、3つだけ教えてください</p>
         <p style="margin:0; font-size:var(--text-body-sm); color:var(--color-ink-muted);">回答は集計のみに使用し、このページや釣果記録には残りません。</p>
@@ -1303,101 +1310,20 @@
   <section id="changelog" class="section" aria-labelledby="changelog-heading">
     <div class="col-narrow">
       <h2 id="changelog-heading" style="margin:0 0 24px; font-size:var(--text-heading); font-weight:700; line-height:1.35;"><span class="nw">更新履歴</span></h2>
-      <div style="display:flex; flex-direction:column; gap:24px;">
-        <!-- 3.0 の公開の日に、見出しの月を公開日に合わせて直す -->
-        <div>
-          <p style="margin:0 0 8px; font-size:var(--text-body); font-weight:700;">3.0（2026年12月）</p>
-          <ul class="feature-list">
-            <li>新しい［釣況］タブ。タブの並びは［釣況］［地図］［カメラ］［記録］［図鑑］に。2.0 の［分析］は、中身はそのまま、［釣況］の「これまで」に移った</li>
-            <li>釣況「いま」：対応している海域の船宿の釣果を毎日まとめて、明日の出船の目安、好調の魚、上向いてきた魚、すべての魚、船長の言葉を出す（無料）</li>
-            <li>「明日の海」：出船の目安と理由（風・波）、潮、1 時間ごとの天気・風・波、海面水温（衛星）</li>
-            <li>魚種の詳細：2 週間・2 か月・去年との推移と、いまの釣れ方</li>
-            <li>気になる魚が上向いたら、朝に知らせる通知（無料）</li>
-            <li>図鑑を作り直した。最近の自己記録の更新、船宿で上向いてきた魚が並ぶ「次に狙えそうな魚」、魚種の詳細に「今の（海域）」</li>
-            <li>記録した直後の「いまの海と答え合わせ」と、シェア画像に入れる今の海の一行（入れるかどうかを選べる）</li>
-            <li>去年の今ごろの自分の釣果（記録があるときだけ）</li>
-            <li>AI の釣行の振り返り（腕で釣った日・海に乗った日・海が渋かった日・取りこぼした日）と、次の釣行の作戦。振り返りと作戦を合わせて 3 回まで無料</li>
-            <li>釣果ログ プラス（年額 5,400円・月額 600円）：すべての釣行の振り返りと作戦、まとめた振り返り、月報、船宿ごとの直近、海の上の通知</li>
-            <li>作戦の日の出船の目安が悪くなったら知らせる通知</li>
-            <li>海面水温（衛星）の自動入力。手で入れた値が優先。分析の「条件ごとの分布」に水温</li>
-            <li>海釣図V のバックアップの取り込み（航跡とマイポイント。無料）</li>
-            <li>釣果の編集で「写真を付ける」「写真を選び直す」</li>
-            <li>釣果ノートの一覧に、その日の潮の小さなグラフ。地図に「移動中の線を出す」の切り替え</li>
-            <li>魚種を 11 種足した（タチウオ・アマダイ・シロギス・キハダマグロなど。全 57 種）</li>
-            <li>バックアップに、3.0 の振り返り・作戦・月報なども入る</li>
-          </ul>
-          <p style="margin:16px 0 8px; font-size:var(--text-body-sm); font-weight:700; color:var(--color-ink-muted);">直した点</p>
-          <ul class="feature-list">
-            <li>画面の左の端から引っ張って戻れない画面があったのを、どこでも戻れるようにした</li>
-            <li>行やカードの、文字のある所しか押せなかった所を、全体で押せるようにした</li>
-            <li>記録のタブで、一番下のカードがタブの帯に隠れていたのを直した</li>
-            <li>釣行の数が多いときの、分析の画面のかくつきを直した</li>
-            <li>釣行を消したとき、見えない釣果が図鑑の数に入っていたのを、「釣行に入っていない釣果」として出すようにした</li>
-            <li>通知を押すと、アプリが落ちることがあったのを直した</li>
-            <li>シェア画像で写真を大きく動かすと、「共有」が押せなくなったのを直した</li>
-            <li>古い写真の釣果に、波の高さが入らなかったのを直した</li>
-            <li>ダークモードで、選んだ札の文字が読めなかったのを直した</li>
-          </ul>
-        </div>
-        <!-- Android 版の公開の日に、見出しと項目の日付を正しい日に直す -->
-        <div>
-          <p style="margin:0 0 8px; font-size:var(--text-body); font-weight:700;">Android版の公開（2026年10月23日）</p>
-          <ul class="feature-list">
-            <li>Android版を Google Play で公開（2026年10月23日）</li>
-          </ul>
-        </div>
-        <div>
-          <p style="margin:0 0 8px; font-size:var(--text-body); font-weight:700;">2.0（2026年10月）</p>
-          <ul class="feature-list">
-            <li>航跡の記録。地図の左上の「釣行を開始」で、出港から帰港までの線を残す。走っている所と釣っている所を自動で分けて描き、画面を消しても記録が続く</li>
-            <li>新しい海底の地図。全国の等深線と水深の色分けを、拡大するほど細かく描く。一度見た場所は電波のない沖でも表示</li>
-            <li>過去の釣行を地図に重ねて比べる。期間・魚種・エリアで絞り込み</li>
-            <li>分析の正確さ。水深・底質・魚礁などの場所の条件を、航跡から分かる、実際に釣りをしていた時間で数える</li>
-            <li>写真付きのバックアップと復元。写真と航跡も一緒に書き出し、新しい iPhone に戻せる</li>
-            <li>ようこそ画面を作り直し。ある 1 日の釣行で、使い方を紹介</li>
-          </ul>
-          <p style="margin:16px 0 8px; font-size:var(--text-body-sm); font-weight:700; color:var(--color-ink-muted);">直した点</p>
-          <ul class="feature-list">
-            <li>写真の保存の仕方を見直し、写真の多い記録でも、釣果の一覧とバックアップが軽くなった</li>
-            <li>風の矢印が逆を向いていたのを、吹いていく方向に直した（文字は「北から」のように表示）</li>
-            <li>一覧の行が、文字の所しか押せなかったのを、行の全体で押せるようにした</li>
-            <li>地図を常に明るい表示にした（ダークモードで明るさがちらつくため）</li>
-            <li>シェア画像を Instagram に共有して戻ると、画面が固まることがあったのを直した</li>
-            <li>写真の向きを、90 度ずつ回せるようにした</li>
-          </ul>
-        </div>
-        <div>
-          <p style="margin:0 0 8px; font-size:var(--text-body); font-weight:700;">1.2（2026年10月）</p>
-          <ul class="feature-list">
-            <li>Android版の先行公開を開始（2026年10月1日）</li>
-            <li>画面下の中央にカメラのボタン。どの画面からでも、すぐに撮って記録</li>
-            <li>写真から魚種を判定して自動で入力。違うときは候補をタップして選び直し。判定はiPhoneの中で</li>
-            <li>釣れた位置の海底地形から、水深を自動で入力。魚探の値に直すこともできる</li>
-            <li>水温は、同じ日の直前の釣果から引き継ぎ</li>
-            <li>図鑑タブを追加。魚種ごとの自己記録の伸び・釣れた月・サイズの分布・釣った場所・当たり条件。次に狙えそうな魚の提案</li>
-            <li>はじめての魚種を記録すると、お祝いの演出</li>
-            <li>魚種が未確定の釣果を、図鑑からまとめて確認</li>
-            <li>釣果をシェア画像に。デザインは3種類、写真の拡大・位置の調整ができ、釣れた場所は出さない</li>
-            <li>設定は、記録の画面の左上の歯車から</li>
-          </ul>
-        </div>
-        <div>
-          <p style="margin:0 0 8px; font-size:var(--text-body); font-weight:700;">1.1（2026年9月）</p>
-          <ul class="feature-list">
-            <li>等深線・底質・沈船・海底障害物を地図に重ねて表示。レイヤーごとにオン・オフ可</li>
-            <li>地図で釣行を選ぶと、その日の釣果だけを強調。2 つ以上選んで日ごとに比較</li>
-            <li>釣果が「釣行」ごとにまとまり、出港から帰港までの潮・潮流・風と釣果をタイムラインで表示</li>
-            <li>「よく釣れている条件」を自分の記録から表示。魚種別・エリア別の絞り込み</li>
-            <li>ボウズの日も「過去の釣行を追加」で記録可能</li>
-          </ul>
-        </div>
-        <div>
-          <p style="margin:0 0 8px; font-size:var(--text-body); font-weight:700;">1.0（2026年9月16日）</p>
-          <ul class="feature-list">
-            <li>初回リリース</li>
-          </ul>
-        </div>
-      </div>
+      <table class="def-table changelog-table" aria-label="更新履歴">
+        <thead>
+          <tr><th scope="col">版</th><th scope="col">おもな変更</th></tr>
+        </thead>
+        <tbody>
+          <!-- 3.0 の公開の日に、月を公開日に合わせて直す -->
+          <tr><th scope="row"><span class="nw">3.0</span><br><span class="changelog__date">2026年12月</span></th><td>新しい［釣況］タブ（いまの海・明日の出船の目安・気になる魚が上向いたときの通知）。AI の振り返りと作戦（合わせて3回まで無料）。釣果ログ プラス。海面水温（衛星）の自動入力。海釣図V の記録の取り込み。図鑑の作り直し。魚種を11種追加（全57種）。ほか、不具合の直し</td></tr>
+          <tr><th scope="row"><span class="nw">Android版</span><br><span class="changelog__date">2026年10月23日</span></th><td>Google Play で公開</td></tr>
+          <tr><th scope="row"><span class="nw">2.0</span><br><span class="changelog__date">2026年10月</span></th><td>航跡の記録。全国の新しい海底の地図。過去の釣行を地図に重ねて比べる。場所の条件を、実際に釣りをしていた時間で数える分析。写真と航跡を含むバックアップと復元。ほか、不具合の直し</td></tr>
+          <tr><th scope="row"><span class="nw">1.2</span><br><span class="changelog__date">2026年10月</span></th><td>カメラのボタン。写真からの魚種の判定と、水深の自動入力。図鑑。シェア画像。Android版の先行公開（2026年10月1日）</td></tr>
+          <tr><th scope="row"><span class="nw">1.1</span><br><span class="changelog__date">2026年9月</span></th><td>等深線・底質・沈船などを地図に重ねる。釣行ごとのタイムライン。よく釣れている条件の表示。ボウズの日の記録</td></tr>
+          <tr><th scope="row"><span class="nw">1.0</span><br><span class="changelog__date">2026年9月16日</span></th><td>初回リリース</td></tr>
+        </tbody>
+      </table>
     </div>
   </section>
 
