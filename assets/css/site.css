@@ -1664,3 +1664,599 @@ details:not([open]) .faq-icon-minus { display: none; }
 .gp-badge img { display: block; width: 180px; height: auto; }
 .gp-badge:hover { text-decoration: none; }
 .gp-badge__fallback { line-height: 1.4; }
+
+/* ─── MARK: 3.0 ─────────────────────────────────────── */
+
+/* ヒーローの小さな注記と「プラスについて」のリンク */
+.hero__fine {
+  margin: -8px 0 0;
+  font-size: var(--text-body-sm);
+  color: var(--color-ink-muted);
+}
+.hero__plus-link { margin: -16px 0 0; font-size: var(--text-body-sm); font-weight: 700; }
+
+/* ヒーローの横に送る画面（静止画だけ。すべての幅で 1 枚ずつ） */
+.hero__carousel { margin-top: 8px; }
+.hero__carousel .phone-carousel__mockup { width: 280px; }
+
+/* 帯「3.0で、変わったこと。変わらないこと。」 */
+.changes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 32px;
+}
+.changes__col {
+  background: var(--color-paper);
+  border-radius: var(--radius);
+  padding: var(--card-pad);
+}
+.changes__title { margin: 0 0 8px; font-size: var(--text-heading-sm); font-weight: 700; line-height: 1.45; }
+.changes__col .feature-list { margin: 0; }
+
+/* 節の見出しの横の小さな札（無料・プラス） */
+.tag {
+  display: inline-block;
+  margin-left: 10px;
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-family: var(--font-body);
+  font-size: var(--text-label);
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: none;
+  vertical-align: 1px;
+  background: var(--color-sand);
+  color: var(--color-ink);
+}
+.section--sand .tag { background: var(--color-paper); }
+.tag--plus { background: var(--color-fish-orange); color: #ffffff; }
+.section--sand .tag--plus { background: var(--color-fish-orange); }
+
+/* 節の動画：画面に入ったら再生し、外れたら止める（JS は .js-section-video） */
+.loop-video {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+.loop-video__frame { position: relative; line-height: 0; }
+.loop-video video {
+  display: block;
+  height: 70vh;
+  max-height: 720px;
+  width: auto;
+  max-width: 100%;
+  aspect-ratio: 9 / 16;
+  object-fit: cover;
+  border-radius: 28px;
+  background: var(--color-slate-depth);
+  box-shadow: 0 10px 30px rgba(11, 26, 33, .18);
+}
+.loop-video figcaption {
+  max-width: 420px;
+  text-align: center;
+  font-size: var(--text-caption);
+  color: var(--color-ink-muted);
+  line-height: 1.7;
+}
+.bg-dark .loop-video figcaption { color: rgba(255, 255, 255, .72); }
+.loop-video__play {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 64px;
+  min-height: 64px;
+  padding: 0 18px;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(11, 26, 33, .78);
+  color: #ffffff;
+  font: 700 var(--text-body-sm) / 1 var(--font-body);
+  cursor: pointer;
+}
+.loop-video.is-manual .loop-video__play { display: inline-flex; align-items: center; justify-content: center; gap: 8px; }
+.loop-video.is-manual.is-playing .loop-video__play { display: none; }
+@media (max-width: 767px) {
+  .loop-video video { width: 66vw; height: auto; max-height: none; }
+}
+
+/* 2 列（文と動画） */
+.split {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 56px;
+  align-items: center;
+  max-width: var(--content-max);
+  margin: 0 auto;
+}
+.split--flip .split__text { order: 2; }
+.split__text { display: flex; flex-direction: column; gap: 16px; max-width: 620px; }
+@media (max-width: 899px) {
+  .split { grid-template-columns: 1fr; gap: 40px; }
+  .split--flip .split__text { order: 0; }
+}
+
+/* 1 行の注意（参考です、など） */
+.note-line {
+  margin: 0;
+  padding: 12px 16px;
+  border-left: 3px solid var(--color-slate-tide);
+  background: var(--color-sand);
+  font-size: var(--text-body-sm);
+  color: var(--color-ink);
+}
+.section--sand .note-line { background: var(--color-paper); }
+
+/* 対応海域の外の人へ */
+.area-note {
+  margin-top: 8px;
+  padding: 24px;
+  border-radius: var(--radius);
+  background: var(--color-sand);
+  font-size: var(--text-body-sm);
+}
+.area-note p { margin: 0; }
+.area-note p + p { margin-top: 8px; }
+
+/* 振り返りの全文と画面 */
+.review-sample {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 40px;
+  align-items: start;
+  max-width: var(--content-max);
+  margin: 48px auto 0;
+}
+.review-sample__shot img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 28px;
+  box-shadow: 0 10px 30px rgba(11, 26, 33, .16);
+}
+.review-sample__text {
+  background: var(--color-paper);
+  border-radius: var(--radius);
+  padding: var(--card-pad);
+  font-size: var(--text-body-sm);
+  line-height: 1.9;
+}
+.review-sample__text h3, .review-sample__text h4 { margin: 20px 0 6px; font-size: var(--text-body); line-height: 1.5; }
+.review-sample__text h3:first-child, .review-sample__text h4:first-child { margin-top: 0; }
+.review-sample__text p { margin: 0 0 8px; }
+.review-sample__text ul { margin: 0 0 8px; padding-left: 1.4em; }
+.review-sample__mark {
+  display: block;
+  margin: 8px 0;
+  padding: 10px 14px;
+  border: 2px solid var(--color-fish-orange);
+  border-radius: 12px;
+  background: #fff4ea;
+  color: var(--color-ink);
+  font-weight: 700;
+}
+.review-sample__caption { margin: 12px 0 0; font-size: var(--text-caption); color: var(--color-ink-muted); }
+@media (max-width: 899px) {
+  .review-sample { grid-template-columns: 1fr; }
+  .review-sample__shot { max-width: 260px; margin: 0 auto; }
+}
+
+/* 「たまるほど、自分の海になる。」の小さな画面の並び */
+.mini-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 16px;
+  margin-top: 32px;
+}
+.mini-card { margin: 0; display: flex; flex-direction: column; gap: 8px; }
+.mini-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(11, 26, 33, .14);
+}
+.mini-card figcaption { font-size: var(--text-caption); line-height: 1.6; color: var(--color-ink-muted); }
+.mini-card figcaption strong { display: block; color: var(--color-ink); }
+.grow-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 24px; }
+.grow-cols h4 { margin: 0 0 4px; font-size: var(--text-body); }
+@media (max-width: 899px) {
+  .mini-grid {
+    grid-template-columns: none;
+    grid-auto-flow: column;
+    grid-auto-columns: 42%;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 8px;
+  }
+  .mini-card { scroll-snap-align: start; }
+  .grow-cols { grid-template-columns: 1fr; }
+}
+
+/* プランの表 */
+.plan-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 32px;
+  font-size: var(--text-body-sm);
+  background: var(--color-paper);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.plan-table th, .plan-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--color-hairline);
+  text-align: center;
+  vertical-align: middle;
+}
+.plan-table th[scope="row"] { text-align: left; font-weight: 500; }
+.plan-table thead th { font-weight: 700; background: var(--color-ocean-deep); color: var(--color-paper); }
+.plan-table thead th.plan-table__plus { background: var(--color-deep-orange); }
+.plan-table tr:last-child th, .plan-table tr:last-child td { border-bottom: none; }
+.plan-table .is-no { color: var(--color-ink-muted); }
+.price {
+  margin: 32px 0 0;
+  font-size: var(--text-heading-sm);
+  font-weight: 700;
+  line-height: 1.6;
+}
+.price-sub { margin: 4px 0 0; }
+.price-fine { margin: 4px 0 0; font-size: var(--text-caption); color: var(--color-ink-muted); }
+.plus-words { margin: 32px 0 0; display: flex; flex-direction: column; gap: 12px; }
+.plus-words p { margin: 0; }
+.terms-box {
+  margin-top: 40px;
+  padding: 24px;
+  border: 1px solid var(--color-hairline);
+  border-radius: var(--radius);
+  background: var(--color-paper);
+  font-size: var(--text-body-sm);
+}
+.terms-box h3 { margin: 0 0 8px; font-size: var(--text-body); }
+.terms-box dl { margin: 0; display: grid; grid-template-columns: 9em 1fr; gap: 6px 16px; }
+.terms-box dt { font-weight: 700; }
+.terms-box dd { margin: 0; color: var(--color-ink-muted); }
+@media (max-width: 640px) {
+  .plan-table th, .plan-table td { padding: 10px 8px; }
+  .terms-box dl { grid-template-columns: 1fr; gap: 0; }
+  .terms-box dd { margin-bottom: 8px; }
+}
+
+/* 取り込みの手順（番号と画面） */
+.import-steps { margin: 32px 0 0; padding: 0; list-style: none; counter-reset: imp; display: flex; flex-direction: column; gap: 32px; }
+.import-steps > li {
+  counter-increment: imp;
+  display: grid;
+  grid-template-columns: 1fr 180px;
+  gap: 24px;
+  align-items: start;
+}
+.import-steps > li.no-shot { grid-template-columns: 1fr; }
+.import-steps h4 { margin: 0 0 6px; font-size: var(--text-body); line-height: 1.55; display: flex; gap: 12px; align-items: baseline; }
+.import-steps h4::before {
+  content: counter(imp);
+  flex-shrink: 0;
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  background: var(--color-fish-orange);
+  color: #ffffff;
+  font: 700 14px / 28px var(--font-num);
+  text-align: center;
+}
+.import-steps p { margin: 0 0 0 40px; color: var(--color-ink-muted); font-size: var(--text-body-sm); }
+.import-steps img { width: 100%; height: auto; display: block; border-radius: 18px; box-shadow: 0 6px 18px rgba(11, 26, 33, .14); }
+@media (max-width: 640px) {
+  .import-steps > li { grid-template-columns: 1fr 120px; gap: 12px; }
+  .import-steps p { margin-left: 0; }
+}
+
+/* 仮の画像（素材が届くまで） */
+.ph {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 9 / 19.5;
+  width: 100%;
+  border-radius: 18px;
+  background: repeating-linear-gradient(45deg, #e9eef1, #e9eef1 10px, #dfe6ea 10px, #dfe6ea 20px);
+  color: var(--color-slate-tide);
+  font: 700 var(--text-caption) / 1.4 var(--font-num);
+  text-align: center;
+  padding: 8px;
+}
+.draft-note { background: #fff1c2; padding: 0 4px; border-radius: 4px; font-size: .9em; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+/* 3.0：メニューが 9 個になったので、1 行に収める */
+.site-header__nav { gap: 22px; flex-wrap: nowrap; }
+.site-header__nav .nav-link { white-space: nowrap; font-size: 15px; }
+.site-header__nav .btn-primary { padding: 12px 18px; font-size: 15px; }
+
+/* 地図の節（3.0 では短く、1 画面に収める） */
+.section--compact { padding-top: 56px; padding-bottom: 56px; }
+@media (max-width: 767px) {
+  #map .loop-video video { width: 50vw; }
+  #map .split { gap: 24px; }
+}
+
+/* 取り込みの手順の画面（1 つの手順に 2 枚のときは縦に並べる） */
+.import-steps__shots { display: flex; flex-direction: column; gap: 12px; }
+.import-steps__shots img { width: 100%; height: auto; display: block; border-radius: 18px; box-shadow: 0 6px 18px rgba(11, 26, 33, .14); }
+.import-after { display: grid; grid-template-columns: 1fr 180px; gap: 24px; align-items: start; }
+.import-after .section-lead + .section-lead { margin-top: 12px; }
+.import-after .import-steps__shots { flex-direction: column; }
+@media (max-width: 640px) {
+  .import-after { grid-template-columns: 1fr; }
+  .import-after .import-steps__shots { flex-direction: row; }
+  .import-after .import-steps__shots img { width: 46%; }
+}
+
+/* 撮るだけの節：記録した直後の画面と、水温の枠 */
+.sst-row { display: flex; gap: 24px; justify-content: center; align-items: flex-start; margin-top: 40px; }
+.sst-row img { display: block; height: auto; border-radius: 18px; box-shadow: 0 6px 18px rgba(11, 26, 33, .14); }
+.sst-row img:first-child { width: 240px; }
+.sst-row img:last-child { width: 360px; align-self: center; }
+@media (max-width: 640px) {
+  .sst-row { flex-direction: column; align-items: center; }
+  .sst-row img:first-child { width: 60%; }
+  .sst-row img:last-child { width: 100%; }
+}
+/* 節の本文の段落の間 */
+.split__text .section-lead + .section-lead { margin-top: -4px; }
+@media (max-width: 640px) {
+  .changes { grid-template-columns: 1fr; gap: 16px; }
+  .changes__col { padding: 24px; }
+}
+
+/* ─── MARK: 3.0 上の方を絵で見せる（2026-11 の直し） ─── */
+/* ヒーロー：スマートフォンの幅だけ、記録した直後の画面を 1 枚。上の部分だけ見せて、下はぼかして切る */
+.hero__shot { display: none; }
+.hero__fine { margin: -16px 0 0; }
+@media (max-width: 767px) {
+  .hero { padding-top: 20px; gap: 12px; }
+  .hero__headline { font-size: 34px; }
+  .hero__sub--lead { font-size: 16px; color: var(--color-ink); }
+  .hero__shot {
+    display: block;
+    width: 216px;
+    height: 34vh;
+    min-height: 220px;
+    max-height: 330px;
+    overflow: hidden;
+    margin: 4px 0 0;
+    -webkit-mask-image: linear-gradient(#000 80%, transparent);
+            mask-image: linear-gradient(#000 80%, transparent);
+  }
+  .hero__shot .phone-mockup { border-radius: 36px 36px 0 0; padding: 7px 7px 0; }
+  .hero__shot .phone-mockup__screen { border-radius: 30px 30px 0 0; }
+  .hero .hero-cta { flex-direction: row; align-items: center; gap: 10px; flex-wrap: nowrap; }
+  .hero .appstore-badge { height: 44px; }
+  .hero .gp-badge img { width: 150px; }
+  .hero .hero-cta .btn-primary { padding: 10px 14px; font-size: 14px; }
+  .hero__fine { margin: 0; font-size: 13px; }
+}
+
+/* 3.0 の帯（細い 1 行） */
+.band-30 {
+  background: var(--color-ocean-deep);
+  color: var(--color-paper);
+  text-align: center;
+  padding: 14px 20px;
+  margin-top: 56px;
+}
+.band-30 p { margin: 0; font-size: var(--text-body-sm); font-weight: 700; line-height: 1.6; }
+
+/* 節の札（文の上に 1 つだけ置く） */
+.split__text > .tag { margin-left: 0; align-self: flex-start; }
+.section-link { margin: 0; font-weight: 700; }
+
+/* 3 つの流れ（番号と短い言葉。PC は横、スマートフォンは縦） */
+.flow {
+  list-style: none;
+  margin: 40px auto 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  max-width: var(--content-max);
+}
+.flow li {
+  flex: 1 1 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--color-paper);
+  border-radius: 999px;
+  padding: 12px 20px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+.section:not(.section--sand) .flow li { background: var(--color-sand); }
+.flow__n {
+  flex-shrink: 0;
+  width: 30px; height: 30px;
+  border-radius: 50%;
+  background: var(--color-fish-orange);
+  color: #ffffff;
+  font: 700 15px / 30px var(--font-num);
+  text-align: center;
+}
+@media (max-width: 767px) {
+  .flow { flex-direction: column; gap: 10px; }
+}
+
+/* 振り返りの 4 つの日（2×2 のタイル） */
+.kinds {
+  list-style: none;
+  margin: 8px 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  max-width: 420px;
+}
+.kinds li {
+  background: var(--color-ocean-deep);
+  color: var(--color-fish-orange);
+  border-radius: 16px;
+  padding: 16px 12px;
+  text-align: center;
+  font-weight: 700;
+  font-size: var(--text-body);
+}
+
+/* 動画と静止画を並べる */
+.media-pair { display: flex; gap: 20px; align-items: center; justify-content: center; }
+.media-pair .loop-video video { height: 60vh; max-height: 620px; }
+.media-pair__shot { width: 240px; flex-shrink: 0; }
+.media-pair__shot img { width: 100%; height: auto; display: block; border-radius: 28px; box-shadow: 0 10px 30px rgba(11, 26, 33, .16); }
+@media (max-width: 767px) {
+  .media-pair { gap: 10px; }
+  .media-pair .loop-video video { width: 44vw; height: auto; }
+  .media-pair__shot { width: 44vw; }
+}
+
+/* 押すと開くまとまり（購入の前に・取り込みの手順） */
+details.terms-box > summary,
+details.more > summary {
+  cursor: pointer;
+  font-weight: 700;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+details.terms-box > summary::-webkit-details-marker,
+details.more > summary::-webkit-details-marker { display: none; }
+details.terms-box > summary::after,
+details.more > summary::after { content: '＋'; color: var(--color-deep-orange); }
+details.terms-box[open] > summary::after,
+details.more[open] > summary::after { content: '−'; }
+details.terms-box[open] > summary { margin-bottom: 12px; }
+details.terms-box .plus-words { margin: 0 0 16px; }
+details.more { border: 1px solid var(--color-hairline); border-radius: var(--radius); padding: 18px 24px; }
+details.more[open] > summary { margin-bottom: 8px; }
+@media (min-width: 900px) { .mini-grid--5 { grid-template-columns: repeat(5, 1fr); } }
+/* たまるほど：12 枚を 6 枚 × 2 段に */
+.mini-grid--many { align-items: start; row-gap: 24px; }
+.plan-table thead th { white-space: nowrap; }
+
+/* ヒーロー（スマートフォンの幅）：3 枚を扇形に。上の部分だけ見せて、下はぼかして切る */
+@media (max-width: 767px) {
+  .hero__shot {
+    width: 100%;
+    max-width: 360px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 10px;
+  }
+  .hero__shot .phone-mockup { flex-shrink: 0; }
+  .hero__shot-center { width: 160px; position: relative; z-index: 2; }
+  .hero__shot-side { width: 128px; margin-top: 22px; }
+  .hero__shot-left { margin-right: -26px; transform: rotate(-5deg); }
+  .hero__shot-right { margin-left: -26px; transform: rotate(5deg); }
+  .hero__shot .phone-mockup { padding: 5px 5px 0; border-radius: 26px 26px 0 0; }
+  .hero__shot .phone-mockup__screen { border-radius: 22px 22px 0 0; }
+}
+@media (max-width: 767px) {
+  .hero__shot-center { width: 150px; }
+  .hero__shot-side { width: 116px; }
+  .hero__shot-left { margin-right: -30px; }
+  .hero__shot-right { margin-left: -30px; }
+}
+
+/* 撮るだけの 1・2・3（押すと説明が開く） */
+.flow--open { align-items: flex-start; }
+.flow--open li { padding: 0; display: block; border-radius: 24px; }
+.flow__item > summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 20px;
+}
+.flow__item > summary::-webkit-details-marker { display: none; }
+.flow__item > summary::after { content: '＋'; margin-left: auto; color: var(--color-deep-orange); font-weight: 700; }
+.flow__item[open] > summary::after { content: '−'; }
+.flow__body {
+  margin: 0;
+  padding: 0 20px 16px 62px;
+  font-weight: 400;
+  font-size: var(--text-body-sm);
+  line-height: 1.8;
+  color: var(--color-ink-muted);
+}
+@media (max-width: 767px) {
+  .flow__body { padding-left: 20px; }
+}
+
+/* 取り込みの 1・2・3（中に手順と画面が入るので、どの幅でも縦に並べる） */
+.flow--stack { flex-direction: column; max-width: var(--col-max); gap: 10px; }
+.flow__body--steps { padding: 0 20px 20px; color: var(--color-ink); }
+.flow__body--steps .import-steps { margin-top: 8px; gap: 24px; }
+
+/* 更新履歴の表 */
+.changelog-table th[scope="row"] { white-space: nowrap; width: 9em; font-weight: 700; color: var(--color-ink); }
+.changelog__date { font-weight: 400; font-size: var(--text-caption); color: var(--color-ink-muted); }
+.changelog-table td { font-size: var(--text-body-sm); line-height: 1.8; }
+
+/* 取り込みの 1・2・3 の中の手順は、外側の .flow の形を受け継がない */
+.flow .import-steps > li {
+  display: grid;
+  grid-template-columns: 1fr 180px;
+  gap: 24px;
+  align-items: start;
+  flex: none;
+  background: none;
+  padding: 0;
+  border-radius: 0;
+  font-weight: 400;
+}
+.flow .import-steps > li.no-shot { grid-template-columns: 1fr; }
+@media (max-width: 640px) {
+  .flow .import-steps > li { grid-template-columns: 1fr 110px; gap: 12px; }
+}
+@media (max-width: 640px) {
+  .changelog-table th[scope="row"] { width: auto; white-space: normal; padding-right: 8px; }
+  .changelog-table th, .changelog-table td { padding: 12px 10px; }
+}
+.flow--stack { align-items: stretch; }
+
+/* 取り込みの 1・2・3 の中の手順には番号を出さない（外の 1・2・3 と見分けがつかなくなるため）。
+   丸い数字の代わりに、左に細い線を引いて、ひとつの手順のまとまりに見せる */
+.flow .import-steps h4 { display: block; }
+.flow .import-steps h4::before { content: none; }
+.flow .import-steps > li > div:first-child { border-left: 3px solid var(--color-fish-orange); padding-left: 12px; }
+.flow .import-steps p { margin-left: 0; }
+
+/* 取り込みの 1・2・3 の中の手順：外の 1・2・3（オレンジの丸）と色を分ける。
+   白い札に、青い線で見せる */
+.flow .import-steps > li,
+.section:not(.section--sand) .flow .import-steps > li {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 14px 14px 14px 0;
+}
+.flow .import-steps > li > div:first-child { border-left-color: var(--color-depth-blue-ink); }
+.flow .import-steps h4 { color: var(--color-depth-blue-ink); }
+
+/* App Store と Google Play のバッジの高さをそろえる。
+   App Store のバッジ（Apple の SVG。108.85:40）は、形・色・比率を変えずに高さだけを決める。
+   Google Play のバッジ（646×250 の PNG）は、上下に透明の余白（各 29px）があり、見えている部分は高さ 192。
+   見えている高さを App Store と同じにするため、PNG の幅 = 高さ × 646 / 192 にする。
+   バッジの間は、Apple の決まりの余白（バッジの高さの 1/4 以上）を取る */
+.hero-cta, .cta-buttons { --badge-h: 52px; align-items: center; column-gap: 24px; }
+.hero-cta .appstore-badge, .cta-buttons .appstore-badge { height: var(--badge-h); width: auto; display: block; }
+.hero-cta .gp-badge img, .cta-buttons .gp-badge img { width: calc(var(--badge-h) * 646 / 192); height: auto; }
+.hero-cta a, .cta-buttons > a { line-height: 0; }
+@media (max-width: 767px) {
+  .hero .hero-cta { --badge-h: 44px; column-gap: 14px; }
+  .hero .hero-cta .appstore-badge { height: var(--badge-h); }
+  .hero .hero-cta .gp-badge img { width: calc(var(--badge-h) * 646 / 192); }
+}

@@ -4,14 +4,14 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>分析の見方｜釣果ログ</title>
-  <meta name="description" content="釣果ログの「分析」タブの読み方。記録がたまると、あなた自身の記録を統計分析して、下げ潮・朝まづめ・水深×底質など、自分の当たりパターンが「時間あたり」の倍率で見えてきます。" />
+  <meta name="description" content="釣果ログの分析（3.0 からは釣況の「これまで」）の読み方。記録がたまると、あなた自身の記録を統計分析して、下げ潮・朝まづめ・水深×底質など、自分の当たりパターンが「時間あたり」の倍率で見えてきます。" />
   <link rel="canonical" href="https://chokalog.margheritaworks.com/analysis/" />
 
   <!-- OGP -->
   <meta property="og:type"        content="article" />
   <meta property="og:url"         content="https://chokalog.margheritaworks.com/analysis/" />
   <meta property="og:title"       content="分析の見方｜釣果ログ" />
-  <meta property="og:description" content="記録がたまると、あなた自身の当たりパターンが「時間あたり」の倍率で見えてきます。分析タブの読み方を、実際の画面で解説します。" />
+  <meta property="og:description" content="記録がたまると、あなた自身の当たりパターンが「時間あたり」の倍率で見えてきます。分析（3.0 からは釣況の「これまで」）の読み方を、実際の画面で解説します。" />
   <meta property="og:image"       content="https://chokalog.margheritaworks.com/assets/img/og.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
@@ -26,7 +26,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
 
   <!-- CSS -->
-  <link rel="stylesheet" href="/assets/css/site.css" />
+  <link rel="stylesheet" href="/assets/css/site.css?v=3.0.3" />
 
   <!-- 分析ページ専用の小さな追加スタイル（トークンはCSS変数のみ使用） -->
   <style>
@@ -181,7 +181,7 @@
         <a href="#per-hour">「時間あたり」って何ですか</a>
         <a href="#why">信頼できる理由</a>
         <a href="#tips">記録をためるコツ</a>
-        <a href="#future">2.0 で変わったこと</a>
+        <a href="#future">2.0・3.0 で変わったこと</a>
         <a href="#notes">注意していただきたいこと</a>
       </aside>
 
@@ -196,7 +196,7 @@
           <a href="#per-hour">「時間あたり」って何ですか</a>
           <a href="#why">信頼できる理由</a>
           <a href="#tips">記録をためるコツ</a>
-          <a href="#future">2.0 で変わったこと</a>
+          <a href="#future">2.0・3.0 で変わったこと</a>
           <a href="#notes">注意していただきたいこと</a>
         </nav>
       </details>
@@ -206,7 +206,8 @@
 
         <section id="intro" aria-labelledby="intro-h">
           <h2 id="intro-h"><span class="nw">はじめに</span></h2>
-          <p>釣果ログの「分析」タブは、あなた自身の釣果記録を統計分析して、「どんなときに釣れているか」を探し、言葉で教えてくれる機能です。自分でも気づいていなかったパターンが見つかることもあります。</p>
+          <p class="note-line" style="margin-bottom:16px;">3.0 から、2.0 の「分析」タブは、中身はそのままで、［釣況］タブの「これまで」に移りました。このページの画面は 2.0 のものです。読み方は変わりません。</p>
+          <p>釣果ログの分析（3.0 からは釣況の「これまで」）は、あなた自身の釣果記録を統計分析して、「どんなときに釣れているか」を探し、言葉で教えてくれる機能です。自分でも気づいていなかったパターンが見つかることもあります。</p>
           <p>たとえばこんな一文が出ます。</p>
           <div class="insight-quote">
             <strong>下げ潮のときによく釣れています</strong>
@@ -217,7 +218,7 @@
 
           <figure class="shot">
             <img src="/assets/img/2.0/analysis-top.webp" alt="分析タブの上部。総釣果 36 件・釣行 20 回・1 釣行あたり 1.8 匹、「よく釣れている条件」カード（朝まづめ × 中潮）、傾向リストが並ぶ" loading="lazy" width="300" />
-            <figcaption>分析タブの上部。上の3つの数字、その下に「よく釣れている条件」と傾向リストが並びます。</figcaption>
+            <figcaption>分析の画面の上部（2.0 の画面）。上の3つの数字、その下に「よく釣れている条件」と傾向リストが並びます。</figcaption>
           </figure>
         </section>
 
@@ -365,9 +366,10 @@
         </section>
 
         <section id="future" aria-labelledby="future-h">
-          <h2 id="future-h"><span class="nw">2.0</span> <span class="nw">で</span><span class="nw">変わったこと</span></h2>
+          <h2 id="future-h"><span class="nw">2.0・3.0</span> <span class="nw">で</span><span class="nw">変わったこと</span></h2>
           <p>2.0 で、出港から帰港までの航跡を記録できるようになりました。航跡から「釣りをしていた時間」が分かるので、水深・底質などの場所の条件は、その時間に対してどれだけ釣れたかで数えるようになりました（上の「場所の条件は、実際に釣りをしていた時間で」）。地図で過去の釣行を重ねれば、どこを流して、どこで釣れたかも見比べられます。</p>
           <p>2.0 より前の記録も、そのまま分析に使えます。航跡のない釣行は、これまでどおり数えます。</p>
+          <p>3.0 で、分析は［釣況］タブの「これまで」に移りました。中身は 2.0 のままで、無料で使えます。水温に衛星で測った海面水温が自動で入るようになり、「条件ごとの分布」に水温（2℃ ごと）が加わりました。</p>
         </section>
 
         <section id="notes" aria-labelledby="notes-h">
