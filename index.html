@@ -35,7 +35,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
 
   <!-- CSS -->
-  <link rel="stylesheet" href="/assets/css/site.css?v=3.0.3" />
+  <link rel="stylesheet" href="/assets/css/site.css?v=3.0.4" />
 
   <!-- Android の端末で開いた場合だけ、最初の画面の Android 版のボタンを先に表示する。判定できない場合は今の並びのまま -->
   <script>if (/Android/i.test(navigator.userAgent || '')) document.documentElement.classList.add('is-android');</script>
@@ -1257,6 +1257,40 @@
           <input type="hidden" name="app"    value="choka-log" />
           <input type="hidden" name="q"      value="chokyo-area-v1" />
           <input type="hidden" name="return" value="https://chokalog.margheritaworks.com/#thanks-chokyo-area" />
+          <p class="poll-area-group">北海道・東北</p>
+          <div class="poll-area-grid">
+            <button type="submit" name="answer" value="北海道（日本海側）" class="poll-option poll-option--area"><span><span class="nw">北海道</span><span class="nw">（日本海側）</span></span></button>
+            <button type="submit" name="answer" value="北海道（太平洋側）" class="poll-option poll-option--area"><span><span class="nw">北海道</span><span class="nw">（太平洋側）</span></span></button>
+            <button type="submit" name="answer" value="北海道（オホーツク）" class="poll-option poll-option--area"><span><span class="nw">北海道</span><span class="nw">（オホーツク）</span></span></button>
+            <button type="submit" name="answer" value="青森・陸奥湾" class="poll-option poll-option--area"><span><span class="nw">青森・</span><span class="nw">陸奥湾</span></span></button>
+            <button type="submit" name="answer" value="三陸" class="poll-option poll-option--area"><span>三陸</span></button>
+            <button type="submit" name="answer" value="仙台湾・福島" class="poll-option poll-option--area"><span><span class="nw">仙台湾・</span><span class="nw">福島</span></span></button>
+            <button type="submit" name="answer" value="秋田・山形" class="poll-option poll-option--area"><span><span class="nw">秋田・</span><span class="nw">山形</span></span></button>
+          </div>
+          <p class="poll-area-group">日本海側（新潟〜山陰）</p>
+          <div class="poll-area-grid">
+            <button type="submit" name="answer" value="新潟・佐渡" class="poll-option poll-option--area"><span><span class="nw">新潟・</span><span class="nw">佐渡</span></span></button>
+            <button type="submit" name="answer" value="富山湾・能登" class="poll-option poll-option--area"><span><span class="nw">富山湾・</span><span class="nw">能登</span></span></button>
+            <button type="submit" name="answer" value="山陰" class="poll-option poll-option--area"><span>山陰</span></button>
+          </div>
+          <p class="poll-area-group">太平洋側（関東〜四国）</p>
+          <div class="poll-area-grid">
+            <button type="submit" name="answer" value="九十九里" class="poll-option poll-option--area"><span>九十九里</span></button>
+            <button type="submit" name="answer" value="伊豆諸島" class="poll-option poll-option--area"><span>伊豆諸島</span></button>
+            <button type="submit" name="answer" value="遠州灘" class="poll-option poll-option--area"><span>遠州灘</span></button>
+            <button type="submit" name="answer" value="熊野灘" class="poll-option poll-option--area"><span>熊野灘</span></button>
+            <button type="submit" name="answer" value="紀伊水道・和歌山" class="poll-option poll-option--area"><span><span class="nw">紀伊水道・</span><span class="nw">和歌山</span></span></button>
+            <button type="submit" name="answer" value="土佐湾" class="poll-option poll-option--area"><span>土佐湾</span></button>
+          </div>
+          <p class="poll-area-group">九州・山口・沖縄</p>
+          <div class="poll-area-grid">
+            <button type="submit" name="answer" value="豊後水道・日向灘" class="poll-option poll-option--area"><span><span class="nw">豊後水道・</span><span class="nw">日向灘</span></span></button>
+            <button type="submit" name="answer" value="響灘・山口北部" class="poll-option poll-option--area"><span><span class="nw">響灘・</span><span class="nw">山口北部</span></span></button>
+            <button type="submit" name="answer" value="長崎・五島" class="poll-option poll-option--area"><span><span class="nw">長崎・</span><span class="nw">五島</span></span></button>
+            <button type="submit" name="answer" value="有明海・八代海" class="poll-option poll-option--area"><span><span class="nw">有明海・</span><span class="nw">八代海</span></span></button>
+            <button type="submit" name="answer" value="鹿児島" class="poll-option poll-option--area"><span>鹿児島</span></button>
+            <button type="submit" name="answer" value="沖縄" class="poll-option poll-option--area"><span>沖縄</span></button>
+          </div>
           <button type="submit" name="answer" value="other"   class="poll-option">このどれでもない（下のご意見のフォームで、海域を教えてください）</button>
         </form>
         <div id="thanks-chokyo-area" style="margin-top:16px; font-size:var(--text-body-sm); color:var(--color-ink-muted);">

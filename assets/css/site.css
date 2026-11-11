@@ -1025,6 +1025,29 @@ details:not([open]) .faq-icon-minus { display: none; }
   outline-offset: 2px;
 }
 
+/* 3 問目（次の海域）：地方ごとのまとまりと、折り返しの並び */
+.poll-area-group {
+  margin: 8px 0 -2px;
+  font-size: var(--text-body-sm);
+  font-weight: 700;
+  color: var(--color-ink-muted);
+}
+.poll-area-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+@media (min-width: 640px) {
+  .poll-area-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+.poll-option--area {
+  padding: 12px 10px 12px 14px;
+  gap: 6px;
+  font-size: var(--text-body-sm);
+  line-height: 1.35;
+}
+.poll-buttons-vertical > .poll-option[value="other"] { margin-top: 8px; }
+
 /* ─── MARK: フィードバックフォーム ────────────────────── */
 .feedback-card {
   background: var(--color-paper);
