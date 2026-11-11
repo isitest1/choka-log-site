@@ -1047,6 +1047,12 @@ details:not([open]) .faq-icon-minus { display: none; }
   line-height: 1.35;
 }
 .poll-buttons-vertical > .poll-option[value="other"] { margin-top: 8px; }
+.area-other { margin-top: 16px; }
+.area-other[hidden], .area-other [hidden] { display: none; }
+.area-other__row { display: flex; gap: 8px; margin-top: 6px; }
+.area-other__row .fb-input { flex: 1; min-width: 0; }
+.area-other__row .btn-primary { flex-shrink: 0; }
+.area-other__done { margin: 12px 0 0; font-size: var(--text-body-sm); color: var(--color-ink); font-weight: 700; }
 
 /* ─── MARK: フィードバックフォーム ────────────────────── */
 .feedback-card {
@@ -1154,6 +1160,8 @@ details:not([open]) .faq-icon-minus { display: none; }
 #thanks-point-market:target { display: block; }
 #thanks-seabed-chart { display: none; }
 #thanks-seabed-chart:target { display: block; }
+#thanks-chokyo-area { display: none; }
+#thanks-chokyo-area:target { display: block; }
 
 /* ─── MARK: 背景写真（Section F・フッター） ─────────── */
 .section--photo-f {
