@@ -35,7 +35,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
 
   <!-- CSS -->
-  <link rel="stylesheet" href="/assets/css/site.css?v=3.0.5" />
+  <link rel="stylesheet" href="/assets/css/site.css?v=3.0.6" />
 
   <!-- Android の端末で開いた場合だけ、最初の画面の Android 版のボタンを先に表示する。判定できない場合は今の並びのまま -->
   <script>if (/Android/i.test(navigator.userAgent || '')) document.documentElement.classList.add('is-android');</script>
@@ -144,7 +144,7 @@
             "name": "釣況はどの海域に対応していますか？",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "2026年11月の時点で、相模湾、東京湾、外房・南房、茨城、伊豆・駿河湾、伊勢湾・三河湾、大阪湾・明石、瀬戸内、若狭湾、玄界灘の10海域です。海域は、順に増やしています。アプリの「この海域を希望する」か、このページのアンケートで、見たい海を教えてください。対応していない海域でも、記録・魚種判定・地図・航跡・統計分析・図鑑・海面水温の自動入力・海釣図V の記録の取り込みは使えます。"
+              "text": "今釣れが船宿の釣果を集めている海域に対応しています。いまは相模湾、東京湾、外房・南房、茨城、伊豆・駿河湾、大阪湾・明石、伊勢湾・三河湾、玄界灘、若狭湾、瀬戸内、九州西の11海域です（2026年11月13日時点）。海域は順に増やしていて、見られるようになったらアプリを開いたときにお知らせします。見たい海域は、このページの下のアンケートから教えてください。"
             }
           },
           {
@@ -161,6 +161,14 @@
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "船宿同士の数は比べず、それぞれの船宿の「ふだん」と比べた位置を使います。「好調続く」は、直近14日にその魚を狙った船宿のうち、比べられた船宿の何軒がふだん以上だったかで出します（例：9軒のうち8軒が普段以上）。ほかの一言には、「7日前より上がった船宿 5軒中3軒」のような根拠を添えて出します。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "出船の目安は、何を見て決めていますか",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "平均の風、波、最大瞬間風速を見ています。最大瞬間風速は、自分の船では 10m/s、遊漁船では 15m/s 以上で「出船おそらく不可」としています。どちらの船かは、設定の「釣況」で選べます。最後に出船を決めるのは、船宿とご自身です。"
             }
           },
           {
@@ -256,7 +264,7 @@
             "name": "iPhone と Android の間で、記録を移せますか？",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "移せます。設定のデータ管理で「写真付きでバックアップ（zip）」を書き出し、新しい端末のアプリで読み込むと、写真と航跡を含めて引き継げます。"
+              "text": "移せます。設定のデータ管理で「写真付きでバックアップ（zip）」を書き出し、新しい端末のアプリで読み込むと、写真と航跡を含めて引き継げます。すべての記録を移すときは全体のバックアップを、1 回の釣行だけを渡すときは釣行の共有を使ってください。"
             }
           },
           {
@@ -280,7 +288,7 @@
             "name": "魚種の判定はどのくらい正確ですか？",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "多くの場合、そのまま使えます。ただし、ブリとヒラマサ、マダイとチダイのような似た魚は取り違えることがあります。違うときは、候補をタップして選び直してください。"
+              "text": "多くの場合、そのまま使えます。ただし、ブリとヒラマサ、マダイとチダイのような似た魚は取り違えることがあります。違うときは、候補をタップして選び直してください。判定が違っていたときは、登録の画面や釣果の画面の「違っていたら教えてください」から知らせてください。写真は送られません。いただいた声は判定の改善に使います。"
             }
           },
           {
@@ -344,7 +352,7 @@
             "name": "機種変更するとき、記録は移せますか？",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "移せます。iPhone版は、設定のデータ管理の「写真付きでバックアップ（zip）」で書き出し、新しい iPhone で「バックアップから復元」を選んでください。写真と航跡も一緒に移ります。復元は、まだ入っていない記録だけを足すので、今ある記録は書き換えません。iPhone版は iCloud で同期しないので、機種変更の前にバックアップを書き出してください。Android版も、設定のデータ管理の「写真付きでバックアップ（zip）」で、写真と航跡を含めて移せます。Android の自動バックアップでも、記録と設定は引き継がれます（写真と航跡の線は含みません）。"
+              "text": "移せます。iPhone版は、設定のデータ管理の「写真付きでバックアップ（zip）」で書き出し、新しい iPhone で「バックアップから復元」を選んでください。写真と航跡も一緒に移ります。復元は、まだ入っていない記録だけを足すので、今ある記録は書き換えません。iPhone版は iCloud で同期しないので、機種変更の前にバックアップを書き出してください。Android版も、設定のデータ管理の「写真付きでバックアップ（zip）」で、写真と航跡を含めて移せます。Android の自動バックアップでも、記録と設定は引き継がれます（写真と航跡の線は含みません）。すべての記録を移すときは全体のバックアップを、1 回の釣行だけを渡すときは釣行の共有を使ってください。"
             }
           },
           {
@@ -376,7 +384,23 @@
             "name": "他の人の釣果を見たり、共有したりできますか？",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "他の人の釣果を見ることはできません。ご自身の釣果は、シェア画像にしてSNSなどで共有できます。釣れた場所は画像に出しません。"
+              "text": "ほかの人の釣果を見る機能はありません。同じ船に乗った人とは、その日の釣行をファイルで分け合えます。くわしくは「同じ船の仲間と、その日の釣行を分け合う」をご覧ください。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "受け取った釣行のファイルが開けません",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "iPhone では、ファイルを押すのではなく、共有のメニューを開いて「釣果ログに取り込む」を選んでください。メッセージでは、ファイルを長押しして「共有」を選ぶと出てきます。そのあと釣果ログを開くと、取り込みの確認が出ます。見つからないときは、ファイルをいったん「ファイル」アプリに保存し、釣果ログの「設定」→「共有された釣行ファイルを読み込む」から選んでください。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "釣行のファイルには何が入りますか",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "その日の釣果、写真、航跡、メモが入ります。釣った場所も入るので、送る相手をよく選んでください。AI の振り返りは入りません。"
             }
           }
         ]
@@ -402,6 +426,7 @@
       <a href="/#map"     class="nav-link">地図</a>
       <a href="/#review"  class="nav-link">振り返り</a>
       <a href="/#plus"    class="nav-link">プラス</a>
+      <a href="/#share"   class="nav-link">共有</a>
       <a href="/#import"  class="nav-link">取り込み</a>
       <a href="/#faq"     class="nav-link">よくある質問</a>
       <a href="/#contact" class="nav-link">お問い合わせ</a>
@@ -417,6 +442,7 @@
         <a href="/#map"      class="nav-link">地図</a>
         <a href="/#review"   class="nav-link">振り返り</a>
         <a href="/#plus"     class="nav-link">プラス</a>
+        <a href="/#share"    class="nav-link">共有</a>
         <a href="/#import"   class="nav-link">取り込み</a>
         <a href="/#faq"      class="nav-link">よくある質問</a>
         <a href="/#contact"  class="nav-link">お問い合わせ</a>
@@ -488,6 +514,7 @@
   <!-- ============ B.5: 3.0 の帯 ============ -->
   <div id="whats-new" class="band-30">
     <p>3.0 で、いまの海と、AI の振り返り・作戦が加わりました。</p>
+    <p class="band-30__sub"><a href="#share">3.0.3：同じ船の仲間と、釣行を分け合えるようになりました</a></p>
   </div>
 
   <!-- ============ 1: いま（NOW） ============ -->
@@ -497,6 +524,8 @@
         <span class="tag">無料</span>
         <h2 id="now-heading" class="section-heading"><span class="tt-orange"><span class="nw">いま、</span></span><span class="nw">何が</span><span class="nw">釣れているか。</span></h2>
         <p class="section-lead">船宿の釣果を毎晩まとめて、いま好調な魚を海域ごとに出します。対応している海は、相模湾・東京湾をはじめ、全国に広げています。</p>
+        <p class="section-lead">出船の目安も出します。平均の風と波に加えて、最大瞬間風速も見ています。設定で、ふだん乗るのが「自分の船」か「遊漁船」かを選ぶと、それぞれに合った目安で判定します。</p>
+        <p class="section-lead">海域は順に増やしています。いまは見られない海域でも、見られるようになったら、アプリを開いたときにお知らせします。</p>
         <p class="section-link"><a href="#survey-area">見たい海を教える →</a></p>
       </div>
       <figure class="loop-video">
@@ -550,6 +579,47 @@
           <p class="flow__body">釣行の画面で押すと、その日の船宿の釣果と並べた振り返りを作ります。船宿の釣果は夜9時ごろに届くので、作れるのはそれ以降です。</p>
         </details></li>
       </ol>
+    </div>
+  </section>
+
+  <!-- ============ 2.5: 共有（SHARE）3.0.3 ============ -->
+  <section id="share" class="section" aria-labelledby="share-heading">
+    <div class="split">
+      <div class="split__text">
+        <span class="tag">無料</span>
+        <h2 id="share-heading" class="section-heading"><span class="tt-orange"><span class="nw">同じ船の</span><span class="nw">仲間と、</span></span><span class="nw">その日の</span><span class="nw">釣行を</span><span class="nw">分け合う</span></h2>
+        <p class="section-lead">同じ船に乗った人に、その日の釣果・写真・航跡・メモを、ひとつのファイルにまとめて送れます。</p>
+        <p class="section-lead">受け取った人は、そのまま自分の釣果ログに取り込めます。誰が何を釣ったかも、どこを走ったかも、みんなの記録に残ります。</p>
+      </div>
+      <!-- iPhone のリポジトリの docs/3.0.3/screens/03c_インポートの確かめ.png（デモのデータ。場所は写っていない） -->
+      <figure class="share-shot">
+        <div class="share-shot__frame">
+          <img src="/assets/img/3.0.3/share-import.webp" alt="受け取った人が開いたところ。「この釣行をインポートしますか」と、釣行の日付・釣果の数・写真の数" width="644" height="1400" loading="lazy" decoding="async" />
+          <span class="share-shot__note">架空のデータです</span>
+        </div>
+      </figure>
+    </div>
+    <div class="container">
+      <!-- 押すと説明が開く。1 つ開くと、ほかは閉じる -->
+      <ol class="flow flow--open">
+        <li><details name="share-flow" class="flow__item">
+          <summary><span class="flow__n" aria-hidden="true">1</span><span>釣行を開いて「共有」</span></summary>
+          <p class="flow__body">釣行の画面か、地図の画面の「共有」を押します。「釣果ログ_釣行_日付.zip」というファイルができます。</p>
+        </details></li>
+        <li><details name="share-flow" class="flow__item">
+          <summary><span class="flow__n" aria-hidden="true">2</span><span>いつもの方法で送る</span></summary>
+          <p class="flow__body">AirDrop、メッセージ、LINE、メールなど、ふだん使っている方法で送ってください。</p>
+        </details></li>
+        <li><details name="share-flow" class="flow__item">
+          <summary><span class="flow__n" aria-hidden="true">3</span><span>受け取った人が取り込む</span></summary>
+          <p class="flow__body">iPhone では、受け取ったファイルの共有のメニューから「釣果ログに取り込む」を選び、釣果ログを開きます。Android では、共有のメニューから釣果ログを選びます。「この釣行をインポートしますか」と出たら、取り込むを押してください。</p>
+        </details></li>
+      </ol>
+      <div class="share-notes">
+        <p>受け取る人にも、釣果ログが入っている必要があります。iPhone と Android の間でも受け渡せます（Android 版は次の更新から対応します）。</p>
+        <p>ファイルには釣った場所も入っています。送る相手をよく選んでください。ファイルは送る人と受け取る人の間で直接やり取りされ、私たちのサーバーには送られません。</p>
+        <p>AI の振り返りはファイルに入りません。同じ釣行がすでに入っているときは、二重に取り込まれません。</p>
+      </div>
     </div>
   </section>
 
@@ -646,7 +716,7 @@
         <figure class="mini-card"><img src="/assets/img/2.0/views-depth-real.webp" alt="記録を水深の深い順に並べた一覧" width="750" height="1625" loading="lazy" decoding="async" /><figcaption>水深の順</figcaption></figure>
         <figure class="mini-card" id="zukan"><img src="/assets/img/3.0/zukan-now.webp" alt="図鑑のワラサの画面の「今の相模湾」。始まった、7日前より上がった船宿5軒中1軒、直近14日の推移" width="750" height="1101" loading="lazy" decoding="async" /><figcaption>図鑑</figcaption></figure>
         <figure class="mini-card"><img src="/assets/img/2.0/zukan-pb-real.webp" alt="図鑑のワラサの自己記録の推移。75cm から 86cm までのグラフと、すべての記録の一覧" width="750" height="1625" loading="lazy" decoding="async" /><figcaption>自己記録の推移</figcaption></figure>
-        <figure class="mini-card" id="share"><img src="/assets/img/3.0/share-line.webp" alt="シェア画像。ワラサ 70cm に、今の海の一行「相模湾 ブリ 始まりの日の1尾」。場所は出ない" width="750" height="1631" loading="lazy" decoding="async" /><figcaption>シェア画像</figcaption></figure>
+        <figure class="mini-card" id="share-image"><img src="/assets/img/3.0/share-line.webp" alt="シェア画像。ワラサ 70cm に、今の海の一行「相模湾 ブリ 始まりの日の1尾」。場所は出ない" width="750" height="1631" loading="lazy" decoding="async" /><figcaption>シェア画像</figcaption></figure>
         <figure class="mini-card"><img src="/assets/img/3.0/bulk-review-top.webp" alt="まとめた振り返り。30釣行を4つに分けたます目と、海に乗るのがうまいタイプ" width="750" height="1631" loading="lazy" decoding="async" /><figcaption>まとめた振り返り<span class="tag tag--plus" style="margin:2px 0 0;">プラス</span></figcaption></figure>
       </div>
       <p class="price-fine" style="margin-top:12px;">釣行の航跡、釣果の詳細、釣行のタイムライン、水深×潮の画面はデモ用の記録です。</p>
@@ -670,6 +740,7 @@
           <tr><th scope="row">いまの海<sup>※1</sup></th><td>○</td><td>○</td></tr>
           <tr><th scope="row">これまで（分析・図鑑・シェア・去年の今ごろ）</th><td>○</td><td>○</td></tr>
           <tr><th scope="row">他のアプリの記録の取り込み</th><td>○</td><td>○</td></tr>
+          <tr><th scope="row">釣行の共有</th><td>○</td><td>○</td></tr>
           <tr><th scope="row">釣行ごとの AI の振り返り</th><td>最初の3回（作戦と合わせて）</td><td>すべての釣行</td></tr>
           <tr><th scope="row">まとめた振り返り・月報</th><td class="is-no">−</td><td>○</td></tr>
           <tr><th scope="row">作戦と答え合わせ</th><td>最初の3回（振り返りと合わせて）</td><td>○</td></tr>
@@ -747,6 +818,10 @@
         <li><div><h4>件数を確かめて取り込む</h4><p>途中で「やめる」を押すと、その回の分は何も残りません。</p></div><div class="import-steps__shots"><img src="/assets/img/3.0/import-6-confirm.webp" alt="確かめて取り込む画面。航跡171回、釣果27件、写真（数えています）を取り込みます" width="750" height="1631" loading="lazy" decoding="async" /></div></li>
           </ol>
           </div>
+        </details></li>
+        <li><details name="import-flow" class="flow__item">
+          <summary><span class="flow__n" aria-hidden="true">4</span><span>これまでの記録のまとめを見る</span></summary>
+          <p class="flow__body">取り込みが終わると、釣行の数、よく釣った魚、魚種ごとの自己記録、釣った場所の地図をまとめて表示します。そこから図鑑や地図、これまでの振り返りに進めます。</p>
         </details></li>
       </ol>
       <p class="section-link" style="margin-top:20px;"><a href="/kaichozu/">海釣図V でのバックアップの作り方から見る ›</a></p>
@@ -875,7 +950,7 @@
               <span class="faq-icon faq-icon-plus" aria-hidden="true">＋</span>
               <span class="faq-icon faq-icon-minus" aria-hidden="true">−</span>
             </summary>
-            <div class="faq-answer">2026年11月の時点で、相模湾、東京湾、外房・南房、茨城、伊豆・駿河湾、伊勢湾・三河湾、大阪湾・明石、瀬戸内、若狭湾、玄界灘の10海域です。海域は、順に増やしています。アプリの「この海域を希望する」か、<a href="/#survey-area">このページのアンケート</a>で、見たい海を教えてください。対応していない海域でも、記録・魚種判定・地図・航跡・統計分析・図鑑・海面水温の自動入力・海釣図V の記録の取り込みは使えます。</div>
+            <div class="faq-answer">今釣れが船宿の釣果を集めている海域に対応しています。いまは相模湾、東京湾、外房・南房、茨城、伊豆・駿河湾、大阪湾・明石、伊勢湾・三河湾、玄界灘、若狭湾、瀬戸内、九州西の11海域です（2026年11月13日時点）。海域は順に増やしていて、見られるようになったらアプリを開いたときにお知らせします。見たい海域は、このページの下の<a href="/#survey-area">アンケート</a>から教えてください。</div>
           </details>
         </div>
 
@@ -898,6 +973,17 @@
               <span class="faq-icon faq-icon-minus" aria-hidden="true">−</span>
             </summary>
             <div class="faq-answer">船宿同士の数は比べず、それぞれの船宿の「ふだん」と比べた位置を使います。「好調続く」は、直近14日にその魚を狙った船宿のうち、比べられた船宿の何軒がふだん以上だったかで出します（例：9軒のうち8軒が普段以上）。ほかの一言には、「7日前より上がった船宿 5軒中3軒」のような根拠を添えて出します。</div>
+          </details>
+        </div>
+
+        <div class="faq-item">
+          <details>
+            <summary>
+              <h3 style="margin:0; font-size:inherit; font-weight:inherit;"><span class="nw">出船の目安は、</span><span class="nw">何を見て</span><span class="nw">決めていますか</span></h3>
+              <span class="faq-icon faq-icon-plus" aria-hidden="true">＋</span>
+              <span class="faq-icon faq-icon-minus" aria-hidden="true">−</span>
+            </summary>
+            <div class="faq-answer">平均の風、波、最大瞬間風速を見ています。最大瞬間風速は、自分の船では 10m/s、遊漁船では 15m/s 以上で「出船おそらく不可」としています。どちらの船かは、設定の「釣況」で選べます。最後に出船を決めるのは、船宿とご自身です。</div>
           </details>
         </div>
 
@@ -1029,7 +1115,7 @@
               <span class="faq-icon faq-icon-plus" aria-hidden="true">＋</span>
               <span class="faq-icon faq-icon-minus" aria-hidden="true">−</span>
             </summary>
-            <div class="faq-answer">移せます。設定のデータ管理で「写真付きでバックアップ（zip）」を書き出し、新しい端末のアプリで読み込むと、写真と航跡を含めて引き継げます。</div>
+            <div class="faq-answer">移せます。設定のデータ管理で「写真付きでバックアップ（zip）」を書き出し、新しい端末のアプリで読み込むと、写真と航跡を含めて引き継げます。すべての記録を移すときは全体のバックアップを、1 回の釣行だけを渡すときは釣行の共有を使ってください。</div>
           </details>
         </div>
 
@@ -1062,7 +1148,7 @@
               <span class="faq-icon faq-icon-plus" aria-hidden="true">＋</span>
               <span class="faq-icon faq-icon-minus" aria-hidden="true">−</span>
             </summary>
-            <div class="faq-answer">多くの場合、そのまま使えます。ただし、ブリとヒラマサ、マダイとチダイのような似た魚は取り違えることがあります。違うときは、候補をタップして選び直してください。</div>
+            <div class="faq-answer">多くの場合、そのまま使えます。ただし、ブリとヒラマサ、マダイとチダイのような似た魚は取り違えることがあります。違うときは、候補をタップして選び直してください。判定が違っていたときは、登録の画面や釣果の画面の「違っていたら教えてください」から知らせてください。写真は送られません。いただいた声は判定の改善に使います。</div>
           </details>
         </div>
 
@@ -1150,7 +1236,7 @@
               <span class="faq-icon faq-icon-plus" aria-hidden="true">＋</span>
               <span class="faq-icon faq-icon-minus" aria-hidden="true">−</span>
             </summary>
-            <div class="faq-answer">移せます。iPhone版は、設定のデータ管理の「写真付きでバックアップ（zip）」で書き出し、新しい iPhone で「バックアップから復元」を選んでください。写真と航跡も一緒に移ります。復元は、まだ入っていない記録だけを足すので、今ある記録は書き換えません。iPhone版は iCloud で同期しないので、機種変更の前にバックアップを書き出してください。Android版も、設定のデータ管理の「写真付きでバックアップ（zip）」で、写真と航跡を含めて移せます。Android の自動バックアップでも、記録と設定は引き継がれます（写真と航跡の線は含みません）。</div>
+            <div class="faq-answer">移せます。iPhone版は、設定のデータ管理の「写真付きでバックアップ（zip）」で書き出し、新しい iPhone で「バックアップから復元」を選んでください。写真と航跡も一緒に移ります。復元は、まだ入っていない記録だけを足すので、今ある記録は書き換えません。iPhone版は iCloud で同期しないので、機種変更の前にバックアップを書き出してください。Android版も、設定のデータ管理の「写真付きでバックアップ（zip）」で、写真と航跡を含めて移せます。Android の自動バックアップでも、記録と設定は引き継がれます（写真と航跡の線は含みません）。すべての記録を移すときは全体のバックアップを、1 回の釣行だけを渡すときは釣行の共有を使ってください。</div>
           </details>
         </div>
 
@@ -1194,7 +1280,29 @@
               <span class="faq-icon faq-icon-plus" aria-hidden="true">＋</span>
               <span class="faq-icon faq-icon-minus" aria-hidden="true">−</span>
             </summary>
-            <div class="faq-answer">他の人の釣果を見ることはできません。ご自身の釣果は、シェア画像にしてSNSなどで共有できます。釣れた場所は画像に出しません。</div>
+            <div class="faq-answer">ほかの人の釣果を見る機能はありません。同じ船に乗った人とは、その日の釣行をファイルで分け合えます。くわしくは「<a href="/#share">同じ船の仲間と、その日の釣行を分け合う</a>」をご覧ください。</div>
+          </details>
+        </div>
+
+        <div class="faq-item">
+          <details>
+            <summary>
+              <h3 style="margin:0; font-size:inherit; font-weight:inherit;"><span class="nw">受け取った</span><span class="nw">釣行の</span><span class="nw">ファイルが</span><span class="nw">開けません</span></h3>
+              <span class="faq-icon faq-icon-plus" aria-hidden="true">＋</span>
+              <span class="faq-icon faq-icon-minus" aria-hidden="true">−</span>
+            </summary>
+            <div class="faq-answer">iPhone では、ファイルを押すのではなく、共有のメニューを開いて「釣果ログに取り込む」を選んでください。メッセージでは、ファイルを長押しして「共有」を選ぶと出てきます。そのあと釣果ログを開くと、取り込みの確認が出ます。見つからないときは、ファイルをいったん「ファイル」アプリに保存し、釣果ログの「設定」→「共有された釣行ファイルを読み込む」から選んでください。</div>
+          </details>
+        </div>
+
+        <div class="faq-item">
+          <details>
+            <summary>
+              <h3 style="margin:0; font-size:inherit; font-weight:inherit;"><span class="nw">釣行の</span><span class="nw">ファイルには</span><span class="nw">何が</span><span class="nw">入りますか</span></h3>
+              <span class="faq-icon faq-icon-plus" aria-hidden="true">＋</span>
+              <span class="faq-icon faq-icon-minus" aria-hidden="true">−</span>
+            </summary>
+            <div class="faq-answer">その日の釣果、写真、航跡、メモが入ります。釣った場所も入るので、送る相手をよく選んでください。AI の振り返りは入りません。</div>
           </details>
         </div>
 
@@ -1287,8 +1395,6 @@
           <div class="poll-area-grid">
             <button type="submit" name="answer" value="bungo-hyuga" class="poll-option poll-option--area"><span><span class="nw">豊後水道・</span><span class="nw">日向灘</span></span></button>
             <button type="submit" name="answer" value="hibiki-yamaguchi" class="poll-option poll-option--area"><span><span class="nw">響灘・</span><span class="nw">山口北部</span></span></button>
-            <button type="submit" name="answer" value="nagasaki-goto" class="poll-option poll-option--area"><span><span class="nw">長崎・</span><span class="nw">五島</span></span></button>
-            <button type="submit" name="answer" value="ariake-yatsushiro" class="poll-option poll-option--area"><span><span class="nw">有明海・</span><span class="nw">八代海</span></span></button>
             <button type="submit" name="answer" value="kagoshima" class="poll-option poll-option--area"><span>鹿児島</span></button>
             <button type="submit" name="answer" value="okinawa" class="poll-option poll-option--area"><span>沖縄</span></button>
           </div>
@@ -1361,6 +1467,7 @@
           <tr><th scope="col">版</th><th scope="col">おもな変更</th></tr>
         </thead>
         <tbody>
+          <tr><th scope="row"><span class="nw">3.0.3</span><br><span class="changelog__date">2026年11月</span></th><td>同じ船に乗った人と、その日の釣行をファイルで分け合えるようになりました。出船の目安に最大瞬間風速を加え、「自分の船」と「遊漁船」で目安を選べるようにしました。海釣図Vから取り込んだあとに、これまでの記録のまとめを表示します。見られるようになった海域を、アプリを開いたときにお知らせします。魚種の判定が違っていたときに、その場から知らせられるようにしました。Android 版も近日 3.0.3 に更新します。</td></tr>
           <tr><th scope="row"><span class="nw">3.0</span><br><span class="changelog__date">2026年11月7日</span></th><td>新しい［釣況］タブ（いまの海・明日の出船の目安・気になる魚が上向いたときの通知）。AI の振り返りと作戦（合わせて3回まで無料）。釣果ログ プラス。海面水温（衛星）の自動入力。海釣図V の記録の取り込み。図鑑の作り直し。魚種を11種追加（全57種）。ほか、不具合の直し。Android版も同じ日に 3.0 に</td></tr>
           <tr><th scope="row"><span class="nw">Android版</span><br><span class="changelog__date">2026年10月23日</span></th><td>Google Play で公開</td></tr>
           <tr><th scope="row"><span class="nw">2.0</span><br><span class="changelog__date">2026年10月</span></th><td>航跡の記録。全国の新しい海底の地図。過去の釣行を地図に重ねて比べる。場所の条件を、実際に釣りをしていた時間で数える分析。写真と航跡を含むバックアップと復元。ほか、不具合の直し</td></tr>

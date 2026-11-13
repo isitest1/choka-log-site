@@ -4,6 +4,7 @@
 
 - 受け取る側（api.margheritaworks.com/poll）は、英小文字・数字・ハイフンの値しか受け付けないため、英字の値で送る（2026-11-11）。
 - 海域名は、アプリの「この海域を希望する」の候補と同じ。
+- 2026-11-13：今釣れで九州西（kyushu-west）を公開したため、長崎・五島（nagasaki-goto）と有明海・八代海（ariake-yatsushiro）を選択肢から外した（アプリの候補で九州西に重なる 2 つ）。
 - 「このどれでもない」は `other`。押すと、その場に海域の名前の欄が出る。書いた名前は /feedback に `{ app: "choka-log", type: "request", message: "海域の希望：（書いた名前）", source: "web" }` で送る（アプリの海域の希望と同じ形）。
 
 | 送る値 | 海域名 |
@@ -26,8 +27,6 @@
 | tosa | 土佐湾 |
 | bungo-hyuga | 豊後水道・日向灘 |
 | hibiki-yamaguchi | 響灘・山口北部 |
-| nagasaki-goto | 長崎・五島 |
-| ariake-yatsushiro | 有明海・八代海 |
 | kagoshima | 鹿児島 |
 | okinawa | 沖縄 |
 | other | このどれでもない |

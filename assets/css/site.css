@@ -2079,6 +2079,19 @@ details:not([open]) .faq-icon-minus { display: none; }
   margin-top: 56px;
 }
 .band-30 p { margin: 0; font-size: var(--text-body-sm); font-weight: 700; line-height: 1.6; }
+.band-30 p.band-30__sub { margin-top: 4px; font-weight: 500; font-size: var(--text-caption); }
+.band-30__sub a { color: var(--color-paper); text-decoration: underline; text-underline-offset: 3px; }
+
+/* 3.0.3：共有の節の画面（隅に小さく「架空のデータです」） */
+.share-shot { margin: 0; display: flex; justify-content: center; }
+.share-shot__frame { position: relative; line-height: 0; }
+.share-shot img { display: block; height: 70vh; max-height: 720px; width: auto; max-width: 100%; border-radius: 28px; box-shadow: 0 10px 30px rgba(11, 26, 33, .18); }
+.share-shot__note { position: absolute; right: 10px; bottom: 10px; padding: 3px 8px; border-radius: 999px; background: rgba(11, 26, 33, .62); color: #ffffff; font-size: 11px; line-height: 1.4; }
+@media (max-width: 767px) {
+  .share-shot img { width: 66vw; height: auto; max-height: none; }
+}
+.share-notes { max-width: var(--col-max); margin: 24px auto 0; }
+.share-notes p { margin: 0 0 8px; font-size: var(--text-caption); color: var(--color-ink-muted); line-height: 1.8; }
 
 /* 節の札（文の上に 1 つだけ置く） */
 .split__text > .tag { margin-left: 0; align-self: flex-start; }
