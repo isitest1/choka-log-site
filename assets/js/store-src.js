@@ -1,11 +1,11 @@
 /* SNS ごとのダウンロード数を数えるための処理
- * サイトの URL の ?src= が下の 6 つのどれかなら、sessionStorage に入れ、
+ * サイトの URL の ?src= が下の 8 つのどれかなら（riko は RIKO さんの PR 投稿のストーリーズ、riko_ad はその投稿のパートナーシップ広告）、sessionStorage に入れ、
  * ページ内の App Store（ct=）と Google Play（referrer の utm_source・utm_medium=social）のリンクに引き継ぐ。
- * 6 つ以外の値（サイト内のリンクの src=header など）は無視し、入れてある値を上書きしない。
+ * 8 つ以外の値（サイト内のリンクの src=header など）は無視し、入れてある値を上書きしない。
  * 値がないときは、リンクをいまのまま（ct=site・utm_source=site・utm_medium=web）にする。 */
 (function () {
   'use strict';
-  var ALLOWED = ['ig', 'fb', 'th', 'yt', 'tt', 'x'];
+  var ALLOWED = ['ig', 'fb', 'th', 'yt', 'tt', 'x', 'riko', 'riko_ad'];
   var KEY = 'chokalog_src';
   var src = null;
 
