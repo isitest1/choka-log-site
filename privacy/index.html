@@ -110,7 +110,7 @@
     <div class="privacy-page-header" style="padding-top: 48px;">
       <span class="label label--blue" style="display:block; margin-bottom:16px;">LEGAL</span>
       <h1 style="margin:0 0 12px; font-size:var(--text-display); font-weight:700; line-height:1.28;"><span class="nw">プライバシーポリシー</span></h1>
-      <p style="margin:0; font-size:var(--text-caption); font-weight:500; color:var(--color-ink-muted);">最終更新日：2026年11月7日</p>
+      <p style="margin:0; font-size:var(--text-caption); font-weight:500; color:var(--color-ink-muted);">最終更新日：2026年11月19日</p>
     </div>
 
     <!-- 本文レイアウト（デスクトップ: 2カラム） -->
@@ -130,16 +130,18 @@
           <a href="#pp-chokyo">9. 船宿の釣況（3.0 から）</a>
           <a href="#pp-sst">10. 海面水温の自動入力（3.0 から）</a>
           <a href="#pp-import">11. 海釣図V の記録の取り込み（3.0 から）</a>
-          <a href="#pp-permission">12. 権限の利用目的</a>
-          <a href="#pp-feedback">13. ご意見の送信</a>
-          <a href="#pp-backup">14. バックアップと同期</a>
-          <a href="#pp-ads">15. 第三者提供・広告・解析</a>
-          <a href="#pp-https">16. 通信の暗号化</a>
-          <a href="#pp-delete">17. データの削除</a>
-          <a href="#pp-source">18. データの出典と免責</a>
-          <a href="#pp-changes">19. 本ポリシーの変更</a>
-          <a href="#pp-contact">20. お問い合わせ</a>
-          <a href="#pp-notify">21. お知らせの配信希望</a>
+          <a href="#pp-weather">12. 天気・風・波の予報の取得</a>
+          <a href="#pp-metrics">13. 利用状況の計測</a>
+          <a href="#pp-permission">14. 権限の利用目的</a>
+          <a href="#pp-feedback">15. ご意見の送信</a>
+          <a href="#pp-backup">16. バックアップと同期</a>
+          <a href="#pp-ads">17. 第三者提供・広告・解析</a>
+          <a href="#pp-https">18. 通信の暗号化</a>
+          <a href="#pp-delete">19. データの削除</a>
+          <a href="#pp-source">20. データの出典と免責</a>
+          <a href="#pp-changes">21. 本ポリシーの変更</a>
+          <a href="#pp-contact">22. お問い合わせ</a>
+          <a href="#pp-notify">23. お知らせの配信希望</a>
         </aside>
 
       <!-- モバイル目次（<details> で折り畳み） -->
@@ -157,16 +159,18 @@
             <a href="#pp-chokyo">9. 船宿の釣況（3.0 から）</a>
             <a href="#pp-sst">10. 海面水温の自動入力（3.0 から）</a>
             <a href="#pp-import">11. 海釣図V の記録の取り込み（3.0 から）</a>
-            <a href="#pp-permission">12. 権限の利用目的</a>
-            <a href="#pp-feedback">13. ご意見の送信</a>
-            <a href="#pp-backup">14. バックアップと同期</a>
-            <a href="#pp-ads">15. 第三者提供・広告・解析</a>
-            <a href="#pp-https">16. 通信の暗号化</a>
-            <a href="#pp-delete">17. データの削除</a>
-            <a href="#pp-source">18. データの出典と免責</a>
-            <a href="#pp-changes">19. 本ポリシーの変更</a>
-            <a href="#pp-contact">20. お問い合わせ</a>
-            <a href="#pp-notify">21. お知らせの配信希望</a>
+            <a href="#pp-weather">12. 天気・風・波の予報の取得</a>
+            <a href="#pp-metrics">13. 利用状況の計測</a>
+            <a href="#pp-permission">14. 権限の利用目的</a>
+            <a href="#pp-feedback">15. ご意見の送信</a>
+            <a href="#pp-backup">16. バックアップと同期</a>
+            <a href="#pp-ads">17. 第三者提供・広告・解析</a>
+            <a href="#pp-https">18. 通信の暗号化</a>
+            <a href="#pp-delete">19. データの削除</a>
+            <a href="#pp-source">20. データの出典と免責</a>
+            <a href="#pp-changes">21. 本ポリシーの変更</a>
+            <a href="#pp-contact">22. お問い合わせ</a>
+            <a href="#pp-notify">23. お知らせの配信希望</a>
           </nav>
       </details>
 
@@ -264,8 +268,18 @@
           <p>Android版は、写真をすべて読む許可を求めません。Android の写真選択の機能で、釣行の日の写真をまとめて選んでいただき、選んだ写真の撮影日時で、どの釣果に付けるかを決めます。写真は端末の外へ送りません。</p>
         </section>
 
+        <section id="pp-weather" aria-labelledby="pp-weather-heading">
+          <h2 id="pp-weather-heading"><span class="nw">12.</span> <span class="nw">天気・風・波の</span><span class="nw">予報の</span><span class="nw">取得</span></h2>
+          <p>天気・風・波の予報は、まず Open-Meteo から取得します。取得できない場合は、運営者のサーバー（Cloudflare Workers）を経由して、ノルウェー気象研究所（MET Norway）の予報を取得します。このとき送る位置は、小数点以下 1 桁に丸めた緯度経度（おおむね 10km 四方の単位）です。運営者のサーバーは、同じ場所の問い合わせに再利用するため予報を一時的に保存しますが、どの利用者が問い合わせたかは記録しません。</p>
+        </section>
+
+        <section id="pp-metrics" aria-labelledby="pp-metrics-heading">
+          <h2 id="pp-metrics-heading"><span class="nw">13.</span> <span class="nw">利用状況の</span><span class="nw">計測</span></h2>
+          <p>アプリの改善のため、機能が使われた回数（作戦の作成、写真からの釣果の追加、新機能のお知らせの表示など）を、個人を特定しない形で運営者のサーバーに送ります。釣果の内容、位置、写真は送りません。送った情報を、広告や、運営者以外の解析サービスに使うことはありません。</p>
+        </section>
+
         <section id="pp-permission" aria-labelledby="pp-permission-heading">
-          <h2 id="pp-permission-heading"><span class="nw">12.</span> <span class="nw">権限の</span><span class="nw">利用目的</span></h2>
+          <h2 id="pp-permission-heading"><span class="nw">14.</span> <span class="nw">権限の</span><span class="nw">利用目的</span></h2>
           <p>本アプリが要求するシステム権限とその目的は以下のとおりです。</p>
           <table class="def-table" aria-label="権限の利用目的">
             <thead>
@@ -304,7 +318,7 @@
         </section>
 
 <section id="pp-feedback" aria-labelledby="pp-feedback-heading">
-          <h2 id="pp-feedback-heading"><span class="nw">13.</span> <span class="nw">ご</span><span class="nw">意見の</span><span class="nw">送信</span></h2>
+          <h2 id="pp-feedback-heading"><span class="nw">15.</span> <span class="nw">ご</span><span class="nw">意見の</span><span class="nw">送信</span></h2>
           <p>アプリの「ご意見を送る」からご意見をお送りいただいた場合、次の情報を運営者のサーバーに送ります。</p>
           <ul>
             <li>ご意見の本文と種類</li>
@@ -315,7 +329,7 @@
         </section>
 
         <section id="pp-backup" aria-labelledby="pp-backup-heading">
-          <h2 id="pp-backup-heading"><span class="nw">14.</span> <span class="nw">バックアップと</span><span class="nw">同期</span></h2>
+          <h2 id="pp-backup-heading"><span class="nw">16.</span> <span class="nw">バックアップと</span><span class="nw">同期</span></h2>
           <ul>
             <li>iPhone版：iCloud での同期は行いません。記録は端末の中にあります。設定の「データ管理」から、バックアップ（JSON、または写真と航跡を含む zip）を書き出せます。書き出したファイルは iOS の共有の画面で渡し、保存先はご自身で選びます。アプリがどこかへ送ることはありません。</li>
             <li>Android版：Android の自動バックアップにより、記録と設定がお使いの Google アカウントにバックアップされます。写真と航跡の線は含みません（自動バックアップから戻した場合、釣行の距離と釣りの時間は残りますが、地図の航跡の線は出ません）。設定の「データ管理」から、バックアップ（JSON、または写真と航跡を含む zip）を書き出せます。書き出したファイルは Android の共有の画面で渡し、保存先はご自身で選びます。アプリがどこかへ送ることはありません。</li>
@@ -324,23 +338,23 @@
         </section>
 
 <section id="pp-ads" aria-labelledby="pp-ads-heading">
-          <h2 id="pp-ads-heading"><span class="nw">15.</span> <span class="nw">第三者提供・広告・解析</span></h2>
-          <p>広告は表示しません。アプリ自体には、利用状況を解析するための仕組みを組み込んでいません。ただし、Google Play からインストールした Android版では、Google Play が、アプリが異常終了したときの記録や、アプリの動作の統計を集め、開発者に提供することがあります（Google Play の仕組みによるもので、詳しくは <a href="https://policies.google.com/privacy">Google のプライバシーポリシー</a> をご覧ください）。</p>
+          <h2 id="pp-ads-heading"><span class="nw">17.</span> <span class="nw">第三者提供・広告・解析</span></h2>
+          <p>広告は表示しません。外部の解析サービスは組み込んでいません。利用状況の計測は、上の「利用状況の計測」に書いた範囲で、運営者のサーバーにのみ送ります。ただし、Google Play からインストールした Android版では、Google Play が、アプリが異常終了したときの記録や、アプリの動作の統計を集め、開発者に提供することがあります（Google Play の仕組みによるもので、詳しくは <a href="https://policies.google.com/privacy">Google のプライバシーポリシー</a> をご覧ください）。</p>
           <p>釣果データや個人情報を、第三者に販売・提供することはありません。ただし、「海況の取得のために送る情報」「分析のために送る情報」「地図の表示」「地名の表示」「釣果ログ プラスと AI の機能」「船宿の釣況」「海面水温の自動入力」に書いた送信を除きます。</p>
         </section>
 
 <section id="pp-https" aria-labelledby="pp-https-heading">
-          <h2 id="pp-https-heading"><span class="nw">16.</span> <span class="nw">通信の</span><span class="nw">暗号化</span></h2>
+          <h2 id="pp-https-heading"><span class="nw">18.</span> <span class="nw">通信の</span><span class="nw">暗号化</span></h2>
           <p>外部との通信は、すべて暗号化（HTTPS）して行います。</p>
         </section>
 
 <section id="pp-delete" aria-labelledby="pp-delete-heading">
-          <h2 id="pp-delete-heading"><span class="nw">17.</span> <span class="nw">データの</span><span class="nw">削除</span></h2>
+          <h2 id="pp-delete-heading"><span class="nw">19.</span> <span class="nw">データの</span><span class="nw">削除</span></h2>
           <p>端末の中の記録は、アプリの中で削除できます。アプリを削除すると、端末の中の記録もすべて削除されます。お送りいただいたご意見の削除を希望される場合は、<a href="mailto:support@margheritaworks.com">support@margheritaworks.com</a> までご連絡ください。</p>
         </section>
 
 <section id="pp-source" aria-labelledby="pp-source-heading">
-          <h2 id="pp-source-heading"><span class="nw">18.</span> <span class="nw">データの</span><span class="nw">出典と</span><span class="nw">免責</span></h2>
+          <h2 id="pp-source-heading"><span class="nw">20.</span> <span class="nw">データの</span><span class="nw">出典と</span><span class="nw">免責</span></h2>
           <!-- 海しるAPI利用規約第5条の文言（一字一句変更禁止） -->
           <p>このサービスは、海しるAPIを利用して取得した情報をもとに作成しているが、サービスの内容は海上保安庁によって保証されたものではない</p>
           <p>出典：海洋状況表示システム（<a href="https://www.msil.go.jp/">https://www.msil.go.jp/</a>）</p>
@@ -349,13 +363,13 @@
         </section>
 
 <section id="pp-changes" aria-labelledby="pp-changes-heading">
-          <h2 id="pp-changes-heading"><span class="nw">19.</span> <span class="nw">本ポリシーの</span><span class="nw">変更</span></h2>
+          <h2 id="pp-changes-heading"><span class="nw">21.</span> <span class="nw">本ポリシーの</span><span class="nw">変更</span></h2>
           <p>本ポリシーを変更する場合は、このページの最終更新日を更新します。重要な変更がある場合は、アプリ内でも通知します。</p>
           <p>最新のポリシーは常にこのページでご確認いただけます。</p>
         </section>
 
 <section id="pp-contact" aria-labelledby="pp-contact-heading">
-          <h2 id="pp-contact-heading"><span class="nw">20.</span> <span class="nw">お</span><span class="nw">問い</span><span class="nw">合わせ</span></h2>
+          <h2 id="pp-contact-heading"><span class="nw">22.</span> <span class="nw">お</span><span class="nw">問い</span><span class="nw">合わせ</span></h2>
           <div class="contact-block">
             <p style="margin:0; font-size:var(--text-heading-sm); font-weight:700; line-height:1.4;">お問い合わせ</p>
             <p style="margin:0; color:var(--color-ink-muted);">本ポリシーおよび本アプリに関するご質問は下記までご連絡ください。</p>
@@ -367,7 +381,7 @@
         </section>
 
 <section id="pp-notify" aria-labelledby="pp-notify-heading">
-          <h2 id="pp-notify-heading"><span class="nw">21.</span> <span class="nw">お</span><span class="nw">知らせの</span><span class="nw">配信希望</span></h2>
+          <h2 id="pp-notify-heading"><span class="nw">23.</span> <span class="nw">お</span><span class="nw">知らせの</span><span class="nw">配信希望</span></h2>
           <p>Android版などのお知らせを希望される方から、メールアドレスをお預かりすることがあります。お預かりしたアドレスは、テスト参加のお願いと公開のお知らせの送信にのみ使用し、第三者に提供しません。お知らせメール内のリンク、または <a href="mailto:support@margheritaworks.com">support@margheritaworks.com</a> へのご連絡により、いつでも削除できます。</p>
         </section>
 
