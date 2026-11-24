@@ -110,7 +110,7 @@
     <div class="privacy-page-header" style="padding-top: 48px;">
       <span class="label label--blue" style="display:block; margin-bottom:16px;">LEGAL</span>
       <h1 style="margin:0 0 12px; font-size:var(--text-display); font-weight:700; line-height:1.28;"><span class="nw">プライバシーポリシー</span></h1>
-      <p style="margin:0; font-size:var(--text-caption); font-weight:500; color:var(--color-ink-muted);">最終更新日：2026年11月19日</p>
+      <p style="margin:0; font-size:var(--text-caption); font-weight:500; color:var(--color-ink-muted);">最終更新日：2026年11月24日</p>
     </div>
 
     <!-- 本文レイアウト（デスクトップ: 2カラム） -->
@@ -271,6 +271,7 @@
         <section id="pp-weather" aria-labelledby="pp-weather-heading">
           <h2 id="pp-weather-heading"><span class="nw">12.</span> <span class="nw">天気・風・波の</span><span class="nw">予報の</span><span class="nw">取得</span></h2>
           <p>天気・風・波の予報は、まず Open-Meteo から取得します。取得できない場合は、運営者のサーバー（Cloudflare Workers）を経由して、ノルウェー気象研究所（MET Norway）の予報を取得します。このとき送る位置は、小数点以下 1 桁に丸めた緯度経度（おおむね 10km 四方の単位）です。運営者のサーバーは、同じ場所の問い合わせに再利用するため予報を一時的に保存しますが、どの利用者が問い合わせたかは記録しません。</p>
+          <p>作戦の作成時にも、同じく小数第1位に丸めた基準の地点（母港、最新の釣果の場所など）を送り、釣り方の資料の海域を決めるためだけに使います。AI には位置を渡しません。釣行予定と予定のお知らせは、端末の中だけで扱います。</p>
         </section>
 
         <section id="pp-metrics" aria-labelledby="pp-metrics-heading">
